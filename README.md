@@ -7,7 +7,7 @@
   1.  Create a virtual environment on your system using the command `python3 -m virtualenv “environment name” ` or `python3 -m venv “environment name” `
   2.  Activate it using the command `source <path to environment variables>/bin/activate ` on linux machines or `source <path to environment variables>/Scripts/activate` on windows
   3.  Run the command, `pip install -r requirements.txt` to install all dependencies in the virtual environment
-  4.  update your requirements.txt file using the command `pip freeze > requirements.txt`
+  4.  Update your requirements.txt file using the command `pip freeze > requirements.txt`
   5.  Fork or clone this repository
   6.  Generate your django secret key by doing the following:
   7.  Run the command `python3 manage.py shell`
@@ -18,7 +18,7 @@
       - You can also follow this simple tutorial
 
   9.  Define your django secret key using the environment variable `DJANGO_SECRET_KEY` in a `.env` file at the root of the project.
-  10.  Run the command `python3 manage.py migrate` to start up your database
+  10. Run the command `python3 manage.py migrate` to start up your database
   11. Run the command `python3 manage.py runserver` to startup your server
 
 
@@ -35,6 +35,9 @@
 # Frontend Guys
   - Create your own css and js files in the static folder
   - We shall come up with a naming convention for our styles so that we don't overwrite each others styles.
+
+<br>
+<hr>
 
 De-marauder will be handling the main branch and merging of feature branches so you can perform your task in your own dedicated branches
 
