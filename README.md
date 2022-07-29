@@ -18,6 +18,13 @@
   - Python
   - virtualenv or venv
   - pip
+  - python-dotenv
+
+  Check the requirements.txt file for a more comprehensive list.
+
+# Frontend Guys
+  - Create your own css and js files in the static folder
+  - We shall come up with a naming convention for our styles so that we don't overwrite each others styles.
 
 De-marauder will be handling the main branch and merging of feature branches so you can perform your task in your own dedicated branches
 

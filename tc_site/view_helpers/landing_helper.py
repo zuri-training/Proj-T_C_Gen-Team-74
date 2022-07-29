@@ -9,4 +9,4 @@ from django.shortcuts import render
 
 def landing_helper(request):
     # Write your logic here
-    return render(request, 'tc_site/pages/index.html') # Make sure to return a valid response
+    return render(request, 'tc_site/pages/landing.html') # Make sure to return a valid response
