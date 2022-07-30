@@ -1,5 +1,10 @@
 asgiref==3.5.2
+dj-database-url==1.0.0
 Django==4.0.6
+django-on-heroku==1.1.2
+gunicorn==20.1.0
 Markdown==3.4.1
+psycopg2-binary==2.9.3
 python-dotenv==0.20.0
 sqlparse==0.4.2
+whitenoise==6.2.0
