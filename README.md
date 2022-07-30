@@ -47,6 +47,7 @@
 <hr>
 
 ## Relevant links
-  - UX Research document: https://docs.google.com/document/d/1T4SFiEQCYYrOaHTu2laP7x9L5mTi5jr42VCgjAVX7rI/edit?usp=sharing
+  - UX Research documention: https://docs.google.com/document/d/1T4SFiEQCYYrOaHTu2laP7x9L5mTi5jr42VCgjAVX7rI/edit?usp=sharing
   - Technical documentation: https://docs.google.com/document/d/1nvtH6D1MPTVXxoJBVj0Ln0Znj64kLaKMG5RNimM2Aq4/edit?usp=sharing
   - Contributors details and their tasks: https://docs.google.com/spreadsheets/d/11xXrf_8M0h4MvW9oLjhe1myAj8swJUplk9y0fm1J2YQ/edit?usp=sharing
+  - Database Schema: https://drive.google.com/file/d/1-TfYdHR8ApGuiqzOfBnUK4ddSRsvrybG/view?usp=sharing
