@@ -16,7 +16,6 @@ import os
 
 import django_on_heroku
 import dj_database_url
-from decouple import config
 
 
 load_dotenv()
@@ -34,7 +33,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # ! PLEASE READ THIS
 # !
