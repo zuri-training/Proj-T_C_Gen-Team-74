@@ -17,5 +17,6 @@ urlpatterns = [
     path('gen-file/', views.gen_file, name="gen-file"),
     path('download/<int:userID>/<int:docID>', views.download, name="download"),
     path('share/<int:userID>/<int:docID>', views.share, name="share"),
-    path('export/<int:userID>/<int:docID>', views.export, name="export"),
+    # path('export/<int:userID>/<int:docID>', views.export, name="export"),
+    path('export/', views.export, name="export"),
 ]
