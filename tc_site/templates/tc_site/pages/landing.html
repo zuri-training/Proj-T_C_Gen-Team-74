@@ -4,21 +4,172 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="{% static 'asset/images/Vector2.png'%}" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <title>Terms and Conditions Generator</title>
 
     {% load static %}
     <!-- Change version number to force static files to reload styles -->
     
-    <link rel="stylesheet" href="{% static 'css/main.css' %}?version=1" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?version=1" />
 </head>
 <body>
     
     <!-- This is the landing page -->
     <!-- Include blocks from the block folder -->
     
-    <h1>Hello</h1>
+    <div class="project">
+        <!-- Responsive navbar -->
+        <navbar class="navbar">
+          <div class="brand-logo">
+            <img class="logo" src="{% static 'asset/images/Group 29.png'%}" alt="logo" />
+          </div>
+  
+          <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+          <div class="nav-links">
+            <ul>
+              <li><a class="active" href="{% '#header-section' %}">Home</a></li>
+              <li><a href="#">How It Works</a></li>
+              <li><a href="#">Generate</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Login</a></li>
+              <li><button class="li-btn" href="#">Sign Up</button></li>
+            </ul>
+          </div>
+        </navbar>
+        <!-- Responsive navbar -->
+  
+        <!-- header-section This content is inside the ./landing/hero.html file-->
+        {% block content %}
+
+        {% end block content %}
+        <!-- header-section -->
+  
+        <!-- main-section-one -->
+        <div id="main-section-one">
+          <p class="main1-txt-one">Secure Your Business with us</p>
+          <p class="main1-txt-two">
+            We bring you the best terms & privacy policy generator <br />
+            to protect and move promote your business.
+          </p>
+          <div class="container" id="cards-temp">
+            <div class="row">
+              <div class="col-md-4">
+                <img class="card-img" src="{% static 'asset/images/Rectangle 6.png'%}" alt="" />
+                <p class="temps-txt-1">Mobile App</p>
+                <p class="temps-txt-2">
+                  For any mobile app you are <br />
+                  developing, you will need <br />
+                  terms of use and privacy <br />
+                  policy to launch it.
+                </p>
+              </div>
+              <div class="col-md-4">
+                <img class="card-img" src="{% static 'asset/images/Rectangle 61.png'%}" alt="" />
+                <p class="temps-txt-1">Websites</p>
+                <p class="temps-txt-2">
+                  You need terms & conditions and <br />privacy policy on your
+                  website as<br />
+                  required by law for user data and <br />information collection.
+                </p>
+              </div>
+              <div class="col-md-4">
+                <img class="card-img" src="{% static 'asset/images/Rectangle 62.png'%}" alt="" />
+                <p class="temps-txt-1">Ecommerce</p>
+                <p class="temps-txt-2">
+                  If your website or app has the <br />option to receive
+                  payment,<br />
+                  including a terms & privacy <br />
+                  policy is required by law.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- main-section-one -->
+  
+        <!-- main-section-two -->
+        <div class="main-section-two">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="counter-container">
+                <p class="count-num">
+                  <span class="num" data-val="25000">+</span><span>+</span>
+                </p>
+                <p class="count-txt">Policies Generated</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="counter-container">
+                <p class="count-num">
+                  <span class="num" data-val="23000">+</span><span>+</span>
+                </p>
+                <p class="count-txt">User Trust Built</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="counter-container">
+                <p class="count-num">
+                  <span class="num" data-val="20000">+</span><span>+</span>
+                </p>
+                <p class="count-txt">Supported Countries</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- main-section-two -->
+  
+        <!-- main-section-three -->
+        <div class="main-section-three">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="main3-txt-head">
+                  What are Terms & Conditions and Privacy Policy statements?
+                </p>
+                <p class="main3-txt-body">
+                  Terms & Conditions and privacy policy statements are important
+                  agreements a website should have. They set out what is expected
+                  from both you and your users. Privacy policy explains to users
+                  how their personal data will be used, kept safe, and how they
+                  can excercise their rights over their personal data.
+                </p>
+              </div>
+              <div class="col-md-6">
+                <img
+                  class="main3-img"
+                  src="{% static 'asset/images/signing-contract-accept-terms-conditions-concept-illustration_441303-1071 1.png'%}"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- main-section-three -->
+      </div>
+  
+      <!-- Loader animation -->
+      <div class="loader">
+        <div class="load-content">
+          <img src="{% static 'asset/images/Blue with words.png'%}" alt="" />
+        </div>
+      </div>
+      <!-- Loader animation -->
 
     <!-- Change version number to force static files to reload javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{% static 'js/main.js' %}?version=1" ></script>
 </body>
 </html>
