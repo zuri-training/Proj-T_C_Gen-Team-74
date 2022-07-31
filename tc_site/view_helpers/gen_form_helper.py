@@ -9,4 +9,4 @@ from django.shortcuts import render, redirect
 
 def gen_form_helper(request):
     # Write your logic here
-    return # Make sure to return a valid response
+    return render(request, 'tc_site/blocks/form/form.html', {})# Make sure to return a valid response
