@@ -8,7 +8,9 @@
 }
 
 
-
+.project {
+    position: relative;
+}
 
 /* Navbar section */
 
@@ -25,8 +27,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    /* height: 100%;
-    max-height: 126px; */
+    z-index: 10;
     padding: 0px 145px;
 } 
 
@@ -34,7 +35,6 @@
     margin: 0;
     padding: 0;
     display: flex;
-    width: max-content;
 }
 
 .nav-links li{
@@ -42,8 +42,6 @@
     font-size: 16px;
     line-height: 19.5px;
     font-weight: 400;
-    width: max-content;
-
 }
 
 .nav-links li:nth-child(5){
