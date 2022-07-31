@@ -1,6 +1,6 @@
 /* CSS Styles for Form Page */
 
-body {
+#form-block {
     
     font-family: 'Montserrat'!important;
     max-width: 100%;
@@ -11,38 +11,38 @@ body {
 }
 
 
-h1 {
+#form-block h1 {
     text-align: center;
 }
-h2 {
+#form-block h2 {
     margin: 0;
 }
-ul,li,a {
+#form-block ul,#form-block li,#form-block a {
     max-width: 650px
 }
 #multi-step-form-container {
     margin-top: 5rem;
     max-width: auto;
 }
-.container {
+#form-block .container {
     width: auto;
 
 }
-section {
+#form-block section {
     background-color: #f8f7ff;
     border-radius: 8px;
 }
-.text-center {
+#form-block .text-center {
     text-align: center;
 }
-.mx-auto {
+#form-block .mx-auto {
     margin-left: auto;
     margin-right: auto;
 }
-.pl-0 {
+#form-block .pl-0 {
     padding-left: 0;
 }
-.btn {
+#form-block .btn {
     padding: 0.3rem 1rem;
     font-weight: bolder;
     font-size:medium;
@@ -53,18 +53,18 @@ section {
     cursor: pointer;
 }
 
-.btn.save-btn {
+#form-block .btn.save-btn {
     background-color: #E2DA15 !important;
     border-color: #E2DA15 !important ;
     color: #080808; 
 }
-.btn-container {
+#form-block .btn-container {
     padding-top: 90px;
 }
-.btn-navigate-form-step:hover {
+#form-block .btn-navigate-form-step:hover {
     background-color: #6464b1;
 }
-.save-btn:hover{
+#form-block .save-btn:hover{
     background-color: #f3f1ae !important;
 }
 
@@ -72,36 +72,36 @@ section {
     display: none;
 }
 
-.mt-3 {
+#form-block .mt-3 {
     margin-top: 2rem;
 }
-.d-none {
+#form-block .d-none {
     display: none;
 }
-.form-step {
+#form-block .form-step {
     width: auto;
     padding: 3rem;
 }
-.font-normal {
+#form-block .font-normal {
     font-weight: normal;
 }
-ul.form-stepper {
+#form-block ul.form-stepper {
     counter-reset: section;
     margin-bottom: 3rem;
    
 }
-ul.form-stepper .form-stepper-box {
+#form-block ul.form-stepper .form-stepper-box {
     position: relative;
     
 }
-ul.form-stepper .form-stepper-box span {
+#form-block ul.form-stepper .form-stepper-box span {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     
 }
-.form-stepper-horizontal {
+#form-block .form-stepper-horizontal {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -110,16 +110,16 @@ ul.form-stepper .form-stepper-box span {
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
-ul.form-stepper > li:not(:last-of-type) {
+#form-block #form-block ul.form-stepper > li:not(:last-of-type) {
     margin-bottom: 0.625rem;
     -webkit-transition: margin-bottom 0.4s;
     -o-transition: margin-bottom 0.4s;
     transition: margin-bottom 0.4s;
 }
-.form-stepper-horizontal > li:not(:last-of-type) {
+#form-block #form-block .form-stepper-horizontal > li:not(:last-of-type) {
     margin-bottom: 0 !important;
 }
-.form-stepper-horizontal li {
+#form-block #form-block .form-stepper-horizontal li {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -133,7 +133,7 @@ ul.form-stepper > li:not(:last-of-type) {
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
-.form-stepper-horizontal li:not(:last-child):after {
+#form-block #form-block .form-stepper-horizontal li:not(:last-child):after {
     position: relative;
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -142,16 +142,16 @@ ul.form-stepper > li:not(:last-of-type) {
     content: "";
     top: 32%;
 }
-.form-stepper-horizontal li:after {
+#form-block #form-block .form-stepper-horizontal li:after {
     background-color: #fff;
 }
-.form-stepper-horizontal li.form-stepper-completed:after {
+#form-block #form-block .form-stepper-horizontal li.form-stepper-completed:after {
     background-color: #fff;
 }
-.form-stepper-horizontal li:last-child {
+#form-block #form-block .form-stepper-horizontal li:last-child {
     flex: unset;
 }
-ul.form-stepper li a .form-stepper-box {
+#form-block #form-block ul.form-stepper li a .form-stepper-box {
     display: inline-block;
     width: 80px;
     font-size: 12px;
@@ -162,45 +162,45 @@ ul.form-stepper li a .form-stepper-box {
     background: rgba(0, 0, 0, 0.38);
 
 }
-.form-stepper .form-stepper-active .form-stepper-box {
+#form-block .form-stepper .form-stepper-active .form-stepper-box {
     background-color: #1E1E79 !important;
     color: #fff;
 }
-.form-stepper .form-stepper-active .label {
+#form-block .form-stepper .form-stepper-active .label {
     color: #1E1E79 !important;
 }
-.form-stepper .form-stepper-active .form-stepper-box:hover {
+#form-block .form-stepper .form-stepper-active .form-stepper-box:hover {
     background-color: #4361ee !important;
     color: #fff !important;
 }
-.form-stepper .form-stepper-unfinished .form-stepper-box {
+#form-block .form-stepper .form-stepper-unfinished .form-stepper-box {
     background-color: #fff;
     border: 2px solid #1E1E79;
 }
-.form-stepper .form-stepper-completed .form-stepper-box {
+#form-block .form-stepper .form-stepper-completed .form-stepper-box {
     background-color: #fff !important;
     color: #1E1E79;
     border: 2px solid;
 }
-.form-stepper .form-stepper-completed .label {
+#form-block .form-stepper .form-stepper-completed .label {
     color: #1E1E79!important;
 }
-.form-stepper .form-stepper-completed .form-stepper-box:hover {
+#form-block .form-stepper .form-stepper-completed .form-stepper-box:hover {
     background-color: #1E1E79 !important;
     color: #fff !important;
 }
 
-.form-stepper .form-stepper-active span.text-muted {
+#form-block .form-stepper .form-stepper-active span.text-muted {
     color: #fff !important;
 
 }
-.form-stepper .form-stepper-completed span.text-muted {
+#form-block .form-stepper .form-stepper-completed span.text-muted {
     color: #1E1E79 !important;
 }
-.form-stepper .label {
+#form-block .form-stepper .label {
     font-size: 1rem;
     margin-top: 0.5rem;
 }
-.form-stepper a {
+#form-block .form-stepper a {
     cursor: default;
 }

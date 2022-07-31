@@ -9,6 +9,7 @@ from . import views
 #!
 #!
 
+app_name = 'tc_site'
 urlpatterns = [
     path('', views.landing, name="landing"),
     path('signin/', views.signin, name="signin"),
