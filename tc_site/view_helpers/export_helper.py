@@ -5,8 +5,17 @@
 
 # Import Forms from the forms folder
 
-from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.views.generic import View
+from .export import export_helper 
 
-def export_helper(request):
-    # Write your logic here
-    return # Make sure to return a valid response
+#Creating a class based view
+class GeneratePdf(View):
+     def get(self, request, *args, **kwargs):
+         
+        # getting the template
+        pdf = export_helper('testTemplate.html')
+         
+         # rendering the template
+        return HttpResponse(pdf, content_type='application/pdf')
+
