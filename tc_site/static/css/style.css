@@ -353,9 +353,10 @@
 
     .nav-links li a{
         padding: 40px 5px;
+        width: max-content;
     }
     .nav-links li:nth-child(5){
-        padding-right: 130px;
+        padding-right: 100px;
     }
 }
 
