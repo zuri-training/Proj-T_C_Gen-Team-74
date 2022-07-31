@@ -5,8 +5,8 @@
 
 # Import Forms from the forms folder
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 
 def gen_form_helper(request):
     # Write your logic here
-    return render(request, 'tc_site/blocks/form/form.html', {})# Make sure to return a valid response
+    return render(request, 'tc_site/pages/form.html', {})# Make sure to return a valid response
