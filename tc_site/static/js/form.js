@@ -88,3 +88,15 @@ function show1(){
   function show2(){
     document.getElementById('secondurl').style.display = 'block';
   }
+
+//   Add style to the country input
+
+const countryInput = document.getElementById('country')
+
+countryInput.children[1].classList.add('form-select')
+
+//   Add style to the company_type input
+
+const companyTypeInput = document.getElementById('company_type')
+
+companyTypeInput.children[1].classList.add('form-select')
