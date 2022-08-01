@@ -38,6 +38,6 @@ def signup_helper(request):
                 user = User.objects.get(username = username)
                 user.save()
                 messages.success(request, 'Account successfully created!')
-                return redirect('signin')
+                return redirect('gen-form')
         return render(request, 'tc_site/pages/signup.html', {'form':form})
     return render(request, 'tc_site/pages/signup.html', {'form':form})

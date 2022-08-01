@@ -24,7 +24,7 @@ def signin_helper(request):
         if user is not None:
             login(request, user)
             messages.success(request, 'It\'s good to have you back!')
-            return redirect('landing')
+            return redirect('gen-form')
         # The else condition redirects to the signin form/refreshes the page.
         messages.error(request, 'Invalid login credentials!')
         return render(request, 'tc_site/pages/signin.html', {'form':form})
