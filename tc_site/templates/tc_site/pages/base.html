@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="{% static 'css/landing/dinho.css' %}?version=3" />
   <link rel="stylesheet" href="{% static 'css/landing/taiwo.css' %}?version=3" />
   <link rel="stylesheet" href="{% static 'css/form/form.css' %}?version=3">
+
+  <link rel="stylesheet" href="{% static 'css/auth/sign-up.css' %}?version=10" />
+  <link rel="stylesheet" href="{% static 'css/auth/log-in.css' %}?version=10" />
 </head>
 
 <body>
@@ -35,6 +38,10 @@
   {% include 'tc_site/blocks/loading.html' %}
   <!-- Loader animation -->
 
+  <!-- Auth modal -->
+  {% include 'tc_site/blocks/auth/log-in.html' %}
+  {% include 'tc_site/blocks/auth/sign-up.html' %}
+  <!-- Auth modal -->
   <main class="project">
 
     {% block content %}
@@ -54,6 +61,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="{% static 'js/main.js' %}?version=2"></script>
+  <script src="{% static 'js/modals.js' %}?version=13"></script>
 </body>
 
 </html>

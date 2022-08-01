@@ -1,110 +1,50 @@
-<!DOCTYPE html>
-<html lang="en" id="modals">
-  <head id="modals">
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    {% load static %}
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-    />
-
-    <link rel="stylesheet" href="https://use.typekit.net/bpd3bxi.css" />
-    <link
-      rel="stylesheet"
-      href="{% static 'static\css\sign-up.css' %}?version=1"
-    />
-    />
-
-    <title>Sign-In</title>
-  </head>
-
-  <body>
-    <header></header>
-
-    <main>
-      <div class="sign-up_container">
-        <figure><img src="./get-started.png" alt="get-started.png" /></figure>
-        <div class="head_wrap">
-          <p class="sign-up_heading">Get Started Here!</p>
-          <p>Create an account with QuickTerms and get started right away.</p>
-        </div>
-        <form action="" method="post">
-          <div class="fields">
-            <label for="first_name">Email Address </label>
-            <input
-              name=""
-              placeholder="johndoe@gmail.com"
-              type="email"
-              id="email_field"
-              required
-            />
-          </div>
-
-          <div class="fields">
-            <label for="first_name">Full Name</label>
-            <input type="text" name="" placeholder="John Doe" id="" required />
-          </div>
-
-          <div class="fields">
-            <label for="create_password">Create Password</label>
-
-            <input
-              type="password"
-              name="create_password"
-              placeholder="Minimum of 8 characters"
-              min="8"
-              id="password"
-              required
-            />
-          </div>
-
-          <div class="fields">
-            <label for="verify_password">Verify Password</label>
-
-            <input
-              type="password"
-              name="verify_password"
-              placeholder="Enter your password"
-              min="8"
-              id="password"
-              required
-            />
-
-            <p>
-              <input
-                type="checkbox"
-                name="agree"
-                id="terms_agreement"
-                onclick="enableBtn();"
-                value=""
-              />
-              By checking this box, I agree to QuickTerms' User Agreement and
-              Privacy Policy.
-            </p>
-          </div>
-
-          <div class="btn-sign-up-container">
-            <button type="submit" id="sign-up_btn" disabled>Sign Up</button>
-          </div>
-          <p class="question">
-            Already have an account?
-            <a href="./log-in.html"> Log in</a>
-          </p>
-        </form>
+{% load static %}
+<div id="sign-up-modal" class="backdrop-wrapper">
+  <div class="backdrop"></div>
+  <div class="modals sign-up_container">
+    <figure><img src="{% static 'assets/auth/sign-up/get-started.png' %}" alt="get-started.png" /></figure>
+    <div class="head_wrap">
+      <p class="sign-up_heading">Get Started Here!</p>
+      <p>Create an account with QuickTerms and get started right away.</p>
+    </div>
+    <form action="{% url 'tc_site:signup' %}" method="post">
+      <div class="fields">
+        <label for="first_name">Email Address </label>
+        <input name="" placeholder="johndoe@gmail.com" type="email" id="email_field" required />
       </div>
-    </main>
 
-    <footer></footer>
+      <div class="fields">
+        <label for="first_name">Full Name</label>
+        <input type="text" name="" placeholder="John Doe" required />
+      </div>
 
-    <script src="{% static 'static\js\modals.js' %}?version=1"></script>
-  </body>
-</html>
+      <div class="fields">
+        <label for="create_password">Create Password</label>
+
+        <input type="password" name="create_password" placeholder="Minimum of 8 characters" min="8" class="password"
+          required />
+      </div>
+
+      <div class="fields">
+        <label for="verify_password">Verify Password</label>
+
+        <input type="password" name="verify_password" placeholder="Enter your password" min="8" class="password"
+          required />
+
+        <p>
+          <input type="checkbox" name="agree" id="terms_agreement" onclick="enableBtn();" value="" />
+          By checking this box, I agree to QuickTerms' User Agreement and
+          Privacy Policy.
+        </p>
+      </div>
+
+      <div class="btn-sign-up-container">
+        <button type="submit" id="sign-up_btn">Sign Up</button>
+      </div>
+      <p class="question">
+        Already have an account?
+        <a><span class="sign-in"> Log in</span></a>
+      </p>
+    </form>
+  </div>
+</div>
