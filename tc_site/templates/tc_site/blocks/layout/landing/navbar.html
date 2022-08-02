@@ -1,23 +1,18 @@
-{% load static %}
-<nav class="navbar">
-    <div class="brand-logo">
-      <img class="logo" src="{% static 'assets/landing/dinho/Group 29.png'%}" alt="logo" />
-    </div>
+{% load static %} 
 
-    <a href="#" class="toggle-button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </a>
-    <div class="nav-links">
-      <ul>
-        <li><a class="active" href="#">Home</a></li>
-        <li><a href="#">How It Works</a></li>
-        <li><a href="#">Generate</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Login</a></li>
-        <li><button class="li-btn" href="#">Sign Up</button></li>
-      </ul>
-    </div>
-  </nav>
+<nav>
+  <input type="checkbox" for="check" id="check" />
+  <label class="check-box" for="check"><i class="fa fa-bars"></i></label>
+  <label><img class="logo" src="{% static 'assets/landing/dinho/Group 29.png'%}" alt="logo" /></label>
+  <ul class="nav-ul">
+    <li class="nav-li"><a class="active" href="">Home</a></li>
+    <li class="nav-li"><a href=""> How It Works</a></li>
+    <li class="nav-li"><a href="">Generate</a></li>
+    <li class="nav-li"><a href=""> Contact</a></li>
+    <li class="nav-li"><a href="">FAQ</a></li>
+    <li class="nav-li"><a id="nav-login" href="">Login</a></li>
+    <li class="nav-li">
+      <button class="li-btn" href="#">Sign Up</button>
+    </li>
+  </ul>
+</nav>
