@@ -24,14 +24,19 @@ function enableBtn() {
   }
 }
 
+// Get the show-sign-up-cheker from the landing block
+signupChecker = document.getElementById('sign-up-modal-checker');
+signinChecker = document.getElementById('sign-up-modal-checker');
 
-let signupModalActive = false;
-let signinModalActive = false;
+// Create a toggle by checking if the route was redirected to 'signup' or 'signin'
+let signupModalActive = signupChecker?.dataset?.showSignUpModal == 'true' ? true : false;
+let signinModalActive = signinChecker?.dataset?.showSignInModal == 'true' ? true : false;
+console.log(signupModalActive, signupChecker?.dataset?.showSignUpModal)
 
 // Toggle signup modal
 const signupBtns = document.querySelectorAll('.sign-up')
 const signupModal = document.getElementById('sign-up-modal');
-signupModal.style.display = 'none';
+signupModal.style.display = signupModalActive ? 'grid' : 'none';
 
 
 signupBtns.forEach((signupBtn) => {
@@ -54,7 +59,7 @@ signupBtns.forEach((signupBtn) => {
 // Toggle signin modal
 const signinBtns = document.querySelectorAll('.sign-in');
 const signinModal = document.getElementById('sign-in-modal');
-signinModal.style.display = 'none';
+signinModal.style.display = signinModalActive  ? 'grid' : 'none';
 
 signinBtns.forEach((signinBtn) => {
 

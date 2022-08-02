@@ -28,7 +28,7 @@
 .backdrop {
   position: fixed;
   background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(1rem);
+  backdrop-filter: blur(3px);
   top: 0;
   bottom: 0;
   left: 0;

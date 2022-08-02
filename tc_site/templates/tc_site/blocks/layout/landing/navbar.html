@@ -1,4 +1,13 @@
 {% load static %}
+
+<!-- This will be used in the modal.js file -->
+{% if show_sign_up %}
+<div id="sign-up-modal-checker" data-show-sign-up-modal="true"></div>
+{% else %}
+<div id="sign-up-modal-checker" data-show-sign-up-modal="false"></div>
+{% endif %}
+
+
 <nav class="navbar">
     <div class="brand-logo">
       <img class="logo" src="{% static 'assets/landing/dinho/Group 29.png'%}" alt="logo" />
