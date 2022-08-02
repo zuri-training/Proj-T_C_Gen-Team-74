@@ -13,6 +13,7 @@
 
 #form-block h1 {
     text-align: center;
+    padding: 200px 0px 100px;
 }
 #form-block h2 {
     margin: 0;
@@ -20,7 +21,7 @@
 #form-block ul,#form-block li,#form-block a {
     max-width: 650px
 }
-#multi-step-form-container {
+#form-block .multi-step-form-container {
     margin-top: 5rem;
     max-width: auto;
 }
@@ -110,16 +111,16 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
-#form-block #form-block ul.form-stepper > li:not(:last-of-type) {
+#form-block ul.form-stepper > li:not(:last-of-type) {
     margin-bottom: 0.625rem;
     -webkit-transition: margin-bottom 0.4s;
     -o-transition: margin-bottom 0.4s;
     transition: margin-bottom 0.4s;
 }
-#form-block #form-block .form-stepper-horizontal > li:not(:last-of-type) {
+#form-block .form-stepper-horizontal > li:not(:last-of-type) {
     margin-bottom: 0 !important;
 }
-#form-block #form-block .form-stepper-horizontal li {
+#form-block .form-stepper-horizontal li {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -133,7 +134,7 @@
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
-#form-block #form-block .form-stepper-horizontal li:not(:last-child):after {
+#form-block .form-stepper-horizontal li:not(:last-child):after {
     position: relative;
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -142,16 +143,16 @@
     content: "";
     top: 32%;
 }
-#form-block #form-block .form-stepper-horizontal li:after {
+#form-block .form-stepper-horizontal li:after {
     background-color: #fff;
 }
-#form-block #form-block .form-stepper-horizontal li.form-stepper-completed:after {
+ #form-block .form-stepper-horizontal li.form-stepper-completed:after {
     background-color: #fff;
 }
-#form-block #form-block .form-stepper-horizontal li:last-child {
+ #form-block .form-stepper-horizontal li:last-child {
     flex: unset;
 }
-#form-block #form-block ul.form-stepper li a .form-stepper-box {
+ #form-block ul.form-stepper li a .form-stepper-box {
     display: inline-block;
     width: 80px;
     font-size: 12px;
