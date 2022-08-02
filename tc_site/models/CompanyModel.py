@@ -8,7 +8,7 @@ from django_countries.fields import CountryField
 #src/myapp/models.py
 
 
-class CompanyModel (models.Model):
+class CompanyModel(models.Model):
 
     #  (IDs should be unique hashes)
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
