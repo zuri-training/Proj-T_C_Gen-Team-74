@@ -7,67 +7,55 @@
       <p class="sign-up_heading">Get Started Here!</p>
       <p>Create an account with QuickTerms and get started right away.</p>
     </div>
-
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      {{form.last_name.error}}
+    {% if form.errors %}
+    <div class="alert alert-warning alert-dismissible fade show error-alert" role="alert">
+      {{signup_form.errors.last_name}}
+      {{signup_form.errors.first_name}}
+      {{signup_form.errors.username}}
+      {{signup_form.errors.email}}
+      {{signup_form.errors.password}}
+      {{signup_form.errors.password2}}
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      {{form.first_name.error}}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      {{form.username.error}}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      {{form.email.error}}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      {{form.password.error}}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      {{form.password2.error}}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
+    {% endif %}
 
     <form action="{% url 'tc_site:signup' %}" method="post">
       {% csrf_token %}
       <div class="fields">
         <label for="username">Username </label>
-        {{form.username}}
+        {{signup_form.username}}
         <!-- <input name="email" placeholder="johndoe@gmail.com" type="email" id="email_field" required /> -->
       </div>
       <div class="fields">
         <label for="email">Email Address </label>
-        {{form.email}}
+        {{signup_form.email}}
         <!-- <input name="email" placeholder="johndoe@gmail.com" type="email" id="email_field" required /> -->
       </div>
 
       <div class="fields">
         <label for="first_name">First Name</label>
-        {{form.first_name}}
+        {{signup_form.first_name}}
         <!-- <input type="text" name="first_name" placeholder="John" required /> -->
       </div>
       <div class="fields">
         <label for="first_name">Last Name</label>
-        {{form.last_name}}
+        {{signup_form.last_name}}
         <!-- <input type="text" name="last_name" placeholder="Doe" required /> -->
       </div>
 
       <div class="fields">
         <label for="password">Create Password</label>
-        {{form.password}}
+        {{signup_form.password}}
+        <i class="bi bi-eye-slash togglePassword"></i>
+
         <!-- <input type="password" name="password" placeholder="Minimum of 8 characters" min="8" class="password" required /> -->
       </div>
 
       <div class="fields">
         <label for="password2">Verify Password</label>
-        {{form.password2}}
-
-        <!-- <input type="password" name="password2" placeholder="Enter your password" min="8" class="password" required /> -->
+        {{signup_form.password2}}
+        <i class="bi bi-eye-slash togglePassword" ></i>
+       <!-- <input type="password" name="password2" placeholder="Enter your password" min="8" class="password" required /> -->
 
         <p>
           <input type="checkbox" name="agree" id="terms_agreement" onclick="enableBtn();" value="" />
@@ -77,7 +65,8 @@
       </div>
 
       <div class="btn-sign-up-container">
-        <button type="submit" id="sign-up_btn">Sign Up</button>
+        <!-- I changed your styles from targeting the button element to targeting a 'button class' -->
+        <button class='button' type="submit" id="sign-up_btn">Sign Up</button>
       </div>
       <p class="question">
         Already have an account?
