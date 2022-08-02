@@ -5,6 +5,7 @@
 
 # Import Forms from the forms folder
 from django.shortcuts import render, redirect
+from django.contrib.auth import login
 from django.contrib.auth.models import User
 from django.contrib import messages
 from tc_site.forms.signupForm import SignupForm
@@ -37,7 +38,9 @@ def signup_helper(request):
                 # obtaining the username and saving it in the database.
                 user = User.objects.get(username = username)
                 user.save()
+                # Login user
+                login(request, user)
                 messages.success(request, 'Account successfully created!')
-                return redirect('gen-form')
-        return render(request, 'tc_site/pages/signup.html', {'form':form})
-    return render(request, 'tc_site/pages/signup.html', {'form':form})
+                return redirect('tc_site:gen-form')
+        return render(request, 'tc_site/pages/landing.html', {'form':form, 'show_sign_up': True})
+    return render(request, 'tc_site/pages/landing.html', {'form':form, 'show_sign_up': True})

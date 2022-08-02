@@ -9,8 +9,9 @@ class SignupForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['first_name', 'last_name', 'username', 'email', 'password', 'password2']
-        widgets = {'first_name': forms.TextInput(attrs={'class':'form-control','placeholder':'', 'required':True}),
-        'username':forms.TextInput(attrs={'class':'form-control','placeholder':''}),
+        widgets = {
+            'username':forms.TextInput(attrs={'class':'form-control','placeholder':''}),
+            'first_name': forms.TextInput(attrs={'class':'form-control','placeholder':'', 'required':True}),
             'last_name': forms.TextInput(attrs={'class':'form-control','placeholder':'', 'required':True}),
             'email': forms.EmailInput(attrs={'class':'form-control','placeholder':'', 'required':True}), 
             'password': forms.PasswordInput(attrs={'class':'form-control','placeholder':'', 'required':True})
