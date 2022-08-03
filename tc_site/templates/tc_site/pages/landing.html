@@ -1,95 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'tc_site/pages/base.html' %}
+{% load static %}
+{% block meta %}
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="{% static 'assets/landing/dinho/Vector2.png'%}" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+  integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+<link rel="stylesheet" href="https://use.typekit.net/bpd3bxi.css" />
 
-<head>
-  {% load static %}
+<title>Terms and Conditions Generator</title>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="{% static 'asset/images/Vector2.png'%}" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <title>Terms and Conditions Generator</title>
+<!-- Change version number to force static files to reload styles -->
 
-  <!-- Change version number to force static files to reload styles -->
+{% endblock %}
 
-  <link rel="stylesheet" href="{% static 'css/landing/dinho.css' %}?version=0" />
-  <link rel="stylesheet" href="{% static 'css/landing/taiwo.css' %}?version=0" />
-</head>
+{% block content %}
+<!-- header-section This content is inside the ./landing/hero.html file-->
+{% include 'tc_site/blocks/landing/hero.html' %}
+<!-- header-section -->
 
-<body>
+<!-- main-section-one -->
 
-  <!-- This is the landing page -->
-  <!-- Include blocks from the block folder -->
+{% include 'tc_site/blocks/landing/main-section-1.html' %}
 
-  <main class="project">
-    {% include 'tc_site/blocks/layout/landing/navbar.html' %}
-    <!-- Responsive navbar -->
-    <!-- Responsive navbar -->
+<!-- main-section-one -->
 
-    <!-- header-section This content is inside the ./landing/hero.html file-->
-    {% include 'tc_site/blocks/landing/hero.html' %}
-    {% block content %}
+<!-- main-section-two -->
 
-    {% endblock content %}
-    <!-- header-section -->
+{% include 'tc_site/blocks/landing/main-section-2.html' %}
 
-    <!-- main-section-one -->
+<!-- main-section-two -->
 
-    {% include 'tc_site/blocks/landing/main-section-1.html' %}
+<!-- main-section-three -->
 
-    <!-- main-section-one -->
+{% include 'tc_site/blocks/landing/main-section-3.html' %}
 
-    <!-- main-section-two -->
+<!-- main-section-three -->
 
-    {% include 'tc_site/blocks/landing/main-section-2.html' %}
+<!-- taiwoak's html landing page codes-->
+<!-- main-section-four -->
 
-    <!-- main-section-two -->
+{% include 'tc_site/blocks/landing/main-section-4.html' %}
 
-    <!-- main-section-three -->
+<!-- main-section-four -->
 
-    {% include 'tc_site/blocks/landing/main-section-3.html' %}
-    
-    <!-- main-section-three -->
-    
-    <!-- taiwoak's html landing page codes-->
-    <!-- main-section-four -->
-    
-    {% include 'tc_site/blocks/landing/main-section-4.html' %}
-    
-    <!-- main-section-four -->
-    
-    <!-- main-section-five -->
-    
-    {% include 'tc_site/blocks/landing/main-section-5.html' %}
-    
-    <!-- main-section-five -->
-    
-    <!-- main-section-six -->
-    
-    {% include 'tc_site/blocks/landing/main-section-6.html' %}
-    
-    <!-- main-section-six -->
-    
-    <!-- main-section-seven -->
-    
-    {% include 'tc_site/blocks/landing/main-section-7.html' %}
+<!-- main-section-five -->
 
-    <!-- main-section-seven -->
+{% include 'tc_site/blocks/landing/main-section-5.html' %}
 
-    {% include 'tc_site/blocks/layout/landing/footer.html' %}
-  </main>
-  <!-- end of taiwoak's html code-->
+<!-- main-section-five -->
 
-  <!-- Loader animation -->
-  {% include 'tc_site/blocks/loading.html' %}
-  <!-- Loader animation -->
+<!-- main-section-six -->
 
-  <!-- Change version number to force static files to reload javascript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="{% static 'js/main.js' %}?version=1"></script>
-</body>
+{% include 'tc_site/blocks/landing/main-section-6.html' %}
 
-</html>
+<!-- main-section-six -->
+
+<!-- main-section-seven -->
+
+{% include 'tc_site/blocks/landing/main-section-7.html' %}
+
+<!-- main-section-seven -->
+
+<!-- end of taiwoak's html code-->
+
+{% endblock %}

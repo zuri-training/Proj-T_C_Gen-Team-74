@@ -291,10 +291,12 @@ nav .nav-li #nav-login:hover{
 /* Animation section */
 
 .loader{
+    position: fixed;
+    top: 0;
     height: 100vh;
     width: 100%;
     background: #D5D5F0;
-    
+    z-index: 100;
 }
 
 .loader img{
