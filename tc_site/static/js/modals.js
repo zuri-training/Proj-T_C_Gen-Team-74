@@ -31,7 +31,6 @@ signinChecker = document.getElementById('sign-in-modal-checker');
 // Create a toggle by checking if the route was redirected to 'signup' or 'signin'
 let signupModalActive = signupChecker?.dataset?.showSignUpModal == 'true' ? true : false;
 let signinModalActive = signinChecker?.dataset?.showSignInModal == 'true' ? true : false;
-console.log(signupModalActive, signupChecker?.dataset?.showSignUpModal)
 
 // Toggle signup modal
 const signupBtns = document.querySelectorAll('.sign-up')
