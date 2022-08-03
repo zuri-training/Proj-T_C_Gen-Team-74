@@ -8,9 +8,6 @@
     text-align: center;
 }
 
-/* .hero-bg {
-    height: 100vh;
-} */
 .hero-bg img {
     width: 100vw;
     height: 100vh;
@@ -78,6 +75,7 @@
 
     #hero .text-content h1 {
         margin-bottom: 1rem;
+        font-size: 2rem;
     }
 
     #hero .text-content .text {
@@ -91,8 +89,11 @@
     }
 }
 
-@media screen and (max-width: 420px) {
+@media (max-width: 420px) {
     #hero .container {
         top: 6rem;
+    }
+    #hero .text-content h1 {
+        margin-top: 3rem;
     }
 }

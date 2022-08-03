@@ -66,10 +66,7 @@ a {
     font-size: 2rem;
     line-height: 48px;
     color: #131313;
-
     max-width: 560px;
-    max-height: 144px;
-
 }
 
 .main-tc-3-h1-2 {
@@ -131,7 +128,7 @@ a {
     width: 100%;
     padding: 3rem 0;
     background-color: #262698;
-    padding: 80px 100px 70px 100px;
+    padding: 80px 0 70px;
 }
 
 .main-tc-4-h1 {
@@ -590,9 +587,8 @@ a {
     .main-tc-4-img img {
         height: 50vh;
     }
-
     .main-tc-4-h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     #contact .between {
