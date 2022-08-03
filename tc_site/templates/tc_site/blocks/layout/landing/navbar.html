@@ -29,84 +29,97 @@
   </ul>
 </nav> -->
 
-<nav class="navbar">
+<nav id="landing-navbar" class="navbar">
+  <div class="container">
 
-
-  <label><img class="logo" src="{% static 'assets/landing/dinho/Group 29.png'%}" alt="" /></label>
-  <input type="checkbox" for="check" id="check" />
-  <label class="check-box" for="check"><i class="fa fa-bars"></i></label>
-
-  <!--   
-    <div class="brand-logo">
-      <img class="logo" src="{% static 'assets/landing/dinho/Group 29.png'%}" alt="logo" />
+    <div class="nav-logo">
+      <div>
+        <img class="logo" src="{% static 'assets/landing/navbar/Vector.png'%}" alt="logo" />
+      </div>
+      <div>
+        <img class="logo" src="{% static 'assets/landing/navbar/uickTerms.png'%}" alt="logo" />
+      </div>
     </div>
 
-    <a href="#" class="toggle-button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </a> -->
+    <div class="menu-wrapper">
+      <input type="checkbox" name="toggler" id="toggler" />
+      <div class="menu">
+        <div class="menu-line"></div>
+      </div>
 
-  <!-- <div> -->
-  <ul class="nav-ul">
-    <li class="nav-li"><a class="active" href="{% url 'tc_site:landing' %}">Home</a></li>
-    <li class="nav-li"><a href="#">How It Works</a></li>
-    <li class="nav-li"><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
-    <li class="nav-li"><a href="#">Contact</a></li>
-    <li class="nav-li"><a href="#">FAQ</a></li>
-    <hr class="nav-divider">
-    {% if user.id %}
-    <li class="nav-li"><a href="#"><i class="fa-solid fa-user"></i></a></li>
-    {% else %}
-    <li class="nav-li"><a id="nav-login" class="sign-in">
-        <!-- <div role="sign-in-button"> -->
-        Login
-        <!-- </div> -->
-      </a>
-    </li>
-    {% endif %}
-    {% if user.id %}
-    <li class="nav-li"><a href="{% url 'tc_site:signout' %}"><button class="li-btn">
-          Log out
-        </button></a></li>
-    {% else %}
-    <li class="nav-li"><button class="li-btn sign-up">
-        Sign Up
-      </button></li>
-    {% endif %}
-  </ul>
-  <!-- </div> -->
+      <div class="nav">
+        <ul class="nav-links">
+          <li class="nav-item active"><a href="{% url 'tc_site:landing' %}">Home</a></li>
+          <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">How It Works</a></li>
+          <li class="nav-item"><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
+          <li class="nav-item"><a href="{% url 'tc_site:landing' %}#contact">Contact</a></li>
+          <li class="nav-item"><a href="{% url 'tc_site:landing' %}#faq">FAQ</a></li>
+        </ul>
+        <ul class="nav-auth-btns nav-links">
+          <li>
+            {% if user.id %}
+            <a href="#">
+              <i class="fa-solid fa-user"></i>
+              <div>{{user.username}}</div>
+            </a>
+            {% else %}
+            <a>
+              <div role="sign-in-button" class="sign-in nav-item sec-btn">Login</div>
+            </a>
+            {% endif %}
+          </li>
+          <li>
+            {% if user.id %}
+            <button class="pri-btn">
+              <a href="{% url 'tc_site:signout' %}">
+                Log out
+              </a>
+            </button>
+            {% else %}
+            <button class="pri-btn sign-up">
+              Sign Up
+            </button>
+            {% endif %}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav-lg">
+      <ul class="nav-links links">
+        <li class="nav-item active"><a href="{% url 'tc_site:landing' %}">Home</a></li>
+        <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">How It Works</a></li>
+        <li class="nav-item"><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
+        <li class="nav-item"><a href="{% url 'tc_site:landing' %}#contact">Contact</a></li>
+        <li class="nav-item"><a href="{% url 'tc_site:landing' %}#faq">FAQ</a></li>
+      </ul>
+      <ul class="nav-auth-btns nav-links">
+        <li>
+          {% if user.id %}
+          <a href="#">
+            <i class="fa-solid fa-user"></i>
+            <div>{{user.username}}</div>
+          </a>
+          {% else %}
+          <a>
+            <div role="sign-in-button" class="sign-in sec-btn">Login</div>
+          </a>
+          {% endif %}
+        </li>
+        <li>
+          <button class="pri-btn">
+            {% if user.id %}
+            <a href="{% url 'tc_site:signout' %}">
+              Log out
+            </a>
+            {% else %}
+            <div class="sign-up">
+              Sign Up
+            </div>
+            {% endif %}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
-
-
-<aside class="sidebar">
-  <nav>
-    <ul class="nav-ul-aside">
-      <li class="nav-li"><a class="active" href="{% url 'tc_site:landing' %}">Home</a></li>
-      <li class="nav-li"><a href="#">How It Works</a></li>
-      <li class="nav-li"><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
-      <li class="nav-li"><a href="#">Contact</a></li>
-      <li class="nav-li"><a href="#">FAQ</a></li>
-      <hr class="nav-divider">
-      {% if user.id %}
-      <li class="nav-li"><a href="#"><i class="fa-solid fa-user"></i></a></li>
-      {% else %}
-      <li class="nav-li"><a id="nav-login" class="sign-in">
-          <!-- <div role="sign-in-button"> -->
-          Login
-          <!-- </div> -->
-        </a>
-      </li>
-      {% endif %}
-      {% if user.id %}
-      <li class="nav-li"><a href="{% url 'tc_site:signout' %}"><button class="li-btn">
-            Log out
-          </button></a></li>
-      {% else %}
-      <li class="nav-li"><button class="li-btn sign-up">
-          Sign Up
-        </button></li>
-      {% endif %}
-    </ul>
-  </nav>
-</aside>

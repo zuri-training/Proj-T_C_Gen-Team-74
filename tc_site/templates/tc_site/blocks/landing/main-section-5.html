@@ -1,23 +1,27 @@
 {% load static %}
 <hr class="main-hr">
-      <section class="container d-md-flex flex-md-row justify-content-center align-items-center main-tc-3o">
-        <div class="main-tc-3 flex-fill">
+    <section id="docs" class="container">
+      <div class="row">
+        <div class="col-lg-6 main-tc-3-img">
+          <img src="{% static 'assets/landing/taiwo/howto.png' %}" alt="How To Use T & C Generator" width=""
+          height="">
+        </div>
+        <div class="col-lg-6 main-tc-3">
           <h1 class="main-tc-3-h1">How to Use the Terms & Conditions Generator for free on our website</h1>
-          <div class="main-tc-3-h1p">
-            <h1 class="main-tc-3-h1-2">&#x2022; Register</h1>
-            <p class="main-tc-3-p">Sign up for free and select a template to get <br id="maintcp"> started</p>
+          <div>
+            <h1 class="main-tc-3-h1-2">1. Register</h1>
+            <p class="main-tc-3-p">Sign up for free and select a template to get started</p>
           </div>
-          <div class="main-tc-3-h1p">
-            <h1 class="main-tc-3-h1-2">&#x2022; Complete the document</h1>
-            <p class="main-tc-3-p">Answer a few questions and your document is  <br id="maintcp"> created automatically.</p>
+          <div>
+            <h1 class="main-tc-3-h1-2">2. Complete the document</h1>
+            <p class="main-tc-3-p">Answer a few questions and your document is created automatically.</p>
           </div>
-          <div class="main-tc-3-h1p">
-            <h1 class="main-tc-3-h1-2">&#x2022; Export- Share- Download</h1>
-            <p class="main-tc-3-p">Your document is ready! You will be able to  <br id="maintcp"> export, share and download it in Word, PDF,  <br id="maintcp"> Spreadsheet formats.</p>
-          </div>
+          <div>
+            <h1 class="main-tc-3-h1-2">3. Export- Share- Download</h1>
+            <p class="main-tc-3-p">Your document is ready! You will be able to export, share and download it in Word, PDF,
+              Spreadsheet formats.</p>
+            </div>
+            <a href="{% url 'tc_site:gen-form' %}"><button class="main-tc-3-btn">Get Started Here</button></a>
         </div>
-        <div class="main-tc-3-img flex-fill">
-          <img src="{% static 'assets/landing/taiwo/howto.png' %}" alt="How To Use T & C Generator" class="main-tc-3-i">
-          <a href=""><button class="main-tc-3-btn">Get Started Here</button></a>
-        </div>
-      </section>
+      </div>
+    </section>
