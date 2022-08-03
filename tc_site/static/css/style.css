@@ -34,7 +34,6 @@
     margin: 0;
     padding: 0;
     display: flex;
-    width: max-content;
 }
 
 .nav-links li{
@@ -42,8 +41,6 @@
     font-size: 16px;
     line-height: 19.5px;
     font-weight: 400;
-    width: max-content;
-
 }
 
 .nav-links li:nth-child(5){
@@ -353,10 +350,9 @@
 
     .nav-links li a{
         padding: 40px 5px;
-        width: max-content;
     }
     .nav-links li:nth-child(5){
-        padding-right: 100px;
+        padding-right: 130px;
     }
 }
 

@@ -13,6 +13,13 @@
 
 #form-block h1 {
     text-align: center;
+    padding: 200px 0px 100px;
+}
+@media screen and (max-width: 500px) {
+    #form-block h1 {
+        padding: 50px 0px;
+        font-size: 1.5rem;
+    }
 }
 #form-block h2 {
     margin: 0;
@@ -20,13 +27,17 @@
 #form-block ul,#form-block li,#form-block a {
     max-width: 650px
 }
-#multi-step-form-container {
+#form-block .multi-step-form-container {
     margin-top: 5rem;
     max-width: auto;
 }
 #form-block .container {
     width: auto;
 
+}
+#form-block .form-wrapper {
+    padding-top: 20px;
+    border-top: 1px solid;
 }
 #form-block section {
     background-color: #f8f7ff;
@@ -110,16 +121,16 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
-#form-block #form-block ul.form-stepper > li:not(:last-of-type) {
+#form-block ul.form-stepper > li:not(:last-of-type) {
     margin-bottom: 0.625rem;
     -webkit-transition: margin-bottom 0.4s;
     -o-transition: margin-bottom 0.4s;
     transition: margin-bottom 0.4s;
 }
-#form-block #form-block .form-stepper-horizontal > li:not(:last-of-type) {
+#form-block .form-stepper-horizontal > li:not(:last-of-type) {
     margin-bottom: 0 !important;
 }
-#form-block #form-block .form-stepper-horizontal li {
+#form-block .form-stepper-horizontal li {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -133,7 +144,7 @@
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
-#form-block #form-block .form-stepper-horizontal li:not(:last-child):after {
+#form-block .form-stepper-horizontal li:not(:last-child):after {
     position: relative;
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -142,16 +153,26 @@
     content: "";
     top: 32%;
 }
-#form-block #form-block .form-stepper-horizontal li:after {
+#form-block .form-stepper-horizontal li:after {
     background-color: #fff;
 }
-#form-block #form-block .form-stepper-horizontal li.form-stepper-completed:after {
+<<<<<<< HEAD
+ #form-block .form-stepper-horizontal li.form-stepper-completed:after {
     background-color: #fff;
 }
-#form-block #form-block .form-stepper-horizontal li:last-child {
+ #form-block .form-stepper-horizontal li:last-child {
     flex: unset;
 }
-#form-block #form-block ul.form-stepper li a .form-stepper-box {
+ #form-block ul.form-stepper li a .form-stepper-box {
+=======
+#form-block .form-stepper-horizontal li.form-stepper-completed:after {
+    background-color: #fff;
+}
+#form-block .form-stepper-horizontal li:last-child {
+    flex: unset;
+}
+#form-block ul.form-stepper li a .form-stepper-box {
+>>>>>>> 207ce56ce2db38baccfd26ba2e5e1eb70dd965a0
     display: inline-block;
     width: 80px;
     font-size: 12px;

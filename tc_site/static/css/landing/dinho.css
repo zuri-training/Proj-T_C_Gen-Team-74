@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap');
 
-
 .project {
     position: relative;
 }
@@ -12,7 +11,8 @@
 }
 
 #header-section .container{
-    padding: 180px 110px 100px;
+    padding: 40px;
+    height: 100vh;
 }
 
 .header-img{
@@ -24,7 +24,7 @@
 
 .header-text-one{
     font-size: 56px;
-    line-height: 68.26px;
+    line-height: 68px;
     font-weight: 700;
     color: #131313;
     padding-bottom: 20px;
@@ -34,7 +34,7 @@
     font-size: 24px;
     line-height: 32px;
     font-weight: 400;
-    color: #4A4A4A;
+    color: #262626;
     padding: 30px 0px;
 }
 
@@ -49,7 +49,7 @@
     background: #262698;
     color: #EAF0EA;
     font-size: 24px;
-    line-height: 29.26px;
+    line-height: 29px;
     font-weight: 700;
     border: transparent;
 
@@ -80,13 +80,7 @@
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
-}
-
-.main1-txt-two{
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 24px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 #cards-temp{
@@ -111,6 +105,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+    padding: 0px 55px;
 }
 
 /* main-section-one section */
@@ -173,16 +168,6 @@
 
 /* main-section-three section */
 
-
-
-
-
-
-
-
-
-
-
 /* Animation section */
 
 .loader{
@@ -219,61 +204,112 @@
 /* Animation section */
 
 
-
-/* Media Query section */
-
-
 @media screen and (max-width: 992px) and (min-width: 795px){
 
     #header-section .container{
-        padding: 150px 20px;
+        padding: 30px 20px;
+    }
+    .header-text-one{
+        font-size: 45px;
+        line-height: 50px;
+        font-weight: 700;
+        padding-bottom: 0px;
     }
 
+    .header-text-two{
+        font-size: 24px;
+        line-height: 25px;
+        font-weight: 400;
+        color: #262626;
+        padding: 30px 0px;
+    }
+    
+    .header-btn-one{
+        max-width: 348px;
+        max-height: 91px;
+        padding: 10px 5px;
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 700;
+    }  
+
+    #cards-temp{
+        padding: 0px 25px;
+    }
+    
+    .temps-txt-2{
+        padding: 0px 21px;
+    }
+
+    .loader img{
+        position: absolute;
+        top: 40%;
+        left: 30%;
+
+    }
+
+    .load-content img{
+        width: 40%;
+    } */
 }
 
 @media screen and (max-width: 794px) and (min-width: 766px){
 
-    #header-section .container{
-        padding: 150px 20px;
+    a:hover, a.active{
+        background: none;
+        color: #E2DA15;
     }
+    #check:checked ~ ul{
+        left: 0;
+    } */
+    /* navbar-section */
 
+
+    /* #header-section .container{
+        padding: 10px 30px;
+        justify-content: center;
+        text-align: center;
+    }
     .header-text-one{
-        font-size: 30px;
+        font-size: 35px;
         line-height: 40px;
+        font-weight: 700;
+        padding-bottom: 0px;
     }
 
-    .header-text-one{
+    .header-text-two{
         font-size: 20px;
-        line-height: 30px;
+        line-height: 23px;
+        padding: 10px 0px;
     }
-}
-
-@media screen and (max-width: 768px) and (min-width: 200px){
-
-    .header-text-one{
-        font-size: 30px;
-        line-height: 40px;
-    }
-
-    .header-text-one{
-        font-size: 20px;
-        line-height: 30px;
-    }
+    
     
     .header-btn-one{
         width: 100%;
-        max-width: 100%;
+        max-width: 248px;
         height: 100%;
-        max-height: 10%;
-        border-radius: 4px;
-        padding: 5px 10px;
-        font-size: 16px;
-        line-height: 20px;
+        max-height:71px;
+        padding: 10px 5px;
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: 700;
+    }
     
+
+    .header-img{
+        width: 100%;
+        max-width: 369px;
+        height: 100%;
+        max-height: 369px;
     }
     
     #header-section .container{
-        padding: 60px 30px;
+        padding: 20px 30px;
+    }
+
+    .main1-txt-one {
+        font-size: 35px;
+        line-height: 40px;
     }
     
     #main-section-one{
@@ -282,6 +318,120 @@
 
     .main-section-two{
         padding: 53px 30px;
+    }
+
+    #cards-temp {
+        padding: 0px 36px;
+    }
+
+    .temps-txt-2 {
+        padding: 10px 15px;
+    }
+
+    .count-num{
+        font-size: 20px;
+        line-height: 30px;
+    
+    }
+    
+    .count-txt{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .main-section-three{
+        padding: 80px 40px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .main3-txt-head {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .main3-txt-body {
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .main3-img {
+        width: 100%;
+        max-width: 385px;
+        height: 100%;
+        max-height: 313px;
+    } */
+
+    /* animation */
+
+    /* .loader img{
+        position: absolute;
+        top: 40%;
+        left: 30%;
+
+    }
+
+    .load-content img{
+        width: 40%;
+    } */
+}
+
+@media screen and (max-width: 430px) and (min-width: 373px){
+    .header-text-one{
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 700;
+        padding-bottom: 0px;
+    }
+
+    .header-text-two{
+        font-size: 18px;
+        line-height: 23px;
+        padding: 10px 0px;
+    }
+    
+    
+    .header-btn-one{
+        width: 100%;
+        max-width: 248px;
+        height: 100%;
+        max-height:71px;
+        padding: 10px 5px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    
+
+    .header-img{
+        width: 100%;
+        max-width: 369px;
+        height: 100%;
+        max-height: 369px;
+    }
+    
+    #header-section .container{
+        padding: 20px 20px;
+    }
+    
+    #main-section-one{
+        padding: 20px 20px;
+    }
+
+    .main1-txt-one {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .main-section-two{
+        padding: 53px 20px;
+    }
+
+    #cards-temp {
+        padding: 0px 30px;
+    }
+
+    .temps-txt-2 {
+        padding: 10px 15px;
     }
     .count-num{
         font-size: 20px;
@@ -296,17 +446,202 @@
 
     .main-section-three{
         padding: 80px 40px;
+        justify-content: center;
+        text-align: center;
     }
 
+    .main3-txt-head {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .main3-txt-body {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .main3-img {
+        width: 100%;
+        max-width: 385px;
+        height: 100%;
+        max-height: 313px;
+    } */
 
     /* animation */
 
-    .loader img{
+    /* .loader img{
         position: absolute;
+        top: 40%;
+        left: 30%;
+
     }
+
     .load-content img{
         width: 40%;
+    } */
+}
+
+@media screen and (max-width: 323px) and (min-width: 200px){
+
+    /* navbar- section */
+    /* .logo {
+        margin: 5px;
+        width: 115px;
     }
+
+    nav{
+        padding: 12px;
+    }
+
+    .check-box{
+        display: block;
+    }
+
+    .nav-ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #131313;
+        top: 70px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    
+    .nav-li{
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+        text-transform: uppercase;
+    }
+
+    .nav-li a{
+        font-size: 20px;
+    }
+
+    nav .nav-li #nav-login{
+        border-left: none;
+    }
+    
+
+    a:hover, a.active{
+        background: none;
+        color: #E2DA15;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    } */
+    /* navbar-section */
+
+
+    /* #header-section .container{
+        padding: 10px 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    .header-text-one{
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 700;
+        padding-bottom: 0px;
+    }
+
+    .header-text-two{
+        font-size: 16px;
+        line-height: 23px;
+        padding: 10px 0px;
+    }
+    
+    
+    .header-btn-one{
+        width: 100%;
+        max-width: 248px;
+        height: 100%;
+        max-height:51px;
+        padding: 10px 5px;
+        font-size: 16px;
+        line-height: 25px;
+    }
+    
+
+    .header-img{
+        width: 100%;
+        max-width: 369px;
+        height: 100%;
+        max-height: 369px;
+    }
+    
+    #header-section .container{
+        padding: 20px 20px;
+    }
+    
+    #main-section-one{
+        padding: 20px 20px;
+    }
+
+    .main1-txt-one {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .main-section-two{
+        padding: 53px 20px;
+    }
+
+    #cards-temp {
+        padding: 0px 30px;
+    }
+
+    .temps-txt-2 {
+        padding: 10px 15px;
+    }
+
+    .count-num{
+        font-size: 20px;
+        line-height: 30px;
+    
+    }
+    
+    .count-txt{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .main-section-three{
+        padding: 80px 40px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .main3-txt-head {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .main3-txt-body {
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .main3-img {
+        width: 100%;
+        max-width: 385px;
+        height: 100%;
+        max-height: 313px;
+    } */
+
+    /* animation */
+
+    /* .loader img{
+        position: absolute;
+        top: 40%;
+        left: 30%;
+
+    }
+
+    .load-content img{
+        width: 40%;
+    } */
 }
 
 /* Media Query section */

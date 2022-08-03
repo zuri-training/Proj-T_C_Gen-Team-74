@@ -32,6 +32,7 @@ a {
 
 .main-tc-2 {
     padding-bottom: 50px;
+
 }
 
 #why .row {
@@ -54,10 +55,9 @@ a {
     color: #262626;
 }
 
-
-
 #docs {
     padding-top: 3rem;
+
 }
 
 .main-tc-3-h1 {
@@ -66,8 +66,10 @@ a {
     font-size: 2rem;
     line-height: 48px;
     color: #131313;
+
     max-width: 560px;
     max-height: 144px;
+
 }
 
 .main-tc-3-h1-2 {
@@ -93,13 +95,14 @@ a {
 
 .main-hr {
     border: 0.5px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 75px;
 }
 
 .main-tc-3-btn {
     width: 311px;
     height: 91px;
     padding: 10px;
-    background-color: #1E1E79;
+    background-color: #2D2DB6;
     border-radius: 4px;
     font-style: normal;
     font-weight: 700;
@@ -108,6 +111,7 @@ a {
     color: #FAFAFA;
     border: none;
     margin-bottom: 3rem;
+
 }
 
 .main-tc-3-btn:hover {
@@ -127,10 +131,11 @@ a {
     width: 100%;
     padding: 3rem 0;
     background-color: #262698;
+    padding: 80px 100px 70px 100px;
 }
 
 .main-tc-4-h1 {
-    font-family: 'Inter';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -144,9 +149,9 @@ a {
     max-width: 465px;
     height: 75px;
     padding: 10px;
-    background-color: #D6E2D6;
+    background-color: #E2DA15;
     border-radius: 4px;
-    font-family: 'Inter';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -158,13 +163,14 @@ a {
 }
 
 .main-tc-4-btn:hover {
-    background-color: #D6E2D6;
+    background-color: #E2DA15;
     border: 2px solid #080808;
     border-radius: 4px;
+    box-shadow: 0px 4px 12px rgba(56, 56, 56, 0.3);
 }
 
 .main-tc-4-btn:active {
-    background-color: #B2BCB2;
+    background-color: #BCB612;
     border: 2px solid #080808;
     border-radius: 4px;
 }
@@ -200,6 +206,8 @@ a {
 }
 
 .main-tc-5-faq-2 {
+    width: 100%;
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -208,13 +216,17 @@ a {
     top: -20px;
 }
 
+#main-tc-6 {
+    padding-bottom: 59px;
+}
+
 .main-tc-6-h1 {
     max-width: 531px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
-    line-height: 40px;
+    line-height: 48px;
     color: #E4ECE4;
     padding-top: 3rem;
 }
@@ -236,7 +248,7 @@ a {
     padding-left: 80px;
     /* height: 844px; */
     position: relative;
-    top: 50px;
+    top: 35px;
 }
 
 .main-tc-7-h1,
@@ -258,7 +270,7 @@ a {
     font-weight: 700;
     font-size: 1.2rem;
     line-height: 29px;
-    color: #DDE7DD;
+    color: #E4ECE4;
     padding: 24px 0 10px 0;
 }
 
@@ -278,6 +290,7 @@ a {
     outline: none;
     border: 2px solid rgba(3, 81, 98, 0.8);
     border-radius: 4px;
+    background-color: #E4ECE4;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -297,6 +310,7 @@ a {
     outline: none;
     border: 2px solid rgba(3, 81, 98, 0.8);
     border-radius: 4px;
+    background-color: #E4ECE4;
 }
 
 .main-tc-7-input::placeholder {
@@ -342,9 +356,10 @@ a {
 }
 
 .main-tc-7-submit:hover {
+    background-color: #E2DA15;
+    border: 2px solid #080808;
     box-shadow: 0px 4px 12px rgba(56, 56, 56, 0.3);
 }
-
 
 .main-tc-8-con {
     padding-bottom: 60px;
@@ -476,6 +491,12 @@ a {
     border: 3px solid #B2BCB2;
     background-color: #1E1E79;
     align-items: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #FFFFFF;
+    padding: 10px 10px;
 }
 
 .main-tc-11-sub {
@@ -491,7 +512,7 @@ a {
     color: #0A0A09;
     border: none;
     position: relative;
-    top: 2px;
+    top: 0px;
     right: 8px;
 }
 
@@ -499,6 +520,7 @@ a {
     height: 59px;
     background-color: #E2DA15;
     border-radius: 4px;
+    box-shadow: 0px 4px 12px rgba(56, 56, 56, 0.3);
 }
 
 .main-tc-11-sub:active {
@@ -603,3 +625,4 @@ a {
         position: relative;
     }
 }
+
