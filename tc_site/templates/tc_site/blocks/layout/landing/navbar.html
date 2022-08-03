@@ -1,9 +1,22 @@
 {% load static %} 
 
+
+<!-- This will be used in the modal.js file -->
+{% if show_sign_up %}
+<div id="sign-up-modal-checker" data-show-sign-up-modal="true"></div>
+{% else %}
+<div id="sign-up-modal-checker" data-show-sign-up-modal="false"></div>
+{% endif %}
+{% if show_sign_in %}
+<div id="sign-in-modal-checker" data-show-sign-in-modal="true"></div>
+{% else %}
+<div id="sign-in-modal-checker" data-show-sign-in-modal="false"></div>
+{% endif %}
+
 <nav>
   <input type="checkbox" for="check" id="check" />
   <label class="check-box" for="check"><i class="fa fa-bars"></i></label>
-  <label><img class="logo" src="{% static 'assets/landing/dinho/Group 29.png'%}" alt="logo" /></label>
+  <label><img class="logo" src="{% static 'assets/landing/dinho/Group 29.png'%}" alt="" /></label>
   <ul class="nav-ul">
     <li class="nav-li"><a class="active" href="">Home</a></li>
     <li class="nav-li"><a href=""> How It Works</a></li>
@@ -16,3 +29,38 @@
     </li>
   </ul>
 </nav>
+
+<!-- <nav class="navbar">
+    <div class="brand-logo">
+      <img class="logo" src="{% static 'assets/landing/dinho/Group 29.png'%}" alt="logo" />
+    </div>
+
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="nav-links">
+      <ul>
+        <li><a class="active" href="{% url 'tc_site:landing' %}">Home</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">FAQ</a></li>
+        {% if user.id %}
+        <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+        {% else %}
+        <li><a><div role="sign-in-button" class="sign-in">Login</div></a></li>
+        {% endif %}
+        {% if user.id %}
+        <li><a href="{% url 'tc_site:signout' %}"><button class="li-btn">
+          Log out
+        </button></a></li>
+        {% else %}
+        <li><button class="li-btn sign-up">
+          Sign Up
+        </button></li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav> -->

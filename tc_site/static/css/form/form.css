@@ -1,0 +1,227 @@
+/* CSS Styles for Form Page */
+
+#form-block {
+    
+    font-family: 'Montserrat'!important;
+    max-width: 100%;
+    font-style: normal;
+    font-size: 15px !important;
+    line-height: 40px !important;
+    min-height: fit-content;
+}
+
+
+#form-block h1 {
+    text-align: center;
+    padding: 200px 0px 100px;
+}
+@media screen and (max-width: 500px) {
+    #form-block h1 {
+        padding: 50px 0px;
+        font-size: 1.5rem;
+    }
+}
+#form-block h2 {
+    margin: 0;
+}
+#form-block ul,#form-block li,#form-block a {
+    max-width: 650px
+}
+#form-block .multi-step-form-container {
+    margin-top: 5rem;
+    max-width: auto;
+}
+#form-block .container {
+    width: auto;
+
+}
+#form-block .form-wrapper {
+    padding-top: 20px;
+    border-top: 1px solid;
+}
+#form-block section {
+    background-color: #f8f7ff;
+    border-radius: 8px;
+}
+#form-block .text-center {
+    text-align: center;
+}
+#form-block .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+#form-block .pl-0 {
+    padding-left: 0;
+}
+#form-block .btn {
+    padding: 0.3rem 1rem;
+    font-weight: bolder;
+    font-size:medium;
+    width: 175px !important;
+    background-color: #2D2DB6;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#form-block .btn.save-btn {
+    background-color: #E2DA15 !important;
+    border-color: #E2DA15 !important ;
+    color: #080808; 
+}
+#form-block .btn-container {
+    padding-top: 90px;
+}
+#form-block .btn-navigate-form-step:hover {
+    background-color: #6464b1;
+}
+#form-block .save-btn:hover{
+    background-color: #f3f1ae !important;
+}
+
+#secondurl {
+    display: none;
+}
+
+#form-block .mt-3 {
+    margin-top: 2rem;
+}
+#form-block .d-none {
+    display: none;
+}
+#form-block .form-step {
+    width: auto;
+    padding: 3rem;
+}
+#form-block .font-normal {
+    font-weight: normal;
+}
+#form-block ul.form-stepper {
+    counter-reset: section;
+    margin-bottom: 3rem;
+   
+}
+#form-block ul.form-stepper .form-stepper-box {
+    position: relative;
+    
+}
+#form-block ul.form-stepper .form-stepper-box span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    
+}
+#form-block .form-stepper-horizontal {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+#form-block ul.form-stepper > li:not(:last-of-type) {
+    margin-bottom: 0.625rem;
+    -webkit-transition: margin-bottom 0.4s;
+    -o-transition: margin-bottom 0.4s;
+    transition: margin-bottom 0.4s;
+}
+#form-block .form-stepper-horizontal > li:not(:last-of-type) {
+    margin-bottom: 0 !important;
+}
+#form-block .form-stepper-horizontal li {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+#form-block .form-stepper-horizontal li:not(:last-child):after {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 1px;
+    content: "";
+    top: 32%;
+}
+#form-block .form-stepper-horizontal li:after {
+    background-color: #fff;
+}
+<<<<<<< HEAD
+ #form-block .form-stepper-horizontal li.form-stepper-completed:after {
+    background-color: #fff;
+}
+ #form-block .form-stepper-horizontal li:last-child {
+    flex: unset;
+}
+ #form-block ul.form-stepper li a .form-stepper-box {
+=======
+#form-block .form-stepper-horizontal li.form-stepper-completed:after {
+    background-color: #fff;
+}
+#form-block .form-stepper-horizontal li:last-child {
+    flex: unset;
+}
+#form-block ul.form-stepper li a .form-stepper-box {
+>>>>>>> 207ce56ce2db38baccfd26ba2e5e1eb70dd965a0
+    display: inline-block;
+    width: 80px;
+    font-size: 12px;
+    height: 40px;
+    margin-right: 0;
+    line-height: 1.7rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.38);
+
+}
+#form-block .form-stepper .form-stepper-active .form-stepper-box {
+    background-color: #1E1E79 !important;
+    color: #fff;
+}
+#form-block .form-stepper .form-stepper-active .label {
+    color: #1E1E79 !important;
+}
+#form-block .form-stepper .form-stepper-active .form-stepper-box:hover {
+    background-color: #4361ee !important;
+    color: #fff !important;
+}
+#form-block .form-stepper .form-stepper-unfinished .form-stepper-box {
+    background-color: #fff;
+    border: 2px solid #1E1E79;
+}
+#form-block .form-stepper .form-stepper-completed .form-stepper-box {
+    background-color: #fff !important;
+    color: #1E1E79;
+    border: 2px solid;
+}
+#form-block .form-stepper .form-stepper-completed .label {
+    color: #1E1E79!important;
+}
+#form-block .form-stepper .form-stepper-completed .form-stepper-box:hover {
+    background-color: #1E1E79 !important;
+    color: #fff !important;
+}
+
+#form-block .form-stepper .form-stepper-active span.text-muted {
+    color: #fff !important;
+
+}
+#form-block .form-stepper .form-stepper-completed span.text-muted {
+    color: #1E1E79 !important;
+}
+#form-block .form-stepper .label {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+#form-block .form-stepper a {
+    cursor: default;
+}
