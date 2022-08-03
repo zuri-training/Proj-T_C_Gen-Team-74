@@ -6,6 +6,11 @@
 {% else %}
 <div id="sign-up-modal-checker" data-show-sign-up-modal="false"></div>
 {% endif %}
+{% if show_sign_in %}
+<div id="sign-in-modal-checker" data-show-sign-in-modal="true"></div>
+{% else %}
+<div id="sign-in-modal-checker" data-show-sign-in-modal="false"></div>
+{% endif %}
 
 
 <nav class="navbar">
@@ -25,8 +30,20 @@
         <li><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
         <li><a href="#">Contact</a></li>
         <li><a href="#">FAQ</a></li>
+        {% if user.id %}
+        <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+        {% else %}
         <li><a><div role="sign-in-button" class="sign-in">Login</div></a></li>
-        <li><button class="li-btn sign-up">Sign Up</button></li>
+        {% endif %}
+        {% if user.id %}
+        <li><a href="{% url 'tc_site:signout' %}"><button class="li-btn">
+          Log out
+        </button></a></li>
+        {% else %}
+        <li><button class="li-btn sign-up">
+          Sign Up
+        </button></li>
+        {% endif %}
       </ul>
     </div>
   </nav>

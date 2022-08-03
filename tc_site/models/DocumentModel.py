@@ -9,7 +9,7 @@ class DocumentModel (models.Model):
 
     #  (IDs should be unique hashes)
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    document = models.FileField(upload_to='tc_site/static/documents')
+    document = models.CharField(max_length=100000)
     # document_type = models.CharField(max_length=100)
     date_issued = models.DateField()
     company = models.ForeignKey(CompanyModel, on_delete=models.CASCADE)

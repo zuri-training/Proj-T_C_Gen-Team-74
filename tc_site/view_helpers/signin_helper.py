@@ -11,11 +11,19 @@ from django.contrib.auth import authenticate, login
 
 # Checkout other relevant imports
 from tc_site.forms.signinForm import SigninForm
+from tc_site.forms.signupForm import SignupForm
 
     # Write your logic here
 def signin_helper(request):
-    form = SigninForm()
-    if request == request.POST:
+    signin_form = SigninForm()
+    signup_form = SignupForm()
+
+    ctx = {
+        'signin_form': signin_form,
+        'signup_form': signup_form,
+        'show_sign_in': True
+    }
+    if request.method == 'POST':
         username = request.POST['username'] 
         password = request.POST['password']
         # authenticating user information
@@ -24,8 +32,8 @@ def signin_helper(request):
         if user is not None:
             login(request, user)
             messages.success(request, 'It\'s good to have you back!')
-            return redirect('gen-form')
+            return redirect('tc_site:gen-form')
         # The else condition redirects to the signin form/refreshes the page.
         messages.error(request, 'Invalid login credentials!')
-        return render(request, 'tc_site/pages/signin.html', {'form':form})
-    return render(request, 'tc_site/pages/signin.html', {'form':form})
+        return render(request, 'tc_site/pages/landing.html', ctx)
+    return render(request, 'tc_site/pages/landing.html', ctx)

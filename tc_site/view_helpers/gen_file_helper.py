@@ -105,6 +105,10 @@ def gen_file_helper(request):
         # Save the edited str as a .md file and open it
         new_md_file = open(os.path.join(BASE_DIR, 'templates', 'tc_site', 'temp', 'gen_file.md'), 'w')
         new_md_file.write(template_str)
+
+        # Move cursor to the beginning of the .md file after writing to it
+        new_md_file.seek(0)     
+
         # Create a new html file to be rendered
         html_convert = markdown.markdown(new_md_file)
 
@@ -114,7 +118,7 @@ def gen_file_helper(request):
         # Save the Document
 
         document = DocumentModel(
-            document=new_md_file,
+            document=template_str, # saving markdown string to DB
             company=company,
             date_issued=date.today()
         )
@@ -136,5 +140,5 @@ def gen_file_helper(request):
 
         # Output to the next page
     else:
-        redirect('tc_site:signup')
+        redirect('tc_site:signin')
     return # Make sure to return a valid response
