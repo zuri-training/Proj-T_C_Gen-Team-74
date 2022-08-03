@@ -1,8 +1,4 @@
 {% load static %}
-<<<<<<< HEAD
-
-
-=======
 
 <!-- This will be used in the modal.js file -->
 {% if show_sign_up %}
@@ -16,7 +12,7 @@
 <div id="sign-in-modal-checker" data-show-sign-in-modal="false"></div>
 {% endif %}
 
-<nav>
+<!-- <nav>
   <input type="checkbox" for="check" id="check" />
   <label class="check-box" for="check"><i class="fa fa-bars"></i></label>
   <label><img class="logo" src="{% static 'assets/landing/dinho/Group 29.png'%}" alt="" /></label>
@@ -31,9 +27,16 @@
       <button class="li-btn" href="#">Sign Up</button>
     </li>
   </ul>
-</nav>
+</nav> -->
 
-<!-- <nav class="navbar">
+<nav class="navbar">
+
+
+  <label><img class="logo" src="{% static 'assets/landing/dinho/Group 29.png'%}" alt="" /></label>
+  <input type="checkbox" for="check" id="check" />
+  <label class="check-box" for="check"><i class="fa fa-bars"></i></label>
+
+  <!--   
     <div class="brand-logo">
       <img class="logo" src="{% static 'assets/landing/dinho/Group 29.png'%}" alt="logo" />
     </div>
@@ -42,29 +45,68 @@
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
-    </a>
-    <div class="nav-links">
-      <ul>
-        <li><a class="active" href="{% url 'tc_site:landing' %}">Home</a></li>
-        <li><a href="#">How It Works</a></li>
-        <li><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">FAQ</a></li>
-        {% if user.id %}
-        <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-        {% else %}
-        <li><a><div role="sign-in-button" class="sign-in">Login</div></a></li>
-        {% endif %}
-        {% if user.id %}
-        <li><a href="{% url 'tc_site:signout' %}"><button class="li-btn">
+    </a> -->
+
+  <!-- <div> -->
+  <ul class="nav-ul">
+    <li class="nav-li"><a class="active" href="{% url 'tc_site:landing' %}">Home</a></li>
+    <li class="nav-li"><a href="#">How It Works</a></li>
+    <li class="nav-li"><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
+    <li class="nav-li"><a href="#">Contact</a></li>
+    <li class="nav-li"><a href="#">FAQ</a></li>
+    <hr class="nav-divider">
+    {% if user.id %}
+    <li class="nav-li"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+    {% else %}
+    <li class="nav-li"><a id="nav-login" class="sign-in">
+        <!-- <div role="sign-in-button"> -->
+        Login
+        <!-- </div> -->
+      </a>
+    </li>
+    {% endif %}
+    {% if user.id %}
+    <li class="nav-li"><a href="{% url 'tc_site:signout' %}"><button class="li-btn">
           Log out
         </button></a></li>
-        {% else %}
-        <li><button class="li-btn sign-up">
+    {% else %}
+    <li class="nav-li"><button class="li-btn sign-up">
+        Sign Up
+      </button></li>
+    {% endif %}
+  </ul>
+  <!-- </div> -->
+</nav>
+
+
+<aside class="sidebar">
+  <nav>
+    <ul class="nav-ul-aside">
+      <li class="nav-li"><a class="active" href="{% url 'tc_site:landing' %}">Home</a></li>
+      <li class="nav-li"><a href="#">How It Works</a></li>
+      <li class="nav-li"><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
+      <li class="nav-li"><a href="#">Contact</a></li>
+      <li class="nav-li"><a href="#">FAQ</a></li>
+      <hr class="nav-divider">
+      {% if user.id %}
+      <li class="nav-li"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+      {% else %}
+      <li class="nav-li"><a id="nav-login" class="sign-in">
+          <!-- <div role="sign-in-button"> -->
+          Login
+          <!-- </div> -->
+        </a>
+      </li>
+      {% endif %}
+      {% if user.id %}
+      <li class="nav-li"><a href="{% url 'tc_site:signout' %}"><button class="li-btn">
+            Log out
+          </button></a></li>
+      {% else %}
+      <li class="nav-li"><button class="li-btn sign-up">
           Sign Up
         </button></li>
-        {% endif %}
-      </ul>
-    </div>
-  </nav> -->
->>>>>>> 6c6b480cc2d7490d4a96ae3d5e15815ee8950fb3
+      {% endif %}
+    </ul>
+  </nav>
+</aside>

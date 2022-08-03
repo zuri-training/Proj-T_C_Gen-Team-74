@@ -10,104 +10,6 @@
 
 
 
-/* Navbar section */
-
-.logo{
-    margin: .5rem;
-}
-
-nav{
-    background-color: #1E1E79;
-    width: auto;
-    height: 100%;
-    padding: 10px 100px;
-}
-
-.nav-ul{
-    float: right;
-    margin-right: 5px;
-}
-
-.nav-li{
-    display: inline-block;
-    line-height: 60px;
-    margin: 0px 5px;
-}
-
-.nav-li a {
-    list-style: none;
-    font-size: 16px;
-    line-height: 32px;
-    font-weight: 400;
-    text-decoration: none;
-    color: #DDE7DD;
-    padding: 0px 10px;
-}
-
-nav .nav-li #nav-login{
-    font-size: 24px;
-    line-height: 29px;
-    font-weight: 600;
-    color: #D6E2D6;
-    border-left: 2px solid #D6E2D6;
-}
-
-nav .nav-li #nav-login:hover{
-    color: #E2DA15;
-    border: 1px solid #E2DA15;
-    transition: .5s;
-    border-radius: 4px;
-}
-
-.nav-li a.active, .nav-li a:hover{
-    border: transparent;
-    border-bottom: 2px solid #E2DA15;
-    color: #E2DA15;
-    transition: .5s;
-    line-height: 0px;
-}
-
-.nav-li .li-btn{
-    font-weight: 600;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 29px;
-    color: #080808;
-    background: #E2DA15;
-    border: transparent;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 183px;
-    height: 100%;
-    max-height: auto;
-    margin: 20px;
-    padding: 12px 10px;
-}
-
-.nav-li .li-btn:hover{
-    color: #E2DA15;
-    background: #1E1E79;
-    border: 1px solid #E2DA15;
-    transition: .6s;
-    cursor: pointer;
-}
-
-.check-box{
-    font-size: 30px;
-    color: #E2DA15;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-
-#check{
-    display: none;
-}
-
-
-/* Navbar section */
 
 
 
@@ -278,16 +180,6 @@ nav .nav-li #nav-login:hover{
 
 /* main-section-three section */
 
-
-
-
-
-
-
-
-
-
-
 /* Animation section */
 
 .loader{
@@ -335,15 +227,11 @@ nav .nav-li #nav-login:hover{
 
 
 @media screen and (max-width: 1020px) and (min-width: 980px){
-    nav{
+    /* nav{
         padding: 10px 5px;
     }
     .nav-li .li-btn{
         font-size: 24px;
-        line-height: 29px;
-        max-width: 110px;
-        height: 100%;
-        max-height: auto;
         margin: 10px 5px;
         padding: 12px 5px;
     }
@@ -363,14 +251,14 @@ nav .nav-li #nav-login:hover{
     
     .temps-txt-2{
         padding: 0px 32px;
-    }
+    } */
     
 }
 
 
 @media screen and (max-width: 990px) and (min-width: 880px){
     
-    nav{
+    /* nav{
         padding: 10px 5px;
     }
 
@@ -379,8 +267,6 @@ nav .nav-li #nav-login:hover{
     }
     .nav-li .li-btn{
         font-size: 24px;
-        line-height: 29px;
-        max-width: 110px;
         margin: 10px 5px;
         padding: 12px 5px;
     }
@@ -429,11 +315,11 @@ nav .nav-li #nav-login:hover{
 
     .load-content img{
         width: 40%;
-    }
+    } */
 }
 
 @media screen and (max-width: 870px) and (min-width: 813px){
-    nav{
+    /* nav{
         padding: 10px 5px;
     }
     
@@ -453,8 +339,6 @@ nav .nav-li #nav-login:hover{
 
     .nav-li .li-btn{
         font-size: 22px;
-        line-height: 20px;
-        max-width: 100px;
         margin: 8px 0px;
         padding: 8px 3px;
     }
@@ -505,11 +389,11 @@ nav .nav-li #nav-login:hover{
 
     .load-content img{
         width: 40%;
-    }
+    } */
 }
 
 @media screen and (max-width: 812px) and (min-width: 760px){
-    nav{
+    /* nav{
         padding: 10px 0px;
     }
     
@@ -529,8 +413,6 @@ nav .nav-li #nav-login:hover{
 
     .nav-li .li-btn{
         font-size: 22px;
-        line-height: 20px;
-        max-width: 100px;
         margin: 8px 0px;
         padding: 8px 3px;
     }
@@ -580,13 +462,13 @@ nav .nav-li #nav-login:hover{
 
     .load-content img{
         width: 40%;
-    }
+    } */
 }
 
 @media screen and (max-width: 768px) and (min-width: 426px){
 
     /* navbar- section */
-    .logo{
+    /* .logo{
         margin: .5rem 1rem;
     }
 
@@ -631,11 +513,11 @@ nav .nav-li #nav-login:hover{
     }
     #check:checked ~ ul{
         left: 0;
-    }
+    } */
     /* navbar-section */
 
 
-    #header-section .container{
+    /* #header-section .container{
         padding: 10px 30px;
         justify-content: center;
         text-align: center;
@@ -730,11 +612,11 @@ nav .nav-li #nav-login:hover{
         max-width: 385px;
         height: 100%;
         max-height: 313px;
-    }
+    } */
 
     /* animation */
 
-    .loader img{
+    /* .loader img{
         position: absolute;
         top: 40%;
         left: 30%;
@@ -743,13 +625,13 @@ nav .nav-li #nav-login:hover{
 
     .load-content img{
         width: 40%;
-    }
+    } */
 }
 
 @media screen and (max-width: 430px) and (min-width: 373px){
 
     /* navbar- section */
-    .logo{
+    /* .logo{
         margin: .5rem 1rem;
     }
 
@@ -794,11 +676,11 @@ nav .nav-li #nav-login:hover{
     }
     #check:checked ~ ul{
         left: 0;
-    }
+    } */
     /* navbar-section */
 
 
-    #header-section .container{
+    /* #header-section .container{
         padding: 10px 20px;
         justify-content: center;
         text-align: center;
@@ -891,12 +773,12 @@ nav .nav-li #nav-login:hover{
         max-width: 385px;
         height: 100%;
         max-height: 313px;
-    }
+    } */
 
 
     /* animation */
 
-    .loader img{
+    /* .loader img{
         position: absolute;
         top: 40%;
         left: 30%;
@@ -905,13 +787,13 @@ nav .nav-li #nav-login:hover{
 
     .load-content img{
         width: 40%;
-    }
+    } */
 }
 
 @media screen and (max-width: 375px) and (min-width: 323px){
 
     /* navbar- section */
-    .logo{
+    /* .logo{
         margin: .5rem 1rem;
     }
 
@@ -956,11 +838,11 @@ nav .nav-li #nav-login:hover{
     }
     #check:checked ~ ul{
         left: 0;
-    }
+    } */
     /* navbar-section */
 
 
-    #header-section .container{
+    /* #header-section .container{
         padding: 10px 20px;
         justify-content: center;
         text-align: center;
@@ -1053,11 +935,11 @@ nav .nav-li #nav-login:hover{
         max-width: 385px;
         height: 100%;
         max-height: 313px;
-    }
+    } */
 
     /* animation */
 
-    .loader img{
+    /* .loader img{
         position: absolute;
         top: 40%;
         left: 30%;
@@ -1066,13 +948,13 @@ nav .nav-li #nav-login:hover{
 
     .load-content img{
         width: 40%;
-    }
+    } */
 }
 
 @media screen and (max-width: 323px) and (min-width: 200px){
 
     /* navbar- section */
-    .logo {
+    /* .logo {
         margin: 5px;
         width: 115px;
     }
@@ -1118,11 +1000,11 @@ nav .nav-li #nav-login:hover{
     }
     #check:checked ~ ul{
         left: 0;
-    }
+    } */
     /* navbar-section */
 
 
-    #header-section .container{
+    /* #header-section .container{
         padding: 10px 20px;
         justify-content: center;
         text-align: center;
@@ -1216,11 +1098,11 @@ nav .nav-li #nav-login:hover{
         max-width: 385px;
         height: 100%;
         max-height: 313px;
-    }
+    } */
 
     /* animation */
 
-    .loader img{
+    /* .loader img{
         position: absolute;
         top: 40%;
         left: 30%;
@@ -1229,7 +1111,7 @@ nav .nav-li #nav-login:hover{
 
     .load-content img{
         width: 40%;
-    }
+    } */
 }
 
 /* Media Query section */
