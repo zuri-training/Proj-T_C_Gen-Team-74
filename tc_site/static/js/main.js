@@ -1,6 +1,3 @@
-// You can create your own js files for your pages as need arises and link them to the relevant pages
-
-//Dinho 
 
 //Animation function
 document.querySelector('.project').style.display='none'
@@ -10,17 +7,6 @@ setTimeout(() => {
     document.querySelector('.project').style.display='block'
     document.querySelector('.loader').style.display='none'
 },2000)
-
-
-//Navbar Toggler function
-
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navbarLinks = document.getElementsByClassName('nav-links')[0]
-
-
-toggleButton.addEventListener('click', ()=> {
-    navbarLinks.classList.toggle('active')
-})
 
 
 //Counter Function
