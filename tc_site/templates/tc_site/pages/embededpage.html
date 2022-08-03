@@ -8,5 +8,17 @@
 </head>
 <body>
     <!-- HTML for this page will be included dynamically from the back end -->
+    <button id="emb" onClick="emb()">Embed</button>
+    <div><iframe id="iFrame"></iframe></div>
+    <script>
+        var iframe = document.getElementById("iFrame");
+        function emb() {
+        iframe.src = "{{}}";
+        height = "200";
+        width = "300";
+        }
+
+    </script>
+    
 </body>
 </html>

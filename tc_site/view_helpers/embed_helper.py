@@ -6,7 +6,21 @@
 # Import Forms from the forms folder
 
 from django.shortcuts import render, redirect
+from tc_site.forms import GenDocumentForm
+from tc_site.models import DocumentModel
 
 def embed_helper(request):
     # Write your logic here
-    return # Make sure to return a valid response
+
+    if request.method == 'GET':
+        form = GenDocumentForm(request.GET)
+        if form.is_valid():
+            form.save()
+            return redirect('/pages')
+        else:
+            form = GenDocumentForm()
+        
+            args = {'form' : form}
+            return render(request, '/pages/embededpage.html', args) # Make sure to return a valid response
+
+    

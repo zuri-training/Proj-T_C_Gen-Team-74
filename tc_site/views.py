@@ -1,3 +1,4 @@
+from wsgiref.util import request_uri
 from django.shortcuts import render
 
 # Helper imports
@@ -37,9 +38,10 @@ def gen_file (request):
     # Locate and put your logic in the view_helper directory of this app
     return gen_file_helper(request)
 
-def embed (request):
+def embed (request, userID, docID):
     # Locate and put your logic in the view_helper directory of this app
-    return embed_helper(request)
+
+    return embed_helper(request, 'tc_site/pages/embededpage.html', {'userID' : userID}, {'docID' : docID})
 
 def download (request):
     # Locate and put your logic in the view_helper directory of this app
