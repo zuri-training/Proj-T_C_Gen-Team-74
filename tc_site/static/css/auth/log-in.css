@@ -5,13 +5,6 @@
   --main-blue: rgb(45, 45, 182);
 }
 
-.modals * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat";
-}
-
 .backdrop-wrapper {
   position: fixed;
   z-index: 100;
@@ -28,7 +21,7 @@
 .backdrop {
   position: fixed;
   background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(1rem);
+  backdrop-filter: blur(3px);
   top: 0;
   bottom: 0;
   left: 0;
@@ -149,7 +142,7 @@
   margin-bottom: 25px;
 }
 
-.modals button {
+.modals .button {
   display: flex;
   justify-content: center;
   align-items: center;

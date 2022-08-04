@@ -13,14 +13,14 @@
   font-family: "Montserrat";
 }
 
-/* .modals {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%);
-  transform: translateX(-50%);
-  z-index: 1;
-} */
+.error-alert {
+  width: 80%;
+  padding: 0.2rem;
+  margin: .5rem auto 0;
+}
+.error-alert li {
+  padding: 0.5rem;
+}
 
 .modals a {
   text-decoration: none;
