@@ -1,130 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap');
 
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
-
 .project {
     position: relative;
 }
-
-/* Navbar section */
-
-.logo{
-    margin: .5rem;
-}
-
-.navbar{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1E1E79;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    padding: 0px 145px;
-} 
-
-.nav-links ul{
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.nav-links li{
-    list-style: none;
-    font-size: 16px;
-    line-height: 19.5px;
-    font-weight: 400;
-}
-
-.nav-links li:nth-child(5){
-    padding-right: 180px;
-}
-
-.nav-links li a{
-    text-decoration: none;
-    color: #DDE7DD;
-    padding: 32px;
-    display: block;
-}
-.nav-links li:nth-child(6){
-    color: #D6E2D6;
-    font-size: 24px;
-    line-height: 29.26px;
-    font-weight: 600;
-}
-
-
-.nav-links li:hover{
-    transition: 0.6s ease-in-out;
-}
-.nav-links li a.active{
-    line-height: 0px;
-    border-bottom: 2px solid #E2DA15;
-    color: #E2DA15;
-}
-
-.nav-links li .li-btn{
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 29.26px;
-    color: #080808;
-    background: #E2DA15;
-    border: transparent;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 183px;
-    height: 100%;
-    max-height: 53px;
-    margin: 20px;
-    padding: 12px, 10px, 12px, 10px;
-
-}
-
-.nav-links li .li-btn:hover{
-    color: #080808;
-    background: #E2DA15;
-    border: 1px solid #000000;
-    transition: all 6s ease-in-out;
-    cursor: pointer;
-}
-
-/* Toggler icon */
-
-.toggle-button{
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-}
-
-
-.toggle-button .bar{
-    height: 3px;
-    width: 100%;
-    transition: all .6s ease-in-out;
-    background-color: white;
-    border-radius: 10px;
-    transition: all 0.3s linear;
-}
-
-/* Toggler icon */
-
-
-/* Navbar section */
-
-
 
 /* Header section */
 
@@ -133,7 +11,8 @@
 }
 
 #header-section .container{
-    padding: 180px 110px 100px;
+    padding: 40px;
+    height: 100vh;
 }
 
 .header-img{
@@ -145,7 +24,7 @@
 
 .header-text-one{
     font-size: 56px;
-    line-height: 68.26px;
+    line-height: 68px;
     font-weight: 700;
     color: #131313;
     padding-bottom: 20px;
@@ -155,7 +34,7 @@
     font-size: 24px;
     line-height: 32px;
     font-weight: 400;
-    color: #4A4A4A;
+    color: #262626;
     padding: 30px 0px;
 }
 
@@ -170,7 +49,7 @@
     background: #262698;
     color: #EAF0EA;
     font-size: 24px;
-    line-height: 29.26px;
+    line-height: 29px;
     font-weight: 700;
     border: transparent;
 
@@ -192,6 +71,9 @@
     text-align: center;
     padding: 60px 120px;
 }
+#main-section-one .row {
+    justify-content: center;
+}
 
 .main1-txt-one,.main1-txt-two,.temps-txt-1,.temps-txt-2{
     color: #FFFFFF;
@@ -201,23 +83,12 @@
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
-}
-
-.main1-txt-two{
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 24px;
-    padding-bottom: 20px;
-}
-
-#cards-temp{
-    padding: 0px 88px;
+    padding-bottom: 30px;
 }
 
 .card-img{
-    max-width: 100%;
-    width: 189px;
-    height: 149px;
+    max-width: 300px;
+    width: 100%;
     max-height: 100%;
 }
 
@@ -225,7 +96,6 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 48px;
-
 }
 
 .temps-txt-2{
@@ -237,13 +107,17 @@
 
 /* main-section-one section */
 
-
+@media screen and (max-width: 800px) {
+    #main-section-one {
+        padding: 2rem 1rem;
+    }
+}
 
 /* main-section-two section */
 .main-section-two{
     background: #F5F5F5;
     text-align: center;
-    padding: 83px 40px;
+    padding: 40px;
 }
 
 .counter-container{
@@ -252,19 +126,28 @@
 
 .count-num{
     color: #131313;
-    font-size: 48px;
+    font-size: 2rem;
     line-height: 39.83px;
     font-weight: 600;
-
 }
 
 .count-txt{
     color: #000000;
-    font-size: 32px;
+    font-size: 1.5rem;
     line-height: 39.83px;
     font-weight: 400;
+    margin: 0 auto;
+    width: max-content;
 }
 
+@media screen and (max-width: 500px) {
+    .count-num{
+        font-size: 36px;
+    }
+    .count-txt{
+        font-size: 1rem;
+    }
+}
 
 /* main-section-two section */
 
@@ -272,7 +155,7 @@
 /* main-section-three section */
 
 .main-section-three{
-    padding: 100px 140px;
+    padding: 100px 0px;
 }
 
 .main3-img{
@@ -296,16 +179,6 @@
 }
 
 /* main-section-three section */
-
-
-
-
-
-
-
-
-
-
 
 /* Animation section */
 
@@ -338,216 +211,117 @@
     }
 }
 
+/* Animation section ends */
 
-
-/* Animation section */
-
-
-
-/* Media Query section */
-
-@media screen and (max-width: 1253px) and (min-width: 1204px){
-    .logo{
-        margin: 0.5rem;
-    }
-
-    .nav-links li a{
-        padding: 40px 5px;
-    }
-    .nav-links li:nth-child(5){
-        padding-right: 130px;
-    }
-}
-
-@media screen and (max-width: 1204px) and (min-width: 992px){
-    .logo{
-        margin: 0.4rem;
-    }
-
-    .navbar{
-        padding: 0px 25px;
-    }
-
-    .nav-links li a{
-        padding: 40px 5px;
-    }
-    .nav-links li:nth-child(5){
-        padding-right: 150px;
-    }
-    .nav-links li a.active{
-        padding: 46px 5px;
-        margin: 0px;
-    }
-}
 
 @media screen and (max-width: 992px) and (min-width: 795px){
-    .logo{
-        margin: 0px;
-    }
-
-    .navbar{
-        padding: 0px 5px;
-    }
-
-    .nav-links li a{
-        padding: 40px 5px;
-    }
-    .nav-links li:nth-child(5){
-        padding-right: 40px;
-    }
-    .nav-links li a.active{
-        padding: 46px 5px;
-        margin: 0px;
-    }
-
 
     #header-section .container{
-        padding: 150px 20px;
+        padding: 30px 20px;
     }
-
-}
-
-@media screen and (max-width: 794px) and (min-width: 766px){
-    .logo{
-        margin: 0rem;
-    }
-    .navbar{
-        padding: 0px 5px;
-    }
-
-    .nav-links li a{
-        padding: 40px 5px;
-    }
-    .nav-links li:nth-child(5){
-        padding-right: 1px;
-    }
-    .nav-links li a.active{
-        padding: 48px 5px;
-        margin: 0px;
-    }
-
-
-
-    #header-section .container{
-        padding: 150px 20px;
-    }
-
     .header-text-one{
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 45px;
+        line-height: 50px;
+        font-weight: 700;
+        padding-bottom: 0px;
     }
 
-    .header-text-one{
-        font-size: 20px;
-        line-height: 30px;
-    }
-}
-
-@media screen and (max-width: 768px) and (min-width: 200px){
-
-    /* navbar- section */
-    .logo{
-        margin: 0px;
-    }
-    .navbar{
-        padding: 0px 20px;
-        height: 100%;
-        max-height: 100%;
-        position: relative;
-        top: 0;
-    } 
-
-    .nav-links li:nth-child(5){
-        padding-right: 0px;
-    }
-
-    .nav-links li .li-btn{
-
-        font-size: 18px;
-        border-radius: 4px;
-        width: 100%;
-        max-width: 30%;
-        height: 100%;
-        max-height: 60%;
-        margin: 10px;
-        padding: 
-        10px, 0px;
-    
-    }
-
-    .toggle-button{
-        display: flex;
-        transition: all 0.5s;
-    }
-
-    .toggle-button .bar{
-        transition: all 0.5s;
-    }
-
-
-    .nav-links{
-        display: none;
-        width: 100%;
-    }
-
-    .navbar{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links ul{
-        width: 100%;
-        flex-direction: column;
-        transition: all 0.5s;
-    }
-
-    .nav-links li{
-        text-align: center;
-    }
-
-    .nav-links li a{
-        padding: .5rem 1rem;
-    }
-
-    .nav-links.active{
-        display: flex;
-    }
-
-    /* navbar-section */
-
-
-    .header-text-one{
-        font-size: 30px;
-        line-height: 40px;
-    }
-
-    .header-text-one{
-        font-size: 20px;
-        line-height: 30px;
+    .header-text-two{
+        font-size: 24px;
+        line-height: 25px;
+        font-weight: 400;
+        color: #262626;
+        padding: 30px 0px;
     }
     
     .header-btn-one{
-        width: 100%;
-        max-width: 100%;
-        height: 100%;
-        max-height: 10%;
-        border-radius: 4px;
-        padding: 5px 10px;
-        font-size: 16px;
-        line-height: 20px;
+        max-width: 348px;
+        max-height: 91px;
+        padding: 10px 5px;
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 700;
+    }
+
+    .loader img{
+        position: absolute;
+        top: 40%;
+        left: 30%;
+
+    }
+
+    .load-content img{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 794px) and (min-width: 766px){
+
+    a:hover, a.active{
+        background: none;
+        color: #E2DA15;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    } 
+}
+
+@media screen and (max-width: 430px) and (min-width: 373px){
+    .header-text-one{
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 700;
+        padding-bottom: 0px;
+    }
+
+    .header-text-two{
+        font-size: 18px;
+        line-height: 23px;
+        padding: 10px 0px;
+    }
     
+    
+    .header-btn-one{
+        width: 100%;
+        max-width: 248px;
+        height: 100%;
+        max-height:71px;
+        padding: 10px 5px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    
+
+    .header-img{
+        width: 100%;
+        max-width: 369px;
+        height: 100%;
+        max-height: 369px;
     }
     
     #header-section .container{
-        padding: 60px 30px;
+        padding: 20px 20px;
     }
     
     #main-section-one{
-        padding: 20px 30px;
+        padding: 20px 20px;
+    }
+
+    .main1-txt-one {
+        font-size: 30px;
+        line-height: 40px;
     }
 
     .main-section-two{
-        padding: 53px 30px;
+        padding: 53px 20px;
+    }
+
+    #cards-temp {
+        padding: 0px 30px;
+    }
+
+    .temps-txt-2 {
+        padding: 10px 15px;
     }
     .count-num{
         font-size: 20px;
@@ -561,18 +335,24 @@
     }
 
     .main-section-three{
-        padding: 80px 40px;
+        padding: 80px 0;
+        justify-content: center;
     }
 
-
-    /* animation */
-
-    .loader img{
-        position: absolute;
+    .main3-txt-head {
+        font-size: 36px;
+        line-height: 48px;
     }
-    .load-content img{
-        width: 40%;
+
+    .main3-txt-body {
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .main3-img {
+        width: 100%;
+        max-width: 385px;
+        height: 100%;
+        max-height: 313px;
     }
 }
-
-/* Media Query section */

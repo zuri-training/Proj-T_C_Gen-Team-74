@@ -1,4 +1,4 @@
-{% extends 'tc_site/pages/base.html' %}
+{% extends 'tc_site/pages/landing/base.html' %}
 {% load static %}
 {% block meta %}
 <meta charset="UTF-8">
@@ -16,10 +16,6 @@
 
 <!-- Change version number to force static files to reload styles -->
 
-<link rel="stylesheet" href="{% static 'css/landing/dinho.css' %}?version=2" />
-<link rel="stylesheet" href="{% static 'css/landing/taiwo.css' %}?version=2" />
-<link rel="stylesheet" href="{% static 'css/auth/log-in.css' %}?version=1" />
-<link rel="stylesheet" href="{% static 'static\css\sign-up.css' %}?version=1" />
 {% endblock %}
 
 {% block content %}
@@ -69,6 +65,22 @@
 {% include 'tc_site/blocks/landing/main-section-7.html' %}
 
 <!-- main-section-seven -->
+
+<!-- main-section-eight -->
+
+{% include 'tc_site/blocks/landing/testimonials.html' %}
+
+<!-- main-section-eight -->
+
+<!-- main-section-nine -->
+
+<article class="container-fluid footer">
+  {% include 'tc_site/blocks/landing/contact.html' %}
+</article>
+
+<!-- main-section-nine -->
+
+
 
 <!-- end of taiwoak's html code-->
 

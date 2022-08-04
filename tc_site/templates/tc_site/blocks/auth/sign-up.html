@@ -12,6 +12,7 @@
       <p class="sign-up_heading">Get Started Here!</p>
       <p>Create an account with QuickTerms and get started right away.</p>
     </div>
+ Wellington_1
     <form action="{% url 'tc_site:signup' %}" method="post" id="sign-up_form">
       <div class="fields">
         <label for="first_name">Email Address </label>
@@ -44,6 +45,30 @@
       <div class="fields">
         <label for="email">Email Address </label>
         {{signup_form.email}} -->
+==
+    {% if form.errors %}
+    <div class="alert alert-warning alert-dismissible fade show error-alert" role="alert">
+      {{signup_form.errors.last_name}}
+      {{signup_form.errors.first_name}}
+      {{signup_form.errors.username}}
+      {{signup_form.errors.email}}
+      {{signup_form.errors.password}}
+      {{signup_form.errors.password2}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endif %}
+
+    <form action="{% url 'tc_site:signup' %}" method="post">
+      {% csrf_token %}
+      <div class="fields">
+        <label for="username">Username </label>
+        {{signup_form.username}}
+        <!-- <input name="email" placeholder="johndoe@gmail.com" type="email" id="email_field" required /> -->
+      </div>
+      <div class="fields">
+        <label for="email">Email Address </label>
+        {{signup_form.email}}
+ main
         <!-- <input name="email" placeholder="johndoe@gmail.com" type="email" id="email_field" required /> -->
       </div>
 
@@ -59,6 +84,7 @@
       </div>
 
       <div class="fields">
+ Wellington_1
 
         <label for="create_password">Create Password</label>
         <div class="icon_group">
@@ -99,6 +125,19 @@
         <label for="password2">Verify Password</label>
         {{signup_form.password2}}
         <i class="bi bi-eye-slash togglePassword" ></i> -->
+===
+        <label for="password">Create Password</label>
+        {{signup_form.password}}
+        <i class="bi bi-eye-slash togglePassword"></i>
+
+        <!-- <input type="password" name="password" placeholder="Minimum of 8 characters" min="8" class="password" required /> -->
+      </div>
+
+      <div class="fields">
+        <label for="password2">Verify Password</label>
+        {{signup_form.password2}}
+        <i class="bi bi-eye-slash togglePassword" ></i>
+ main
        <!-- <input type="password" name="password2" placeholder="Enter your password" min="8" class="password" required /> -->
 
         <p>

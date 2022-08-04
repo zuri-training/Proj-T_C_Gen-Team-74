@@ -1,23 +1,108 @@
 {% load static %}
-<nav class="navbar">
-    <div class="brand-logo">
-      <img class="logo" src="{% static 'assets/landing/dinho/Group 29.png'%}" alt="logo" />
+
+<!-- This will be used in the modal.js file -->
+{% if show_sign_up %}
+<div id="sign-up-modal-checker" data-show-sign-up-modal="true"></div>
+{% else %}
+<div id="sign-up-modal-checker" data-show-sign-up-modal="false"></div>
+{% endif %}
+{% if show_sign_in %}
+<div id="sign-in-modal-checker" data-show-sign-in-modal="true"></div>
+{% else %}
+<div id="sign-in-modal-checker" data-show-sign-in-modal="false"></div>
+{% endif %}
+
+<nav id="landing-navbar" class="navbar">
+  <div class="container">
+    <a href="{% url 'tc_site:landing' %}">
+      <div class="nav-logo">
+        <div>
+          <img class="logo" src="{% static 'assets/landing/navbar/Vector.png'%}" alt="logo" />
+        </div>
+        <div>
+          <img class="logo" src="{% static 'assets/landing/navbar/uickTerms.png'%}" alt="logo" />
+        </div>
+      </div>
+    </a>
+    <div class="menu-wrapper">
+      <input type="checkbox" name="toggler" id="toggler" />
+      <div class="menu">
+        <div class="menu-line"></div>
+      </div>
+
+      <div class="nav">
+        <ul class="nav-links">
+          <li class="nav-item active"><a href="{% url 'tc_site:landing' %}">Home</a></li>
+          <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">How It Works</a></li>
+          <li class="nav-item"><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
+          <li class="nav-item"><a href="{% url 'tc_site:landing' %}#contact">Contact</a></li>
+          <li class="nav-item"><a href="{% url 'tc_site:landing' %}#faq">FAQ</a></li>
+        </ul>
+        <ul class="nav-auth-btns nav-links">
+          <li>
+            {% if user.id %}
+            <a class="dashboard-link" href="{% url 'tc_site:coming-soon' %}">
+              <img src="{% static 'assets/landing/navbar/user-icon.png' %}" class="user-icon" alt="user-icon">
+              <span>{{user.username}}</span>
+            </a>
+            {% else %}
+            <a>
+              <div role="sign-in-button" class="sign-in nav-item sec-btn">Login</div>
+            </a>
+            {% endif %}
+          </li>
+          <li>
+            {% if user.id %}
+            <button class="pri-btn">
+              <a href="{% url 'tc_site:signout' %}">
+                Log out
+              </a>
+            </button>
+            {% else %}
+            <button class="pri-btn sign-up">
+              Sign Up
+            </button>
+            {% endif %}
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <a href="#" class="toggle-button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </a>
-    <div class="nav-links">
-      <ul>
-        <li><a class="active" href="{% url 'tc_site:landing' %}">Home</a></li>
-        <li><a href="#">How It Works</a></li>
-        <li><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a><div role="sign-in-button" class="sign-in">Login</div></a></li>
-        <li><button class="li-btn sign-up">Sign Up</button></li>
+    <div class="nav-lg">
+      <ul class="nav-links links">
+        <li class="nav-item active"><a href="{% url 'tc_site:landing' %}">Home</a></li>
+        <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">How It Works</a></li>
+        <li class="nav-item"><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
+        <li class="nav-item"><a href="{% url 'tc_site:landing' %}#contact">Contact</a></li>
+        <li class="nav-item"><a href="{% url 'tc_site:landing' %}#faq">FAQ</a></li>
+      </ul>
+      <ul class="nav-auth-btns nav-links">
+        <li>
+          {% if user.id %}
+          <a class="dashboard-link" href="{% url 'tc_site:coming-soon' %}">
+            <img src="{% static 'assets/landing/navbar/user-icon.png' %}" class="user-icon" alt="user-icon">
+            <span>{{user.username}}</span>
+          </a>
+          {% else %}
+          <a>
+            <div role="sign-in-button" class="sign-in sec-btn">Login</div>
+          </a>
+          {% endif %}
+        </li>
+        <li>
+          <button class="pri-btn">
+            {% if user.id %}
+            <a href="{% url 'tc_site:signout' %}">
+              Log out
+            </a>
+            {% else %}
+            <div class="sign-up">
+              Sign Up
+            </div>
+            {% endif %}
+          </button>
+        </li>
       </ul>
     </div>
-  </nav>
+  </div>
+</nav>

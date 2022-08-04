@@ -1,28 +1,23 @@
- {% load static %}
- 
- <!-- header-section -->
-    <div id="header-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <img
-                class="header-img"
-                src="{% static 'assets/landing/dinho/—Pngtree—terms and conditions flat design_5870935 1.png'%}"
-                alt=""
-              />
-            </div>
-            <div class="col-md-6">
-              <p class="header-text-one">
-                Terms & Conditions and Privacy Policy Generator
-              </p>
-              <p class="header-text-two">
-                We offer you customized terms & conditions and privacy policy
-                for websites, mobile apps, desktop apps, ecommerce and many more
-                to protect and promote your business.
-              </p>
-              <button class="header-btn-one">Get Started For FREE</button>
-            </div>
-          </div>
-        </div>
-      </div>
-  <!-- header-section -->
+{% load static %}
+
+<!-- header-section -->
+<div id="hero">
+  <div class="hero-bg">
+    <img src="{% static 'assets/landing/hero/hero-bg.png' %}" alt="hero-bg">
+  </div>
+  <div class="container">
+    <div class="text-content">
+      <h1>
+        Terms & Conditions and Privacy Policy Generator
+      </h1>
+      <p class="text">
+        We offer you customized terms & conditions and privacy policy
+        for websites, mobile apps, desktop apps, e-commerce and many more
+        to protect and promote your business.
+      </p>
+    </div>
+    <a class="button" href="{% url 'tc_site:gen-form' %}">Get Started For FREE</a>
+  </div>
+
+</div>
+<!-- header-section -->

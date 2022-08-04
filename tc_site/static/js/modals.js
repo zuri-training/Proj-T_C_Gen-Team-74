@@ -1,9 +1,9 @@
-const togglePasswordBtn = document.querySelector('#togglePassword');
+const togglePasswordBtns = document.querySelectorAll('.togglePassword'); // I changed the id to a class so I could target multiple buttons at once
 const passwords = document.querySelectorAll('.password');
 
-passwords.forEach((password) => {
+passwords.forEach((password, id) => {
 
-  togglePasswordBtn.addEventListener('click', function () {
+  togglePasswordBtns[id]?.addEventListener('click', function () {
     // toggle the type attribute
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', type);
@@ -24,14 +24,18 @@ function enableBtn() {
   }
 }
 
+// Get the show-sign-up-cheker from the landing block
+signupChecker = document.getElementById('sign-up-modal-checker');
+signinChecker = document.getElementById('sign-in-modal-checker');
 
-let signupModalActive = false;
-let signinModalActive = false;
+// Create a toggle by checking if the route was redirected to 'signup' or 'signin'
+let signupModalActive = signupChecker?.dataset?.showSignUpModal == 'true' ? true : false;
+let signinModalActive = signinChecker?.dataset?.showSignInModal == 'true' ? true : false;
 
 // Toggle signup modal
 const signupBtns = document.querySelectorAll('.sign-up')
 const signupModal = document.getElementById('sign-up-modal');
-signupModal.style.display = 'none';
+signupModal.style.display = signupModalActive ? 'grid' : 'none';
 
 
 signupBtns.forEach((signupBtn) => {
@@ -54,7 +58,7 @@ signupBtns.forEach((signupBtn) => {
 // Toggle signin modal
 const signinBtns = document.querySelectorAll('.sign-in');
 const signinModal = document.getElementById('sign-in-modal');
-signinModal.style.display = 'none';
+signinModal.style.display = signinModalActive  ? 'grid' : 'none';
 
 signinBtns.forEach((signinBtn) => {
 
