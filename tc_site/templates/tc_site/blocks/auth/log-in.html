@@ -3,7 +3,7 @@
   <div class="backdrop"></div>
   <div class="modals login_container">
     <p class="heading">Login to your account</p>
-    <form action="{% url 'tc_site:signin' %}" method="post">
+    <form action="{% url 'tc_site:signin' %}" method="post" id="log-in_form">
       <div class="fields">
         <label for="first_name">Username</label>
         <input type="text" name="" placeholder="John Doe" required />
@@ -12,8 +12,14 @@
       <div class="fields">
         <label for="password">Password</label>
         <div class="icon_group">
-          <input type="password" name="enter_password" placeholder="Enter your password" min="8" class="password"
-            required />
+          <input
+            type="password"
+            name="enter_password"
+            placeholder="Enter your password"
+            min="8"
+            class="password"
+            required
+          />
           <i class="bi bi-eye-slash" id="togglePassword"></i>
         </div>
       </div>
