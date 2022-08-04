@@ -3,9 +3,6 @@
   <div class="backdrop"></div>
   <div class="modals login_container">
     <p class="heading">Login to your account</p>
-<<<<<<< HEAD
-    <form action="{% url 'tc_site:signin' %}" method="post" id="log-in_form">
-=======
     {% if form.errors %}
     <div class="alert alert-warning alert-dismissible fade show error-alert" role="alert">
       {{signin_form.errors.username}}
@@ -13,19 +10,17 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     {% endif %}
-    <form action="{% url 'tc_site:signin' %}" method="post">
+    <form action="{% url 'tc_site:signin' %}" method="post" id="log-in_form">
       {% csrf_token %}
->>>>>>> d75bc922ee51a96b681d14c6d8634fe689c93faf
       <div class="fields">
         <label for="first_name">Username</label>
-        {{signin_form.username}}
-        <!-- <input type="text" name="" placeholder="John Doe" required /> -->
+        <!-- {{signin_form.username}} -->
+        <input type="text" name="" placeholder="John Doe" required />
       </div>
 
       <div class="fields">
         <label for="password">Password</label>
         <div class="icon_group">
-<<<<<<< HEAD
           <input
             type="password"
             name="enter_password"
@@ -34,13 +29,9 @@
             class="password"
             required
           />
+          <!-- {{signin_form.password}} -->
           <i class="bi bi-eye-slash" id="togglePassword"></i>
-=======
-          {{signin_form.password}}
-          <!-- <input type="password" name="enter_password" placeholder="Enter your password" min="8" class="password"
-            required /> -->
-          <i class="bi bi-eye-slash togglePassword"></i>
->>>>>>> d75bc922ee51a96b681d14c6d8634fe689c93faf
+          <!-- <i class="bi bi-eye-slash togglePassword"></i> -->
         </div>
       </div>
       <span id="forgot"><a href="#"> Forgot Password? </a></span>

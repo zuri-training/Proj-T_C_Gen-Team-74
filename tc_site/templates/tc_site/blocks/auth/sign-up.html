@@ -12,7 +12,6 @@
       <p class="sign-up_heading">Get Started Here!</p>
       <p>Create an account with QuickTerms and get started right away.</p>
     </div>
-<<<<<<< HEAD
     <form action="{% url 'tc_site:signup' %}" method="post" id="sign-up_form">
       <div class="fields">
         <label for="first_name">Email Address </label>
@@ -23,8 +22,7 @@
           id="email_field"
           required
         />
-=======
-    {% if form.errors %}
+    <!-- {% if form.errors %}
     <div class="alert alert-warning alert-dismissible fade show error-alert" role="alert">
       {{signup_form.errors.last_name}}
       {{signup_form.errors.first_name}}
@@ -40,14 +38,13 @@
       {% csrf_token %}
       <div class="fields">
         <label for="username">Username </label>
-        {{signup_form.username}}
+        {{signup_form.username}} -->
         <!-- <input name="email" placeholder="johndoe@gmail.com" type="email" id="email_field" required /> -->
-      </div>
+      <!-- </div>
       <div class="fields">
         <label for="email">Email Address </label>
-        {{signup_form.email}}
+        {{signup_form.email}} -->
         <!-- <input name="email" placeholder="johndoe@gmail.com" type="email" id="email_field" required /> -->
->>>>>>> d75bc922ee51a96b681d14c6d8634fe689c93faf
       </div>
 
       <div class="fields">
@@ -62,7 +59,7 @@
       </div>
 
       <div class="fields">
-<<<<<<< HEAD
+
         <label for="create_password">Create Password</label>
         <div class="icon_group">
           <input
@@ -90,21 +87,20 @@
         </div>
       </div>
       <div class="fields">
-=======
-        <label for="password">Create Password</label>
+
+        <!-- <label for="password">Create Password</label>
         {{signup_form.password}}
-        <i class="bi bi-eye-slash togglePassword"></i>
+        <i class="bi bi-eye-slash togglePassword"></i> -->
 
         <!-- <input type="password" name="password" placeholder="Minimum of 8 characters" min="8" class="password" required /> -->
-      </div>
+      <!-- </div>
 
       <div class="fields">
         <label for="password2">Verify Password</label>
         {{signup_form.password2}}
-        <i class="bi bi-eye-slash togglePassword" ></i>
+        <i class="bi bi-eye-slash togglePassword" ></i> -->
        <!-- <input type="password" name="password2" placeholder="Enter your password" min="8" class="password" required /> -->
 
->>>>>>> d75bc922ee51a96b681d14c6d8634fe689c93faf
         <p>
           <input
             type="checkbox"
