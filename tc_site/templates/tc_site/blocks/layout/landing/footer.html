@@ -1,18 +1,15 @@
 {% load static %}
 <footer>
-  <article class="container-fluid footer">
-    {% include 'tc_site/blocks/landing/contact.html' %}
-  </article>
   <div class="footer-hr1"></div>
   <article class="footer2">
     <div class="container">
       <section class="row footer-content">
-        <div class="col-md-3 col-lg-2 col-sm-4 footer-logo">
-          <img src="{% static 'assets/landing/taiwo/logo.png' %}" alt="QuickTerms" width="200px" height="77px"
-            class="main-tc-9-img">
+        <div class="col-md-3 col-sm-4 footer-logo">
+          <a href="{% url 'tc_site:landing' %}"><img src="{% static 'assets/landing/taiwo/logo.png' %}" alt="QuickTerms" width="200px" height="77px"
+            class="main-tc-9-img"></a>
           <p class="main-tc-9-p">Zuri training, Team 74.</p>
         </div>
-        <div class="col-md-3 col-lg-2 col-sm-4 footer-link">
+        <div class="col-sm-4 col-md-3 footer-link">
           <ul>
             <li class="main-tc-10-p">Product</li>
             <li><a href="#" class="main-tc-10-link">Privacy Policy Generator</a></li>

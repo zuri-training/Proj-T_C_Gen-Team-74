@@ -15,4 +15,4 @@ class DocumentModel (models.Model):
     company = models.ForeignKey(CompanyModel, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.document.name
+        return "Document " + str(self.id) + ' - ' + str(self.date_issued)

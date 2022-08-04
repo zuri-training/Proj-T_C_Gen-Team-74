@@ -17,7 +17,7 @@
     position: absolute;
     top: 12rem;
     left: 50%;
-    width: 80%;
+    width: 90%;
     max-width: 994px;
     margin: 0 auto;
     transform: translateX(-50%);
@@ -66,11 +66,11 @@
 
 @media (max-width: 600px) {
     .hero-bg img {
-        height: 70vh;
+        height: 90vh;
     }
 
     #hero .container {
-        top: 8rem;
+        top: 12rem;
     }
 
     #hero .text-content h1 {
@@ -83,17 +83,29 @@
         margin-bottom: 1.5rem;
     }
 
-
     #hero .button {
         font-size: 1rem;
     }
 }
 
 @media (max-width: 420px) {
+    .hero-bg img {
+        height: 70vh;
+    }
+
     #hero .container {
-        top: 6rem;
+        top: 4rem;
     }
     #hero .text-content h1 {
         margin-top: 3rem;
+    }
+}
+
+@media screen and (min-height: 450px) and (max-height: 550px) {
+    .hero-bg img {
+        height: 80vh;
+    }
+    #hero .container {
+        top: 8rem;
     }
 }

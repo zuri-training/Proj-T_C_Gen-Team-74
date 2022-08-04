@@ -12,35 +12,18 @@
 <div id="sign-in-modal-checker" data-show-sign-in-modal="false"></div>
 {% endif %}
 
-<!-- <nav>
-  <input type="checkbox" for="check" id="check" />
-  <label class="check-box" for="check"><i class="fa fa-bars"></i></label>
-  <label><img class="logo" src="{% static 'assets/landing/dinho/Group 29.png'%}" alt="" /></label>
-  <ul class="nav-ul">
-    <li class="nav-li"><a class="active" href="">Home</a></li>
-    <li class="nav-li"><a href=""> How It Works</a></li>
-    <li class="nav-li"><a href="">Generate</a></li>
-    <li class="nav-li"><a href=""> Contact</a></li>
-    <li class="nav-li"><a href="">FAQ</a></li>
-    <li class="nav-li"><a id="nav-login" href="">Login</a></li>
-    <li class="nav-li">
-      <button class="li-btn" href="#">Sign Up</button>
-    </li>
-  </ul>
-</nav> -->
-
 <nav id="landing-navbar" class="navbar">
   <div class="container">
-
-    <div class="nav-logo">
-      <div>
-        <img class="logo" src="{% static 'assets/landing/navbar/Vector.png'%}" alt="logo" />
+    <a href="{% url 'tc_site:landing' %}">
+      <div class="nav-logo">
+        <div>
+          <img class="logo" src="{% static 'assets/landing/navbar/Vector.png'%}" alt="logo" />
+        </div>
+        <div>
+          <img class="logo" src="{% static 'assets/landing/navbar/uickTerms.png'%}" alt="logo" />
+        </div>
       </div>
-      <div>
-        <img class="logo" src="{% static 'assets/landing/navbar/uickTerms.png'%}" alt="logo" />
-      </div>
-    </div>
-
+    </a>
     <div class="menu-wrapper">
       <input type="checkbox" name="toggler" id="toggler" />
       <div class="menu">
@@ -58,9 +41,9 @@
         <ul class="nav-auth-btns nav-links">
           <li>
             {% if user.id %}
-            <a href="#">
-              <i class="fa-solid fa-user"></i>
-              <div>{{user.username}}</div>
+            <a class="dashboard-link" href="{% url 'tc_site:coming-soon' %}">
+              <img src="{% static 'assets/landing/navbar/user-icon.png' %}" class="user-icon" alt="user-icon">
+              <span>{{user.username}}</span>
             </a>
             {% else %}
             <a>
@@ -96,9 +79,9 @@
       <ul class="nav-auth-btns nav-links">
         <li>
           {% if user.id %}
-          <a href="#">
-            <i class="fa-solid fa-user"></i>
-            <div>{{user.username}}</div>
+          <a class="dashboard-link" href="{% url 'tc_site:coming-soon' %}">
+            <img src="{% static 'assets/landing/navbar/user-icon.png' %}" class="user-icon" alt="user-icon">
+            <span>{{user.username}}</span>
           </a>
           {% else %}
           <a>

@@ -19,4 +19,4 @@ def landing_helper(request):
         'signup_form': signup_form,
         'signin_form': signin_form,
     }
-    return render(request, 'tc_site/pages/landing.html', ctx) # Make sure to return a valid response
+    return render(request, 'tc_site/pages/landing/landing.html', ctx) # Make sure to return a valid response

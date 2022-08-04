@@ -1,0 +1,20 @@
+{% extends 'tc_site/pages/landing/base.html' %}
+{% load static %}
+{% block content %}
+<div id="preview" class='container'>
+
+    <a href="{% url 'tc_site:gen-form' %}">
+        <div class="back-arrow">
+            <img class="chevron" src="{% static 'assets/form/Vector-1.png' %}" alt="">
+            <img class="rod" src="{% static 'assets/form/Vector.png' %}" alt="">
+        </div>
+    </a>
+
+    {% include 'tc_site/gen_file.html' %}
+
+    <div class="btns">
+        <a href="{% url 'tc_site:landing' %}"><button class="btn btn-sec">Save for Later</button></a>
+        <a href="{% url 'tc_site:gen-file' %}"><button class="btn btn-pri">Generate Now</button></a>
+    </div>
+</div>
+{% endblock %}

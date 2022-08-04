@@ -16,8 +16,10 @@ urlpatterns = [
     path('signup/', views.signup, name="signup"),
     path('signout/', views.signout, name="signout"),
     path('gen-form/', views.gen_form, name="gen-form"),
+    path('preview/', views.preview, name="preview"),
     path('gen-file/', views.gen_file, name="gen-file"),
     path('download/<int:userID>/<int:docID>', views.download, name="download"),
     path('share/<int:userID>/<int:docID>', views.share, name="share"),
     path('export/<int:userID>/<int:docID>', views.export, name="export"),
+    path('coming-soon', views.coming_soon, name="coming-soon"),
 ]

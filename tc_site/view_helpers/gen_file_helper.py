@@ -37,7 +37,7 @@ def gen_file_helper(request):
         # Read the template
 
         template_str = ''
-        if request.POST['gen_option'] == 'PP':
+        if request.POST['doc-type'] == 'PP':
             PP_DIR = os.path.join(BASE_DIR, 'static', 'doc_templates', 'privacy_policy')
             if form['company_type'] == 'ecommerce':
                 with open(os.path.join(PP_DIR, 'ecommerce_PP_temp.md', 'r')) as f:
@@ -55,7 +55,7 @@ def gen_file_helper(request):
                 with open(os.path.join(PP_DIR, 'privacy_policy_template.md', 'r')) as f:
                     template_str = f.read()
             
-        elif form['gen_option'] == 'TC':
+        elif form['doc-type'] == 'TC':
             PP_DIR = os.path.join(BASE_DIR, 'static', 'doc_templates', 'terms_and_conditions')
             if form['company_type'] == 'ecommerce':
                 with open(os.path.join(PP_DIR, 'ecommerce_T&C_temp.md', 'r')) as f:

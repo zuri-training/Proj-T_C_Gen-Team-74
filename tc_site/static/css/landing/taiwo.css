@@ -107,8 +107,8 @@ a {
     line-height: 29px;
     color: #FAFAFA;
     border: none;
+    margin-top: 2rem;
     margin-bottom: 3rem;
-
 }
 
 .main-tc-3-btn:hover {
@@ -126,9 +126,9 @@ a {
 
 #main-tc-4 {
     width: 100%;
-    padding: 3rem 0;
     background-color: #262698;
-    padding: 80px 0 70px;
+    /* padding: 80px 0 70px; */
+    padding: 3rem 0;
 }
 
 .main-tc-4-h1 {
@@ -159,6 +159,17 @@ a {
     display: block;
 }
 
+@media screen and (max-width: 600px) {
+    .main-tc-4-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5.07527px;
+        gap: 5.08px;
+    }
+}
+
 .main-tc-4-btn:hover {
     background-color: #E2DA15;
     border: 2px solid #080808;
@@ -186,6 +197,7 @@ a {
     margin: 0 auto;
     max-width: 184px;
     padding-bottom: 24px;
+    text-align: center;
 }
 
 .main-tc-5-faq {
@@ -211,6 +223,12 @@ a {
     line-height: 32px;
     position: relative;
     top: -20px;
+}
+
+@media screen and (max-width: 600px) {
+    .main-tc-5-h1 {
+        font-size: 40px;
+    }
 }
 
 #main-tc-6 {
@@ -239,6 +257,17 @@ a {
     position: relative;
 }
 
+@media screen and (max-width: 600px) {
+    .main-tc-6-h1 {
+        font-size: 30px;
+    }
+}
+
+#faq .accordion-item {
+    margin: 0 auto;
+    max-width: 960px;
+    width: 100%;
+}
 
 .main-tc-7-br {
     border-right: 6px solid #DDE7DD;
@@ -280,7 +309,6 @@ a {
     background-color: #DDE7DD;
     border-radius: 4.9789px;
     border: none;
-    margin-bottom: 1rem;
 }
 
 .main-tc-7-input:focus {
@@ -332,18 +360,21 @@ a {
 .main-tc-7-submit {
     display: block;
     width: 80%;
+    max-width: 300px;
+    position: relative;
+    left: -1%;
     margin: 0 auto;
     padding: 1rem;
-    background: #F7F9F7;
+    background: #E2DA15;
     border-radius: 11.6746px;
     border: none;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    font-size: 1rem;
-    line-height: 31px;
+    font-size: 1.5rem;
     text-align: center;
     color: #0A0A09;
+    margin-top: 40px;
     margin-bottom: 80px;
     transition: ease .2s
 }
@@ -378,7 +409,7 @@ a {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     color: #E4ECE4;
     position: relative;
@@ -390,7 +421,7 @@ a {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     color: #E4ECE4;
     position: relative;
@@ -402,7 +433,7 @@ a {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     color: #FFFFFF;
     position: relative;
@@ -414,7 +445,7 @@ a {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     color: #FFFFFF;
     position: relative;
@@ -426,7 +457,7 @@ a {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     color: #DDE7DD;
     position: relative;
@@ -499,24 +530,25 @@ a {
 .main-tc-11-sub {
     padding: 10px 30px;
     max-width: 181px;
-    height: 55px;
+    height: 54px;
     background-color: #E2DA15;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     border: 2px solid transparent;
+    border-radius: 4px;
     font-size: 24px;
     color: #0A0A09;
-    border: none;
     position: relative;
-    top: 0px;
+    top: 2px;
     right: 8px;
 }
 
 .main-tc-11-sub:hover {
-    height: 59px;
+    --border-color: #080808;
+
+    border: 2px solid var(--border-color);
     background-color: #E2DA15;
-    border-radius: 4px;
     box-shadow: 0px 4px 12px rgba(56, 56, 56, 0.3);
 }
 
@@ -585,10 +617,15 @@ a {
     .main-tc-2-img img,
     .main-tc-3-img img,
     .main-tc-4-img img {
-        height: 50vh;
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+        display: block;
     }
+
     .main-tc-4-h1 {
-        font-size: 1.5rem;
+        font-size: 16px;
+        line-height: 24px;
     }
 
     #contact .between {
@@ -607,18 +644,28 @@ a {
         margin: 0 auto;
         margin-bottom: 3rem;
     }
+
     .main-tc-8-con {
         padding-bottom: 20px;
     }
-    
+
     .main-tc-11-sub {
         position: static;
     }
 }
 
-@media (min-width: 770px) {  
+@media (min-width: 770px) {
     .main-tc-11-sub {
         position: relative;
     }
 }
 
+@media screen and (max-width: 600px) {
+    .main-tc-9-p {
+        display: none;
+    }
+
+    .main-tc-9-img {
+        margin-bottom: 2rem;
+    }
+}

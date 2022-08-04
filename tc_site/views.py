@@ -6,11 +6,13 @@ from .view_helpers.signin_helper import signin_helper
 from .view_helpers.signup_helper import signup_helper
 from .view_helpers.signout_helper import signout_helper
 from .view_helpers.gen_form_helper import gen_form_helper
+from .view_helpers.preview_helper import preview_helper
 from .view_helpers.gen_file_helper import gen_file_helper
 from .view_helpers.embed_helper import embed_helper
 from .view_helpers.download_helper import download_helper
 from .view_helpers.share_helper import share_helper
 from .view_helpers.export_helper import export_helper
+from .view_helpers.coming_soon_helper import coming_soon_helper
 
 # Create your views here.
 
@@ -34,6 +36,10 @@ def gen_form (request):
     # Locate and put your logic in the view_helper directory of this app
     return gen_form_helper(request)
 
+def preview (request):
+    # Locate and put your logic in the view_helper directory of this app
+    return preview_helper(request)
+    
 def gen_file (request):
     # Locate and put your logic in the view_helper directory of this app
     return gen_file_helper(request)
@@ -53,3 +59,7 @@ def share (request):
 def export (request):
     # Locate and put your logic in the view_helper directory of this app
     return export_helper(request)
+
+def coming_soon (request):
+    # Locate and put your logic in the view_helper directory of this app
+    return coming_soon_helper(request)
