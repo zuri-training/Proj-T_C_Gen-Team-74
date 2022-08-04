@@ -1,0 +1,192 @@
+@import url("https://use.typekit.net/bpd3bxi.css");
+
+.login_container {
+  --main-color: rgb(255, 255, 255);
+  --main-blue: rgb(45, 45, 182);
+}
+
+.modals * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+.backdrop-wrapper {
+  position: fixed;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 2rem 0;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.backdrop {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1rem);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.modals.login_container {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  padding: 24px 15px;
+  background-color: rgba(243, 241, 241, 1);
+  box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.25);
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.modals p.heading {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  margin-bottom: 12px;
+}
+
+.modals form {
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+}
+
+.modals div.fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.modals div.icon_group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2px;
+}
+
+.modals input {
+  margin-bottom: 1.2em;
+  /* width: 392px;
+  height: 60px; */
+  border-radius: 4px;
+  border: solid rgba(146, 146, 146, 1) 2px;
+  padding: 12px;
+  /* gap: 10px; */
+  font-size: 18px;
+}
+
+.modals input::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  /* line-height: 40px; */
+  font-size: 20px;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.modals input:focus {
+  outline: none;
+  transition: 0.1s;
+  border: solid var(--main-blue) 2px;
+  box-shadow: 0px 0px 2px 1px rgba(146, 146, 146);
+}
+
+.modals input:focus::placeholder {
+  transition: 0.1s;
+  letter-spacing: 0.6px;
+  font-size: 20px;
+}
+
+.modals input#password {
+  margin-bottom: 0.4em;
+}
+
+.modals i {
+  margin-right: 20px;
+  padding-top: 20px;
+  margin-bottom: 28px;
+  margin-left: -30px;
+  cursor: pointer;
+  text-align: right;
+  display: inline;
+}
+
+.modals label {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+.modals #forgot {
+  margin-bottom: 28px;
+}
+
+.modals span a {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.modals p {
+  text-align: center;
+}
+
+.modals a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+}
+
+.modals .btn-login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.modals button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 2.4em;
+  line-height: 29px;
+  color: rgb(235, 241, 235);
+  color: rgba(212, 212, 212, 1);
+  background-color: var(--main-blue);
+  border: none;
+  border-radius: 4px;
+  padding: 12px 10px;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+}
+
+.modals #login_btn {
+  transition: letter-spacing 0.3s;
+  letter-spacing: normal;
+}
+
+.modals #login_btn:hover {
+  color: white;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+}
+
+.modals .question {
+  margin-bottom: 10px;
+}
+
+.modals p a {
+  color: var(--main-blue);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}

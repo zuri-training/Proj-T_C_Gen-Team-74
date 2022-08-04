@@ -1,0 +1,87 @@
+{% load static %}
+<div id="sign-up-modal" class="backdrop-wrapper">
+  <div class="backdrop"></div>
+  <div class="modals sign-up_container">
+    <figure>
+      <img
+        src="{% static 'assets/auth/sign-up/get-started.png' %}"
+        alt="get-started.png"
+      />
+    </figure>
+    <div class="head_wrap">
+      <p class="sign-up_heading">Get Started Here!</p>
+      <p>Create an account with QuickTerms and get started right away.</p>
+    </div>
+    <form
+      action="{% url 'tc_site:signup' %}"
+      method="post"
+      class="sign-up_form"
+    >
+      <div class="fields">
+        <label for="first_name">Email Address </label>
+        <input
+          name=""
+          placeholder="johndoe@gmail.com"
+          type="email"
+          id="email_field"
+          required
+        />
+      </div>
+
+      <div class="fields">
+        <label for="first_name">Full Name</label>
+        <input type="text" name="" placeholder="John Doe" required />
+      </div>
+
+      <div class="fields">
+        <label for="create_password">Create Password</label>
+        <div class="icon_group">
+          <input
+            type="password"
+            name="create_password"
+            placeholder="Minimum of 8 characters"
+            min="8"
+            class="password"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="fields">
+        <label for="verify_password">Verify Password</label>
+        <div class="icon_group">
+          <input
+            type="password"
+            name="verify_password"
+            placeholder="Enter your password"
+            min="8"
+            class="password"
+            required
+          />
+        </div>
+      </div>
+      <div class="fields">
+        <p>
+          <input
+            type="checkbox"
+            name="agree"
+            id="terms_agreement"
+            onclick="enableBtn();"
+            value=""
+            style="display: inline; width: 15%"
+          />
+          By checking this box, I agree to QuickTerms' User Agreement and
+          Privacy Policy.
+        </p>
+      </div>
+
+      <div class="btn-sign-up-container">
+        <button type="submit" id="sign-up_btn">Sign Up</button>
+      </div>
+      <p class="question">
+        Already have an account?
+        <a><span class="sign-in"> Log in</span></a>
+      </p>
+    </form>
+  </div>
+</div>

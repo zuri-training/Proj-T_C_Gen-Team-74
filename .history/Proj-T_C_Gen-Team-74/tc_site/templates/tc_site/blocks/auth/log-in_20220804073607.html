@@ -1,0 +1,36 @@
+{% load static %}
+<div id="sign-in-modal" class="backdrop-wrapper">
+  <div class="backdrop"></div>
+  <div class="modals login_container">
+    <p class="heading">Login to your account</p>
+    <form action="{% url 'tc_site:signin' %}" method="post" id="log-in_form">
+      <div class="fields">
+        <label for="first_name">Username</label>
+        <input type="text" name="" placeholder="John Doe" required />
+      </div>
+
+      <div class="fields">
+        <label for="password">Password</label>
+        <div class="icon_group">
+          <input
+            type="password"
+            name="enter_password"
+            placeholder="Enter your password"
+            min="8"
+            class="password"
+            required
+          />
+          <i class="bi bi-eye-slash" id="togglePassword"></i>
+        </div>
+      </div>
+      <span id="forgot"><a href="#"> Forgot Password? </a></span>
+
+      <div class="btn-login-container">
+        <button type="submit" id="login_btn">Login</button>
+      </div>
+    </form>
+
+    <p class="question">Don't have an account?</p>
+    <p class="sign-up"><a>Sign Up</a></p>
+  </div>
+</div>

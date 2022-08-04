@@ -7,6 +7,6 @@ class SigninForm(forms.ModelForm):
         model = User
         fields = ['username', 'password']
         widgets = {
-            'username': forms.TextInput(attrs={'id': 'login_username', 'class':'form-control', 'class:'placeholder':'Enter username', 'required':True}),
+            'username': forms.TextInput(attrs={'id': 'login_username', 'class':'form-control','placeholder':'Enter username', 'required':True}),
             'password': forms.PasswordInput(attrs={'id': 'login_password', 'class':'password form-control','placeholder':'Enter password', 'required':True}),
         }

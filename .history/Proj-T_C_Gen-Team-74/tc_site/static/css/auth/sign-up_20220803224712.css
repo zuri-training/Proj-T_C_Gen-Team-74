@@ -1,0 +1,178 @@
+@import url("https://use.typekit.net/bpd3bxi.css");
+
+.sign-up_container {
+  --main-color: rgb(255, 255, 255);
+  --main-blue: rgb(45, 45, 182);
+}
+
+/* General stylings  */
+.modals * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+/* .modals {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  z-index: 1;
+} */
+
+.modals a {
+  text-decoration: none;
+  color: black;
+}
+
+.modals.sign-up_container {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  /* padding: 24px 25px; */
+  background-color: rgba(243, 241, 241, 1);
+  box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.25);
+  border: 0px solid black;
+  border-radius: 0px;
+  width: 40rem;
+}
+
+/* Image stylings*/
+.modals figure {
+  margin-bottom: 1rem;
+}
+
+/* Heading styles */
+.modals .head_wrap {
+  text-align: center;
+  margin-bottom: 0rem;
+}
+
+.modals .head_wrap p {
+  font-size: 18px;
+}
+
+.modals .head_wrap .sign-up_heading {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  margin-bottom: 2.3rem;
+}
+
+/* Form stylings */
+
+.modals label {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0px;
+  font-weight: 400;
+}
+
+.modals form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.2rem 4rem;
+  padding-top: 2.8rem;
+  text-align: center;
+}
+
+.modals div.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  width: 100%;
+}
+
+.modals input {
+  margin-bottom: 1.2em;
+  border-radius: 4px;
+  border: solid rgba(146, 146, 146, 1) 2px;
+  padding: 9px;
+  font-size: 16px;
+  outline: none;
+}
+
+.modals input::placeholder {
+  font-weight: 400;
+  font-size: 20px;
+  /* line-height: 40px; */
+  font-size: 18px;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.modals input:focus {
+  outline: none;
+  transition: 0.1s;
+  border: solid var(--main-blue) 2px;
+  box-shadow: 0px 0px 2px 2px rgba(146, 146, 146);
+}
+
+.modals input:focus::placeholder {
+  transition: 0.1s;
+  letter-spacing: 0.6px;
+}
+
+.modals #terms_agreement {
+  font-size: 12px;
+}
+
+.modals .btn-sign-up-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  width: 90%;
+}
+
+.modals #sign-up_btn {
+  background-color: var(--main-blue);
+  color: rgba(212, 212, 212, 1);
+  border: none;
+  border-radius: 4px;
+  padding: 12px 10px;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+  height: 2.4em;
+  line-height: 29px;
+}
+
+.modals #sign-up_btn {
+  transition: letter-spacing 0.3s;
+  letter-spacing: normal;
+}
+
+.modals #sign-up_btn:hover {
+  color: white;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+}
+
+.modals form p {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.modals p.question {
+  text-align: center;
+  font-size: 12px;
+  color: rgb(19, 19, 19);
+}
+
+.modals p.question a {
+  transition: letter-spacing 0.2s;
+  letter-spacing: normal;
+  margin-top: 0.8rem;
+}
+
+.modals p.question a:hover {
+  cursor: pointer;
+  letter-spacing: 0.6px;
+}
