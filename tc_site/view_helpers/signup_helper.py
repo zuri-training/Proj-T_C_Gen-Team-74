@@ -35,13 +35,13 @@ def signup_helper(request):
             if password != password2:
                 messages.error(request, "Passwords don't match")
                 # return redirect('tc_site:signup')
-                return render(request, 'tc_site/pages/landing.html', {'form': form, 'show_sign_up': True})
+                return render(request, 'tc_site/pages/landing.html', ctx)
 
             # Verifying that the email isn't already in the database
             elif User.objects.filter(email=email).first():
                 messages.error(request, 'Email already exists, try signing in!')
                 # return redirect('tc_site:signup')
-                return render(request, 'tc_site/pages/landing.html', {'form': form, 'show_sign_up': True})
+                return render(request, 'tc_site/pages/landing.html', ctx)
 
             else:
                 # creating an account for user
