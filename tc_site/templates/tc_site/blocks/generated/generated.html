@@ -1,4 +1,4 @@
-{% extends 'tc_site/pages/base.html' %}
+{% extends 'tc_site/pages/landing/base.html' %}
 {% load static%}
 {% block meta %}
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
 
     <div id="generated" class="container">
         <div class="greetings">
-            <h2> Hello John!</h1>
+            <h2> Hello {{user.username}}!</h1>
             <h3 class="pb-5">Congratulations, Your Terms and Conditions are Ready!</h2>
         </div>
 
@@ -27,7 +27,7 @@
             <div class="take-action p-5 text-center">
                 <h5> Which of the following action will you like to take ?</h5>
             </div>
-    <div class="accordion" id="accordion">
+    <div class="accordion container" id="accordion">
             <div class="action mx-3 pt-4 pb-1">
                 <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#export" aria-expanded="false" aria-controls="export">
                     Export File <i class="fa-solid fa-chevron-down"></i>
@@ -40,7 +40,7 @@
                 </button>
             </div>
         
-            <div class="collapse" id="export" data-parent="#accordion">
+            <div class="container collapse" id="export" data-parent="#accordion">
                 <div class="card card-body">
                     <p> You can export and download your file as PDF or MS Word document on our website  </p>
                     <div class="pdf p-0 m-0"> <img src="{% static 'assets/generated/pdf.svg'%}" alt="" id="pdf"> <a href=""> Click here to export your file as PDF</a></div>
@@ -48,7 +48,7 @@
                     
                 </div>
             </div>
-            <div class="collapse" id="embed" data-parent="#accordion">
+            <div class="container collapse" id="embed" data-parent="#accordion">
                 <div class="card card-body">
                   <p> Make your document visible to anybody visiting your website by embedding it. You can copy the link to your to your website and embed.. To learn more<a href="">  click here</a> </p>
                   <div class="form-group ">
@@ -64,7 +64,7 @@
        </div>
                 
               </div>
-              <div class="collapse" id="share" data-parent="#accordion">
+              <div class="container collapse" id="share" data-parent="#accordion">
                 <div class="card card-body">
                     <div class="form-group p-0 col-md-8">
                         <label for="InputEmail"></label>

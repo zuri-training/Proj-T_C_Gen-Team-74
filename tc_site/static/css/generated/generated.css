@@ -1,30 +1,47 @@
 #generated {
-    
+
     font-family: 'Montserrat';
     max-width: 100%;
     font-style: normal;
-    
+
+    padding-top: 100px;
+
 }
+
 #generated .container {
     margin: 50px;
 }
+
+#generated .greetings {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
 #generated .temporary-placeholder-image {
     max-width: 600px;
 }
+
 #generated .view-box {
     border: 1px solid;
     max-width: fit-content;
+    margin: 0 auto;
 }
+
 #generated img {
     width: 190px;
 }
+
 #generated .card {
     border: 0;
-   
+
 }
-#generated #pdf, #microsoft {
+
+#generated #pdf,
+#microsoft {
     width: 17px;
 }
+
 #generated .action {
     display: flex;
     justify-content: space-between;
@@ -32,21 +49,27 @@
     padding-left: 20px;
     padding-right: 10px;
 }
+
 #generated .wrapper {
     max-width: 900px;
 }
 
-#generated span, .copy,a {
+#generated span,
+.copy,
+a {
     color: blue;
 }
-#generated #share-text, #inputEmail {
+
+#generated #share-text,
+#inputEmail {
     background-color: #F0EFEF !important;
 }
 
 #generated .btn-primary {
     background-color: #2D2DB6;
 }
-.btn-light {
+
+#generated .btn-light {
     background-color: #fff;
     border: 0;
     border-radius: 0;
@@ -60,5 +83,4 @@
     background-color: #ECE5E5;
     border-bottom: 4px solid;
     border-bottom-color: #252598;
-  }
-  
+}
