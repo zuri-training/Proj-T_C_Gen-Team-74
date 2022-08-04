@@ -130,7 +130,7 @@ def gen_file_helper(request):
         new_md_file.close()
         newhtml.close()
 
-        render(request, 'tc_site/temp/gen_file.html')
+        render(request, 'tc_site/blocks/generated/generated.html')
 
         # Save the edited md document to cloudinary
 
