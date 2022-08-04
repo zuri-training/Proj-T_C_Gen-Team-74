@@ -35,5 +35,5 @@ def signin_helper(request):
             return redirect('tc_site:gen-form')
         # The else condition redirects to the signin form/refreshes the page.
         messages.error(request, 'Invalid login credentials!')
-        return render(request, 'tc_site/pages/landing.html', ctx)
-    return render(request, 'tc_site/pages/landing.html', ctx)
+        return render(request, 'tc_site/pages/landing/landing.html', ctx)
+    return render(request, 'tc_site/pages/landing/landing.html', ctx)
