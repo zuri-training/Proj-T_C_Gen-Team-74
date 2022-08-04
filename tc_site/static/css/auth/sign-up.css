@@ -34,7 +34,7 @@
   /* padding: 24px 25px; */
   background-color: rgba(243, 241, 241, 1);
   box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.25);
-  border: 0px solid black;
+  border: 0px solid;
   border-radius: 0px;
   width: 40rem;
 }
@@ -51,14 +51,14 @@
 }
 
 .modals .head_wrap p {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .modals .head_wrap .sign-up_heading {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 31px;
   line-height: 39px;
-  margin-bottom: 2.3rem;
+  margin-bottom: 1.2rem;
 }
 
 /* Form stylings */
@@ -66,39 +66,45 @@
 .modals label {
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
   font-weight: 400;
 }
 
-.modals form {
+.modals form#sign-up_form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3.2rem;
-  padding-top: 2.8rem;
+  justify-content: center;
+  padding: 3.2rem 4rem;
+  padding-top: 2.1rem;
 }
 
 .modals div.fields {
   display: flex;
   flex-direction: column;
   gap: 0px;
-  width: 90%;
+}
+
+.modals div.icon_group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2px;
 }
 
 .modals input {
   margin-bottom: 1.2em;
   border-radius: 4px;
   border: solid rgba(146, 146, 146, 1) 2px;
-  padding: 12px;
-  font-size: 18px;
+  padding: 9px;
+  font-size: 17px;
   outline: none;
+  width: 25rem;
+  height: 3rem;
 }
 
 .modals input::placeholder {
   font-weight: 400;
-  font-size: 20px;
-  /* line-height: 40px; */
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   color: rgba(0, 0, 0, 0.4);
 }
@@ -113,10 +119,13 @@
 .modals input:focus::placeholder {
   transition: 0.1s;
   letter-spacing: 0.6px;
+  font-size: 17px;
 }
 
 .modals #terms_agreement {
   font-size: 12px;
+  width: 2rem;
+  height: 1.2rem;
 }
 
 .modals .btn-sign-up-container {
@@ -125,7 +134,7 @@
   justify-content: center;
   margin-top: 10px;
   margin-bottom: 25px;
-  width: 90%;
+  /* width: 90%; */
 }
 
 .modals #sign-up_btn {
@@ -137,7 +146,7 @@
   font-weight: 600;
   font-size: 24px;
   text-align: center;
-  width: 100%;
+  width: 60%;
   height: 2.4em;
   line-height: 29px;
 }
@@ -167,9 +176,80 @@
 .modals p.question a {
   transition: letter-spacing 0.2s;
   letter-spacing: normal;
+  margin-top: 0.55rem;
 }
 
 .modals p.question a:hover {
   cursor: pointer;
   letter-spacing: 0.6px;
+}
+
+@media screen and (max-width: 700px) {
+  .modals .head_wrap p {
+    font-size: 14px;
+  }
+
+  .modals .head_wrap .sign-up_heading {
+    font-size: 28px;
+    margin-bottom: 1rem;
+  }
+
+  .modals label {
+    font-size: 14px;
+  }
+
+  .modals form#sign-up_form {
+    padding: 2.7rem 3.5rem;
+    padding-top: 1.6rem;
+  }
+
+  .modals input {
+    font-size: 14px;
+    padding: 7px;
+    height: 1.8rem;
+    width: 16.5rem;
+  }
+
+  .modals input::placeholder {
+    font-size: 14px;
+  }
+
+  .modals input:focus::placeholder {
+    transition: 0.1s;
+    font-size: 15px;
+  }
+
+  .modals #terms_agreement {
+    font-size: 12px;
+    width: 1.7rem;
+    height: 1rem;
+  }
+
+  .modals .btn-sign-up-container {
+    margin-top: 8px;
+    margin-bottom: 21px;
+  }
+
+  .modals #sign-up_btn {
+    padding: 9px 8px;
+    font-size: 21px;
+  }
+
+  .modals #sign-up_btn:hover {
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .modals .head_wrap .sign-up_heading {
+    font-size: 26px;
+  }
+  .modals input:focus::placeholder {
+    transition: 0.1s;
+    font-size: 15px;
+  }
+  .modals #sign-up_btn {
+    padding: 9px 8px;
+    font-size: 19px;
+  }
 }
