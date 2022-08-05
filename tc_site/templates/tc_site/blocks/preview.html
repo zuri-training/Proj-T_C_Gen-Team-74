@@ -1,5 +1,11 @@
 {% extends 'tc_site/pages/landing/base.html' %}
 {% load static %}
+
+{% block meta %}
+<link rel="stylesheet" href="{% static 'css/preview/preview.css' %}?version=3" />
+
+{% endblock %}
+
 {% block content %}
 <div id="preview" class='container'>
 
@@ -10,7 +16,9 @@
         </div>
     </a>
 
-    {% include 'tc_site/gen_file.html' %}
+    <div id="preview-wrapper">
+        {% include 'tc_site/gen_file.html' %}
+    </div>
 
     <div class="btns">
         <a href="{% url 'tc_site:landing' %}"><button class="btn btn-sec">Save for Later</button></a>

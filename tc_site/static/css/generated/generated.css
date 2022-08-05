@@ -9,7 +9,9 @@
 }
 
 #generated .container {
-    margin: 30px;
+
+    margin: 30px auto !important;
+    max-width: 650px;
 }
 
 #generated .greetings {
@@ -26,7 +28,12 @@
     border: 1px solid;
     max-width: fit-content;
     margin: 0 auto;
+    max-height: 400px;
+    padding: 1rem;
     overflow: scroll;
+    width: 90%;
+    max-width: 650px
+
 }
 
 #generated #img1, #img2, #img3 {
