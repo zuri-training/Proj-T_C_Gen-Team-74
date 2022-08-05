@@ -6,8 +6,9 @@
     <title>Export Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link rel="stylesheet" href="{% static 'css/generated/generated.css' %}">
+    <link rel="stylesheet" href="{% static 'css/generated/generated.css' %}?version=1">
     <script src="https://kit.fontawesome.com/faacca9d4f.js" crossorigin="anonymous"></script>
+
 {% endblock %}
 
 {% block content %}
@@ -15,13 +16,14 @@
     <div id="generated" class="container">
         <div class="greetings">
             <h2> Hello {{user.username}}!</h1>
-            <h3 class="pb-5">Congratulations, Your Terms and Conditions are Ready!</h2>
+            <h3 class="pb-5">Congratulations, Your document has been generated!</h2>
         </div>
 
-            <div class="view-box d-flex">
-                <div class="temporary-placeholder-image"><img src="https://images.sampletemplates.com/wp-content/uploads/2019/10/Sample-Website-Terms-and-Conditions.jpg" id="img1"></div>
+            <div class="view-box">
+                {% include 'tc_site/gen_file.html' %}
+                <!-- <div class="temporary-placeholder-image"><img src="https://images.sampletemplates.com/wp-content/uploads/2019/10/Sample-Website-Terms-and-Conditions.jpg" id="img1"></div>
                 <div class="temporary-placeholder-image"><img src="https://images.sampletemplates.com/wp-content/uploads/2019/10/Sample-Website-Terms-and-Conditions.jpg" id="img2"></div>
-                <div class="temporary-placeholder-image"><img src="https://images.sampletemplates.com/wp-content/uploads/2019/10/Sample-Website-Terms-and-Conditions.jpg" id="img3"></div> 
+                <div class="temporary-placeholder-image"><img src="https://images.sampletemplates.com/wp-content/uploads/2019/10/Sample-Website-Terms-and-Conditions.jpg" id="img3"></div>  -->
             </div>
             
             <div class="take-action p-5 text-center">
@@ -40,7 +42,7 @@
                 </button>
             </div>
         
-            <div class="container collapse m-0" id="export" data-parent="#accordion">
+            <div class="container collapse show m-0" id="export" data-parent="#accordion">
                 <div class="card card-body">
                     <p> You can export and download your file as PDF or MS Word document on our website  </p>
                     <div class="pdf d-flex p-0 m-0"> <img src="{% static 'assets/generated/pdf.png' %}" alt="pdf" id="pdf" width="17px" height="24px"> <a href="">  Click here to export your file as PDF</a></div>
@@ -54,7 +56,9 @@
                         
                     
                     </div>
-                   <textarea class="form-control" id="embed" rows="6"cols="15"></textarea>
+                   <textarea class="form-control" id="embed" rows="6"cols="15">
+                    {{html_content}}
+                   </textarea>
                </div>
            
            <div class= "mt-2">

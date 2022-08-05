@@ -21,5 +21,9 @@ urlpatterns = [
     path('download/<int:userID>/<int:docID>', views.download, name="download"),
     path('share/<int:userID>/<int:docID>', views.share, name="share"),
     path('export/<int:userID>/<int:docID>', views.export, name="export"),
+    path('<str:username>/', views.dashboard, name="dashboard"),
+    path('<str:username>/archive', views.archive, name="archive"),
+    path('<str:username>/generate', views.generated_docs, name="generate"),
+    path('<str:username>/generated_docs', views.generated_docs, name="generated_docs"),
     path('coming-soon', views.coming_soon, name="coming-soon"),
 ]
