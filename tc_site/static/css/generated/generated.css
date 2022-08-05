@@ -60,6 +60,14 @@
     padding-right: 10px;
 }
 
+@media screen and (max-width: 500px) {
+    #generated .action {
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 #generated .wrapper {
     max-width: 900px;
 }
@@ -106,4 +114,14 @@ a {
 #generated .btn-primary:hover {
     background-color: #8d8df8;
     border: 1px solid;
+}
+
+#embed-btn {
+    position: relative;
+}
+#embed-btn.active::after {
+    content: 'copied!';
+    position: absolute;
+    right: -5rem;
+    color: black;
 }

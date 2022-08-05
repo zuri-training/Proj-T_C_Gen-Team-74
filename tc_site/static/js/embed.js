@@ -12,14 +12,21 @@ function copyToClipboard(text) {
       }, function(err) {
         console.error('Async: Could not copy text: ', err);
       });
+
+      embedBtn.classList.add('active');
+      setTimeout(()=>{
+        embedBtn.classList.remove('active');
+      }, 2000)
 }
 function anotherCopyToClipboard(text) {
     console.log('click')
     var input = document.createElement('textarea');
     input.innerHTML = text;
     document.body.appendChild(input);
+    input.focus();
     input.select();
     var result = document.execCommand('copy');
+
     document.body.removeChild(input);
 
     console.log(result)
@@ -29,5 +36,5 @@ function anotherCopyToClipboard(text) {
 // Get embed button
 const embedBtn = document.getElementById('embed-btn');
 
-embedBtn.addEventListener('click', (text)=>copyToClipboard(text));
+embedBtn.addEventListener('click', ()=>copyToClipboard(text));
 
