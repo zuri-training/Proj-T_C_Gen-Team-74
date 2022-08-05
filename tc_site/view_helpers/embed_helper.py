@@ -9,7 +9,7 @@ from django.shortcuts import render, redirect
 from tc_site.forms import GenDocumentForm
 from tc_site.models import DocumentModel
 
-def embed_helper(request):
+def embed_helper(request, userID, docID):
     # Write your logic here
 
     if request.method == 'GET':

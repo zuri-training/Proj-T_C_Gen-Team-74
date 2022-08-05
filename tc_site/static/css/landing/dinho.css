@@ -1,115 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap');
 
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: 'border-box';
-    font-family: 'Montserrat', sans-serif;
+.project {
+    position: relative;
 }
-
-
-
-
-/* Navbar section */
-
-.logo{
-    margin: .5rem;
-}
-
-nav{
-    background-color: #1E1E79;
-    width: auto;
-    height: 100%;
-    padding: 10px 100px;
-}
-
-.nav-ul{
-    float: right;
-    margin-right: 5px;
-}
-
-.nav-li{
-    display: inline-block;
-    line-height: 60px;
-    margin: 0px 5px;
-}
-
-.nav-li a {
-    list-style: none;
-    font-size: 16px;
-    line-height: 32px;
-    font-weight: 400;
-    text-decoration: none;
-    color: #DDE7DD;
-    padding: 0px 10px;
-}
-
-nav .nav-li #nav-login{
-    font-size: 24px;
-    line-height: 29px;
-    font-weight: 600;
-    color: #D6E2D6;
-    border-left: 2px solid #D6E2D6;
-}
-
-nav .nav-li #nav-login:hover{
-    color: #E2DA15;
-    border: 1px solid #E2DA15;
-    transition: .5s;
-    border-radius: 4px;
-}
-
-.nav-li a.active, .nav-li a:hover{
-    border: transparent;
-    border-bottom: 2px solid #E2DA15;
-    color: #E2DA15;
-    transition: .5s;
-    line-height: 0px;
-}
-
-.nav-li .li-btn{
-    font-weight: 600;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 29px;
-    color: #080808;
-    background: #E2DA15;
-    border: transparent;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 183px;
-    height: 100%;
-    max-height: auto;
-    margin: 20px;
-    padding: 12px 10px;
-}
-
-.nav-li .li-btn:hover{
-    color: #E2DA15;
-    background: #1E1E79;
-    border: 1px solid #E2DA15;
-    transition: .6s;
-    cursor: pointer;
-}
-
-.check-box{
-    font-size: 30px;
-    color: #E2DA15;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-
-#check{
-    display: none;
-}
-
-
-/* Navbar section */
-
-
 
 /* Header section */
 
@@ -178,6 +71,9 @@ nav .nav-li #nav-login:hover{
     text-align: center;
     padding: 60px 120px;
 }
+#main-section-one .row {
+    justify-content: center;
+}
 
 .main1-txt-one,.main1-txt-two,.temps-txt-1,.temps-txt-2{
     color: #FFFFFF;
@@ -190,14 +86,9 @@ nav .nav-li #nav-login:hover{
     padding-bottom: 30px;
 }
 
-#cards-temp{
-    padding: 0px 88px;
-}
-
 .card-img{
-    max-width: 100%;
-    width: 189px;
-    height: 149px;
+    max-width: 300px;
+    width: 100%;
     max-height: 100%;
 }
 
@@ -205,7 +96,6 @@ nav .nav-li #nav-login:hover{
     font-weight: 700;
     font-size: 24px;
     line-height: 48px;
-
 }
 
 .temps-txt-2{
@@ -213,18 +103,21 @@ nav .nav-li #nav-login:hover{
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    padding: 0px 55px;
 }
 
 /* main-section-one section */
 
-
+@media screen and (max-width: 800px) {
+    #main-section-one {
+        padding: 2rem 1rem;
+    }
+}
 
 /* main-section-two section */
 .main-section-two{
     background: #F5F5F5;
     text-align: center;
-    padding: 83px 40px;
+    padding: 40px;
 }
 
 .counter-container{
@@ -233,19 +126,28 @@ nav .nav-li #nav-login:hover{
 
 .count-num{
     color: #131313;
-    font-size: 48px;
+    font-size: 2rem;
     line-height: 39.83px;
     font-weight: 600;
-
 }
 
 .count-txt{
     color: #000000;
-    font-size: 32px;
+    font-size: 1.5rem;
     line-height: 39.83px;
     font-weight: 400;
+    margin: 0 auto;
+    width: max-content;
 }
 
+@media screen and (max-width: 500px) {
+    .count-num{
+        font-size: 36px;
+    }
+    .count-txt{
+        font-size: 1rem;
+    }
+}
 
 /* main-section-two section */
 
@@ -253,7 +155,7 @@ nav .nav-li #nav-login:hover{
 /* main-section-three section */
 
 .main-section-three{
-    padding: 100px 140px;
+    padding: 100px 0px;
 }
 
 .main3-img{
@@ -277,16 +179,6 @@ nav .nav-li #nav-login:hover{
 }
 
 /* main-section-three section */
-
-
-
-
-
-
-
-
-
-
 
 /* Animation section */
 
@@ -319,222 +211,10 @@ nav .nav-li #nav-login:hover{
     }
 }
 
+/* Animation section ends */
 
 
-/* Animation section */
-
-
-
-
-/* Media Query section */
-@media screen and (max-width: 1200px) and (min-width: 1020px){
-    nav {
-        padding: 10px 38px;
-    }
-}
-
-
-@media screen and (max-width: 1020px) and (min-width: 980px){
-    nav{
-        padding: 10px 5px;
-    }
-    .nav-li .li-btn{
-        font-size: 24px;
-        line-height: 29px;
-        max-width: 110px;
-        height: 100%;
-        max-height: auto;
-        margin: 10px 5px;
-        padding: 12px 5px;
-    }
-    #header-section .container{
-        padding: 30px 20px;
-    }
-    .header-text-one{
-        font-size: 50px;
-        line-height: 62px;
-        font-weight: 700;
-        padding-bottom: 10px;
-    }
-
-    #cards-temp{
-        padding: 0px 25px;
-    }
-    
-    .temps-txt-2{
-        padding: 0px 32px;
-    }
-    
-}
-
-
-@media screen and (max-width: 990px) and (min-width: 880px){
-    
-    nav{
-        padding: 10px 5px;
-    }
-
-    .nav-li {
-        margin: 0px 0px;
-    }
-    .nav-li .li-btn{
-        font-size: 24px;
-        line-height: 29px;
-        max-width: 110px;
-        margin: 10px 5px;
-        padding: 12px 5px;
-    }
-    #header-section .container{
-        padding: 30px 20px;
-    }
-    .header-text-one{
-        font-size: 45px;
-        line-height: 50px;
-        font-weight: 700;
-        padding-bottom: 0px;
-    }
-
-    .header-text-two{
-        font-size: 24px;
-        line-height: 25px;
-        font-weight: 400;
-        color: #262626;
-        padding: 30px 0px;
-    }
-    
-    
-    .header-btn-one{
-        max-width: 348px;
-        max-height: 91px;
-        padding: 10px 5px;
-        font-size: 24px;
-        line-height: 29px;
-        font-weight: 700;
-    }  
-
-    #cards-temp{
-        padding: 0px 25px;
-    }
-    
-    .temps-txt-2{
-        padding: 0px 32px;
-    }
-
-    .loader img{
-        position: absolute;
-        top: 40%;
-        left: 30%;
-
-    }
-
-    .load-content img{
-        width: 40%;
-    }
-}
-
-@media screen and (max-width: 870px) and (min-width: 813px){
-    nav{
-        padding: 10px 5px;
-    }
-    
-    .nav-li {
-        margin: 12px 0px;
-    }
-    .nav-ul {
-        float: right;
-        margin: 0px;
-        padding: 0px;
-    }
-
-    nav .nav-li #nav-login{
-        font-size: 22px;
-        line-height: 20px;
-    }
-
-    .nav-li .li-btn{
-        font-size: 22px;
-        line-height: 20px;
-        max-width: 100px;
-        margin: 8px 0px;
-        padding: 8px 3px;
-    }
-
-
-    #header-section .container{
-        padding: 30px 20px;
-    }
-    .header-text-one{
-        font-size: 45px;
-        line-height: 50px;
-        font-weight: 700;
-        padding-bottom: 0px;
-    }
-
-    .header-text-two{
-        font-size: 24px;
-        line-height: 25px;
-        font-weight: 400;
-        color: #262626;
-        padding: 30px 0px;
-    }
-    
-    
-    .header-btn-one{
-        max-width: 348px;
-        max-height: 91px;
-        padding: 10px 5px;
-        font-size: 24px;
-        line-height: 29px;
-        font-weight: 700;
-    }  
-
-    #cards-temp{
-        padding: 0px 25px;
-    }
-    
-    .temps-txt-2{
-        padding: 0px 21px;
-    }
-
-    .loader img{
-        position: absolute;
-        top: 40%;
-        left: 30%;
-
-    }
-
-    .load-content img{
-        width: 40%;
-    }
-}
-
-@media screen and (max-width: 812px) and (min-width: 760px){
-    nav{
-        padding: 10px 0px;
-    }
-    
-    .nav-li {
-        margin: 9px 0px;
-    }
-    .nav-ul {
-        float: right;
-        margin: 0px;
-        padding: 0px;
-    }
-
-    nav .nav-li #nav-login{
-        font-size: 22px;
-        line-height: 20px;
-    }
-
-    .nav-li .li-btn{
-        font-size: 22px;
-        line-height: 20px;
-        max-width: 100px;
-        margin: 8px 0px;
-        padding: 8px 3px;
-    }
-
+@media screen and (max-width: 992px) and (min-width: 795px){
 
     #header-section .container{
         padding: 30px 20px;
@@ -561,14 +241,6 @@ nav .nav-li #nav-login:hover{
         font-size: 24px;
         line-height: 29px;
         font-weight: 700;
-    }  
-
-    #cards-temp{
-        padding: 0px 25px;
-    }
-    
-    .temps-txt-2{
-        padding: 0px 21px;
     }
 
     .loader img{
@@ -583,47 +255,7 @@ nav .nav-li #nav-login:hover{
     }
 }
 
-@media screen and (max-width: 768px) and (min-width: 426px){
-
-    /* navbar- section */
-    .logo{
-        margin: .5rem 1rem;
-    }
-
-    nav{
-        padding: 10px 30px;
-    }
-
-    .check-box{
-        display: block;
-    }
-
-    .nav-ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #131313;
-        top: 100px;
-        left: -100%;
-        text-align: center;
-        transition: all 0.5s;
-    }
-    
-    .nav-li{
-        display: block;
-        margin: 40px 0;
-        line-height: 30px;
-        text-transform: uppercase;
-    }
-
-    .nav-li a{
-        font-size: 20px;
-    }
-
-    nav .nav-li #nav-login{
-        border-left: none;
-    }
-    
+@media screen and (max-width: 794px) and (min-width: 766px){
 
     a:hover, a.active{
         background: none;
@@ -631,340 +263,10 @@ nav .nav-li #nav-login:hover{
     }
     #check:checked ~ ul{
         left: 0;
-    }
-    /* navbar-section */
-
-
-    #header-section .container{
-        padding: 10px 30px;
-        justify-content: center;
-        text-align: center;
-    }
-    .header-text-one{
-        font-size: 35px;
-        line-height: 40px;
-        font-weight: 700;
-        padding-bottom: 0px;
-    }
-
-    .header-text-two{
-        font-size: 20px;
-        line-height: 23px;
-        padding: 10px 0px;
-    }
-    
-    
-    .header-btn-one{
-        width: 100%;
-        max-width: 248px;
-        height: 100%;
-        max-height:71px;
-        padding: 10px 5px;
-        font-size: 20px;
-        line-height: 25px;
-        font-weight: 700;
-    }
-    
-
-    .header-img{
-        width: 100%;
-        max-width: 369px;
-        height: 100%;
-        max-height: 369px;
-    }
-    
-    #header-section .container{
-        padding: 20px 30px;
-    }
-
-    .main1-txt-one {
-        font-size: 35px;
-        line-height: 40px;
-    }
-    
-    #main-section-one{
-        padding: 20px 30px;
-    }
-
-    .main-section-two{
-        padding: 53px 30px;
-    }
-
-    #cards-temp {
-        padding: 0px 36px;
-    }
-
-    .temps-txt-2 {
-        padding: 10px 15px;
-    }
-
-    .count-num{
-        font-size: 20px;
-        line-height: 30px;
-    
-    }
-    
-    .count-txt{
-        font-size: 20px;
-        line-height: 30px;
-    }
-
-    .main-section-three{
-        padding: 80px 40px;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .main3-txt-head {
-        font-size: 35px;
-        line-height: 40px;
-    }
-
-    .main3-txt-body {
-        font-size: 20px;
-        line-height: 23px;
-    }
-
-    .main3-img {
-        width: 100%;
-        max-width: 385px;
-        height: 100%;
-        max-height: 313px;
-    }
-
-    /* animation */
-
-    .loader img{
-        position: absolute;
-        top: 40%;
-        left: 30%;
-
-    }
-
-    .load-content img{
-        width: 40%;
-    }
+    } 
 }
 
 @media screen and (max-width: 430px) and (min-width: 373px){
-
-    /* navbar- section */
-    .logo{
-        margin: .5rem 1rem;
-    }
-
-    nav{
-        padding: 10px 20px;
-    }
-
-    .check-box{
-        display: block;
-    }
-
-    .nav-ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #131313;
-        top: 100px;
-        left: -100%;
-        text-align: center;
-        transition: all 0.5s;
-    }
-    
-    .nav-li{
-        display: block;
-        margin: 40px 0;
-        line-height: 30px;
-        text-transform: uppercase;
-    }
-
-    .nav-li a{
-        font-size: 20px;
-    }
-
-    nav .nav-li #nav-login{
-        border-left: none;
-    }
-    
-
-    a:hover, a.active{
-        background: none;
-        color: #E2DA15;
-    }
-    #check:checked ~ ul{
-        left: 0;
-    }
-    /* navbar-section */
-
-
-    #header-section .container{
-        padding: 10px 20px;
-        justify-content: center;
-        text-align: center;
-    }
-    .header-text-one{
-        font-size: 30px;
-        line-height: 40px;
-        font-weight: 700;
-        padding-bottom: 0px;
-    }
-
-    .header-text-two{
-        font-size: 18px;
-        line-height: 23px;
-        padding: 10px 0px;
-    }
-    
-    
-    .header-btn-one{
-        width: 100%;
-        max-width: 248px;
-        height: 100%;
-        max-height:71px;
-        padding: 10px 5px;
-        font-size: 18px;
-        line-height: 25px;
-    }
-    
-
-    .header-img{
-        width: 100%;
-        max-width: 369px;
-        height: 100%;
-        max-height: 369px;
-    }
-    
-    #header-section .container{
-        padding: 20px 20px;
-    }
-    
-    #main-section-one{
-        padding: 20px 20px;
-    }
-
-    #cards-temp {
-        padding: 0px 36px;
-    }
-
-    .temps-txt-2 {
-        padding: 10px 15px;
-    }
-    
-    .main1-txt-one {
-        font-size: 30px;
-        line-height: 40px;
-    }
-
-    .main-section-two{
-        padding: 53px 20px;
-    }
-    .count-num{
-        font-size: 20px;
-        line-height: 30px;
-    
-    }
-    
-    .count-txt{
-        font-size: 20px;
-        line-height: 30px;
-    }
-
-    .main-section-three{
-        padding: 80px 40px;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .main3-txt-head {
-        font-size: 30px;
-        line-height: 40px;
-    }
-
-    .main3-txt-body {
-        font-size: 18px;
-        line-height: 23px;
-    }
-
-    .main3-img {
-        width: 100%;
-        max-width: 385px;
-        height: 100%;
-        max-height: 313px;
-    }
-
-
-    /* animation */
-
-    .loader img{
-        position: absolute;
-        top: 40%;
-        left: 30%;
-
-    }
-
-    .load-content img{
-        width: 40%;
-    }
-}
-
-@media screen and (max-width: 375px) and (min-width: 323px){
-
-    /* navbar- section */
-    .logo{
-        margin: .5rem 1rem;
-    }
-
-    nav{
-        padding: 10px 20px;
-    }
-
-    .check-box{
-        display: block;
-    }
-
-    .nav-ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #131313;
-        top: 100px;
-        left: -100%;
-        text-align: center;
-        transition: all 0.5s;
-    }
-    
-    .nav-li{
-        display: block;
-        margin: 40px 0;
-        line-height: 30px;
-        text-transform: uppercase;
-    }
-
-    .nav-li a{
-        font-size: 20px;
-    }
-
-    nav .nav-li #nav-login{
-        border-left: none;
-    }
-    
-
-    a:hover, a.active{
-        background: none;
-        color: #E2DA15;
-    }
-    #check:checked ~ ul{
-        left: 0;
-    }
-    /* navbar-section */
-
-
-    #header-section .container{
-        padding: 10px 20px;
-        justify-content: center;
-        text-align: center;
-    }
     .header-text-one{
         font-size: 30px;
         line-height: 40px;
@@ -1033,203 +335,24 @@ nav .nav-li #nav-login:hover{
     }
 
     .main-section-three{
-        padding: 80px 40px;
+        padding: 80px 0;
         justify-content: center;
-        text-align: center;
     }
 
     .main3-txt-head {
-        font-size: 30px;
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .main3-txt-body {
+        font-size: 20px;
         line-height: 40px;
     }
 
-    .main3-txt-body {
-        font-size: 18px;
-        line-height: 23px;
-    }
-
     .main3-img {
         width: 100%;
         max-width: 385px;
         height: 100%;
         max-height: 313px;
     }
-
-    /* animation */
-
-    .loader img{
-        position: absolute;
-        top: 40%;
-        left: 30%;
-
-    }
-
-    .load-content img{
-        width: 40%;
-    }
 }
-
-@media screen and (max-width: 323px) and (min-width: 200px){
-
-    /* navbar- section */
-    .logo {
-        margin: 5px;
-        width: 115px;
-    }
-
-    nav{
-        padding: 12px;
-    }
-
-    .check-box{
-        display: block;
-    }
-
-    .nav-ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #131313;
-        top: 70px;
-        left: -100%;
-        text-align: center;
-        transition: all 0.5s;
-    }
-    
-    .nav-li{
-        display: block;
-        margin: 40px 0;
-        line-height: 30px;
-        text-transform: uppercase;
-    }
-
-    .nav-li a{
-        font-size: 20px;
-    }
-
-    nav .nav-li #nav-login{
-        border-left: none;
-    }
-    
-
-    a:hover, a.active{
-        background: none;
-        color: #E2DA15;
-    }
-    #check:checked ~ ul{
-        left: 0;
-    }
-    /* navbar-section */
-
-
-    #header-section .container{
-        padding: 10px 20px;
-        justify-content: center;
-        text-align: center;
-    }
-    .header-text-one{
-        font-size: 25px;
-        line-height: 30px;
-        font-weight: 700;
-        padding-bottom: 0px;
-    }
-
-    .header-text-two{
-        font-size: 16px;
-        line-height: 23px;
-        padding: 10px 0px;
-    }
-    
-    
-    .header-btn-one{
-        width: 100%;
-        max-width: 248px;
-        height: 100%;
-        max-height:51px;
-        padding: 10px 5px;
-        font-size: 16px;
-        line-height: 25px;
-    }
-    
-
-    .header-img{
-        width: 100%;
-        max-width: 369px;
-        height: 100%;
-        max-height: 369px;
-    }
-    
-    #header-section .container{
-        padding: 20px 20px;
-    }
-    
-    #main-section-one{
-        padding: 20px 20px;
-    }
-
-    .main1-txt-one {
-        font-size: 25px;
-        line-height: 30px;
-    }
-
-    .main-section-two{
-        padding: 53px 20px;
-    }
-
-    #cards-temp {
-        padding: 0px 30px;
-    }
-
-    .temps-txt-2 {
-        padding: 10px 15px;
-    }
-
-    .count-num{
-        font-size: 20px;
-        line-height: 30px;
-    
-    }
-    
-    .count-txt{
-        font-size: 20px;
-        line-height: 30px;
-    }
-
-    .main-section-three{
-        padding: 80px 40px;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .main3-txt-head {
-        font-size: 25px;
-        line-height: 30px;
-    }
-
-    .main3-txt-body {
-        font-size: 16px;
-        line-height: 23px;
-    }
-
-    .main3-img {
-        width: 100%;
-        max-width: 385px;
-        height: 100%;
-        max-height: 313px;
-    }
-
-    /* animation */
-
-    .loader img{
-        position: absolute;
-        top: 40%;
-        left: 30%;
-
-    }
-
-    .load-content img{
-        width: 40%;
-    }
-}
-
-/* Media Query section */

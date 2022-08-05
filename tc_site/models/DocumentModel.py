@@ -9,10 +9,10 @@ class DocumentModel (models.Model):
 
     #  (IDs should be unique hashes)
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    document = models.CharField(max_length=100000)
-    # document_type = models.CharField(max_length=100)
+    content = models.CharField(max_length=100000)
+    document_type = models.CharField(max_length=10) # PP or TC
     date_issued = models.DateField()
     company = models.ForeignKey(CompanyModel, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.document.name
+        return "Document " + str(self.id) + ' - ' + str(self.date_issued)

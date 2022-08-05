@@ -6,7 +6,27 @@ document.querySelector('.loader').classList.add('loader')
 setTimeout(() => {
     document.querySelector('.project').style.display='block'
     document.querySelector('.loader').style.display='none'
-},2000)
+},000)
+
+
+//Navbar Toggler function
+
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.querySelectorAll('.nav-item')
+
+
+navbarLinks.forEach((navbarLink)=>{
+    navbarLink.addEventListener('click', ()=> {
+        const activeNavbarLinks = document.querySelectorAll('.active')
+
+        activeNavbarLinks.forEach((activeNavbarLink)=>{
+            activeNavbarLink.classList.remove("active");
+        })
+        
+        navbarLink.classList.add('active')
+    })
+
+})
 
 
 //Counter Function

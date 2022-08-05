@@ -1,0 +1,59 @@
+{% load static %}
+<div id="contact">
+    <section class="container d-flex flex-column justify-content-center align-items-center">
+        <h1 class="main-tc-6-h1">HOW CAN WE HELP?</h1>
+        <p class="main-tc-6-p">We provide 24/7 customer care support</p>
+    </section>
+    <div class="container">
+        <section class="row between">
+            <div class="col-lg-6 main-tc-7">
+                <h1 class="main-tc-7-h1">Message us</h1>
+                <form action="" method="post">
+                    <div>
+                        <label for="name" class="main-tc-7-label">FULL NAME</label>
+                        <input type="text" name="name" class="main-tc-7-input" maxlength="30" placeholder="Input Name"
+                            required>
+                    </div>
+                    <div>
+                        <label for="email" class="main-tc-7-label">E-MAIL</label>
+                        <input type="email" name="email" class="main-tc-7-input" maxlength="40"
+                            placeholder="yourname@gmail.com" required>
+                    </div>
+                    <div>
+                        <label for="message" class="main-tc-7-label">HOW CAN WE HELP YOU?</label>
+                        <textarea name="message" class="main-tc-7-textarea" maxlength="500" rows="5"
+                            placeholder="Tell us what you'll like to enquire about" required></textarea>
+                    </div>
+                    <input type="submit" name="submit" value="SUBMIT" class="main-tc-7-submit">
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <div class="main-tc-8">
+
+                    <h1 class="main-tc-8-h1">Contacts</h1>
+                    <span class="d-flex flex-row main-tc-8-con">
+                        <img src="{% static 'assets/landing/taiwo/email.png' %}" alt="Email Address" width="30px"
+                            height="30px">
+                        <ul>
+                            <li class="main-tc-8-pa">Quickterms@gmail.com</li>
+                            <li class="main-tc-8-pb">Quickterms@yahoo.com</li>
+                        </ul>
+                    </span>
+                    <span class="d-flex flex-row main-tc-8-con">
+                        <img src="{% static 'assets/landing/taiwo/call.png' %}" alt="Phone Numbers" width="30px"
+                            height="30px">
+                        <ul>
+                            <li class="main-tc-8-pb2 ">+234 - 815 - 874 - 7222 </li>
+                            <li class="main-tc-8-pa2">+234 - 703 - 713 - 9611</li>
+                        </ul>
+                    </span>
+                    <span class="d-flex flex-row align-items-center">
+                        <img src="{% static 'assets/landing/taiwo/location.png' %}" alt="Location" width="30px"
+                            height="30px">
+                        <p class="main-tc-8-pc">@Zuri, project_team_74</p>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

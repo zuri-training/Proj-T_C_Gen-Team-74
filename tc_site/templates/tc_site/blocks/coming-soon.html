@@ -1,0 +1,15 @@
+{% extends 'tc_site/pages/landing/base.html' %}
+
+{% block content %}
+<div id="body-soon">
+    <div class="container">
+        <div id="coming-soon">
+            <h1 class="header-soon">C<span class="blue-o">o</span>ming Soon</h1>
+            <p class="construction">This page is under construction</p>
+            <a href="{% url 'tc_site:landing' %}">
+                <button class="notify-me"><i class="fa-solid fa-arrow-left-long"></i>Back to home</button>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

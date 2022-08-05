@@ -1,5 +1,5 @@
 {% load static %}
-<div id="sign-in-modal" class="backdrop-wrapper">
+<div id="sign-in-modal" class="backdrop-wrapper" style="display: none;">
   <div class="backdrop"></div>
   <div class="modals login_container">
     <p class="heading">Login to your account</p>
@@ -10,21 +10,19 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     {% endif %}
-    <form action="{% url 'tc_site:signin' %}" method="post">
+    <form action="{% url 'tc_site:signin' %}" method="post" id="log-in_form">
       {% csrf_token %}
       <div class="fields">
         <label for="first_name">Username</label>
         {{signin_form.username}}
-        <!-- <input type="text" name="" placeholder="John Doe" required /> -->
       </div>
 
       <div class="fields">
         <label for="password">Password</label>
         <div class="icon_group">
           {{signin_form.password}}
-          <!-- <input type="password" name="enter_password" placeholder="Enter your password" min="8" class="password"
-            required /> -->
           <i class="bi bi-eye-slash togglePassword"></i>
+ 
         </div>
       </div>
       <span id="forgot"><a href="#"> Forgot Password? </a></span>

@@ -1,0 +1,95 @@
+{% extends 'tc_site/pages/landing/base.html' %}
+{% load static%}
+{% block meta %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'css/generated/generated.css' %}?version=1">
+    <script src="https://kit.fontawesome.com/faacca9d4f.js" crossorigin="anonymous"></script>
+
+{% endblock %}
+
+{% block content %}
+
+    <div id="generated" class="container">
+        <div class="greetings">
+            <h2> Hello {{user.username}}!</h1>
+            <h3 class="pb-5">Congratulations, Your document has been generated!</h2>
+        </div>
+
+            <div class="view-box">
+                {% include 'tc_site/gen_file.html' %}
+                <!-- <div class="temporary-placeholder-image"><img src="https://images.sampletemplates.com/wp-content/uploads/2019/10/Sample-Website-Terms-and-Conditions.jpg" id="img1"></div>
+                <div class="temporary-placeholder-image"><img src="https://images.sampletemplates.com/wp-content/uploads/2019/10/Sample-Website-Terms-and-Conditions.jpg" id="img2"></div>
+                <div class="temporary-placeholder-image"><img src="https://images.sampletemplates.com/wp-content/uploads/2019/10/Sample-Website-Terms-and-Conditions.jpg" id="img3"></div>  -->
+            </div>
+            
+            <div class="take-action p-5 text-center">
+                <h5> Which of the following action will you like to take ?</h5>
+            </div>
+    <div class="accordion container m-0" id="accordion">
+            <div class="action mx-2 pt-3 pb-1">
+                <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#export" aria-expanded="false" aria-controls="export">
+                    Export File <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#embed" aria-expanded="false" aria-controls="embed">
+                  Embed <i class="fa-solid fa-angle-left"></i><i class="fa-solid fa-angle-right"></i>
+                </button>
+                <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#share" aria-expanded="false" aria-controls="share">
+                    Share <i class="fa-solid fa-share-nodes"></i>
+                </button>
+            </div>
+        
+            <div class="container collapse show m-0" id="export" data-parent="#accordion">
+                <div class="card card-body">
+                    <p> You can export and download your file as PDF or MS Word document on our website  </p>
+                    <div class="pdf d-flex p-0 m-0"> <img src="{% static 'assets/generated/pdf.png' %}" alt="pdf" id="pdf" width="17px" height="24px"> <a href="">  Click here to export your file as PDF</a></div>
+                    <div class="microsoft d-flex"> <img src="{% static 'assets/generated/microsoft.png' %}" alt="word" id="microsoft" width="17px" height="24px"> <a href="">  Click here to export your file as MS Word Document</a></div> 
+                </div>
+            </div>
+            <div class="container collapse m-0" id="embed" data-embed-html="{{html_content}}" data-parent="#accordion">
+                <div class="card card-body">
+                  <p> Make your document visible to anybody visiting your website by embedding it. You can copy the link to your to your website and embed.. To learn more<a>  click here</a> </p>
+                  <div class="form-group ">
+                        
+                    
+                    </div>
+                   <textarea class="form-control" id="embed" rows="6"cols="15">
+                    {{html_content}}
+                   </textarea>
+               </div>
+           
+           <div class= "mt-2 mx-3">
+               <button id="embed-btn" class="btn btn-primary mt-4"> <i class="fa-solid fa-link"></i> Copy</button>
+           </div>
+       </div>
+              <div class="container collapse m-0" id="share" data-parent="#accordion">
+                <div class="card card-body">
+                    <div class="form-group p-0 col-md-8">
+                        <label for="InputEmail"></label>
+                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Input Email address">
+                        
+                    </div>
+                    <div class="form-group ">
+                         <div class="copy py-2"> <a href=""><i class="fa-solid fa-link"></i> Copy Link here</a>
+                         </div>
+                        <textarea class="form-control" id="share-text" rows="6"cols="15" placeholder="Paste Link here.." ></textarea>
+                    </div>
+                
+                    </div class= "mt-2">
+                    <button type="submit" class="btn btn-primary mt-4">Send Link</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+<script src="{% static 'js/generated.js' %}?version=0"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="{% static 'js/embed.js' %}?version=1"></script>
+
+{% endblock %}

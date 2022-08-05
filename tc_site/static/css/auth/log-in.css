@@ -3,6 +3,7 @@
 .login_container {
   --main-color: rgb(255, 255, 255);
   --main-blue: rgb(45, 45, 182);
+  --main-blue-light: hsl(240, 60%, 55%);
 }
 
 .backdrop-wrapper {
@@ -29,58 +30,52 @@
   z-index: -1;
 }
 
-
 .modals.login_container {
-  /* position: absolute; */
-  display: flex;
-  flex-direction: column;
-  /* padding: 24px 25px; */
+  position: absolute;
+  padding: 24px 15px;
   background-color: rgba(243, 241, 241, 1);
   box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.25);
-  border: 1px solid black;
-  border-radius: 4px;
+  border: 0px solid;
+  border-radius: 1rem;
 }
 
 .modals p.heading {
   font-weight: 700;
   font-size: 32px;
   line-height: 39px;
-  margin-bottom: 12px;
+  margin: 1rem auto 1.5rem;
 }
 
-.modals form {
+.modals form#log-in_form {
   display: flex;
   flex-direction: column;
-  /* gap: 10px; */
 }
 
 .modals div.fields {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: .5rem;
 }
 
 .modals div.icon_group {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 2px;
+  --mg-bottom: 2px;
+
+  margin-bottom: var(--mg-bottom);
+  position: relative;
+  font-size: 16px;
 }
 
 .modals input {
-  margin-bottom: 1.2em;
-  width: 392px;
-  height: 60px;
+  width: 100%;
+  margin-bottom: var(--mg-bottom);
   border-radius: 4px;
   border: solid rgba(146, 146, 146, 1) 2px;
-  padding: 12px;
+  padding: .5rem;
   /* gap: 10px; */
-  font-size: 18px;
 }
 
 .modals input::placeholder {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   /* line-height: 40px; */
-  font-size: 20px;
   font-style: normal;
   color: rgba(0, 0, 0, 0.4);
 }
@@ -95,6 +90,7 @@
 .modals input:focus::placeholder {
   transition: 0.1s;
   letter-spacing: 0.6px;
+  font-size: 20px;
 }
 
 .modals input#password {
@@ -102,29 +98,33 @@
 }
 
 .modals i {
-  margin-right: 20px;
-  padding-top: 20px;
-  margin-bottom: 28px;
-  margin-left: -30px;
+  position: absolute;
+  top: calc(50% - var(--mg-bottom));
+  right: 1rem;
+  transform: translateY(-50%);
   cursor: pointer;
-  text-align: right;
-  display: inline;
 }
 
 .modals label {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
   margin-bottom: 5px;
   font-weight: 400;
 }
 
 .modals #forgot {
-  margin-bottom: 28px;
+  margin: 1rem 0;
 }
 
 .modals span a {
+  text-align: center;
   font-size: 12px;
   font-weight: 400;
+  width: fit-content;
+  margin: 0 auto;
+}
+.modals span a:hover {
+  color: var(--main-blue)
 }
 
 .modals p {
@@ -137,18 +137,11 @@
 }
 
 .modals .btn-login-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 1rem;
 }
 
 .modals .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
+  width: 100%;
   height: 2.4em;
   line-height: 29px;
   color: rgb(235, 241, 235);
@@ -178,8 +171,77 @@
 }
 
 .modals p a {
-  color: var(--main-blue);
+  color: var(--main-blue) !important;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  width: fit-content;
+  margin: auto;
+  cursor: pointer;
+}
+.modals p a:hover {
+  color: var(--main-blue-light) !important
+}
+
+@media screen and (max-width: 700px) {
+  .modals p.heading {
+    font-size: 30px;
+  }
+
+  .modals input::placeholder {
+    font-size: 14px;
+  }
+
+  .modals input:focus::placeholder {
+    transition: 0.1s;
+    font-size: 15px;
+  }
+
+  .modals label {
+    font-size: 14px;
+  }
+
+  .modals span a {
+    font-size: 12px;
+  }
+
+  .modals .btn-login-container {
+    margin-top: 8px;
+    margin-bottom: 21px;
+  }
+
+  .modals button {
+    padding: 9px 8px;
+    font-size: 21px;
+  }
+
+  .modals #login_btn:hover {
+    letter-spacing: 1px;
+  }
+
+  .modals .question {
+    margin-bottom: 8px;
+  }
+
+  .modals p a {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .modals.login_container {
+    padding: 20px 10px;
+  }
+
+  .modals p.heading {
+    font-size: 26px;
+  }
+  .modals input:focus::placeholder {
+    transition: 0.1s;
+    font-size: 15px;
+  }
+  .modals button {
+    padding: 9px 8px;
+    font-size: 19px;
+  }
 }
