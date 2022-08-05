@@ -9,7 +9,7 @@
 }
 
 #generated .container {
-    margin: 50px;
+    margin: 30px;
 }
 
 #generated .greetings {
@@ -19,16 +19,17 @@
 }
 
 #generated .temporary-placeholder-image {
-    max-width: 600px;
+    max-width: 300px;
 }
 
 #generated .view-box {
     border: 1px solid;
     max-width: fit-content;
     margin: 0 auto;
+    overflow: scroll;
 }
 
-#generated img {
+#generated #img1, #img2, #img3 {
     width: 190px;
 }
 
@@ -39,8 +40,10 @@
 
 #generated #pdf,
 #microsoft {
+    background-size: 24px 17px;
     width: 17px;
 }
+ 
 
 #generated .action {
     display: flex;
@@ -58,6 +61,10 @@
 .copy,
 a {
     color: blue;
+}
+#generated a {
+    display: inline;
+    padding: 1px;
 }
 
 #generated #share-text,
@@ -83,4 +90,13 @@ a {
     background-color: #ECE5E5;
     border-bottom: 4px solid;
     border-bottom-color: #252598;
+}
+#generated .btn-light:hover {
+    background-color:#8d8df8;
+    border: 1px solid;
+    border-radius: 0;
+}
+#generated .btn-primary:hover {
+    background-color: #8d8df8;
+    border: 1px solid;
 }
