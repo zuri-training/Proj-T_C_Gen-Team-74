@@ -183,7 +183,6 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
     line-height: 2rem;
     color: #262626;
 }
@@ -193,7 +192,6 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
     line-height: 32px;
     position: relative;
     top: -20px;
@@ -335,13 +333,10 @@
     display: block;
     width: 80%;
     max-width: 300px;
-    position: relative;
-    left: -1%;
-    margin: 0 auto;
     padding: 1rem;
     background: #E2DA15;
     border-radius: 11.6746px;
-    border: none;
+    border: 2px solid transparent;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -351,10 +346,6 @@
     margin-top: 40px;
     margin-bottom: 80px;
     transition: ease .2s
-}
-
-.main-tc-7-submit:hover {
-    letter-spacing: 3px;
 }
 
 .main-tc-7-submit:hover {

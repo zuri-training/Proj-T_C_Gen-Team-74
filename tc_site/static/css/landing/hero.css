@@ -1,6 +1,6 @@
 #hero {
     --primary-blue: hsl(240, 61%, 37%);
-    --primary-blue-light: hsla(240, 61%, 37%, 0.6);
+    --primary-blue-light: hsl(240, 48%, 54%);
     --primary-yellow: hsl(51, 81%, 37%);
     --light-color: white;
     --light-color-light: hsla(0, 0%, 100%, 0.432);
@@ -8,30 +8,35 @@
     text-align: center;
 }
 
-.hero-bg img {
+.hero-bg {
+    background-image: url('/static/assets/landing/hero/hero-bg.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #hero .container {
-    position: absolute;
-    top: 12rem;
-    left: 50%;
     width: 90%;
     max-width: 994px;
     margin: 0 auto;
-    transform: translateX(-50%);
 }
 
 #hero .text-content h1 {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 3rem;
+    margin: 8rem auto 3rem;
 }
 
 #hero .text-content .text {
     font-size: 1.5rem;
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem;
+    max-width: 700px;
+    text-shadow: 0 0 1rem;
 }
 
 #hero .button {
@@ -42,70 +47,50 @@
     max-height: 91px;
     border-radius: 4px;
     padding: 12px 10px;
-    background: #262698;
+    background: var(--primary-blue);
     color: #EAF0EA;
-    font-size: 24px;
+    font-size: 1.2rem;
     line-height: 29.26px;
     font-weight: 700;
     border: transparent;
     margin-bottom: 3rem;
 }
-
-@media (max-width:900px) and (min-width: 600px) {
-
-    #hero .text-content h1 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    #hero .text-content .text {
-        font-size: 1.5rem;
-        margin-bottom: 3rem;
-    }
+#hero .button:hover {
+    box-shadow: 0 4px 12px rgb(56 56 56 / 30%);
+    background: var(--primary-blue-light);
 }
 
-@media (max-width: 600px) {
-    .hero-bg img {
-        height: 90vh;
-    }
 
-    #hero .container {
-        top: 12rem;
-    }
-
+@media (max-height: 600px) and (min-width: 700px) {
     #hero .text-content h1 {
-        margin-bottom: 1rem;
-        font-size: 2rem;
+        font-size: 2.5rem;
+        margin: 8rem auto 2rem;
     }
-
     #hero .text-content .text {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
+        font-size: 1rem
     }
-
     #hero .button {
+        height: auto;
         font-size: 1rem;
     }
 }
-
-@media (max-width: 420px) {
-    .hero-bg img {
-        height: 70vh;
-    }
-
-    #hero .container {
-        top: 4rem;
-    }
+@media (max-height: 450px) and (min-width: 700px) {
     #hero .text-content h1 {
-        margin-top: 3rem;
+        font-size: 2rem;
+        margin: 8rem auto 1.8rem;
     }
 }
 
-@media screen and (min-height: 450px) and (max-height: 550px) {
-    .hero-bg img {
-        height: 80vh;
+@media (max-width: 699px) {
+    #hero .text-content h1 {
+        font-size: 2rem;
+        margin: 8rem auto 2rem;
     }
-    #hero .container {
-        top: 8rem;
+    #hero .text-content .text {
+        font-size: 1rem
+    }
+    #hero .button {
+        height: auto;
+        font-size: 1rem;
     }
 }
