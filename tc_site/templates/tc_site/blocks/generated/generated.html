@@ -8,7 +8,7 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <script src="https://kit.fontawesome.com/faacca9d4f.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="{% static 'css/generated/generated.css' %}?version=5">
+<link rel="stylesheet" href="{% static 'css/generated/generated.css' %}?version=6">
 
 {% endblock %}
 
@@ -16,9 +16,8 @@
 
 <div id="generated" class="container">
     <div class="greetings">
-        <h2> Hello {{user.username}}!</h1>
-            <h3 class="pb-5">Congratulations, Your document has been generated!
-        </h2>
+        <h1> Hello {{user.username}}!</h1>
+        <h3 class="pb-5">Congratulations, Your document has been generated!</h3>
     </div>
 
     <div class="view-box">
@@ -54,36 +53,31 @@
                         Document</a></div>
             </div>
         </div>
-        <div class="container collapse m-0" id="embed" data-embed-html="{{html_content}}" data-parent="#accordion">
+        <div class="container collapse m-0" id="embed" data-parent="#accordion">
             <div class="card card-body">
                 <p> Make your document visible to anybody visiting your website by embedding it. You can copy the link
                     to your to your website and embed.. To learn more<a> click here</a> </p>
                 <div class="form-group ">
                 </div>
-                <textarea class="form-control" id="embed" rows="6" cols="15">
+                <textarea class="form-control" rows="6" cols="15">
                     {{html_content}}
                    </textarea>
             </div>
 
-            <div class="mt-2 mx-3">
-                <button id="embed-btn" class="btn btn-primary mt-4"> <i class="fa-solid fa-link"></i> Copy</button>
+            <div class="mt-2 mx-3" data-copy-html="{{html_content}}">
+                <button class="btn btn-primary mt-4 copy-btn"> <i class="fa-solid fa-link"></i> Copy</button>
             </div>
         </div>
         <div class="container collapse m-0" id="share" data-parent="#accordion">
-            <div class="card card-body">
-                <div class="form-group p-0 col-md-8">
-                    <label for="InputEmail"></label>
-                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
-                        placeholder="Input Email address">
-                </div>
+            <div class="card card-body" data-copy-html="{{url}}">
                 <div class="form-group ">
-                    <div class="copy py-2"> <a href=""><i class="fa-solid fa-link"></i> Copy Link here</a>
+                    <div class="copy py-2"> <a href=""><i class="fa-solid fa-link"></i>Copy Link below and share</a>
                     </div>
-                    <textarea class="form-control" id="share-text" rows="6" cols="15"
-                        placeholder="Paste Link here.."></textarea>
+                    <textarea class="form-control" id="share-text" rows="3" cols="15"
+                        placeholder="Paste Link here..">{{url}}</textarea>
                 </div>
+                <button type="submit" class="btn btn-primary mt-4 mx-3 copy-btn">Copy Link</button>
             </div>
-            <button type="submit" class="btn btn-primary mt-4 mx-3">Send Link</button>
         </div>
     </div>
 </div>
@@ -100,6 +94,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-<script src="{% static 'js/embed.js' %}?version=3"></script>
+<script src="{% static 'js/embed.js' %}?version=4"></script>
 
 {% endblock %}

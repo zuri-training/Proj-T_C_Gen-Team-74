@@ -128,6 +128,7 @@ def preview_helper (request):
                 company.id=None
                 # Save company model
                 company.save()
+                print(company)
                 # Save the Document
                 document = DocumentModel(
                         content=template_str, # saving HTML string to DB
@@ -144,7 +145,9 @@ def preview_helper (request):
 
             ctx = {
                 'html': template_str,
+                'docID': document.id
             }
+
             return render(request, 'tc_site/blocks/preview.html', ctx)
         
         messages.info(request, "Sorry you can't access this page. Try generating a form first.")

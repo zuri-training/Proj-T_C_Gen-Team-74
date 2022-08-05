@@ -108,10 +108,10 @@ a {
     border: 1px solid;
 }
 
-#embed-btn {
+.copy-btn {
     position: relative;
 }
-#embed-btn.active::after {
+.copy-btn.active::after {
     content: 'copied!';
     position: absolute;
     right: -5rem;

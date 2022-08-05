@@ -55,9 +55,9 @@ def download (request, userID, docID):
     # Locate and put your logic in the view_helper directory of this app
     return download_helper(request, userID, docID)
 
-def share (request, userID, docID):
+def share (request, docID):
     # Locate and put your logic in the view_helper directory of this app
-    return share_helper(request, userID, docID)
+    return share_helper(request, docID)
 
 def export (request, userID, docID):
     # Locate and put your logic in the view_helper directory of this app

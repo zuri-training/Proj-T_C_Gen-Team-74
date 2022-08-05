@@ -1,40 +1,43 @@
-const embedElement = document.getElementById('embed');
-const text = embedElement?.dataset.embedHtml;
 
-
-function copyToClipboard(text) {
-    if (!navigator.clipboard){
-        anotherCopyToClipboard(text)
-        console.log('copied')
-    }
-    navigator.clipboard.writeText(text).then(function() {
-        console.log('Async: Copying to clipboard was successful!');
-      }, function(err) {
-        console.error('Async: Could not copy text: ', err);
-      });
-
-      embedBtn.classList.add('active');
-      setTimeout(()=>{
-        embedBtn.classList.remove('active');
-      }, 2000)
+function copyToClipboard(text, copyBtn) {
+  if (!navigator.clipboard) {
+    anotherCopyToClipboard(text)
+  }
+  navigator.clipboard.writeText(text).then(function () {
+    console.log('Async: Copying to clipboard was successful!');
+  }, function (err) {
+    console.error('Async: Could not copy text: ', err);
+  });
+  console.log('clipboard function:',  copyBtn)
+  copyBtn.classList.add('active');
+  setTimeout(() => {
+    copyBtn.classList.remove('active');
+  }, 2000)
 }
 function anotherCopyToClipboard(text) {
-    console.log('click')
-    var input = document.createElement('textarea');
-    input.innerHTML = text;
-    document.body.appendChild(input);
-    input.focus();
-    input.select();
-    var result = document.execCommand('copy');
 
-    document.body.removeChild(input);
+  var input = document.createElement('textarea');
+  input.innerHTML = text;
+  document.body.appendChild(input);
+  input.focus();
+  input.select();
+  var result = document.execCommand('copy');
 
-    console.log(result)
-    return result;
+  document.body.removeChild(input);
+
+  return result;
 }
 
 // Get embed button
-const embedBtn = document.getElementById('embed-btn');
+const copyBtns = document.querySelectorAll('.copy-btn');
 
-embedBtn.addEventListener('click', ()=>copyToClipboard(text));
+copyBtns.forEach((copyBtn) => {
+  console.log('foreach function:',  copyBtn)
+
+  const copyElement = copyBtn.parentNode;
+
+  const text = copyElement?.dataset.copyHtml;
+  console.log(copyElement)
+  copyBtn.addEventListener('click', () => copyToClipboard(text, copyBtn));
+})
 
