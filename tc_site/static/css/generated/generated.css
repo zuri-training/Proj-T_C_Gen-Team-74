@@ -60,14 +60,6 @@
     padding-right: 10px;
 }
 
-@media screen and (max-width: 500px) {
-    #generated .action {
-        padding: 0;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
 #generated .wrapper {
     max-width: 900px;
 }
@@ -124,4 +116,17 @@ a {
     position: absolute;
     right: -5rem;
     color: black;
+}
+
+
+@media screen and (max-width: 500px) {
+    #generated .action {
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #generated .take-action {
+        padding: 0 !important;
+    }
 }

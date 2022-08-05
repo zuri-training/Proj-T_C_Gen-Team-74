@@ -63,9 +63,9 @@ def export (request, userID, docID):
     # Locate and put your logic in the view_helper directory of this app
     return export_helper(request, userID, docID)
 
-def coming_soon (request):
+def coming_soon (request, page):
     # Locate and put your logic in the view_helper directory of this app
-    return coming_soon_helper(request)
+    return coming_soon_helper(request, page)
 
 def dashboard (request, username):
     # Locate and put your logic in the view_helper directory of this app

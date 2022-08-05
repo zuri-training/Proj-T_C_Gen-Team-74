@@ -14,7 +14,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh;    
+    background: url('/static/assets/coming-soon/desktop.png'), #F7F9F7;
+    background-size: contain
 }
 
 #coming-soon {
@@ -73,7 +75,8 @@
     width: 290px;
     height: 71px;
     margin-top: 10%;
-    border: 2px solid transparent
+    border: 2px solid transparent;
+    text-decoration: none !important;
 }
 #body-soon .notify-me:hover {
     border: 2px solid #080808
@@ -98,6 +101,8 @@
         justify-content: center;
         align-items: center;
         min-height: 0vh;
+        background: url('/static/assets/coming-soon/mobile.png'), #F7F9F7;
+        background-size: contain
     }
 
     #coming-soon {

@@ -41,7 +41,7 @@
         <ul class="nav-auth-btns nav-links">
           <li>
             {% if user.id %}
-            <a class="dashboard-link" href="{% url 'tc_site:coming-soon' %}">
+            <a class="dashboard-link" href="{% url 'tc_site:dashboard' username=user.username %}">
               <img src="{% static 'assets/landing/navbar/user-icon.png' %}" class="user-icon" alt="user-icon">
               <span>{{user.username}}</span>
             </a>
@@ -79,7 +79,7 @@
       <ul class="nav-auth-btns nav-links">
         <li>
           {% if user.id %}
-          <a class="dashboard-link" href="{% url 'tc_site:coming-soon' %}">
+          <a class="dashboard-link" href="{% url 'tc_site:dashboard' username=user.username %}">
             <img src="{% static 'assets/landing/navbar/user-icon.png' %}" class="user-icon" alt="user-icon">
             <span>{{user.username}}</span>
           </a>

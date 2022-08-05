@@ -1,6 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
 
 def dashboard_helper(request, username):
+    user = request.user
 
-    return render(request, 'tc_site/blocks/coming-soon.html')
-    # return render(request, 'tc-site/pages/dashboard/dashboard.html')
+    ctx = {
+        'user': user,
+    }
+
+    if username != user.username:
+        print(username)
+        print(user.username)
+
+        messages.error(request, "You are not allowed to view this page")
+        return redirect('/')
+
+    return render(request, 'tc_site/blocks/dashboard/dashboard.html', ctx)

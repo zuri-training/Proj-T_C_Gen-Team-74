@@ -25,5 +25,5 @@ urlpatterns = [
     path('<str:username>/archive', views.archive, name="archive"),
     path('<str:username>/generate', views.generated_docs, name="generate"),
     path('<str:username>/generated_docs', views.generated_docs, name="generated_docs"),
-    path('coming-soon', views.coming_soon, name="coming-soon"),
+    path('<str:page>/coming-soon', views.coming_soon, name="coming-soon"),
 ]
