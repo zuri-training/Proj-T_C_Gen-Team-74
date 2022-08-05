@@ -90,17 +90,19 @@
           {% endif %}
         </li>
         <li>
-          <button class="pri-btn">
-            {% if user.id %}
-            <a href="{% url 'tc_site:signout' %}">
+          {% if user.id %}
+          <a href="{% url 'tc_site:signout' %}">
+              <button class="pri-btn">
               Log out
+            </button>
             </a>
             {% else %}
             <div class="sign-up">
+              <button class="pri-btn">
               Sign Up
+            </button>
             </div>
             {% endif %}
-          </button>
         </li>
       </ul>
     </div>
