@@ -19,16 +19,16 @@
         </div>
 
             <div class="view-box d-flex">
-                <div class="temporary-placeholder-image"><img src="https://images.sampletemplates.com/wp-content/uploads/2019/10/Sample-Website-Terms-and-Conditions.jpg"></div>
-                <div class="temporary-placeholder-image"><img src="https://images.sampletemplates.com/wp-content/uploads/2019/10/Sample-Website-Terms-and-Conditions.jpg"></div>
-                <div class="temporary-placeholder-image"><img src="https://images.sampletemplates.com/wp-content/uploads/2019/10/Sample-Website-Terms-and-Conditions.jpg"></div> 
+                <div class="temporary-placeholder-image"><img src="https://images.sampletemplates.com/wp-content/uploads/2019/10/Sample-Website-Terms-and-Conditions.jpg" id="img1"></div>
+                <div class="temporary-placeholder-image"><img src="https://images.sampletemplates.com/wp-content/uploads/2019/10/Sample-Website-Terms-and-Conditions.jpg" id="img2"></div>
+                <div class="temporary-placeholder-image"><img src="https://images.sampletemplates.com/wp-content/uploads/2019/10/Sample-Website-Terms-and-Conditions.jpg" id="img3"></div> 
             </div>
             
             <div class="take-action p-5 text-center">
                 <h5> Which of the following action will you like to take ?</h5>
             </div>
-    <div class="accordion container" id="accordion">
-            <div class="action mx-3 pt-4 pb-1">
+    <div class="accordion container m-0" id="accordion">
+            <div class="action mx-2 pt-3 pb-1">
                 <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#export" aria-expanded="false" aria-controls="export">
                     Export File <i class="fa-solid fa-chevron-down"></i>
                 </button>
@@ -40,15 +40,14 @@
                 </button>
             </div>
         
-            <div class="container collapse" id="export" data-parent="#accordion">
+            <div class="container collapse m-0" id="export" data-parent="#accordion">
                 <div class="card card-body">
                     <p> You can export and download your file as PDF or MS Word document on our website  </p>
-                    <div class="pdf p-0 m-0"> <img src="{% static 'assets/generated/pdf.svg'%}" alt="" id="pdf"> <a href=""> Click here to export your file as PDF</a></div>
-                    <div class="microsoft"> <img src="{% static 'assets/generated/microsoft.svg'%}" alt="" id="microsoft"> <a href="">Click here to export your file as MS Word Document</a></div>
-                    
+                    <div class="pdf d-flex p-0 m-0"> <img src="{% static 'assets/generated/pdf.png' %}" alt="pdf" id="pdf" width="17px" height="24px"> <a href="">  Click here to export your file as PDF</a></div>
+                    <div class="microsoft d-flex"> <img src="{% static 'assets/generated/microsoft.png' %}" alt="word" id="microsoft" width="17px" height="24px"> <a href="">  Click here to export your file as MS Word Document</a></div> 
                 </div>
             </div>
-            <div class="container collapse" id="embed" data-parent="#accordion">
+            <div class="container collapse m-0" id="embed" data-parent="#accordion">
                 <div class="card card-body">
                   <p> Make your document visible to anybody visiting your website by embedding it. You can copy the link to your to your website and embed.. To learn more<a href="">  click here</a> </p>
                   <div class="form-group ">
@@ -62,9 +61,7 @@
                <button type="submit" class="btn btn-primary mt-4"> <i class="fa-solid fa-link"></i> Copy</button>
            </div>
        </div>
-                
-              </div>
-              <div class="container collapse" id="share" data-parent="#accordion">
+              <div class="container collapse m-0" id="share" data-parent="#accordion">
                 <div class="card card-body">
                     <div class="form-group p-0 col-md-8">
                         <label for="InputEmail"></label>
