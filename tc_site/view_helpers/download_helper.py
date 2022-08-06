@@ -2,6 +2,6 @@
 # ! If you must change this file inform them or de-marauder
 
 
-def download_helper(request):
+def download_helper(request, userID, docID):
     # Write your logic here
     return # Make sure to return a valid response

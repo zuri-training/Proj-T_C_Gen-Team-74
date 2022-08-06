@@ -1,0 +1,39 @@
+{% load static %}
+<div id="sign-in-modal" class="backdrop-wrapper" style="display: none;">
+  <div class="backdrop"></div>
+  <div class="modals login_container">
+    <p class="heading">Login to your account</p>
+    {% if form.errors %}
+    <div class="alert alert-warning alert-dismissible fade show error-alert" role="alert">
+      {{signin_form.errors.username}}
+      {{signin_form.errors.password}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endif %}
+    <form action="{% url 'tc_site:signin' %}" method="post" id="log-in_form">
+      {% csrf_token %}
+      <div class="fields">
+        <label for="first_name">Username</label>
+        {{signin_form.username}}
+      </div>
+
+      <div class="fields">
+        <label for="password">Password</label>
+        <div class="icon_group">
+          {{signin_form.password}}
+          <i class="bi bi-eye-slash togglePassword"></i>
+ 
+        </div>
+      </div>
+      <span id="forgot"><a href="#"> Forgot Password? </a></span>
+
+      <div class="btn-login-container">
+        <!-- I changed your styles from targeting the button element to targeting a 'button class' -->
+        <button class="button" type="submit" id="login_btn">Login</button>
+      </div>
+    </form>
+
+    <p class="question">Don't have an account?</p>
+    <p class="sign-up"><a>Sign Up</a></p>
+  </div>
+</div>

@@ -6,7 +6,18 @@
 # Import Forms from the forms folder
 
 from django.shortcuts import render, redirect
+from ..forms.GenDocumentForm import GenDocumentForm
 
 def gen_form_helper(request):
     # Write your logic here
-    return # Make sure to return a valid response
+    user = request.user
+    form = GenDocumentForm()
+    ctx = {
+        'user': user,
+        'form': form
+    }
+    if (user.id):
+        return render(request, 'tc_site/pages/form.html', ctx) # Make sure to return a valid response
+
+    else:
+        return redirect('tc_site:signin')

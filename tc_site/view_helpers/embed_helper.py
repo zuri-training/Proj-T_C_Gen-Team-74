@@ -7,6 +7,6 @@
 
 from django.shortcuts import render, redirect
 
-def embed_helper(request):
+def embed_helper(request, userID, docID):
     # Write your logic here
     return # Make sure to return a valid response

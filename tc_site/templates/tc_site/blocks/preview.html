@@ -1,0 +1,28 @@
+{% extends 'tc_site/pages/landing/base.html' %}
+{% load static %}
+
+{% block meta %}
+<link rel="stylesheet" href="{% static 'css/preview/preview.css' %}?version=3" />
+
+{% endblock %}
+
+{% block content %}
+<div id="preview" class='container'>
+
+    <a href="{% url 'tc_site:gen-form' %}">
+        <div onclick="history.back()" class="back-arrow">
+            <img class="chevron" src="{% static 'assets/form/Vector-1.png' %}" alt="">
+            <img class="rod" src="{% static 'assets/form/Vector.png' %}" alt="">
+        </div>
+    </a>
+
+    <div id="preview-wrapper">
+        {% include 'tc_site/gen_file.html' %}
+    </div>
+
+    <div class="btns">
+        <a href="{% url 'tc_site:landing' %}"><button class="btn btn-sec">Save for Later</button></a>
+        <a href="{% url 'tc_site:gen-file' %}"><button class="btn btn-pri">Generate Now</button></a>
+    </div>
+</div>
+{% endblock %}

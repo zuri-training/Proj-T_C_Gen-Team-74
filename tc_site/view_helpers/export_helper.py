@@ -6,7 +6,7 @@
 # Import Forms from the forms folder
 
 from django.http import HttpResponse
-from django.views.generic import View
+from django.views import View
 from .export import export_helper 
 
 #Creating a class based view

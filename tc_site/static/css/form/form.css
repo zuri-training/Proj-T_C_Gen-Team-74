@@ -1,0 +1,88 @@
+#form-block {
+    --primary-blue: hsl(240, 60%, 30%);
+    --primary-blue-2: #5050C2;
+    --primary-blue-light: #8E8EDA80;
+    --primary-yellow: #E2DA15;
+    --border-color: #080808
+}
+
+#form-block {
+    padding-top: 100px;
+}
+
+#form-block .heading {
+    text-align: center;
+    /* font-size: 3rem; */
+    font-weight: bold;
+    color: var(--primary-blue);
+
+    font-family: Montserrat;
+    line-height: 68px;
+    letter-spacing: 0em;
+}
+
+#form-block .form-divider {
+    width: 100%;
+}
+
+#form-block .form-wrapper {
+    background: var(--primary-blue-light);
+    width: 100%;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    border-radius: 4px;
+    position: relative;
+}
+
+#form-block .form-heading {
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 39px;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+#form-block form p {
+    margin-bottom: 1rem;
+}
+
+#form-block .buttons {
+    margin: 2rem 0 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+#form-block .buttons > div{
+    display: flex;
+    gap: 1rem;
+}
+#form-block .btn {
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100px;
+    padding: .5rem 1rem;
+    border: 2px solid transparent;
+}
+
+#form-block .btn-pri {
+    background: var(--primary-blue);
+    color: white
+}
+#form-block .btn-sec {
+    background: var(--primary-yellow);
+}
+#form-block .btn-pri:hover {
+    background: var(--primary-blue-2);
+}
+#form-block .btn-sec:hover {
+    border: 2px solid var(--border-color);
+}
+
+@media screen and (max-width: 600px) {
+    #form-block .btn-pri {
+        position: absolute;
+        bottom: 2%;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+}
