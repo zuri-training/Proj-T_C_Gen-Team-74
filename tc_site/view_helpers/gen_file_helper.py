@@ -10,13 +10,13 @@ from datetime import date
 from pathlib import Path
 from django.shortcuts import render, redirect
 
-from tc_site.models.DocumentModel import DocumentModel
+# from tc_site.models.DocumentModel import DocumentModel
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 ROOT_URL=os.getenv('SITE_URL')
 
-def gen_file_helper(request):
+def gen_file_helper(request, docID):
     # Write your logic here
     user = request.user
     ctx = {'user': user}
@@ -26,12 +26,14 @@ def gen_file_helper(request):
         html_content = html.read()
         ctx['html_content'] = html_content
 
-        doc = DocumentModel.objects.get(content=html_content)
-        print(doc)
+        # doc = DocumentModel.objects.get(id=docID)
+
         # Create the share document URL
-        url = f"{ROOT_URL}/share/{doc.id}"
+        url = f"{ROOT_URL}/share/{docID}"
 
         ctx['url'] = url
+        ctx['docID'] = docID
+
         return render(request, 'tc_site/blocks/generated/generated.html', ctx)
 
     else:

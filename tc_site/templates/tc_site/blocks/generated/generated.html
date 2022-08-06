@@ -47,7 +47,7 @@
             <div class="card card-body">
                 <p> You can export and download your file as PDF or MS Word document on our website </p>
                 <div class="pdf d-flex p-0 m-0"> <img src="{% static 'assets/generated/pdf.png' %}" alt="pdf" id="pdf"
-                        width="17px" height="24px"> <a href=""> Click here to export your file as PDF</a></div>
+                        width="17px" height="24px"> <a href="{% url 'tc_site:export' userID=user.id docID=docID %}" target="_blank"> Click here to export your file as PDF</a></div>
                 <div class="microsoft d-flex"> <img src="{% static 'assets/generated/microsoft.png' %}" alt="word"
                         id="microsoft" width="17px" height="24px"> <a href=""> Click here to export your file as MS Word
                         Document</a></div>

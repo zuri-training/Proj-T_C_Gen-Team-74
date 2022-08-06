@@ -7,36 +7,41 @@ from tc_site.models.DocumentModel import DocumentModel
 # Import Forms from the forms folder
 
 
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect
 from django.http import HttpResponse
-from django.template.loader import render_to_string
-from weasyprint import HTML
-import tempfile
+
+
+from io import BytesIO
+# from django.http import HttpResponse
+from django.template.loader import get_template
+
+from xhtml2pdf import pisa
+
+def render_to_pdf(template_src, context_dict={}):
+    template = get_template(template_src)
+    html  = template.render(context_dict)
+    print(html)
+
+    # Create a byte stream buffer
+    result = BytesIO()
+    
+    # Pass in the buffer and the html string encoded in utf-8 to the pisaDocument function
+    pdf = pisa.pisaDocument(BytesIO(html.encode("utf-8")), result)
+    if not pdf.err:
+        # Return an http response
+        return HttpResponse(result.getvalue(), content_type='application/pdf')
+    return None
 
 
 def export_helper(request, userID, docID):
     # Write your logic here
     # set the content type to pdf
-    response = HttpResponse(content_type='application/pdf')
-    # set the file name and add inline to prevent forced download
-    response['Content-Disposition'] = 'inline; attachment; filename="document_%s_%s.pdf"' % userID % docID
-    # response['Content-Transfer-Encoding'] = 'binary'
 
-    # render template to string
-    html_string = render_to_string(
-        'tc_site/gen_file.html', {'content': []}
-    )
-    html = HTML(string=html_string)
+    if request.user.id:
 
-    # write html string to pdf
-    result = html.write_pdf()
+        data = {}
 
-    # store file in memory temporarily
-    with tempfile.NamedTemporaryFile(delete=True) as output:
-        output.write(result)
-        output.flush()
-        output = open(output.name, 'r')
-        response.write(output.read())
+        pdf = render_to_pdf('tc_site/gen_file.html', data)
+        return HttpResponse(pdf, content_type='application/pdf')
 
-    # Make sure to return a valid response
-    return response
+    return redirect('/')

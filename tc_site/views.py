@@ -11,7 +11,7 @@ from .view_helpers.gen_file_helper import gen_file_helper
 from .view_helpers.embed_helper import embed_helper
 from .view_helpers.download_helper import download_helper
 from .view_helpers.share_helper import share_helper
-from .view_helpers.export_helper import GeneratePdf
+from .view_helpers.export_helper import export_helper
 from .view_helpers.coming_soon_helper import coming_soon_helper
 from .view_helpers.dashboard.dashboard_helper import dashboard_helper
 from .view_helpers.dashboard.archive_helper import archive_helper
@@ -43,9 +43,9 @@ def preview (request):
     # Locate and put your logic in the view_helper directory of this app
     return preview_helper(request)
     
-def gen_file (request):
+def gen_file (request, docID):
     # Locate and put your logic in the view_helper directory of this app
-    return gen_file_helper(request)
+    return gen_file_helper(request, docID)
 
 def embed (request, userID, docID):
     # Locate and put your logic in the view_helper directory of this app
@@ -59,11 +59,10 @@ def share (request, docID):
     # Locate and put your logic in the view_helper directory of this app
     return share_helper(request, docID)
 
-class export(GeneratePdf):
+def export(request, userID, docID):
     # Locate and put your logic in the view_helper directory of this app
-    # return export_helper(request, userID, docID)
+    return export_helper(request, userID, docID)
 
-    pass
 
 def coming_soon (request, page):
     # Locate and put your logic in the view_helper directory of this app

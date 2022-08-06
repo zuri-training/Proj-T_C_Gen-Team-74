@@ -1,8 +1,8 @@
 #hero {
     --primary-blue: hsl(240, 61%, 37%);
     --primary-blue-light: hsl(240, 48%, 54%);
-    /* --primary-yellow: hsl(51, 81%, 37%); */
     --primary-yellow: hsl(58, 83%, 40%);
+    --primary-yellow-light: hsl(58, 83%, 48%);
     --light-color: white;
     --dark-color: #262626;;
     --light-color-light: hsla(0, 0%, 100%, 0.432);
@@ -39,7 +39,7 @@
 }
 
 #hero .text-content .text {
-    font-size: 40px;
+    font-size: 2.2rem;
     margin: 0 auto 3rem;
     max-width: 700px;
     font-weight: 500;
@@ -62,10 +62,33 @@
     font-weight: 700;
     border: transparent;
     margin-bottom: 3rem;
+    position: relative;
 }
+
+#hero .button::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: 'Get Started';
+}
+#hero .button::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--primary-yellow-light);
+}
+
 #hero .button:hover {
     box-shadow: 0 4px 12px rgb(56 56 56 / 30%);
-    background: var(--primary-blue-light);
+    background: var(--primary-yellow-light);
 }
 
 

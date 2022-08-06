@@ -22,7 +22,7 @@
 
     <div class="btns">
         <a href="{% url 'tc_site:landing' %}"><button class="btn btn-sec">Save for Later</button></a>
-        <a href="{% url 'tc_site:gen-file' %}"><button class="btn btn-pri">Generate Now</button></a>
+        <a href="{% url 'tc_site:gen-file' docID=docID %}"><button class="btn btn-pri">Generate Now</button></a>
     </div>
 </div>
 {% endblock %}
