@@ -92,7 +92,7 @@ def preview_helper (request):
             template_str = template_str.replace(
                     '[___COMPANY_COUNTRY___]', '<strong class="text-info">' + form['company_country'] + '</strong>')
             template_str = template_str.replace(
-                    '[WEBSITE_NAME]', '<strong class="text-info">' + form['company_name'] + '</strong>')
+                    '[__WEBSITE_NAME__]', '<strong class="text-info">' + form['company_name'] + '</strong>')
             template_str = template_str.replace(
                     '[COMPANY_URL]', '<strong class="text-info">' + form['company_url'] + '</strong>')
             template_str = template_str.replace(
@@ -103,6 +103,8 @@ def preview_helper (request):
                     '[WEBSITE_CONTACT_PAGE_URL]', '<strong class="text-info">' + form['company_url'] + '</strong>')
             template_str = template_str.replace(
                     '[COPYRIGHT_AGENT_CONTACT_EMAIL]', '<strong class="text-info">copyrightagent@' + ''.join(form['company_name'].split(' ')) + '.com</strong>')
+            template_str = template_str.replace(
+                    '[___COPYRIGHT_AGENT_CONTACT_EMAIL___]', '<strong class="text-info">copyrightagent@' + ''.join(form['company_name'].split(' ')) + '.com</strong>')
             template_str = template_str.replace(
                     '[___WEBSITE_CONTACT_EMAIL___]', '<strong class="text-info">' + form['company_email'] + '</strong>')
             template_str = template_str.replace(
