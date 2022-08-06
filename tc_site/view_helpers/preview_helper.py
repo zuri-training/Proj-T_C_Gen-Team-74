@@ -36,6 +36,10 @@ def preview_helper (request):
             if not re.match(r'^\+?1?\d{9,15}$', request.POST['company_phone_number']):
                 messages.info(request, "Remove spaces from your phone number")
                 return redirect('/gen-form/')
+
+            if request.POST.get('doc-type') == None:
+                messages.info(request, "Please select what type of document you wish to")
+                return redirect('/gen-form/')
             
             # Use data from form to select the template to be be used
             # Read the template
