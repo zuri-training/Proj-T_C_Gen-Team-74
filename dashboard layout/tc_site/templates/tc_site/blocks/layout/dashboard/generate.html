@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="{% static 'assets/landing/dinho/Vector2.png'%}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+  {% block meta %}
+  {% endblock %}
+
+  <title>Terms and Conditions Generator</title>
+  <link rel="stylesheet" href="{% static 'css/dashboard/taiwo.css' %}" />
+
+</head>
+  <body>
+    <section class="container-fluid d-flex flex-column justify-content-lg-center justify-content-start align-items-lg-start align-items-center" id="sidebar">
+        <div class="sidebar-logo">
+            <img src="{% static 'assets/dashboard/layout/taiwo/quickterms.png' %}" alt="Quickterms" class="sidebar-logoimg">
+        </div>
+        <div class="sidebar-dash sidebar-bg">
+            <img src="{% static 'assets/dashboard/layout/taiwo/dashboard.png' %}" class="sidebar-img sidebar-img1" alt="Dashboard">
+            <a href="dashboard.html" class="sidebar-a">Dashboard</a>
+        </div>
+        <div class="sidebar-gend sidebar-bg">
+            <img src="{% static 'assets/dashboard/layout/taiwo/gendocs.png' %}" class="sidebar-img sidebar-img2" alt="Generated Docs">
+            <a href="gendocs.html" class="sidebar-a">Generated Docs</a>
+        </div>
+        <div class="sidebar-gen sidebar-bg">
+            <img src="{% static 'assets/dashboard/layout/taiwo/generate.png' %}" class="sidebar-img sidebar-img3" alt="Generate">
+            <a href="generate.html" class="sidebar-a">Generate</a>
+        </div>
+        <div class="sidebar-arch sidebar-bg">
+            <img src="{% static 'assets/dashboard/layout/taiwo/archive.png' %}" class="sidebar-img sidebar-img4" alt="Archive">
+            <a href="archive.html" class="sidebar-a">Archive</a>
+        </div>
+        <div class="sidebar-con sidebar-bg">
+            <img src="{% static 'assets/dashboard/layout/taiwo/contact.png' %}" class="sidebar-img sidebar-img5" alt="Contact">
+            <a href="#" class="sidebar-a">Contact</a>
+        </div>
+        <div class="sidebar-log sidebar-bg">
+            <img src="{% static 'assets/dashboard/layout/taiwo/logout.png' %}" class="sidebar-img sidebar-img6" alt="Logout">
+            <a href="#" class="sidebar-a">Logout</a>
+        </div>
+        <div class="sidebar-active"></div>
+    </section>
+    <nav class="navbar navbar-default  navbar-expand navbar-fixed-top nav-wrapper">
+        <div class="container-fluid d-flex flex-row align-items-center">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <p class="nav-p1" id="nav-gen">Generate</p>
+              </li>
+             <li class="nav-item">
+                <img src="{% static 'assets/dashboard/layout/taiwo/notifications.png' %}" class="nav-img sidebar-img7">
+              </li>
+              <li class="nav-item">
+                <img src="{% static 'assets/dashboard/layout/taiwo/home.png' %}" alt="" class="nav-img1 sidebar-img8">
+              </li>
+              <li class="nav-item">
+                <img src="{% static 'assets/dashboard/layout/taiwo/person.png' %}" alt=""  class="nav-img2 sidebar-img9">
+              </li>
+              <li class="nav-item">
+                <p class="nav-p2">John Doe</p>
+              </li>
+            </ul>
+        </div>
+    </nav>    
+  </body>
+</html>
