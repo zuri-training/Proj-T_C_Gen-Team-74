@@ -3,20 +3,20 @@
 <!-- header-section -->
 <div id="hero">
   <div class="hero-bg">
-    <img src="{% static 'assets/landing/hero/hero-bg.png' %}" alt="hero-bg">
-  </div>
-  <div class="container">
-    <div class="text-content">
-      <h1>
-        Terms & Conditions and Privacy Policy Generator
-      </h1>
-      <p class="text">
-        We offer you customized terms & conditions and privacy policy
-        for websites, mobile apps, desktop apps, ecommerce and many more
-        to protect and promote your business.
-      </p>
+    <!-- <img src="{% static 'assets/landing/hero/hero-bg.png' %}" alt="hero-bg"> -->
+
+    <div class="container">
+      <div class="text-content">
+        <h1>
+          Terms & Conditions and Privacy Policy <span>Generator</span>
+        </h1>
+        <p class="text">
+          We handle the paperwork so you
+          can focus on your business.
+        </p>
+      </div>
+      <a class="button" href="{% url 'tc_site:gen-form' %}">Get Started For FREE</a>
     </div>
-    <a class="button" href="{% url 'tc_site:gen-form' %}">Get Started For FREE</a>
   </div>
 
 </div>

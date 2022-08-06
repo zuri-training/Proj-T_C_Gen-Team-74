@@ -6,7 +6,7 @@ document.querySelector('.loader').classList.add('loader')
 setTimeout(() => {
     document.querySelector('.project').style.display='block'
     document.querySelector('.loader').style.display='none'
-},000)
+},1000)
 
 
 //Navbar Toggler function

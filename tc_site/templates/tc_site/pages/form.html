@@ -1,4 +1,4 @@
-{% extends 'tc_site/pages/base.html' %}
+{% extends 'tc_site/pages/landing/base.html' %}
 {% load static%}
 {% block meta %}
 <!-- Required meta tags -->
@@ -16,275 +16,48 @@
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 {% endblock %}
 
-
 {% block content %}
 <div id="form-block" class="container">
-    <h1>Terms and Conditions Generator</h1>
-    <div id="multi-step-form-container">
-        <!-- Form Steps / Progress Bar -->
-        <ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
-            <!-- Step 1 -->
-            <li class="form-stepper-active text-center form-stepper-list" step="1">
-                <a class="mx-2">
-                    <span class="form-stepper-box">
-                        <span>Step 1</span>
-                    </span>
-                    <div class="label">Getting Started</div>
-                </a>
-            </li>
-            <!-- Step 2 -->
-            <li class="form-stepper-unfinished text-center form-stepper-list" step="2">
-                <a class="mx-2">
-                    <span class="form-stepper-box ">
-                        <span>Step 2</span>
-                    </span>
-                    <div class="label ">Platform Content</div>
-                </a>
-            </li>
-            <!-- Step 3 -->
-            <li class="form-stepper-unfinished text-center form-stepper-list" step="3">
-                <a class="mx-2">
-                    <span class="form-stepper-box ">
-                        <span>Step 3</span>
-                    </span>
-                    <div class="label ">Disputes</div>
-                </a>
-            </li>
-        </ul>
+    <div class="container">
+        <h1 class="heading">Generate</h1>
+        <hr class="form-divider">
         <!-- Step Wise Form Content -->
         <div class="form-wrapper">
-            <form id="userAccountSetupForm" name="userAccountSetupForm" enctype="multipart/form-data" method="POST">
-                <!-- Step 1 Content -->
-                <section id="step-1" class="form-step">
-                    <h2 class="font-normal">Get Started</h2>
-                    <!-- Step 1 input fields -->
-                    <div class="mt-3">
-                        <label for="agreement"> Does this agreement apply to a website user or mobile application
-                            user?</label>
-                        <div class="agreement">
-                            <label>
-                                <input type="radio" value="website" name="website" option="website"> Website
+            <form action="{% url 'tc_site:preview' %}" method="POST">
+                {% csrf_token %}
+                <h1 class="form-heading">Busines Information</h1>
+
+                <div class="content">
+                    <div class="form-group">
+                        <label class="bold-text" for="doc-type">What type of document would you like to generate?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="doc-type" value="TC"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Terms and Conditions
                             </label>
                         </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="radio" value="application" name="website" option="application">
-                                Application
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="doc-type" value="PP"
+                                id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Privacy Policy
                             </label>
-                            <div>
-                                <label><input type="radio" value="both" name="website" option="both"> Both
-                                </label>
-                            </div>
-                        </div>
-
-
-                        <div class="mt-3 mb-3">
-                            <label for="age">Can Users under the age of 18 use your Platform</label>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="radio" value="yes" name="age" option="yes"> Yes
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="radio" value="no" name="age" option="no"> No
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group pl-0 col-8 ">
-                            <label for="url"> URL Address of your Website </label>
-                            <input type="url" class="form-control" id="url" placeholder="https://www.zoey.bakery/ng/">
-                        </div>
-
-                        <div class="form-group pl-0 col-8">
-                            <label for="Website name">Full name of Website</label>
-                            {{form.company_url}}
-                            <!-- <input type="text" class="form-control" placeholder="Zoey bakery" id="companyName"> -->
-                        </div>
-
-                        <div class="form-group pl-0 col-8">
-                            <label for="Application Name">Name of Application</label>
-                            <input type="text" class="form-control" placeholder="Zoey Bakery" id="applicationName" name="app_name">
-                        </div>
-                        <div class="form-group pl-0 col-8">
-                            <label for="company">Legal Company name</label>
-                            {{form.company_name}}
-                            <!-- <input type="text" class="form-control" placeholder="Company Name" id="legalCompanyName"> -->
-                        </div>
-                        <div class="form-group pl-0 col-8">
-                            <label for="email">Email address of Company</label>
-                            {{form.company_email}}
-                            <!-- <input type="email" class="form-control" id="email" placeholder="zoeybakery@gmail.com"> -->
-                        </div>
-                        
-                        <div class="form-group pl-0 col-8">
-                            <label for="phone">Company Phone Number</label>
-                            {{form.company_phone_number}}
-                            <!-- <input type="tel" class="form-control" id="phone" placeholder="08055000000"> -->
                         </div>
                     </div>
-                    
-                    <div id="country" class="form-group pl-0 col-8 ">
-                        <label for="company">Company Location</label>
-                        {{form.company_country}}
-                        <!-- <input type="text" class="form-control" placeholder="Nigeria" id="country"> -->
+                    {{form.as_p}}
+                </div>
+                <div class="buttons">
+                    <a href="{% url 'tc_site:landing' %}"><button class="btn btn-sec">Back</button></a>
+                    <div>
+                        <a href=""><button class="btn btn-sec">Save</button></a>
+                        <button type="submit" class="btn btn-pri">Preview</button>
                     </div>
-                    <div class="form-group pl-0 col-8 ">
-                        <label for="company">Company Address</label>
-                        <input type="text" class="form-control" placeholder="2 Alex Street Ajah, Lagos" id="address">
-                    </div>
-                    <div class="form-group pl-0 col-8">
-                        <label for="company">Company Postal Code</label>
-                        <input type="text" class="form-control" placeholder="P.M.B 520016" id="postcode">
-                    </div>
-
-                    <div class="mt-9 d-flex justify-content-end">
-                        <div class="btn-container">
-                            <button class="btn save-btn" type="submit">Save</button>
-                            <button class="btn btn-navigate-form-step" type="button" step_number="2">Next</button>
-                        </div>
-                    </div>
+                </div>
+            </form>
 
         </div>
-        </section>
-        <!-- Step 2 Content, default hidden on page load. -->
-        <section id="step-2" class="form-step d-none">
-            <h2 class="font-normal">Platform Content</h2>
-            <!-- Step 2 input fields -->
-            <div class="mt-3">
-
-                <div class="mt-3">
-                    <div id="company_type" class="form-group pl-0 col-8 ">
-                        <label for="company">What type of business does your company do?</label>
-                        {{form.company_type}}
-                    </div>
-                </div>
-                <div class="mt-3">
-                    <label for="userAccount"> Can Users create account on your Website</label>
-                    <div class="checkbox">
-                        <label>
-                            <input type="radio" value="yes" name="account" option="yes"> Yes
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="radio" value="no" name="account" option="no"> No
-                        </label>
-                    </div>
-                </div>
-                <div class="mt-3 mb-3">
-                    <label for="reviews">Are reviews submitted on the platform?</label>
-                    <div class="checkbox">
-                        <label>
-                            <input type="radio" value="yes" name="reviews" option="yes"> Yes
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="radio" value="no" name="reviews" option="no"> No
-                        </label>
-                    </div>
-                </div>
-                <div class="mt-3 mb-3">
-                    <label for="contentUpload">Are Contents uploaded on the platform?</label>
-                    <div class="checkbox">
-                        <label>
-                            <input type="radio" value="yes" name="content" option="yes"> Yes
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="radio" value="no" name="content" option="no"> No
-                        </label>
-                    </div>
-                </div>
-                <div class="mt-3 mb-3">
-                    <label for="secondWebsite">Does your Platform have another Website?</label>
-                    <div class="checkbox">
-                        <label>
-                            <input type="radio" id="alturl" value="yes" name="url" option="yes" onclick="show2();">
-                            Yes
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="radio" value="no" name="url" option="no" onclick="show1();"> No
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group pl-0 col-8 " id="secondurl">
-                    <label for="Application Name"> <small>If the answer to the above question is yes, provide the
-                            website link </small></label>
-                    <input type="url" class="form-control" placeholder="https://www.xoey.bakery/ng/">
-                </div>
-                <div class="mt-3 mb-3">
-                    <label for="secondWebsite">Are third party advertisments allowed on the platform?</label>
-                    <div class="checkbox">
-                        <label>
-                            <input type="radio" value="yes" name="advert" option="yes"> Yes
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="radio" value="no" name="advert" option="no"> No
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-9 d-flex flex-wrap">
-                <div>
-                    <button class="btn btn-navigate-form-step save-btn" type="button" step_number="1">Prev</button>
-                </div>
-                <div class="btn-container2 ml-auto">
-                    <button class="btn btn-navigate-form-step save-btn" type="submit">Save</button>
-                    <button class="btn btn-navigate-form-step" type="button" step_number="3">Next</button>
-                </div>
-            </div>
-
     </div>
-    </section>
-    <!-- Step 3 Content, default hidden on page load. -->
-    <section id="step-3" class="form-step d-none">
-        <h2 class="font-normal">Disputes</h2>
-        <!-- Step 3 input fields -->
-        <div class="mt-3">
-            <label for="agreement"> How will dispute between you and your users be resolved?</label>
-            <div class="agreement">
-                <label>
-                    <input type="radio" value="litigation" name="dispute" option="litigation"> Litigation
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="radio" value="arbitration" name="dispute" option="arbitration"> Arbitration
-                </label>
-                <div>
-                    <label><input type="radio" value="negotiation" name="dispute" option="negotiation"> Negotiation
-                    </label>
-                </div>
-            </div>
-            <div class="form-group pl-0 col-8 ">
-                <label for="disputeCountry">What country does Litigation/Arbitration take place?</label>
-                <input type="text" class="form-control" placeholder="Nigeria" id="disputeCountry">
-            </div>
-        </div>
-        <div class="mt-9 d-flex flex-wrap">
-            <div>
-                <button class="btn btn-navigate-form-step save-btn" type="button" step_number="1">Prev</button>
-            </div>
-            <div class="btn-container2 ml-auto">
-                <button class="btn btn-navigate-form-step save-btn" type="submit">Preview</button>
-                <button class="btn btn-navigate-form-step" type="submit">Generate</button>
-            </div>
-        </div>
-
-
-</div>
-</section>
-</form>
-
-</div>
 </div>
 
 <!-- Optional JavaScript -->
@@ -298,7 +71,5 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-
-<script src="{% static 'js/form.js' %}?version=0"></script>
 
 {% endblock %}

@@ -1,4 +1,4 @@
-# Team 74 Terms & Conditions Generator Project Skeleton
+# QuickTerms Terms & Conditions Generator
 
 # How to use
 

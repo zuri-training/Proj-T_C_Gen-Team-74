@@ -1,0 +1,132 @@
+#generated {
+
+    font-family: 'Montserrat';
+    max-width: 100%;
+    font-style: normal;
+
+    padding-top: 100px;
+
+}
+
+#generated .container {
+
+    margin: 30px auto !important;
+    max-width: 650px;
+}
+
+#generated .greetings {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+#generated .temporary-placeholder-image {
+    max-width: 300px;
+}
+
+#generated .view-box {
+    border: 1px solid;
+    max-width: fit-content;
+    margin: 0 auto;
+    max-height: 400px;
+    padding: 1rem;
+    overflow: scroll;
+    width: 90%;
+    max-width: 650px
+
+}
+
+#generated #img1, #img2, #img3 {
+    width: 190px;
+}
+
+#generated .card {
+    border: 0;
+
+}
+
+#generated #pdf,
+#microsoft {
+    background-size: 24px 17px;
+    width: 17px;
+}
+ 
+
+#generated .action {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+#generated .wrapper {
+    max-width: 900px;
+}
+
+#generated span,
+.copy,
+a {
+    color: blue;
+}
+#generated a {
+    display: inline;
+    padding: 1px;
+}
+
+#generated #share-text,
+#inputEmail {
+    background-color: #F0EFEF !important;
+}
+
+#generated .btn-primary {
+    background-color: #2D2DB6;
+}
+
+#generated .btn-light {
+    background-color: #fff;
+    border: 0;
+    border-radius: 0;
+}
+
+#generated .btn-light:active {
+    background-color: #8d8df8 !important;
+}
+
+#generated .btn-light:focus {
+    background-color: #ECE5E5;
+    border-bottom: 4px solid;
+    border-bottom-color: #252598;
+}
+#generated .btn-light:hover {
+    background-color:#8d8df8;
+    border: 1px solid;
+    border-radius: 0;
+}
+#generated .btn-primary:hover {
+    background-color: #8d8df8;
+    border: 1px solid;
+}
+
+.copy-btn {
+    position: relative;
+}
+.copy-btn.active::after {
+    content: 'copied!';
+    position: absolute;
+    right: -5rem;
+    color: black;
+}
+
+
+@media screen and (max-width: 500px) {
+    #generated .action {
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #generated .take-action {
+        padding: 0 !important;
+    }
+}

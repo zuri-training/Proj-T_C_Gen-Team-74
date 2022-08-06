@@ -1,11 +1,13 @@
 {% load static %}
-<div id="sign-up-modal" class="backdrop-wrapper">
+<div id="sign-up-modal" class="backdrop-wrapper" style="display: none;">
   <div class="backdrop"></div>
   <div class="modals sign-up_container">
-    <figure><img src="{% static 'assets/auth/sign-up/get-started.png' %}" alt="get-started.png" /></figure>
+    <figure>
+      <img src="{% static 'assets/auth/sign-up/get-started.png' %}" alt="get-started.png" />
+    </figure>
     <div class="head_wrap">
       <p class="sign-up_heading">Get Started Here!</p>
-      <p>Create an account with QuickTerms and get started right away.</p>
+      <p>Create an account with QuickTerms!</p>
     </div>
     {% if form.errors %}
     <div class="alert alert-warning alert-dismissible fade show error-alert" role="alert">
@@ -19,59 +21,56 @@
     </div>
     {% endif %}
 
-    <form action="{% url 'tc_site:signup' %}" method="post">
+    <form action="{% url 'tc_site:signup' %}" method="post" id="sign-up_form">
       {% csrf_token %}
       <div class="fields">
         <label for="username">Username </label>
         {{signup_form.username}}
-        <!-- <input name="email" placeholder="johndoe@gmail.com" type="email" id="email_field" required /> -->
       </div>
       <div class="fields">
         <label for="email">Email Address </label>
         {{signup_form.email}}
-        <!-- <input name="email" placeholder="johndoe@gmail.com" type="email" id="email_field" required /> -->
       </div>
 
       <div class="fields">
         <label for="first_name">First Name</label>
         {{signup_form.first_name}}
-        <!-- <input type="text" name="first_name" placeholder="John" required /> -->
       </div>
       <div class="fields">
         <label for="first_name">Last Name</label>
         {{signup_form.last_name}}
-        <!-- <input type="text" name="last_name" placeholder="Doe" required /> -->
       </div>
 
       <div class="fields">
         <label for="password">Create Password</label>
-        {{signup_form.password}}
-        <i class="bi bi-eye-slash togglePassword"></i>
-
-        <!-- <input type="password" name="password" placeholder="Minimum of 8 characters" min="8" class="password" required /> -->
+        <div class="icon_group">
+          {{signup_form.password}}
+          <i class="bi bi-eye-slash togglePassword"></i>
+        </div>
       </div>
-
+      
       <div class="fields">
         <label for="password2">Verify Password</label>
+        <div class="icon_group">
         {{signup_form.password2}}
-        <i class="bi bi-eye-slash togglePassword" ></i>
-       <!-- <input type="password" name="password2" placeholder="Enter your password" min="8" class="password" required /> -->
-
-        <p>
-          <input type="checkbox" name="agree" id="terms_agreement" onclick="enableBtn();" value="" />
-          By checking this box, I agree to QuickTerms' User Agreement and
-          Privacy Policy.
-        </p>
+        <i class="bi bi-eye-slash togglePassword"></i>
       </div>
+
+        <!-- <input type="password" name="password2" placeholder="Enter your password" min="8" class="password" required /> -->
+      </div>
+      <p class="d-flex my-4">
+        <input type="checkbox" name="agree" id="terms_agreement" onclick="enableBtn();"/>
+        By checking this box, I agree to QuickTerms' User Agreement and
+        Privacy Policy.
+      </p>
 
       <div class="btn-sign-up-container">
         <!-- I changed your styles from targeting the button element to targeting a 'button class' -->
         <button class='button' type="submit" id="sign-up_btn">Sign Up</button>
       </div>
-      <p class="question">
-        Already have an account?
-        <a><span class="sign-in"> Log in</span></a>
-      </p>
+      
+      <p class="question">Already have an account?</p>
+    <p class="sign-in"><a>Log in</a></p>
     </form>
   </div>
 </div>

@@ -1,4 +1,9 @@
 /* You can create your own css files and link them to the relevant pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .message.on-top {
     position: fixed;
@@ -7,4 +12,20 @@
 body {
     width: 100vw;
     overflow-x: hidden;
+}
+
+h1,
+p,
+button,
+a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
 }

@@ -1,8 +1,8 @@
 #landing-navbar {
     --primary-blue: hsl(240, 61%, 37%);
-    --primary-blue-light: hsla(240, 61%, 37%, 0.6);
+    --primary-blue-light: hsla(240, 61%, 37%, 0.8);
     --primary-yellow: hsl(51, 81%, 37%);
-    --primary-yellow-light: hsla(51, 81%, 37%, 0.644);
+    --primary-yellow-light: hsl(58, 83%, 48%);
     --light-color: white;
     --light-color-light: hsla(0, 0%, 100%, 0.432);
 
@@ -13,6 +13,7 @@
     padding: 0 !important;
     width: 100vw;
     font-family: 'Montserrat';
+    box-shadow: 0 0 .5rem #555;
 }
 
 #landing-navbar .container {
@@ -49,7 +50,22 @@
     width: 100%;
     height: 100%
 }
-
+.dashboard-link {
+    margin-right: 1rem;
+}
+#landing-navbar .dashboard-link img.user-icon {
+    width: 25px;
+    height: 25px
+}
+#landing-navbar .dashboard-link img.user-icon + span {
+    color: var(--primary-blue);
+}
+#landing-navbar .nav .dashboard-link img.user-icon + span {
+    color: var(--light-color);
+}
+#landing-navbar .nav .dashboard-link img.user-icon + span:hover {
+    color: var(--primary-yellow);
+}
 .menu-wrapper {
     --width: 40px;
 
@@ -150,7 +166,7 @@
     width: 100vw;
     border-radius: 50%;
     background-color: var(--primary-blue-light);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(3px);
     visibility: hidden;
     transition: 0.5s;
     transform: scale(0);
@@ -163,6 +179,9 @@
     text-transform: uppercase;
     font-weight: 600;
     text-shadow: 0 0 10px var(--dark-color);
+}
+.nav a:hover {
+    color: var(--primary-yellow);
 }
 
 #toggler:checked~.nav {
@@ -183,8 +202,14 @@
     text-shadow: 0 0 1rem;
     background-color: var(--light-color);
 }
+#landing-navbar .pri-btn > a {
+    color: var(--primary-blue);
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+}
 
-#landing-navbar .pri-btn:hover {
+#landing-navbar .pri-btn:hover, #landing-navbar .pri-btn:hover > a {
     background-color: var(--primary-blue);
     color: var(--light-color);
 }

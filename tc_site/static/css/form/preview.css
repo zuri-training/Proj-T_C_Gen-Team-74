@@ -1,0 +1,73 @@
+#preview {
+    --primary-blue: hsl(240, 60%, 30%);
+    --primary-blue-2: #5050C2;
+    --primary-blue-light: #8E8EDA80;
+    --primary-yellow: #E2DA15;
+    --border-color: #080808;
+
+    min-height: 100vh;
+    padding-top: 150px;
+}
+
+#preview .back-arrow {
+    position: fixed;
+    left: 3rem;
+    top: 6rem;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: antiquewhite;
+}
+
+#preview .back-arrow:hover {
+    background-color: #eee;
+
+}
+#preview .back-arrow img:first-child {
+    width: 20px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#preview .back-arrow img:last-child {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+}
+
+#preview .btns {
+    margin: 3rem 0 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+#preview .btn {
+    font-size: 1rem;
+    font-weight: bold;
+    width: max-content;
+    padding: .5rem 1rem;
+    border: 2px solid transparent;
+}
+
+#preview .btn-pri {
+    background: var(--primary-blue);
+    color: white
+}
+#preview .btn-sec {
+    background: var(--primary-yellow);
+}
+#preview .btn-pri:hover {
+    background: var(--primary-blue-2);
+}
+#preview .btn-sec:hover {
+    border: 2px solid var(--border-color);
+}
+
+@media screen and (max-width: 500px) {
+    #preview .back-arrow {
+        display: none;
+    }
+}
