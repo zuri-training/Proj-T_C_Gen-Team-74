@@ -10,7 +10,6 @@ from django.shortcuts import render
 import os
 from pathlib import Path
 
-import tc_site
 from ..models.DocumentModel import DocumentModel
 
 

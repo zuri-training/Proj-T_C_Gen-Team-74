@@ -8,7 +8,7 @@ function copyToClipboard(text, copyBtn) {
   }, function (err) {
     console.error('Async: Could not copy text: ', err);
   });
-  console.log('clipboard function:',  copyBtn)
+  
   copyBtn.classList.add('active');
   setTimeout(() => {
     copyBtn.classList.remove('active');
@@ -32,12 +32,9 @@ function anotherCopyToClipboard(text) {
 const copyBtns = document.querySelectorAll('.copy-btn');
 
 copyBtns.forEach((copyBtn) => {
-  console.log('foreach function:',  copyBtn)
-
   const copyElement = copyBtn.parentNode;
 
   const text = copyElement?.dataset.copyHtml;
-  console.log(copyElement)
   copyBtn.addEventListener('click', () => copyToClipboard(text, copyBtn));
 })
 
