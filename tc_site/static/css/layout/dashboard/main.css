@@ -25,3 +25,144 @@
 #dashboard-body main .block {
     padding-top: 5rem
 }
+
+
+#dashboard-body {
+    --sec-color: #F7F9F7
+ }
+
+/******SideBar Styling*********/
+
+#dashboard-body .sidenav {
+    height: 100%;
+    background: #1e1e79;
+    overflow-x: hidden;
+    transition: all 0.5s ease;
+    padding: 35px 0 1rem;
+}
+#dashboard-body .top-nav-items {
+    margin-top: 2rem;
+}
+#dashboard-body .sidenav li {
+    padding: 15px 7px;
+    font-style: none;
+    font-size: 1rem;
+    line-height: 24.38px;
+    font-weight: 400;
+    display: block;
+    transition: 0.4s;
+}
+
+#dashboard-body .sidenav li a {
+    /* padding-top: 2.3rem; */
+    text-decoration: none;
+    color: #F7F9F7;
+    padding-left: 0;
+    transition: 0.4s ease-in-out;
+}
+
+#dashboard-body #nav-hamburger {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font-size: 30px;
+    color: #F7F9F7;
+    cursor: pointer;
+    background: #1e1e79;
+    border-radius: 3px;
+    padding: 6px 12px;
+    transition: all 0.5s;
+}
+
+#dashboard-body #nav-hamburger:hover {
+    color: #1e1e79;
+    background: #F7F9F7;
+    transition: all 0.5s ease-in-out;
+}
+
+#dashboard-body .move-ele {
+    margin-top: 4rem;
+}
+
+#dashboard-body .sidenav li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-right: 3px solid #F9F8D0;
+}
+#dashboard-body .sidenav li span {
+    margin-left: .3rem;
+}
+
+#dashboard-body .sidenav li:hover a {
+    padding-left: 10px;
+}
+
+#dashboard-body .sidenav a.logo:hover {
+    padding-left: auto
+}
+
+
+/******SideBar Styling*********/
+
+
+
+/******NavBar Styling*********/
+#dash-top-nav {
+    top: 0;
+    right: 0;
+    left: 0;
+    position: relative;
+}
+#dashboard-body .dash-nav {
+    background-color: var(--sec-color);
+    width: 100%;
+    position: fixed;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 2px solid #1e1e79;
+    box-shadow: 0 0 0.5rem #333;
+}
+
+#dashboard-body .dash-text a {
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 39px;
+    color: #080808;
+}
+
+
+#dashboard-body .nav-icons {
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
+#dashboard-body .nav-icons a {
+    text-decoration: none;
+    color: #192B2B;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    margin-left: 1rem;
+}
+#dashboard-body .nav-icons a.dashboard-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#dashboard-body .nav-icons a.dashboard-link img {
+    width: 25px;
+    height: 25px;
+}
+#dashboard-body .nav-icons a.dashboard-link span {
+    margin-left: 5px;
+}
+
+/******NavBar Styling*********/
+
+@media screen and (max-width: 900px) {
+    #dashboard-body .dash-text a {
+        font-size: 1rem;
+    }
+}
