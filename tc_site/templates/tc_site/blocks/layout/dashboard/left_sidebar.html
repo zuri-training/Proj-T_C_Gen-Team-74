@@ -1,20 +1,37 @@
 {% load static %}
 <nav id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;
+    <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;
+    </a> -->
+    <a class="logo" href="{% url 'tc_site:landing' %}">
+        <img class="full-logo" src="{% static 'assets/dashboard/dinho/Frame 59906.png' %}" alt="logo" />
+        <img class="half-logo" style="display: none;" src="{% static 'assets/dashboard/layout/sidenav/logo.png' %}"
+            alt="logo" />
     </a>
-    <a href="{% url 'tc_site:landing' %}"><img src="{% static 'assets/dashboard/dinho/Frame 59906.png' %}" alt="logo" /></a>
-  
-    <a href="{% url 'tc_site:dashboard' username=user.username %}"><img src="{% static 'assets/dashboard/dinho/element-4.png' %}" alt="" />Dashboard</a>
-  
-    <a href="{% url 'tc_site:coming-soon' page='dashboard' %}"><img src="{% static 'assets/dashboard/dinho/edit.png' %}" alt="" />Generated Docs</a>
-  
-    <a href="{% url 'tc_site:gen-form' %}"><img src="{% static 'assets/dashboard/dinho/layer.png' %}" alt="" />Generate</a>
-  
-    <a href="{% url 'tc_site:coming-soon' page='dashboard' %}"><img src="{% static 'assets/dashboard/dinho/archive.png' %}" alt="" />Archive</a>
-  
-    <a class="move-ele" href="{% url 'tc_site:coming-soon' page='dashboard' %}"><img src="{% static 'assets/dashboard/dinho/message-question.png' %}"
-        alt="" />Contact/FAQ</a>
-    <a href="{% url 'tc_site:coming-soon' page='dashboard' %}"><img src="{% static 'assets/dashboard/dinho/logout.png' %}" alt="" />Logout</a>
-  </nav>
 
-  <span onclick="openNav()"><i id="nav-hamburger" class="fa fa-bars"></i></span>
+    <ul>
+
+        <li><a href="{% url 'tc_site:dashboard' username=user.username %}"><img
+                    src="{% static 'assets/dashboard/dinho/element-4.png' %}" alt="" /><span>Dashboard</span></a></li>
+
+        <li><a href="{% url 'tc_site:coming-soon' page='dashboard' %}"><img
+                    src="{% static 'assets/dashboard/dinho/edit.png' %}" alt="" /><span>Generated Docs</span></a></li>
+
+        <li><a href="{% url 'tc_site:gen-form' %}"><img src="{% static 'assets/dashboard/dinho/layer.png' %}"
+                    alt="" /><span>Generate</span></a></li>
+
+        <li><a href="{% url 'tc_site:coming-soon' page='dashboard' %}"><img
+                    src="{% static 'assets/dashboard/dinho/archive.png' %}" alt="" /><span>Archive</span></a></li>
+    </ul>
+    <ul class="move-ele">
+        <li><a href="{% url 'tc_site:coming-soon' page='dashboard' %}"><img
+                    src="{% static 'assets/dashboard/dinho/message-question.png' %}"
+                    alt="" /><span>Contact/FAQ</span></a></li>
+        <li><a href="{% url 'tc_site:coming-soon' page='dashboard' %}"><img
+                    src="{% static 'assets/dashboard/dinho/message-question.png' %}" alt="" /><span>Profile</span></a>
+        </li>
+        <li><a href="{% url 'tc_site:coming-soon' page='dashboard' %}"><img
+                    src="{% static 'assets/dashboard/dinho/logout.png' %}" alt="" /><span>Logout</span></a></li>
+    </ul>
+</nav>
+
+<!-- <span><i id="nav-hamburger" class="fa fa-bars"></i></span> -->
