@@ -289,7 +289,7 @@
     #landing-navbar .nav-lg {
         display: flex;
         align-items: center;
-        width: 75%;
+        width: 80%;
         justify-content: space-between;
         color: var(--white-color);
     }
