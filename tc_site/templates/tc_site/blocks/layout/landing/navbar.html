@@ -16,11 +16,9 @@
   <div class="container">
     <a href="{% url 'tc_site:landing' %}">
       <div class="nav-logo">
-        <div>
-          <img class="logo" src="{% static 'assets/landing/navbar/Vector.png'%}" alt="logo" />
-        </div>
-        <div>
-          <img class="logo" src="{% static 'assets/landing/navbar/uickTerms.png'%}" alt="logo" />
+        <div class="logo">
+          <img class="transparent-navbar-logo" src="{% static 'assets/landing/navbar/logo-2.png'%}" alt="logo">
+          <img class="white-navbar-logo" src="{% static 'assets/landing/navbar/logo.png'%}" alt="logo">
         </div>
       </div>
     </a>
@@ -33,6 +31,7 @@
       <div class="nav">
         <ul class="nav-links">
           <li class="nav-item active"><a href="{% url 'tc_site:landing' %}">Home</a></li>
+          <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">About</a></li>
           <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">How It Works</a></li>
           <li class="nav-item"><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
           <li class="nav-item"><a href="{% url 'tc_site:landing' %}#contact">Contact</a></li>
@@ -46,9 +45,7 @@
               <span>{{user.username}}</span>
             </a>
             {% else %}
-            <a>
               <div role="sign-in-button" class="sign-in nav-item sec-btn">Login</div>
-            </a>
             {% endif %}
           </li>
           <li>
@@ -71,6 +68,7 @@
     <div class="nav-lg">
       <ul class="nav-links links">
         <li class="nav-item active"><a href="{% url 'tc_site:landing' %}">Home</a></li>
+        <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">About</a></li>
         <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">How It Works</a></li>
         <li class="nav-item"><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
         <li class="nav-item"><a href="{% url 'tc_site:landing' %}#contact">Contact</a></li>
@@ -84,25 +82,23 @@
             <span>{{user.username}}</span>
           </a>
           {% else %}
-          <a>
             <div role="sign-in-button" class="sign-in sec-btn">Login</div>
-          </a>
           {% endif %}
         </li>
         <li>
           {% if user.id %}
           <a href="{% url 'tc_site:signout' %}">
-              <button class="pri-btn">
+            <button class="pri-btn">
               Log out
             </button>
-            </a>
-            {% else %}
-            <div class="sign-up">
-              <button class="pri-btn">
+          </a>
+          {% else %}
+          <div class="sign-up">
+            <button class="pri-btn">
               Sign Up
             </button>
-            </div>
-            {% endif %}
+          </div>
+          {% endif %}
         </li>
       </ul>
     </div>
