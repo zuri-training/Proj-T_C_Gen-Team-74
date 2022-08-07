@@ -1,0 +1,27 @@
+#dashboard-body * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+#dashboard-body {
+    /* display: grid;
+    grid-template-columns: repeat(12, 1fr); */
+    height: 100vh;
+}
+
+#dashboard-body header {
+    height: 100vh;
+    display: inline-block;
+}
+
+#dashboard-body main {
+    display: inline-block;
+    height: 100vh;
+    position: absolute;
+    overflow-y: scroll;
+}
+#dashboard-body main .block {
+    padding-top: 5rem
+}
