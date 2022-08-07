@@ -16,6 +16,17 @@ aList.forEach((a) => {
     if (span) {
         span.style.color = 'var(--white-color)';
     }
+    
+    // on hover styles for nav items
+    a.addEventListener('mouseover', () => {
+        a.style.color = 'var(--primary-yellow-light)';
+        a.style.background = 'transparent';
+    })
+    
+    // reset after hover is done
+    a.addEventListener('mouseleave', () => {
+        a.style.color = 'var(--white-color)';
+    })
 })
 
 // Nav auth buttons conditional styles
@@ -123,6 +134,17 @@ document.addEventListener('scroll', () => {
             if (span) {
                 span.style.color = 'var(--white-color)';
             }
+
+            // on hover styles for nav items
+            a.addEventListener('mouseover', () => {
+                a.style.color = 'var(--primary-yellow-light)';
+                a.style.background = 'transparent';
+            })
+            
+            // reset after hover is done
+            a.addEventListener('mouseleave', () => {
+                a.style.color = 'var(--white-color)';
+            })
         })
 
         const priBtn = navbar.querySelector('.nav-lg').querySelector('.pri-btn');
