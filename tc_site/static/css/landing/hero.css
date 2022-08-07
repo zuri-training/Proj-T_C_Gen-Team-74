@@ -54,15 +54,17 @@
     margin: 0 auto;
     max-height: 91px;
     border-radius: 4px;
-    padding: 12px 10px;
+    padding: calc(10px + 1.2rem) 10px;
     background: var(--primary-yellow);
     color: var(--dark-color);
     font-size: 1.2rem;
-    line-height: 29.26px;
+    line-height: calc(29.26px + 1.2rem);
     font-weight: 700;
     border: transparent;
     margin-bottom: 3rem;
     position: relative;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
 }
 
 #hero .button::after {
@@ -71,7 +73,9 @@
     bottom: 0;
     left: 0;
     right: 0;
-    content: 'Get Started';
+    content: 'Get Started For FREE';
+    display: grid;
+    place-content: center;
 }
 #hero .button::before {
     position: absolute;
@@ -80,15 +84,27 @@
     left: 0;
     right: 0;
     content: '';
-    width: 100%;
+    width: 0;
     height: 100%;
-    z-index: -1;
-    background: var(--primary-yellow-light);
+    background: transparent;
+    transform: scale(0);
+    transform-origin: center;
+    width: 100%;
+    border-radius: 50%;
+    transition: all .1s ease-in-out;
 }
 
+#hero .button:active {
+    transform: scale(.95);
+}
 #hero .button:hover {
     box-shadow: 0 4px 12px rgb(56 56 56 / 30%);
+}
+#hero .button:hover::before {
+    border-radius: 4px;
     background: var(--primary-yellow-light);
+    width: 100%;
+    transform: scale(1);
 }
 
 
