@@ -1,0 +1,111 @@
+
+
+/* main-section-one section  */
+
+#main-section-one{
+    background: #FFFFFF;
+    text-align: center;
+    padding: 60px 120px;
+}
+#main-section-one .row {
+    justify-content: center;
+}
+
+.main1-txt-one{
+    color: #0F0F3D;
+    font-family: Montserrat;
+}
+
+.main1-txt-two,.temps-txt-1,.temps-txt-2{
+    color: #17191C;
+}
+
+.main1-txt-one{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    padding-bottom: 30px;
+}
+
+.main1-txt-two{
+    font-size: 24px;
+}
+
+.card-img{
+    max-width: 300px;
+    width: 100%;
+    max-height: 100%;
+}
+
+.temps-txt-1{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 48px;
+}
+
+.temps-txt-2{
+    align-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* main-section-one section */
+
+@media screen and (max-width: 800px) {
+    #main-section-one {
+        padding: 2rem 1rem;
+    }
+}
+
+/* main-section-two section */
+.main-section-two{
+    background-image: url('/static/assets/landing/victor/Group 118.png');
+    text-align: center;
+    padding: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: inherit;
+    height: 346px;
+    display: block;
+}
+
+.counter-container{
+    padding: 10px 0px;
+}
+
+.count-num{
+    color: #131313;
+    font-size: 2rem;
+    line-height: 39.83px;
+    font-weight: 600;
+}
+
+.count-txt{
+    color: #000000;
+    font-size: 1.5rem;
+    line-height: 39.83px;
+    font-weight: 400;
+    margin: 0 auto;
+    width: max-content;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .main-section-two{
+        min-width: 20vw;
+        min-height: fit-content;
+        display: contents;
+    }
+    .col-md-4{
+        background-color: #DCDCF3;
+    }
+    .count-num{
+        font-size: 36px;
+    }
+    .count-txt{
+        font-size: 1rem;
+    }
+}
+/* main-section-two section */
