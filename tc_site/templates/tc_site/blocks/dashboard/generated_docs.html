@@ -1,112 +1,86 @@
-<!DOCTYPE html>
-<html lang="en" class="dashboard-gen-docs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% extends 'tc_site/pages/dashboard/base.html' %}
+{% block content %}
+<div class="dashboard-gen-docs">
 
-    <!-- {% load static %} -->
-
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-    />
-
-    <link rel="stylesheet" href="https://use.typekit.net/bpd3bxi.css" />
-    <link rel="stylesheet" href="./dashboard.css" />
-
-    <title>DashBoard</title>
-  </head>
-
-  <body>
-    <header></header>
-
-    <main>
-      <div class="dashboard-container">
-        <section class="gen-docs" id="tc_docs">
-          <div class="head_wrap">
-            <span class="gen-docs-heading" id="tc_docs-heading">
-              Terms and Conditions
-            </span>
-            <a href="" class="more"> View More > </a>
-          </div>
-
-          <div class="gen_container">
-            <div class="gen-docs_temps">
-              hallo guys
-              <figure>
-                <a href=""> <img src="" alt="" /> </a>
-                <figcaption class="gen-docs_names">
-                  Zoey Bakery Website
-                </figcaption>
-              </figure>
-            </div>
-            <div class="gen-docs_temps">
-              hallo guys
-
-              <figure>
-                <a href=""> <img src="" alt="" /> </a>
-                <figcaption class="gen-docs_names">JDW Mobile App</figcaption>
-              </figure>
-            </div>
-            <div class="gen-docs_temps">
-              hallo guys
-
-              <figure>
-                <a href=""> <img src="" alt="" /> </a>
-                <figcaption class="gen-docs_names">JDW E-Commerce</figcaption>
-              </figure>
-            </div>
-          </div>
-        </section>
-
-        <section class="gen-docs" id="pp_docs">
-          <div class="head_wrap">
-            <span class="gen-docs-heading" id="pp_docs-heading">
-              Privacy Policy
-            </span>
-            <a href="" class="more"> View More > </a>
-          </div>
-
-          <div class="gen_container">
-            <div class="gen-docs_temps">
-              hallo guys
-
-              <figure>
-                <a href=""> <img src="" alt="" /> </a>
-                <figcaption class="gen-docs_names">
-                  John Doe Wears Website
-                </figcaption>
-              </figure>
-            </div>
-            <div class="gen-docs_temps">
-              hallo guys
-
-              <figure>
-                <a href=""> <img src="" alt="" /> </a>
-                <figcaption class="gen-docs_names">Mobile App</figcaption>
-              </figure>
-            </div>
-
-            <div class="gen-docs_temps">
-              hallo guys
-
-              <figure>
-                <a href=""> <img src="" alt="" /></a>
-                <figcaption class="gen-docs_names">E-Commerce</figcaption>
-              </figure>
-            </div>
-          </div>
-        </section>
+  <div class="dashboard-container">
+    <section class="gen-docs" id="tc_docs">
+      <div class="head_wrap">
+        <span class="gen-docs-heading" id="tc_docs-heading">
+          Terms and Conditions
+        </span>
+        <a href="" class="more"> View More > </a>
       </div>
-    </main>
 
-    <footer></footer>
-  </body>
-</html>
+      <!-- <div class="gen_container__wrapper"> -->
+        <div class="gen_container">
+          <div class="gen-docs_temps">
+            hallo guys
+            <figure>
+              <a href=""> <img src="" alt="" /> </a>
+              <figcaption class="gen-docs_names">
+                Zoey Bakery Website
+              </figcaption>
+            </figure>
+          </div>
+          <div class="gen-docs_temps">
+            hallo guys
+
+            <figure>
+              <a href=""> <img src="" alt="" /> </a>
+              <figcaption class="gen-docs_names">JDW Mobile App</figcaption>
+            </figure>
+          </div>
+          <div class="gen-docs_temps">
+            hallo guys
+
+            <figure>
+              <a href=""> <img src="" alt="" /> </a>
+              <figcaption class="gen-docs_names">JDW E-Commerce</figcaption>
+            </figure>
+          </div>
+        </div>
+      <!-- </div> -->
+    </section>
+
+    <section class="gen-docs" id="pp_docs">
+      <div class="head_wrap">
+        <span class="gen-docs-heading" id="pp_docs-heading">
+          Privacy Policy
+        </span>
+        <a href="" class="more"> View More > </a>
+      </div>
+
+      <div class="gen_container">
+        <div class="gen-docs_temps">
+          hallo guys
+
+          <figure>
+            <a href=""> <img src="" alt="" /> </a>
+            <figcaption class="gen-docs_names">
+              John Doe Wears Website
+            </figcaption>
+          </figure>
+        </div>
+        <div class="gen-docs_temps">
+          hallo guys
+
+          <figure>
+            <a href=""> <img src="" alt="" /> </a>
+            <figcaption class="gen-docs_names">Mobile App</figcaption>
+          </figure>
+        </div>
+
+        <div class="gen-docs_temps">
+          hallo guys
+
+          <figure>
+            <a href=""> <img src="" alt="" /></a>
+            <figcaption class="gen-docs_names">E-Commerce</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+{% endblock %}

@@ -22,6 +22,7 @@ urlpatterns = [
     path('signup/', views.signup, name="signup"),
     path('signout/', views.signout, name="signout"),
     path('gen-form/', views.gen_form, name="gen-form"),
+    path('preview-blank/', views.preview_blank, name="preview-blank"),
     path('preview/', views.preview, name="preview"),
     path('gen-file/<str:docID>', views.gen_file, name="gen-file"),
 

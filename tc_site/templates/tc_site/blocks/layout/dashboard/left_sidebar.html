@@ -12,7 +12,7 @@
         <li data-description="Dashboard"><a href="{% url 'tc_site:dashboard' username=user.username %}"><img
                     src="{% static 'assets/dashboard/dinho/element-4.png' %}" alt="" /><span>Dashboard</span></a></li>
 
-        <li data-description="Generated Docs"><a href="{% url 'tc_site:coming-soon' page='dashboard' %}"><img
+        <li data-description="Generated Docs"><a href="{% url 'tc_site:generated_docs' username=user.username %}"><img
                     src="{% static 'assets/dashboard/dinho/edit.png' %}" alt="" /><span>Generated Docs</span></a></li>
 
         <li data-description="Generate"><a href="{% url 'tc_site:gen-form' %}"><img src="{% static 'assets/dashboard/dinho/layer.png' %}"
@@ -28,7 +28,7 @@
         <li data-description="Profile"><a href="{% url 'tc_site:coming-soon' page='dashboard' %}"><img
                     src="{% static 'assets/dashboard/dinho/message-question.png' %}" alt="" /><span>Profile</span></a>
         </li>
-        <li data-description="Logout"><a href="{% url 'tc_site:coming-soon' page='dashboard' %}"><img
+        <li data-description="Logout"><a href="{% url 'tc_site:signout' %}"><img
                     src="{% static 'assets/dashboard/dinho/logout.png' %}" alt="" /><span>Logout</span></a></li>
     </ul>
 </nav>

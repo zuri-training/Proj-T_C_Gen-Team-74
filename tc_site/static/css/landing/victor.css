@@ -68,7 +68,7 @@
     background-repeat: no-repeat;
     text-align: center;
     width: inherit;
-    /* height: 346px; */
+    background-color: #DCDCF3;
     display: block;
 }
 
@@ -97,7 +97,6 @@
     .main-section-two{
         min-width: 20vw;
         min-height: fit-content;
-        background-color: #DCDCF3;
     }
     .count-num{
         font-size: 36px;
