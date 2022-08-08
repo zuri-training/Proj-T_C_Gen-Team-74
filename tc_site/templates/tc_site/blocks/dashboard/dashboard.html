@@ -10,6 +10,23 @@
         <div id="comp-1">
           <div>
             <canvas id="myChart"></canvas>
+            <script>
+              const dough_Chart = document.getElementById('myChart').getContext('2d');
+              const myChart = new Chart (dough_Chart, {
+                type: 'doughnut',
+                data: {
+                  labels:[{% for i in dashboard_chart %} '{{ i.document_type }}' {% endfor%}],
+                  datasets:[
+                    data:[
+                      {% for document in dashboard_chart %} {{ document.total }}, {% endfor%}],
+                    backgroundColor:[
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2),
+                      ]
+                  ]  
+                  },
+              })
+            </script>
           </div>
           <p class="clinge">Total <span class="clinge-total">75%</span></p>
         </div>

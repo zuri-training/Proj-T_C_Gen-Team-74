@@ -14,7 +14,7 @@ from .view_helpers.download_helper import download_helper
 from .view_helpers.share_helper import share_helper
 from .view_helpers.export_helper import export_helper
 from .view_helpers.coming_soon_helper import coming_soon_helper
-from .view_helpers.dashboard.dashboard_helper import dashboard_helper
+from .view_helpers.dashboard.dashboard_helper import *
 from .view_helpers.dashboard.archive_helper import archive_helper
 from .view_helpers.dashboard.generated_docs_helper import generated_docs_helper
 
@@ -74,6 +74,7 @@ def coming_soon (request, page):
     return coming_soon_helper(request, page)
 
 def dashboard (request, username):
+    dashboard_chart()
     # Locate and put your logic in the view_helper directory of this app
     return dashboard_helper(request, username)
 
