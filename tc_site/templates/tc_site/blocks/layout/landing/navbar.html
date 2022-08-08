@@ -11,6 +11,11 @@
 {% else %}
 <div id="sign-in-modal-checker" data-show-sign-in-modal="false"></div>
 {% endif %}
+{% if show_blank_preview %}
+<div id="blank-review-modal-checker" data-show-blank-preview-modal="true"></div>
+{% else %}
+<div id="blank-preview-modal-checker" data-show-blank-preview-modal="false"></div>
+{% endif %}
 
 {% if landing or show_sign_in or show_sign_up %}
 <nav id="landing-navbar" class="navbar">

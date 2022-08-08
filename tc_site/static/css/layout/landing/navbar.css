@@ -1,8 +1,9 @@
 #landing-navbar {
     --primary-blue: hsl(240, 61%, 37%);
     --primary-blue-light: hsla(240, 61%, 37%, 0.8);
-    --primary-yellow: hsl(51, 81%, 37%);
-    --primary-yellow-light: hsl(58, 83%, 48%);
+    --primary-yellow: #BCB612;
+    /* --primary-yellow: #ab9412; */
+    --primary-yellow-light: #e0d915;
     --white-color: white;
     /* --white-color: #E3DFE5; */
     --light-color: transparent;
@@ -238,16 +239,24 @@
 }
 
 #landing-navbar .sec-btn {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     text-shadow: 0 0 1rem;
     color: var(--primary-yellow);
     border: 2px solid var(--primary-yellow);
     border-radius: 8px;
     background: var(--light-color);
     padding: .5rem 1rem;
-    color: var(--white-color);
+    /* color: var(--white-color); */
     text-align: center;
     cursor: pointer;
+    margin: 0 auto;
+}
+#landing-navbar .sec-btn.sign-in {
+    padding: .3rem .8rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border: 2px solid transparent;
+    color: var(--primary-yellow);
 }
 #landing-navbar .nav .sec-btn {
     background: transparent;
@@ -255,6 +264,9 @@
 
 #landing-navbar .sec-btn:hover {
     background-color: var(--primary-yellow);
+}
+#landing-navbar .sec-btn:hover.sign-in {
+    color: var(--white-color);
 }
 
 #landing-navbar .nav-lg {

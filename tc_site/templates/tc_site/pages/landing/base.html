@@ -19,10 +19,10 @@
 
   <!-- Change version number to force static files to reload styles -->
 
-  <link rel="stylesheet" href="{% static 'css/layout/landing/navbar.css' %}?version=14" />
+  <link rel="stylesheet" href="{% static 'css/layout/landing/navbar.css' %}?version=16" />
   <link rel="stylesheet" href="{% static 'css/landing/dinho.css' %}?version=8" />
   <link rel="stylesheet" href="{% static 'css/landing/hero.css' %}?version=12" />
-  <link rel="stylesheet" href="{% static 'css/landing/taiwo.css' %}?version=12" />
+  <link rel="stylesheet" href="{% static 'css/landing/taiwo.css' %}?version=14" />
   <link rel="stylesheet" href="{% static 'css/landing/faq.css' %}?version=3" />
   <link rel="stylesheet" href="{% static 'css/landing/testimonials.css' %}?version=7" />
   <link rel="stylesheet" href="{% static 'css/landing/victor.css' %}?version=3">
@@ -32,7 +32,8 @@
 
   <link rel="stylesheet" href="{% static 'css/auth/sign-up.css' %}?version=19" />
   <link rel="stylesheet" href="{% static 'css/auth/log-in.css' %}?version=19" />
-  <link rel="stylesheet" href="{% static 'css/main.css' %}?version=3" />
+  <link rel="stylesheet" href="{% static 'css/landing/preview_modal.css' %}?version=2" />
+  <link rel="stylesheet" href="{% static 'css/main.css' %}?version=4" />
 
   <link rel="stylesheet" href="{% static 'css/coming-soon.css' %}?version=4" />
 </head>
@@ -53,6 +54,7 @@
   <!-- Auth modal -->
   {% include 'tc_site/blocks/auth/log-in.html' %}
   {% include 'tc_site/blocks/auth/sign-up.html' %}
+  {% include 'tc_site/blocks/landing/preview_template.html' %}
   <!-- Auth modal -->
   <main class="project">
     {% if messages %}
@@ -82,9 +84,9 @@
 
 
   <script defer src="{% static 'js/main.js' %}?version=5"></script>
-  <script src="{% static 'js/navbar.js' %}?version=11"></script>
+  <script src="{% static 'js/navbar.js' %}?version=13"></script>
   <script defer src="{% static 'js/faq.js' %}?version=2"></script>
-  <script src="{% static 'js/modals.js' %}?version=16"></script>
+  <script src="{% static 'js/modals.js' %}?version=18"></script>
   <script src="{% static 'js/form.js' %}?version=3"></script>
 
 </body>

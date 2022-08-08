@@ -25,7 +25,7 @@
         <div class="form-wrapper">
             <form action="{% url 'tc_site:preview' %}" method="POST">
                 {% csrf_token %}
-                <h1 class="form-heading">Busines Information</h1>
+                <h1 class="form-heading">Business Information</h1>
 
                 <div class="content">
                     <div class="form-group">
@@ -50,7 +50,7 @@
                 <div class="buttons">
                     <a href="{% url 'tc_site:landing' %}"><button class="btn btn-sec">Back</button></a>
                     <div>
-                        <a href=""><button class="btn btn-sec">Save</button></a>
+                        <a href="{% url 'tc_site:dashboard' username=user.username %}" class="btn btn-sec">Save</a>
                         <button type="submit" class="btn btn-pri">Preview</button>
                     </div>
                 </div>

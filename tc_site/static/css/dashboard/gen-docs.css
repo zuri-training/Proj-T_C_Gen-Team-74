@@ -7,15 +7,9 @@
 }
 
 /* General styles */
-.dashboard-gen-docs * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat";
-}
 
-.dashboard-gen-docs html,
-.dashboard-gen-docs body {
+#dashboard-body .dashboard-gen-docs html,
+#dashboard-body .dashboard-gen-docs body {
   font-size: 16px;
 }
 
@@ -25,35 +19,38 @@
 }
 
 /* Dashboard styles */
-.dashboard-gen-docs div.dashboard-container {
+#dashboard-body .dashboard-gen-docs div.dashboard-container {
   padding: 1rem 5rem;
 }
 
-.dashboard-gen-docs section.gen-docs {
+#dashboard-body .dashboard-gen-docs section.gen-docs {
   padding: 2rem 0rem;
 }
 
-.dashboard-gen-docs section p.gen-docs-heading {
+#dashboard-body .dashboard-gen-docs section p.gen-docs-heading {
   font-weight: 500;
   font-size: 22px;
   flex: 1;
 }
 
-.dashboard-gen-docs section div.head_wrap {
+#dashboard-body .dashboard-gen-docs section div.head_wrap {
   display: flex;
   flex-direction: row;
   margin-bottom: 0.4rem;
+  align-items: center;
   /* column-gap: 36rem; */
 }
 
-.dashboard-gen-docs section a.more {
-  font-size: 14px;
+#dashboard-body .dashboard-gen-docs section a.more {
+  font-size: 12px;
+  color: var(--main-blue);
   justify-content: end;
   text-align: right;
   position: relative;
+  left: 1rem
 }
 
-.dashboard-gen-docs section a.more::after {
+#dashboard-body .dashboard-gen-docs section a.more::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -69,19 +66,23 @@
   transition: opacity 300ms, transform 300ms;
 }
 
-.dashboard-gen-docs section a.more::after {
+#dashboard-body .dashboard-gen-docs section a.more::after {
   opacity: 1;
   transform: scale(0);
   transform-origin: center;
 }
 
-.dashboard-gen-docs section a.more:hover::after {
+#dashboard-body .dashboard-gen-docs section a.more:hover::after {
   /* opacity: 1; */
   transform: scale(1);
   /* transform-origin: center; */
 }
 
-.dashboard-gen-docs div.gen_container {
+#dashboard-body .dashboard-gen-docs div.gen_container__wrapper {
+  width: 90%;
+  margin: auto;
+}
+#dashboard-body .dashboard-gen-docs div.gen_container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -92,8 +93,8 @@
   row-gap: 2rem;
 }
 
-.dashboard-gen-docs div.gen-docs_temps {
-  background-color: rebeccapurple;
+#dashboard-body .dashboard-gen-docs div.gen-docs_temps {
+  background-color: var(--main-color);
   flex: 1;
   text-align: center;
   height: 15rem;

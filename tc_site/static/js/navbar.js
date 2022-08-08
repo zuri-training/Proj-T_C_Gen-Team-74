@@ -58,8 +58,9 @@ if (hero) {
 
                 // on hover styles for nav items
                 a.addEventListener('mouseover', () => {
-                    a.style.color = 'var(--white-color)';
+                    // a.style.color = 'var(--white-color)';
                     a.style.background = 'var(--primary-yellow)';
+                    a.style.color = 'var(--primary-blue)'
 
                     // Remove nav-item style from log-out link
                     if (a.classList.contains('log-out')) {
@@ -165,9 +166,13 @@ if (hero) {
                 })
             }
             if (secBtn) {
-                secBtn.style.color = 'var(--white-color)'
-                secBtn.addEventListener('mouseleave', () => {
+                // secBtn.style.color = 'var(--white-color)'
+                secBtn.style.color = 'var(--primary-yellow)'
+                secBtn.addEventListener('mouseover', () => {
                     secBtn.style.color = 'var(--white-color)'
+                })
+                secBtn.addEventListener('mouseleave', () => {
+                    secBtn.style.color = 'var(--primary-yellow)'
                 })
             }
 

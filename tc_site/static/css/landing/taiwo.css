@@ -58,6 +58,13 @@
     line-height: 32px;
 }
 
+.main-tc-3-img {
+    background-image: url('/static/assets/landing/doc-img-bubble/bubbles.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .main-tc-3-img img {
     margin: 0 auto;
     display: block;
@@ -100,9 +107,18 @@
 
 #main-tc-4 {
     width: 100%;
-    background-color: #262698;
-    /* padding: 80px 0 70px; */
-    padding: 3rem 0;
+    padding: 3rem 0 0;
+}
+
+#main-tc-4 .main-tc-4__wrapper {
+    background-color: #2D2DB6;
+    padding-bottom: 3rem;
+}
+
+#main-tc-4 .preview-svg {
+    display: block;
+    position: relative;
+    top: 10px;
 }
 
 .main-tc-4-h1 {
@@ -113,6 +129,7 @@
     line-height: 56px;
     text-align: center;
     color: #FEF7F7;
+    padding-top: 2rem;
 }
 
 .main-tc-4-btn {
@@ -135,12 +152,14 @@
 
 @media screen and (max-width: 600px) {
     .main-tc-4-btn {
+        width: 60%;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 5.07527px;
-        gap: 5.08px;
+        height: auto;
+        padding: 1rem;
+        margin: 1rem auto;
     }
 }
 
@@ -157,50 +176,8 @@
     border-radius: 4px;
 }
 
-/* #faq.main-tc-5 {
-    padding: 3rem 0;
-}
-
-.main-tc-5-h1 {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 80px;
-    line-height: 80px;
-    color: #5050C2;
-    margin: 0 auto;
-    max-width: 184px;
-    padding-bottom: 24px;
-    text-align: center;
-}
-
-.main-tc-5-faq {
-    max-width: 1001px;
-    background: #FFFFFF;
-    border: 0.994889px solid #D6E2D6;
-    border-radius: 4px;
-    margin-bottom: 40px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    line-height: 2rem;
-    color: #262626;
-}
-
-.main-tc-5-faq-2 {
-    width: 100%;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 32px;
-    position: relative;
-    top: -20px;
-} */
-
-@media screen and (max-width: 600px) {
-    /* .main-tc-5-h1 {
-        font-size: 40px;
-    } */
+#contact {
+    padding-top: 3rem;
 }
 
 #main-tc-6 {
@@ -213,7 +190,8 @@
     font-weight: 600;
     font-size: 48px;
     line-height: 48px;
-    color: #0F0F3D;;
+    color: #0F0F3D;
+    ;
     padding-top: 4rem;
 }
 
@@ -232,20 +210,16 @@
         font-size: 30px;
     }
 }
+
 @media screen and (max-width: 450px) {
     .main-tc-6-p {
         display: none;
     }
+
     .main-tc-7-h1 {
         display: none;
     }
 }
-
-/* #faq .accordion-item {
-    margin: 0 auto;
-    max-width: 960px;
-    width: 100%;
-} */
 
 .main-tc-7-br {
     border-right: 6px solid #DDE7DD;
@@ -256,7 +230,7 @@
 }
 
 .main-tc7 {
-    display: block;  
+    display: block;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -345,7 +319,7 @@
     max-width: 300px;
     margin: 0 auto;
     padding: 1rem;
-    background: #2D2DB6;;
+    background: #E7E03C;
     border-radius: 4px;
     border: 2px solid transparent;
     font-family: 'Montserrat';
@@ -353,16 +327,28 @@
     font-weight: 700;
     font-size: 1.25rem;
     text-align: center;
-    color: #FFFFFF;
+    color: #080808;
     margin-top: 40px;
     margin-bottom: 120px;
     transition: ease .2s;
 }
 
 .main-tc-7-submit:hover {
-    background-color: #2D2DB6;
     border: 2px solid #080808;
     box-shadow: 0px 4px 12px rgba(56, 56, 56, 0.3);
+}
+
+@media (max-width: 800px) {
+    .main-tc-7-submit {
+        background: #2D2DB6;
+        color: #EAF0EA;
+    }
+
+    .main-tc-7-submit:hover {
+        background-color: #5050C2;
+        border: 2px solid #080808;
+        box-shadow: 0px 4px 12px rgba(56, 56, 56, 0.3);
+    }
 }
 
 .main-tc-8-con {
@@ -385,7 +371,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1rem;
     text-align: center;
     color: #DDE7DD;
     position: relative;
@@ -396,8 +382,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    text-align: center;
+    font-size: 1rem;
     color: #DDE7DD;
     position: relative;
     top: 7px;
@@ -486,9 +471,6 @@
     border-radius: 4px;
     font-size: 24px;
     color: #0A0A09;
-    position: relative;
-    top: 5.5px;
-    right: 8px;
 }
 
 .main-tc-11-sub:hover {
@@ -599,9 +581,11 @@
     }
 }
 
-@media (min-width: 770px) {
+@media (min-width: 1200px) {
     .main-tc-11-sub {
         position: relative;
+        top: 5.5px;
+        right: 8px;
     }
 }
 
@@ -618,17 +602,20 @@
 @media screen and (max-width: 450px) {
     .main-tc-11-p {
         font-size: 20px;
-    } 
+    }
+
     .main-tc-11-sub {
         font-size: 16px;
-    }  
+    }
+
     .footer-grid {
         display: flex;
         flex-direction: column-reverse;
-    } 
+    }
+
     .footer-logo {
         margin-bottom: 1.5rem;
-    }  
+    }
 }
 
 .footer-svg {

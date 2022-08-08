@@ -6,6 +6,7 @@ from .view_helpers.signin_helper import signin_helper
 from .view_helpers.signup_helper import signup_helper
 from .view_helpers.signout_helper import signout_helper
 from .view_helpers.gen_form_helper import gen_form_helper
+from .view_helpers.preview_blank_helper import preview_blank_helper
 from .view_helpers.preview_helper import preview_helper
 from .view_helpers.gen_file_helper import gen_file_helper
 from .view_helpers.embed_helper import embed_helper
@@ -39,6 +40,10 @@ def gen_form (request):
     # Locate and put your logic in the view_helper directory of this app
     return gen_form_helper(request)
 
+def preview_blank (request):
+    # Locate and put your logic in the view_helper directory of this app
+    return preview_blank_helper(request)
+    
 def preview (request):
     # Locate and put your logic in the view_helper directory of this app
     return preview_helper(request)

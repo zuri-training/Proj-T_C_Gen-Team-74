@@ -1,0 +1,32 @@
+.modals.preview-temp {
+    max-width: 600px;
+    width: 90%;
+    background-color: #F7F9F7;
+    padding: 2rem;
+}
+
+.modals.preview-temp * {
+    text-align: left;
+}
+
+.modals.preview-temp .cancel-backdrop {
+    position: fixed;
+    top: 3rem;
+    right: 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    padding: .8rem;
+    color: #F7F9F7;
+    background-color: #2D2DB6;
+    border: 1px solid #2D2DB6;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+}
+
+.modals.preview-temp .cancel-backdrop:hover {
+    background-color: #F7F9F7;
+    color: #2B2D2B;
+}
