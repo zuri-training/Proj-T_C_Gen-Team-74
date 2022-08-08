@@ -24,6 +24,7 @@ def signin_helper(request):
         'show_sign_in': True
     }
     if request.method == 'POST':
+        signin_form = SigninForm(request.POST)
         username = request.POST['username'] 
         password = request.POST['password']
         # authenticating user information
