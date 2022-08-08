@@ -157,7 +157,7 @@
     border-radius: 4px;
 }
 
-#faq.main-tc-5 {
+/* #faq.main-tc-5 {
     padding: 3rem 0;
 }
 
@@ -195,12 +195,12 @@
     line-height: 32px;
     position: relative;
     top: -20px;
-}
+} */
 
 @media screen and (max-width: 600px) {
-    .main-tc-5-h1 {
+    /* .main-tc-5-h1 {
         font-size: 40px;
-    }
+    } */
 }
 
 #main-tc-6 {
@@ -235,11 +235,11 @@
     }
 }
 
-#faq .accordion-item {
+/* #faq .accordion-item {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
-}
+} */
 
 .main-tc-7-br {
     border-right: 6px solid #DDE7DD;

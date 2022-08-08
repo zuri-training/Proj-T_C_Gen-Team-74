@@ -193,106 +193,108 @@ if (hero) {
 // Navbar for other pages
 
 const otherPagesNavbar = document.querySelector('#landing-navbar.navbar-other-pages');
-otherPagesNavbar.style.setProperty('--light-color', 'eeeeee');
+if (otherPagesNavbar) {
+    otherPagesNavbar.style.setProperty('--light-color', 'eeeeee');
 
-// console.dir(navbar);
+    // console.dir(navbar);
 
-// Set Hero nav styles on load
-const otherPagesAList = otherPagesNavbar.querySelector('.nav-lg').querySelectorAll('a')
+    // Set Hero nav styles on load
+    const otherPagesAList = otherPagesNavbar.querySelector('.nav-lg').querySelectorAll('a')
 
-otherPagesAList.forEach((a) => {
-    a.style.color = 'var(--blue-color)';
+    otherPagesAList.forEach((a) => {
+        a.style.color = 'var(--blue-color)';
 
-    span = a.querySelector('span');
-    if (span) {
-        span.style.color = 'var(--blue-color)';
-    }
-    a.style.color = 'var(--primary-blue)';
-    a.style.background = 'transparent';
-    a.style.textDecoration = 'none';
-    // on hover styles for nav items
-    a.addEventListener('mouseover', () => {
-        // a.style.color = 'var(--primary-yellow-light)';
-        // a.style.background = 'transparent';
-
-
-        a.style.color = 'var(--white-color)';
-        a.style.background = 'var(--primary-yellow)';
-
-        // Remove nav-item style from log-out link
-        if (a.classList.contains('log-out')) {
-            // a.style.color = 'var(--white-color)';
-            a.style.background = 'transparent';
+        span = a.querySelector('span');
+        if (span) {
+            span.style.color = 'var(--blue-color)';
         }
-        
-        // Remove nav-item style from dashboard link
-        const dashboardLinks = document.querySelectorAll('.dashboard-link');
-        dashboardLinks.forEach((dashboardLink) => {
-
-            dashboardLink.style.color = 'var(--primary-blue)'
-            dashboardLink.style.background = 'transparent'
-        })
-    })
-
-    // reset after hover is done
-    a.addEventListener('mouseleave', () => {
         a.style.color = 'var(--primary-blue)';
         a.style.background = 'transparent';
+        a.style.textDecoration = 'none';
+        // on hover styles for nav items
+        a.addEventListener('mouseover', () => {
+            // a.style.color = 'var(--primary-yellow-light)';
+            // a.style.background = 'transparent';
+
+
+            a.style.color = 'var(--white-color)';
+            a.style.background = 'var(--primary-yellow)';
+
+            // Remove nav-item style from log-out link
+            if (a.classList.contains('log-out')) {
+                // a.style.color = 'var(--white-color)';
+                a.style.background = 'transparent';
+            }
+
+            // Remove nav-item style from dashboard link
+            const dashboardLinks = document.querySelectorAll('.dashboard-link');
+            dashboardLinks.forEach((dashboardLink) => {
+
+                dashboardLink.style.color = 'var(--primary-blue)'
+                dashboardLink.style.background = 'transparent'
+            })
+        })
+
+        // reset after hover is done
+        a.addEventListener('mouseleave', () => {
+            a.style.color = 'var(--primary-blue)';
+            a.style.background = 'transparent';
+        })
+
     })
 
-})
 
+    // Nav auth buttons conditional styles
+    const otherPagesPriBtn = otherPagesNavbar.querySelector('.nav-lg').querySelector('.pri-btn');
+    const otherPagesSecBtn = otherPagesNavbar.querySelector('.nav-lg').querySelector('.sec-btn');
 
-// Nav auth buttons conditional styles
-const otherPagesPriBtn = otherPagesNavbar.querySelector('.nav-lg').querySelector('.pri-btn');
-const otherPagesSecBtn = otherPagesNavbar.querySelector('.nav-lg').querySelector('.sec-btn');
+    // reset white nav styles
+    otherPagesNavbar.style.position = 'fixed';
+    otherPagesNavbar.style.setProperty('--light-color', 'white'); // '#E3DFE5' looks iffy
 
-// reset white nav styles
-otherPagesNavbar.style.position = 'fixed';
-otherPagesNavbar.style.setProperty('--light-color', 'white'); // '#E3DFE5' looks iffy
+    if (otherPagesPriBtn) {
+        otherPagesPriBtn.style.color = 'var(--primary-blue)';
+        // on hover styles for auth buttons
+        otherPagesPriBtn.addEventListener('mouseover', () => {
+            otherPagesPriBtn.style.color = 'var(--white-color)';
+            otherPagesPriBtn.style.background = 'var(--primary-blue)'
+        })
 
-if (priBtn) {
-    priBtn.style.color = 'var(--primary-blue)';
-    // on hover styles for auth buttons
-    priBtn.addEventListener('mouseover', () => {
-        priBtn.style.color = 'var(--white-color)';
-        priBtn.style.background = 'var(--primary-blue)'
-    })
+        // reset after hover is done
+        otherPagesPriBtn.addEventListener('mouseleave', () => {
+            otherPagesPriBtn.style.color = 'var(--primary-blue)';
+            otherPagesPriBtn.style.background = 'transparent';
+        })
 
-    // reset after hover is done
-    priBtn.addEventListener('mouseleave', () => {
-        priBtn.style.color = 'var(--primary-blue)';
-        priBtn.style.background = 'transparent';
-    })
+    }
+    if (otherPagesSecBtn) {
+        otherPagesSecBtn.style.color = 'var(--primary-yellow)';
+        // on hover styles for auth buttons
+        otherPagesSecBtn.addEventListener('mouseover', () => {
+            otherPagesSecBtn.style.color = 'var(--white-color)';
+            otherPagesSecBtn.style.background = 'var(--primary-yellow)';
+        })
 
+        // reset after hover is done
+        otherPagesSecBtn.addEventListener('mouseleave', () => {
+            otherPagesSecBtn.style.color = 'var(--primary-yellow)';
+            otherPagesSecBtn.style.background = 'transparent';
+            otherPagesSecBtn.style.border = '2px solid transparent';
+
+        })
+    }
+
+    // reset display of the logo.
+    otherPagesNavbar.querySelector('.logo').querySelector('.white-navbar-logo').style.display = 'block'
+    otherPagesNavbar.querySelector('.logo').querySelector('.transparent-navbar-logo').style.display = 'none'
+
+    otherPagesNavbar.style.boxShadow = '0 0 .5rem #555';
+
+    // Reset menu button styles
+    const menubtnLine = otherPagesNavbar.querySelector('.menu-line');
+
+    const primaryBlue = window.getComputedStyle(otherPagesNavbar).getPropertyValue("--primary-blue");
+    console.log('blue: ', primaryBlue)
+
+    menubtnLine.style.setProperty('--menu-line-color', primaryBlue)
 }
-if (secBtn) {
-    secBtn.style.color = 'var(--primary-yellow)';
-    // on hover styles for auth buttons
-    secBtn.addEventListener('mouseover', () => {
-        secBtn.style.color = 'var(--white-color)';
-        secBtn.style.background = 'var(--primary-yellow)';
-    })
-
-    // reset after hover is done
-    secBtn.addEventListener('mouseleave', () => {
-        secBtn.style.color = 'var(--primary-yellow)';
-        secBtn.style.background = 'transparent';
-        secBtn.style.border = '2px solid transparent';
-
-    })
-}
-
-// reset display of the logo.
-otherPagesNavbar.querySelector('.logo').querySelector('.white-navbar-logo').style.display = 'block'
-otherPagesNavbar.querySelector('.logo').querySelector('.transparent-navbar-logo').style.display = 'none'
-
-otherPagesNavbar.style.boxShadow = '0 0 .5rem #555';
-
-// Reset menu button styles
-const menubtnLine = otherPagesNavbar.querySelector('.menu-line');
-
-const primaryBlue = window.getComputedStyle(otherPagesNavbar).getPropertyValue("--primary-blue");
-console.log('blue: ', primaryBlue)
-
-menubtnLine.style.setProperty('--menu-line-color', primaryBlue)

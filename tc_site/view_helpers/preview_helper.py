@@ -1,3 +1,4 @@
+from ast import Try
 from random import randint
 from django.shortcuts import render, redirect
 from django.contrib import messages
@@ -15,8 +16,11 @@ from pathlib import Path
 import re
 import random
 
+from django_countries import countries
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+COUNTRY_DICT = dict(countries)
 
 
 def preview_helper(request):
@@ -99,7 +103,9 @@ def preview_helper(request):
             template_str = template_str.replace(
                 '[___COMPANY_INFORMATION___]', '<strong class="text-info">' + str(form['company_name']) + '</strong>')
             template_str = template_str.replace(
-                '[___COMPANY_COUNTRY___]', '<strong class="text-info">' + form['company_country'] + '</strong>')
+                '[___COMPANY_COUNTRY___]', '<strong class="text-info">' + COUNTRY_DICT[form['company_country']] + '</strong>')
+            # template_str = template_str.replace(
+            #     '[___COMPANY_COUNTRY___]', '<strong class="text-info">' + form['company_country'] + '</strong>')
             template_str = template_str.replace(
                 '[___WEBSITE_NAME___]', '<strong class="text-info">' + form['company_name'] + '</strong>')
             template_str = template_str.replace(
@@ -135,26 +141,42 @@ def preview_helper(request):
             # Use data from the form to create a document model
 
             if docform.is_valid():
-                company = CompanyModel(
-                    company_name=docform.cleaned_data['company_name'],
-                    app_name=docform.cleaned_data['app_name'],
-                    company_url=docform.cleaned_data['company_url'],
-                    company_email=docform.cleaned_data['company_email'],
-                    company_type=docform.cleaned_data['company_type'],
-                    company_phone_number=docform.cleaned_data['company_phone_number'],
-                    company_country=docform.cleaned_data['company_country'],
-                    owner=user
-                )
-                # company.id=None
-                # Save company model
+                try:
+                    company = CompanyModel.objects.get(
+                        company_name=docform.cleaned_data['company_name'],
+                        owner=user)
+
+                    company['company_name'] = docform.cleaned_data['company_name']
+                    company['app_name'] = docform.cleaned_data['app_name']
+                    company['company_url'] = docform.cleaned_data['company_url']
+                    company['company_email'] = docform.cleaned_data['company_email']
+                    company['company_type'] = docform.cleaned_data['company_type']
+                    company['company_phone_number'] = docform.cleaned_data['company_phone_number']
+                    company['company_country'] = docform.cleaned_data['company_country']
+                    company['owner'] = user
+                except:
+                    company = CompanyModel(
+                        company_name=docform.cleaned_data['company_name'],
+                        app_name=docform.cleaned_data['app_name'],
+                        company_url=docform.cleaned_data['company_url'],
+                        company_email=docform.cleaned_data['company_email'],
+                        company_type=docform.cleaned_data['company_type'],
+                        company_phone_number=docform.cleaned_data['company_phone_number'],
+                        company_country=docform.cleaned_data['company_country'],
+                        owner=user
+                    )
+                    # company.id=None
+                    # Save company model                    
+                    
                 company.save()
+
                 # print(company)
                 # Save the Document
-                document = DocumentModel(
-                    content=template_str,  # saving HTML string to DB
-                    company=company,
-                    document_type=form['doc-type'],
-                    date_issued=date.today()
+                document=DocumentModel(
+                    content = template_str,  # saving HTML string to DB
+                    company = company,
+                    document_type = form['doc-type'],
+                    date_issued = date.today()
                 )
 
                 # Save Document
@@ -163,7 +185,7 @@ def preview_helper(request):
             # Close html file
             new_html_file.close()
 
-            ctx = {
+            ctx={
                 'html': template_str,
                 'docID': document.id
             }
