@@ -11,14 +11,14 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 import os
 
-# import django_on_heroku
-# import dj_database_url
+import django_on_heroku
+import dj_database_url
 
 
-# load_dotenv()
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -154,4 +154,4 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# django_on_heroku.settings(locals())
+django_on_heroku.settings(locals())
