@@ -14,7 +14,7 @@
 .error-alert {
   width: 80%;
   padding: 0.2rem;
-  margin: .5rem auto 0;
+  margin: 0.5rem auto 0;
 }
 .error-alert li {
   padding: 0.5rem;
@@ -30,15 +30,21 @@
   box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.25);
   border: 1px solid black;
   border-radius: 1rem;
+  /* width: 90%; */
   width: 90%;
-  max-width: 480px;
-  padding-bottom: 1rem;
+  /* max-width: 480px; */
+  max-width: 1000px;
+  /* padding-bottom: 1rem; */
+  padding: 2.38rem;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 /* Image stylings*/
 .modals.sign-up_container figure {
   margin-bottom: 1rem;
-  border-radius: 1rem 1rem 0 0;
+  /* border-radius: 1rem 1rem 0 0; */
   overflow: hidden;
 }
 .modals.sign-up_container figure img {
@@ -48,7 +54,7 @@
 /* Heading styles */
 .modals.sign-up_container .head_wrap {
   width: 90%;
-  text-align: center;
+  /* text-align: center; */
   margin: auto;
 }
 
@@ -61,13 +67,16 @@
   font-size: 31px;
   line-height: 39px;
   margin-bottom: 1.2rem;
+  color: var(--main-blue);
 }
 
 /* Form stylings */
 
 .modals.sign-up_container label {
-  font-size: 16px;
-  line-height: 24px;
+  /* font-size: 16px; */
+  font-size: 10.63;
+  /* line-height: 24px; */
+  line-height: 21.25px;
   margin-bottom: 5px;
   font-weight: 400;
 }
@@ -78,7 +87,7 @@
 }
 
 .modals.sign-up_container div.fields {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .modals.sign-up_container div.icon_group {
@@ -91,7 +100,8 @@
   font-weight: 400;
   font-size: 16px;
   font-style: normal;
-  color: rgba(0, 0, 0, 0.4);
+  /* color: rgba(0, 0, 0, 0.4); */
+  color: rgba(146, 136, 136, 1);
 }
 
 .modals.sign-up_container input:focus {
@@ -150,11 +160,17 @@
 }
 
 @media screen and (max-width: 700px) {
+  .modals.sign-up_container.sign-up_container {
+    flex-wrap: wrap;
+  }
+  .modals.sign-up_container figure {
+    display: none;
+  }
   .modals.sign-up_container .head_wrap p {
     font-size: 14px;
   }
 
-  .modals.sign-up_container .head_wrap .sign-up_heading{
+  .modals.sign-up_container .head_wrap .sign-up_heading {
     font-size: 28px;
     margin-bottom: 1rem;
   }
@@ -194,6 +210,12 @@
 }
 
 @media screen and (max-width: 350px) {
+  .modals.sign-up_container.sign-up_container {
+    flex-wrap: wrap;
+  }
+  .modals.sign-up_container figure {
+    display: none;
+  }
   .modals .head_wrap .sign-up_heading {
     font-size: 26px;
   }

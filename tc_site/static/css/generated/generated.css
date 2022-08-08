@@ -107,3 +107,26 @@ a {
     background-color: #8d8df8;
     border: 1px solid;
 }
+
+.copy-btn {
+    position: relative;
+}
+.copy-btn.active::after {
+    content: 'copied!';
+    position: absolute;
+    right: -5rem;
+    color: black;
+}
+
+
+@media screen and (max-width: 500px) {
+    #generated .action {
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #generated .take-action {
+        padding: 0 !important;
+    }
+}

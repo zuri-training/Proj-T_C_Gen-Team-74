@@ -24,6 +24,7 @@ def signup_helper(request):
     }
     if request.method == 'POST':
         form = SignupForm(request.POST)
+        signup_form = form
         if form.is_valid():
             password = form.cleaned_data['password']
             password2 = form.cleaned_data['password2']
@@ -39,7 +40,11 @@ def signup_helper(request):
 
             # Verifying that the email isn't already in the database
             elif User.objects.filter(email=email).first():
-                messages.error(request, 'Email already exists, try signing in!')
+                messages.error(request, 'Email already exists, try another or sigin if you already have an account!')
+                # return redirect('tc_site:signup')
+                return render(request, 'tc_site/pages/landing/landing.html', ctx)
+            elif User.objects.filter(username=username).first():
+                messages.error(request, 'Username already exists, try another or sigin if you already have an account!')
                 # return redirect('tc_site:signup')
                 return render(request, 'tc_site/pages/landing/landing.html', ctx)
 

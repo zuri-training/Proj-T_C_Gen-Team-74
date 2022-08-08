@@ -6,6 +6,7 @@ from .view_helpers.signin_helper import signin_helper
 from .view_helpers.signup_helper import signup_helper
 from .view_helpers.signout_helper import signout_helper
 from .view_helpers.gen_form_helper import gen_form_helper
+from .view_helpers.preview_blank_helper import preview_blank_helper
 from .view_helpers.preview_helper import preview_helper
 from .view_helpers.gen_file_helper import gen_file_helper
 from .view_helpers.embed_helper import embed_helper
@@ -39,13 +40,17 @@ def gen_form (request):
     # Locate and put your logic in the view_helper directory of this app
     return gen_form_helper(request)
 
+def preview_blank (request):
+    # Locate and put your logic in the view_helper directory of this app
+    return preview_blank_helper(request)
+    
 def preview (request):
     # Locate and put your logic in the view_helper directory of this app
     return preview_helper(request)
     
-def gen_file (request):
+def gen_file (request, docID):
     # Locate and put your logic in the view_helper directory of this app
-    return gen_file_helper(request)
+    return gen_file_helper(request, docID)
 
 def embed (request, userID, docID):
     # Locate and put your logic in the view_helper directory of this app
@@ -55,17 +60,18 @@ def download (request, userID, docID):
     # Locate and put your logic in the view_helper directory of this app
     return download_helper(request, userID, docID)
 
-def share (request, userID, docID):
+def share (request, docID):
     # Locate and put your logic in the view_helper directory of this app
-    return share_helper(request, userID, docID)
+    return share_helper(request, docID)
 
-def export (request, userID, docID):
+def export(request, userID, docID):
     # Locate and put your logic in the view_helper directory of this app
     return export_helper(request, userID, docID)
 
-def coming_soon (request):
+
+def coming_soon (request, page):
     # Locate and put your logic in the view_helper directory of this app
-    return coming_soon_helper(request)
+    return coming_soon_helper(request, page)
 
 def dashboard (request, username):
     # Locate and put your logic in the view_helper directory of this app

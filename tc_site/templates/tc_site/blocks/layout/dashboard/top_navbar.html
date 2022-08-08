@@ -1,0 +1,19 @@
+{% load static %}
+<!-- NavBar -->
+<nav id="dash-top-nav">
+    <div class="dash-nav">
+      <div class="dash-text">
+        <a href="">DashBoard</a>
+      </div>
+      <div class="nav-icons">
+        <a href="#"><img src="{% static 'assets/dashboard/dinho/notification.png' %}" alt="" /></a>
+        <a href="/"><img src="{% static 'assets/dashboard/dinho/home-2.png' %}" alt="" /></a>
+
+        <a class="dashboard-link" href="#"><img src="{% static 'assets/dashboard/dinho/Group 37.png' %}" alt="" />
+          <span>{{user.username}}</span>
+        </a>
+        
+      </div>
+    </div>
+  </nav>
+  <!-- NavBar -->

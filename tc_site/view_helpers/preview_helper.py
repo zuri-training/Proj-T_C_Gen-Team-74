@@ -1,3 +1,5 @@
+from ast import Try
+from random import randint
 from django.shortcuts import render, redirect
 from django.contrib import messages
 
@@ -12,11 +14,16 @@ from datetime import date
 import os
 from pathlib import Path
 import re
+import random
 
+from django_countries import countries
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-def preview_helper (request):
+COUNTRY_DICT = dict(countries)
+
+
+def preview_helper(request):
 
     user = request.user
     signup_form = SignupForm()
@@ -32,17 +39,23 @@ def preview_helper (request):
         if request.method == 'POST':
             form = request.POST
             docform = GenDocumentForm(request.POST)
-            
+
             if not re.match(r'^\+?1?\d{9,15}$', request.POST['company_phone_number']):
                 messages.info(request, "Remove spaces from your phone number")
                 return redirect('/gen-form/')
-            
+
+            if request.POST.get('doc-type') == None:
+                messages.info(
+                    request, "Please select what type of document you wish to")
+                return redirect('/gen-form/')
+
             # Use data from form to select the template to be be used
             # Read the template
 
             template_str = ''
             if request.POST['doc-type'] == 'PP':
-                PP_DIR = os.path.join(BASE_DIR, 'static', 'doc_templates', 'privacy_policy')
+                PP_DIR = os.path.join(BASE_DIR, 'static',
+                                      'doc_templates', 'privacy_policy')
                 if form['company_type'] == 'ecommerce':
                     with open(os.path.join(PP_DIR, 'ecommerce_PP_temp.html'), 'r') as f:
                         template_str = f.read()
@@ -58,9 +71,10 @@ def preview_helper (request):
                 else:
                     with open(os.path.join(PP_DIR, 'PP_temp.html'), 'r') as f:
                         template_str = f.read()
-                
+
             elif form['doc-type'] == 'TC':
-                PP_DIR = os.path.join(BASE_DIR, 'static', 'doc_templates', 'terms_and_conditions')
+                PP_DIR = os.path.join(BASE_DIR, 'static',
+                                      'doc_templates', 'terms_and_conditions')
                 if form['company_type'] == 'ecommerce':
                     with open(os.path.join(PP_DIR, 'ecommerce_T&C_temp.html'), 'r') as f:
                         template_str = f.read()
@@ -77,63 +91,92 @@ def preview_helper (request):
                     with open(os.path.join(PP_DIR, 'T&C_temp.html'), 'r') as f:
                         template_str = f.read()
 
-
             # Edit the template
             template_str = template_str.replace(
-                    '[#our site]', 'https://quickterms.herokuapp.com')
+                '[#our site]', 'https://quickterms.herokuapp.com')
             template_str = template_str.replace(
-                    '[___DATE___]', '<strong class="text-info">' + date.today().strftime("%B %d, %Y") + '</strong>')
+                '[___DATE___]', '<strong class="text-info">' + date.today().strftime("%B %d, %Y") + '</strong>')
             template_str = template_str.replace(
-                    '[COMPANY_NAME]', '<strong class="text-info">' + str(form['company_name']) + '</strong>')
+                '[COMPANY_NAME]', '<strong class="text-info">' + str(form['company_name']) + '</strong>')
             template_str = template_str.replace(
-                    '[___COMPANY INFORMATION___]', '<strong class="text-info">' + str(form['company_name']) + '</strong>')
+                '[___COMPANY INFORMATION___]', '<strong class="text-info">' + str(form['company_name']) + '</strong>')
             template_str = template_str.replace(
-                    '[___COMPANY_INFORMATION___]', '<strong class="text-info">' + str(form['company_name']) + '</strong>')
+                '[___COMPANY_INFORMATION___]', '<strong class="text-info">' + str(form['company_name']) + '</strong>')
             template_str = template_str.replace(
-                    '[___COMPANY_COUNTRY___]', '<strong class="text-info">' + form['company_country'] + '</strong>')
+                '[___COMPANY_COUNTRY___]', '<strong class="text-info">' + COUNTRY_DICT[form['company_country']] + '</strong>')
+            # template_str = template_str.replace(
+            #     '[___COMPANY_COUNTRY___]', '<strong class="text-info">' + form['company_country'] + '</strong>')
             template_str = template_str.replace(
-                    '[WEBSITE_NAME]', '<strong class="text-info">' + form['company_name'] + '</strong>')
+                '[___WEBSITE_NAME___]', '<strong class="text-info">' + form['company_name'] + '</strong>')
             template_str = template_str.replace(
-                    '[COMPANY_URL]', '<strong class="text-info">' + form['company_url'] + '</strong>')
+                '[COMPANY_URL]', '<strong class="text-info">' + form['company_url'] + '</strong>')
             template_str = template_str.replace(
-                    '[WEBSITE_URL]', '<strong class="text-info">' + form['company_url'] + '</strong>')
+                '[WEBSITE_URL]', '<strong class="text-info">' + form['company_url'] + '</strong>')
             template_str = template_str.replace(
-                    '[___WEBSITE_URL___]', '<strong class="text-info">' + form['company_url'] + '</strong>')
+                '[___WEBSITE_URL___]', '<strong class="text-info">' + form['company_url'] + '</strong>')
             template_str = template_str.replace(
-                    '[WEBSITE_CONTACT_PAGE_URL]', '<strong class="text-info">' + form['company_url'] + '</strong>')
+                '[WEBSITE_CONTACT_PAGE_URL]', '<strong class="text-info">' + form['company_url'] + '</strong>')
             template_str = template_str.replace(
-                    '[COPYRIGHT_AGENT_CONTACT_EMAIL]', '<strong class="text-info">copyrightagent@' + ''.join(form['company_name'].split(' ')) + '.com</strong>')
+                '[COPYRIGHT_AGENT_CONTACT_EMAIL]', '<strong class="text-info">copyrightagent@' + ''.join(form['company_name'].split(' ')) + '.com</strong>')
             template_str = template_str.replace(
-                    '[___WEBSITE_CONTACT_EMAIL___]', '<strong class="text-info">' + form['company_email'] + '</strong>')
+                '[___COPYRIGHT_AGENT_CONTACT_EMAIL___]', '<strong class="text-info">copyrightagent@' + ''.join(form['company_name'].split(' ')) + '.com</strong>')
             template_str = template_str.replace(
-                    '[WEBSITE_EMAIL]', '<strong class="text-info">' + form['company_email'] + '</strong>')
+                '[___WEBSITE_CONTACT_EMAIL___]', '<strong class="text-info">' + form['company_email'] + '</strong>')
             template_str = template_str.replace(
-                    '[___LIST___]', '')
+                '[WEBSITE_EMAIL]', '<strong class="text-info">' + form['company_email'] + '</strong>')
             template_str = template_str.replace(
-                    '[___WEBSITE_CONTACT_PAGE_URL___]', '<strong class="text-info">' + form['company_url'] + '</strong>')
+                '[___LIST___]', '')
             template_str = template_str.replace(
-                    '[___APP_NAME___]', '<strong class="text-info">' + request.POST['app_name'] + '</strong>')
+                '[___WEBSITE_CONTACT_PAGE_URL___]', '<strong class="text-info">' + form['company_url'] + '</strong>')
             template_str = template_str.replace(
-                    '[COMPANY_COUNTRY]', '<strong class="text-info">' + form['company_country'] + '</strong>')
-            
+                '[___APP_NAME___]', '<strong class="text-info">' + request.POST['app_name'] + '</strong>')
+            template_str = template_str.replace(
+                '[COMPANY_COUNTRY]', '<strong class="text-info">' + form['company_country'] + '</strong>')
+
             # Save the edited str as a .html file and open it
-            new_html_file = open(os.path.join(BASE_DIR, 'templates', 'tc_site', 'gen_file.html'), 'w')
-            new_html_file.write(template_str)     
-            
+            new_html_file = open(os.path.join(
+                BASE_DIR, 'templates', 'tc_site', 'gen_file.html'), 'w')
+            new_html_file.write(template_str)
+
             # Use data from the form to create a document model
-            
+
             if docform.is_valid():
-                company = CompanyModel(docform)
-                company.owner = user
-                company.id=None
-                # Save company model
+                try:
+                    company = CompanyModel.objects.get(
+                        company_name=docform.cleaned_data['company_name'],
+                        owner=user)
+
+                    company['company_name'] = docform.cleaned_data['company_name']
+                    company['app_name'] = docform.cleaned_data['app_name']
+                    company['company_url'] = docform.cleaned_data['company_url']
+                    company['company_email'] = docform.cleaned_data['company_email']
+                    company['company_type'] = docform.cleaned_data['company_type']
+                    company['company_phone_number'] = docform.cleaned_data['company_phone_number']
+                    company['company_country'] = docform.cleaned_data['company_country']
+                    company['owner'] = user
+                except:
+                    company = CompanyModel(
+                        company_name=docform.cleaned_data['company_name'],
+                        app_name=docform.cleaned_data['app_name'],
+                        company_url=docform.cleaned_data['company_url'],
+                        company_email=docform.cleaned_data['company_email'],
+                        company_type=docform.cleaned_data['company_type'],
+                        company_phone_number=docform.cleaned_data['company_phone_number'],
+                        company_country=docform.cleaned_data['company_country'],
+                        owner=user
+                    )
+                    # company.id=None
+                    # Save company model                    
+                    
                 company.save()
+
+                # print(company)
                 # Save the Document
-                document = DocumentModel(
-                        content=template_str, # saving HTML string to DB
-                        company=company,
-                        document_type=form['doc-type'],
-                        date_issued=date.today()
+                document=DocumentModel(
+                    content = template_str,  # saving HTML string to DB
+                    company = company,
+                    document_type = form['doc-type'],
+                    date_issued = date.today()
                 )
 
                 # Save Document
@@ -142,12 +185,15 @@ def preview_helper (request):
             # Close html file
             new_html_file.close()
 
-            ctx = {
+            ctx={
                 'html': template_str,
+                'docID': document.id
             }
+
             return render(request, 'tc_site/blocks/preview.html', ctx)
-        
-        messages.info(request, "Sorry you can't access this page. Try generating a form first.")
+
+        messages.info(
+            request, "Sorry you can't access this page. Try generating a form first.")
         return render(request, 'tc_site/pages/landing/landing.html', ctx)
-    
+
     return redirect('tc_site:signin')

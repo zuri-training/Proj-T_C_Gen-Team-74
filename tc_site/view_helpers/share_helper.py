@@ -5,8 +5,21 @@
 
 # Import Forms from the forms folder
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 
-def share_helper(request):
+import os
+from pathlib import Path
+
+from ..models.DocumentModel import DocumentModel
+
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+def share_helper(request, docID):
     # Write your logic here
-    return # Make sure to return a valid response
+    doc = DocumentModel.objects.get(id=docID)
+
+    htmlfile = open(os.path.join(BASE_DIR, 'templates/tc_site/gen-doc.html'), 'w')
+    htmlfile.write(doc.content)
+    htmlfile.close
+    return render(request, 'tc_site/gen-doc.html') # Make sure to return a valid response

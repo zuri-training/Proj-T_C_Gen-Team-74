@@ -132,12 +132,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'tc_site', 'static'),
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+SECRET_KEY = "0f4e357b5b93b50facacf122c022fc00af2132f06eb46930"
+EMAIL_HOST_USER = "onobes007@gmail.com"
+EMAIL_HOST_PASSWORD = "gkorbqrzclxwzfqv"
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
