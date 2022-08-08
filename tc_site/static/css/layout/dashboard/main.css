@@ -165,4 +165,14 @@
     #dashboard-body .dash-text a {
         font-size: 1rem;
     }
+    #dashboard-body .nav-icons a {
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #dashboard-body .sidenav li span {
+        margin-left: .3rem;
+    }
 }
