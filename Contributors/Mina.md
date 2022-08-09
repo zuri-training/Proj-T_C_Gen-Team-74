@@ -1,0 +1,1 @@
+Designed wireframe,LoFi and HiFi of About Us page	https://github.com/zuri-training/Proj-T_C_Gen-Team-74/issues/122
