@@ -28,6 +28,7 @@ urlpatterns = [
 
     # Export, Download and Share
     path('export/<str:userID>/<str:docID>', views.export, name="export"),
+    path('export/docx/<str:userID>/<str:docID>', views.export_docx, name="export_docx"),
     path('download/<userID>/<docID>', views.download, name="download"),
     path('share/<docID>', views.share, name="share"),
 

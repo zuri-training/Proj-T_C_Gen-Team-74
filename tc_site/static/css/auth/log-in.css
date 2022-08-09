@@ -31,28 +31,67 @@
 }
 
 .modals.login_container {
-  position: absolute;
-  padding: 24px 15px;
   background-color: rgba(243, 241, 241, 1);
   box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.25);
-  border: 0px solid;
   border-radius: 1rem;
+  border: 1px solid black;
+  width: 90%;
+  /* max-width: 480px; */
+  max-width: 1000px;
+  /* padding-bottom: 1rem; */
+  padding: 2.38rem;
 }
 
-.modals p.heading {
+.modals.login_container i.fa-times {
+  font-size: 60px;
+  color: black;
+  float: right;
+}
+
+.modals.login_container div.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image stylings*/
+.modals.login_container figure {
+  margin-bottom: 1rem;
+  /* border-radius: 1rem 1rem 0 0; */
+  overflow: hidden;
+}
+.modals.login_container figure img {
+  width: 100%;
+}
+
+/* Heading styles */
+.modals.login_container .head_wrap {
+  width: 90%;
+  /* text-align: center; */
+  margin: auto;
+}
+
+.modals.login_container .head_wrap p {
+  font-size: 12px;
+  color: rgba(19, 19, 19, 1);
+}
+
+.modals.login_container .head_wrap .login_heading {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 31px;
   line-height: 39px;
-  margin: 1rem auto 1.5rem;
+  margin-bottom: 1.2rem;
+  color: var(--main-blue);
 }
 
+/* form stylings*/
 .modals form#log-in_form {
   display: flex;
   flex-direction: column;
 }
 
 .modals div.fields {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .modals div.icon_group {
@@ -68,7 +107,7 @@
   margin-bottom: var(--mg-bottom);
   border-radius: 4px;
   border: solid rgba(146, 146, 146, 1) 2px;
-  padding: .5rem;
+  padding: 0.5rem;
   /* gap: 10px; */
 }
 
@@ -97,7 +136,7 @@
   margin-bottom: 0.4em;
 }
 
-.modals i {
+.modals i.togglePassword {
   position: absolute;
   top: calc(50% - var(--mg-bottom));
   right: 1rem;
@@ -117,17 +156,18 @@
 }
 
 .modals span a {
-  text-align: center;
+  text-align: left;
   font-size: 12px;
+  line-height: 24px;
   font-weight: 400;
   width: fit-content;
   margin: 0 auto;
 }
 .modals span a:hover {
-  color: var(--main-blue)
+  color: var(--main-blue);
 }
 
-.modals p {
+.modals p.question {
   text-align: center;
 }
 
@@ -180,10 +220,17 @@
   cursor: pointer;
 }
 .modals p a:hover {
-  color: var(--main-blue-light) !important
+  color: var(--main-blue-light) !important;
 }
 
 @media screen and (max-width: 700px) {
+  .modals.login_container i.fa-times{
+    font-size: 30px;
+  }
+
+  .modals.login_container figure {
+    display: none;
+  }
   .modals p.heading {
     font-size: 30px;
   }
@@ -231,6 +278,14 @@
 @media screen and (max-width: 350px) {
   .modals.login_container {
     padding: 20px 10px;
+  }
+
+  .modals.login_container i.fa-times{
+    font-size: 30px;
+  }
+  
+  .modals.login_container figure {
+    display: none;
   }
 
   .modals p.heading {
