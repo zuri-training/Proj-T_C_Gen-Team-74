@@ -8,4 +8,6 @@ Coming soon page - https://github.com/zuri-training/Proj-T_C_Gen-Team-74/issues/
 
 Task assignment and re-assignment - https://github.com/zuri-training/Proj-T_C_Gen-Team-74/issues/57
 
-creation of mood board	- https://github.com/zuri-training/Proj-T_C_Gen-Team-74/issues/100
+creation of mood board	- https://github.com/zuri-training/Proj-T_C_Gen-Team-74/issues/100 
+
+Carry out UX research	https://github.com/zuri-training/Proj-T_C_Gen-Team-74/issues/20
