@@ -1,6 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" class="dashboard-archive">
-  <head>
+<!-- <!DOCTYPE html> -->
+<div class="dashboard-archive">
+  
+{% extends 'tc_site/pages/dashboard/base.html' %}
+{% block content %}
+  
+ <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,13 +23,13 @@
     />
 
     <link rel="stylesheet" href="https://use.typekit.net/bpd3bxi.css" />
+  
+  
     <link rel="stylesheet" href="./dashboard-archive.css" />
 
     <title>DashBoard</title>
   </head>
 
-  <body>
-    <header></header>
 
     <main>
       <div class="upper-sect">
@@ -118,8 +122,11 @@
           </div>
         </div>
       </section>
-    </main>
+      
+      </div>
+<!--     </main>
 
-    <footer></footer>
+   
   </body>
-</html>
+</html> -->
+{% endblock %}
