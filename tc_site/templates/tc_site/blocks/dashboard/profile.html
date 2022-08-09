@@ -1,0 +1,58 @@
+{% extends 'tc_site/pages/dashboard/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="container dash-profile">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{% static 'assets/dashboard/layout/taiwo/avatar.jpg' %}" alt="Image" class="profile-avatar-img">
+            <label for="file" class="prof-input-img"> Edit Image
+              <input type="file" id="file" name="file" class="prof-input-file" accept="image/*">
+            </label>
+        </div>
+        <div class="col-md-8">
+          <form action="">
+            <div class="basic-info">
+                <h1 class="basic-info-h1">Basic Information</h1>
+                <div class="form-grid">
+                    <div class="form-grid-1">
+                        <label for="name" class="form-label-name">First Name</label> 
+                        <input type="text" name="name" class="form-name" maxlength="30" placeholder="John" required>
+                        <img src="{% static 'assets/dashboard/layout/taiwo/edit.png' %}" alt="Edit" class="input-edit-img1">
+                    </div>
+                    <div class="form-grid-2">
+                        <label for="name" class="form-label-name">Last Name</label> 
+                        <input type="text" name="name" class="form-name" maxlength="30" placeholder="Doe" required>
+                        <img src="{% static 'assets/dashboard/layout/taiwo/edit.png' %}" alt="Edit" class="input-edit-img2">
+                    </div>              
+                    <div class="form-grid-3">
+                      <label for="username" class="form-label-username">User Name</label>
+                      <input type="text" name="username" class="form-user" maxlength="30" placeholder="JohnDoe" required>
+                      <img src="{% static 'assets/dashboard/layout/taiwo/edit.png' %}" alt="Edit" class="input-edit-img3">
+                    </div>
+                </div> 
+            </div>
+            <div class="contact-info">
+                <h1 class="contact-info-h1">Contact Information</h1>
+                <div class="form-con-prof">
+                    <div class="">
+                        <label for="email" class="form-label-email">Email Address</label>
+                        <input type="email" name="email" class="form-user" maxlength="40" placeholder="JohnDoe@yahoo.mail.com" required>
+                        <img src="{% static 'assets/dashboard/layout/taiwo/edit.png' %}" alt="Edit" class="input-edit-img4">
+                    </div>              
+                    <div class="">
+                      <label for="username" class="form-label-phone">Phone Number</label>
+                      <input type="tel" name="number" class="form-user" maxlength="30" placeholder="+2347037139611" required>
+                      <img src="{% static 'assets/dashboard/layout/taiwo/edit.png' %}" alt="Edit" class="input-edit-img5">
+                    </div>
+                    <input type="submit" name="submit" value="Save Profile" class="form-prof-save">
+                </div> 
+            </div>
+          </form>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

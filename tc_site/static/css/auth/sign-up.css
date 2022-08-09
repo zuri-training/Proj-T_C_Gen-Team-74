@@ -25,17 +25,25 @@
   color: black;
 }
 
-.modals.sign-up_container.sign-up_container {
+.modals.sign-up_container {
   background-color: rgba(243, 241, 241, 1);
   box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.25);
   border: 1px solid black;
   border-radius: 1rem;
-  /* width: 90%; */
   width: 90%;
   /* max-width: 480px; */
   max-width: 1000px;
   /* padding-bottom: 1rem; */
   padding: 2.38rem;
+}
+
+.modals.sign-up_container i.fa-times{
+  font-size: 60px;
+  color: black;
+  float: right;
+}
+
+.modals.sign-up_container div.container{
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -46,6 +54,7 @@
   margin-bottom: 1rem;
   /* border-radius: 1rem 1rem 0 0; */
   overflow: hidden;
+  flex-basis: 50%;
 }
 .modals.sign-up_container figure img {
   width: 100%;
@@ -59,7 +68,8 @@
 }
 
 .modals.sign-up_container .head_wrap p {
-  font-size: 16px;
+  font-size: 12px;
+  color: rgba(19, 19, 19, 1);
 }
 
 .modals.sign-up_container .head_wrap .sign-up_heading {
@@ -74,7 +84,7 @@
 
 .modals.sign-up_container label {
   /* font-size: 16px; */
-  font-size: 10.63;
+  font-size: 10.63px;
   /* line-height: 24px; */
   line-height: 21.25px;
   margin-bottom: 5px;
@@ -108,7 +118,7 @@
   outline: none;
   transition: 0.1s;
   border: solid var(--main-blue) 2px;
-  box-shadow: 0px 0px 2px 2px rgba(146, 146, 146);
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
 }
 
 .modals.sign-up_container input:focus::placeholder {
@@ -142,6 +152,15 @@
   font-size: 12px;
 }
 
+.modals.sign-up_container p.d-flex{
+  font-size: 8px;
+}
+
+.modals.sign-up_container p.d-flex a{
+  font-size: 8px;
+  display: inline;
+}
+
 .modals.sign-up_container p.question {
   text-align: center;
   font-size: 12px;
@@ -162,6 +181,9 @@
 @media screen and (max-width: 700px) {
   .modals.sign-up_container.sign-up_container {
     flex-wrap: wrap;
+  }
+  .modals.sign-up_container i.fa-times{
+    font-size: 30px;
   }
   .modals.sign-up_container figure {
     display: none;
@@ -212,6 +234,9 @@
 @media screen and (max-width: 350px) {
   .modals.sign-up_container.sign-up_container {
     flex-wrap: wrap;
+  }
+  .modals.sign-up_container i.fa-times{
+    font-size: 30px;
   }
   .modals.sign-up_container figure {
     display: none;

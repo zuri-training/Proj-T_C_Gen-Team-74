@@ -1,0 +1,133 @@
+<!-- <!DOCTYPE html> -->
+  
+ <!-- <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+
+    <!-- {% load static %} -->
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="https://use.typekit.net/bpd3bxi.css" />
+  
+  
+    <link rel="stylesheet" href="./dashboard-archive.css" />
+
+    <title>DashBoard</title>
+  </head> -->
+
+  <div class="dashboard-archive">
+  
+    {% extends 'tc_site/pages/dashboard/base.html' %}
+    {% load static %}
+    {% block content %}
+
+      <!-- <main> -->
+      <div class="upper-sect">
+        <button type="" class="create-folder">+ Create folder</button>
+      </div>
+
+      <div id="det-cont">
+        <div class="det-heads">
+          <i class="bi bi-folder"></i>
+          <details class="detail-titles">
+            <summary>
+              My Blog
+              <i class="bi bi-caret-right-fill"></i>
+            </summary>
+
+            <div class="acc-links">
+              <p><a href="">Website Privacy Policy</a></p>
+              <p><a href="">Terms & Conditions </a></p>
+              <p><a href="">Sales Terms & Conditions </a></p>
+            </div>
+          </details>
+        </div>
+
+        <hr />
+
+        <div class="det-heads">
+          <i class="bi bi-folder"> </i>
+          <details class="detail-titles">
+            <summary>
+              John Doe Wears<i class="bi bi-caret-right-fill"></i>
+            </summary>
+
+            <div class="acc-links">
+              <p><a href="">Website Privacy Policy</a></p>
+              <p><a href="">Terms & Conditions </a></p>
+              <p><a href="">Sales Terms & Conditions </a></p>
+            </div>
+          </details>
+        </div>
+
+        <hr />
+
+        <div class="det-heads">
+          <i class="bi bi-folder"></i>
+          <details class="detail-titles">
+            <summary>
+              My Website
+              <i class="bi bi-caret-right-fill"></i>
+            </summary>
+
+            <div class="acc-links">
+              <p><a href="">Website Privacy Policy</a></p>
+              <p><a href="">Terms & Conditions </a></p>
+              <p><a href="">Sales Terms & Conditions </a></p>
+            </div>
+          </details>
+        </div>
+
+        <hr />
+
+        <div class="det-heads">
+          <i class="bi bi-folder"></i>
+          <details class="detail-titles">
+            <summary>
+              My App
+              <i class="bi bi-caret-right-fill"></i>
+            </summary>
+            <i class="bi bi-caret-right-fill"></i>
+            <div class="acc-links">
+              <p><a href="">Website Privacy Policy</a></p>
+              <p><a href="">Terms & Conditions </a></p>
+              <p><a href="">Sales Terms & Conditions </a></p>
+            </div>
+          </details>
+        </div>
+
+        <hr />
+      </div>
+
+      <section class="btm-sect">
+        <p class="sect-head">SUMMARY</p>
+        <div class="btm-sect-wrap">
+          <div class="btm-sect-cont" id="btm-sect-cont-red">
+            Total Terms and Conditions Generated
+            <div class="num-cont">54</div>
+          </div>
+          <div class="btm-sect-cont" id="btm-sect-cont-yellow">
+            Total Privacy Policies Generated
+            <div class="num-cont">21</div>
+          </div>
+        </div>
+      </section>
+      
+  </div>
+<!--     </main>
+
+   
+  </body>
+</html> -->
+{% endblock %}
