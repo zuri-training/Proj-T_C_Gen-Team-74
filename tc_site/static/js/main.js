@@ -58,3 +58,7 @@ var typed = new Typed('#auto-type', {
     loop: true,
     smartBackspace: true
 })
+
+
+//Fades Animations
+AOS.init();
