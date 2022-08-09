@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+
+
+#faq {
+  /* --sec-color: #555;
+  --dark-color: black; */
+}
+
+#faq p {
+    margin: 0;
+}
+
+/* perks section */
+
+#faq.perks {
+  background-color: var(--dark-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 9rem 1rem 3rem;
+}
+#faq.perks .text {
+  text-align: center;
+}
+#faq.perks .text-sm {
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+  margin-right: 1.5rem;
+}
+
+#faq.perks .image-animation {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+#faq.perks img {
+  z-index: 2;
+  position: relative;
+}
+#faq.perks .image-animation .video {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  z-index: 1;
+}
+#faq.perks .image-animation .video video {
+  width: 80%;
+}
+#faq.perks .downloading-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+#faq.perks .downloading {
+  position: absolute;
+  bottom: 8%;
+  width: 90%;
+  max-width: 500px;
+  min-width: 300px;
+  border: #999 2px solid;
+  border-radius: 1rem;
+  background-color: var(--dark-color);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+}
+#faq.perks .downloading .img-wrapper {
+  width: 40px;
+  margin: 0.5rem 1rem;
+}
+#faq.perks .downloading p {
+  margin-left: 2rem;
+  font-size: 1rem;
+  font-weight: 800;
+}
+#faq.perks .downloading .check-animation {
+  position: absolute;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+#faq.perks .downloading .check-animation::after {
+  content: " ";
+  position: absolute;
+  border-bottom: 2px solid white;
+  width: 1rem;
+  bottom: -0.5rem;
+  z-index: 1;
+}
+
+/* FAQ */
+
+#faq.faq.perks {
+  padding-inline: 0;
+}
+
+#faq.faq .text h1 {
+  font-size: 1.5rem;
+}
+
+#faq.faq .faq-list {
+  display: flex;
+  padding-left: 0;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+#faq.faq .faq-item {
+  margin: 1rem auto;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+#faq .faq-item-prompt {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #1E1E79;
+  border-bottom: 1px solid #1E1E79;
+}
+#faq.faq .faq-item-prompt span {
+  font-size: 1.5rem;
+  transition: transform 0.1s ease-in;
+}
+#faq .show .faq-item-prompt span {
+  transform: rotate(90deg)
+}
+#faq.faq .faq-item-desc {
+  padding: 1rem;
+  position: relative;
+  border-top: black 2px solid;
+  transform-origin: top;
+  animation: open-down .1s ease-in forwards;
+}
+#faq.faq .faq-item-desc p {
+  padding: 1rem;
+  padding-bottom: 0;
+}
+
+@keyframes open-down {
+  from {
+    /* max-height: 0; */
+    transform: scaleY(0);
+  }
+
+  to {
+    max-height: 500px;
+    transform: scaleY(1);
+  }
+}
+
+#faq .faq .get-started,
+#faq .faq .wrapper > p {
+  margin: 1rem auto;
+  text-align: center;
+  width: 90%;
+  max-width: 700px;
+}
+
+/* Footer */
+
+#faq .footer {
+  background-color: var(--dark-color);
+  padding: 2rem 1rem 1rem;
+  color: var(--sec-color);
+}
+
+#faq .footer * {
+  color: var(--sec-color);
+}
+
+#faq .footer a.contact {
+  font-size: 1.1rem;
+}
+#faq .footer a:hover {
+  text-decoration: underline;
+}
+#faq .footer-nav {
+  margin: 1rem 0;
+  font-size: 1rem;
+  width: 100%;
+}
+#faq .footer-nav .footer-nav-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+#faq .footer .copyright {
+  margin: 3rem 0 1rem;
+}
+
+/* Media Queries */
+
+@media (min-width: 550px) {
+  #faq .hero {
+    height: 110vh;
+  }
+  #faq .faq .wrapper {
+    width: 90%;
+  }
+  #faq .faq .text h1 {
+    font-size: 2.5rem;
+  }
+  #faq .faq .wrapper > p {
+    font-size: 1.3rem;
+  }
+  #faq .perks:last-child .faq-item {
+    max-width: 90%;
+    /* padding: 0.8rem 2rem; */
+  }
+  #faq .perks:last-child .faq-item p {
+    font-size: 1.2rem;
+  }
+  #faq .perks:last-child .faq-item span {
+    font-size: 2.5rem;
+  }
+  #faq .footer .footer-nav .footer-nav-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 949px) {
+  #faq .svg-icon-netflix-logo {
+    width: 120px;
+  }
+  #faq .hero-top {
+    padding-inline: 3rem;
+  }
+  #faq .hero-content {
+    max-width: 600px;
+  }
+  #faq .hero-content h1 {
+    font-size: 3rem;
+  }
+  #faq .hero-content > p.text-sm {
+    margin-bottom: 1.6rem;
+  }
+  #faq .hero-content > p.text-sm:nth-child(2) {
+    font-size: 1.6rem;
+  }
+  #faq .perks {
+    flex-direction: row;
+  }
+
+  #faq .perks:nth-child(2n + 1) {
+    flex-direction: row-reverse;
+  }
+
+  #faq .perks .text {
+    text-align: left;
+    padding: 1rem;
+  }
+
+  #faq .perks .text h1 {
+    font-size: 4rem;
+  }
+  #faq .perks .text p {
+    font-size: 1.5rem;
+  }
+
+  #faq .perks > figure {
+    flex-basis: 50%;
+  }
+  #faq .perks > div {
+    flex-basis: 50%;
+  }
+  #faq .perks .wrapper {
+    flex-basis: 80%;
+    max-width: 800px;
+  }
+  #faq .perks:last-child .text h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  #faq .perks:last-child .faq-item {
+    max-width: 90%;
+    margin-inline: auto;
+  }
+  #faq .faq .faq-item .faq-item-prompt, .faq .faq-item .faq-item-desc {
+    padding: 1.2rem 2rem;
+  }
+  #faq .perks:last-child .faq-item p {
+    font-size: 1.5rem;
+  }
+  #faq .perks:last-child .faq-item span {
+    font-size: 3rem;
+  }
+}

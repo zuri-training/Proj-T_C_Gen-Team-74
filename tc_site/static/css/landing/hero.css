@@ -1,0 +1,143 @@
+#hero {
+    --primary-blue: hsl(240, 61%, 37%);
+    --primary-blue-light: hsl(240, 48%, 54%);
+    --primary-yellow: hsl(58, 83%, 40%);
+    --primary-yellow-light: hsl(58, 83%, 48%);
+    --light-color: white;
+    --dark-color: #262626;;
+    --light-color-light: hsla(0, 0%, 100%, 0.432);
+
+    text-align: center;
+}
+
+.hero-bg {
+    background-image: url('/static/assets/landing/hero/hero-bg-2.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero .container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#hero .text-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 8rem auto 3rem;
+    color: var(--light-color)
+}
+#hero .text-content h1 span {
+    color: var(--primary-yellow)
+}
+
+#hero .text-content .text {
+    font-size: 2.2rem;
+    margin: 0 auto 3rem;
+    max-width: 700px;
+    font-weight: 500;
+    text-shadow: 0 0 1rem #333;
+    color: var(--light-color)
+}
+
+#hero .button {
+    width: 100%;
+    max-width: 348px;
+    height: 100%;
+    margin: 0 auto;
+    max-height: 91px;
+    border-radius: 4px;
+    padding: calc(10px + 1.2rem) 10px;
+    background: var(--primary-yellow);
+    color: var(--dark-color);
+    font-size: 1.2rem;
+    line-height: calc(29.26px + 1.2rem);
+    font-weight: 700;
+    border: transparent;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+#hero .button::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: 'Get Started For FREE';
+    display: grid;
+    place-content: center;
+}
+#hero .button::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 0;
+    height: 100%;
+    background: transparent;
+    transform: scale(0);
+    transform-origin: center;
+    width: 100%;
+    border-radius: 50%;
+    transition: all .1s ease-in-out;
+}
+
+#hero .button:active {
+    transform: scale(.95);
+}
+#hero .button:hover {
+    box-shadow: 0 4px 12px rgb(56 56 56 / 30%);
+}
+#hero .button:hover::before {
+    border-radius: 4px;
+    background: var(--primary-yellow-light);
+    width: 100%;
+    transform: scale(1);
+}
+
+
+@media (max-height: 600px) and (min-width: 700px) {
+    #hero .text-content h1 {
+        font-size: 2.5rem;
+        margin: 8rem auto 2rem;
+    }
+    #hero .text-content .text {
+        font-size: 1.8rem
+    }
+    #hero .button {
+        height: auto;
+        font-size: 1rem;
+    }
+}
+@media (max-height: 450px) and (min-width: 700px) {
+    #hero .text-content h1 {
+        font-size: 2rem;
+        margin: 8rem auto 1.8rem;
+    }
+}
+
+@media (max-width: 699px) {
+    #hero .text-content h1 {
+        font-size: 2rem;
+        margin: 8rem auto 2rem;
+    }
+    #hero .text-content .text {
+        font-size: 1rem
+    }
+    #hero .button {
+        height: auto;
+        font-size: 1rem;
+    }
+}

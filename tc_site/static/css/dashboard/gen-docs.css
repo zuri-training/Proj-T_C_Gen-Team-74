@@ -1,0 +1,108 @@
+@import url("https://use.typekit.net/bpd3bxi.css");
+
+:root {
+  --main-color: rgb(255, 255, 255);
+  --main-blue: rgb(45, 45, 182);
+  --shadow-grey: rgba(146, 146, 146);
+}
+
+/* General styles */
+
+#dashboard-body .dashboard-gen-docs html,
+#dashboard-body .dashboard-gen-docs body {
+  font-size: 16px;
+}
+
+.dashboard-gen-docs a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Dashboard styles */
+#dashboard-body .dashboard-gen-docs div.dashboard-container {
+  padding: 1rem 5rem;
+}
+
+#dashboard-body .dashboard-gen-docs section.gen-docs {
+  padding: 2rem 0rem;
+}
+
+#dashboard-body .dashboard-gen-docs section p.gen-docs-heading {
+  font-weight: 500;
+  font-size: 22px;
+  flex: 1;
+}
+
+#dashboard-body .dashboard-gen-docs section div.head_wrap {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.4rem;
+  /* align-items: center; */
+}
+
+#dashboard-body .dashboard-gen-docs section a.more {
+  font-size: 12px;
+  color: var(--main-blue);
+  justify-content: end;
+  text-align: right;
+  position: relative;
+  left: 1rem
+}
+
+#dashboard-body .dashboard-gen-docs section a.more::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  margin-left: -0.1em;
+  margin-bottom: 0.4em;
+  width: 92%;
+  text-align: left;
+  height: 0.12em;
+  background-color: rgb(59, 59, 59);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+#dashboard-body .dashboard-gen-docs section a.more::after {
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+#dashboard-body .dashboard-gen-docs section a.more:hover::after {
+  /* opacity: 1; */
+  transform: scale(1);
+  /* transform-origin: center; */
+}
+
+#dashboard-body .dashboard-gen-docs div.gen_container__wrapper {
+  width: 90%;
+  margin: auto;
+}
+#dashboard-body .dashboard-gen-docs div.gen_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 5rem;
+  row-gap: 2rem;
+}
+
+#dashboard-body .dashboard-gen-docs div.gen-docs_temps {
+  background-color: var(--main-color);
+  flex: 1;
+  text-align: center;
+  height: 15rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem 0.1rem var(--shadow-grey);
+}
+
+.dashboard-gen-docs figcaption.gen-docs_names {
+  font-size: 20px;
+  font-weight: 600;
+}

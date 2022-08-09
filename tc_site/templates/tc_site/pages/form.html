@@ -1,0 +1,75 @@
+{% extends 'tc_site/pages/landing/base.html' %}
+{% load static%}
+{% block meta %}
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Fontawesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+{% endblock %}
+
+{% block content %}
+<div id="form-block" class="container">
+    <div class="container">
+        <h1 class="heading">Generate</h1>
+        <hr class="form-divider">
+        <!-- Step Wise Form Content -->
+        <div class="form-wrapper">
+            <form action="{% url 'tc_site:preview' %}" method="POST">
+                {% csrf_token %}
+                <h1 class="form-heading">Business Information</h1>
+
+                <div class="content">
+                    <div class="form-group">
+                        <label class="bold-text" for="doc-type">What type of document would you like to generate?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="doc-type" value="TC"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Terms and Conditions
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="doc-type" value="PP"
+                                id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Privacy Policy
+                            </label>
+                        </div>
+                    </div>
+                    {{form.as_p}}
+                </div>
+                <div class="buttons">
+                    <a href="{% url 'tc_site:landing' %}"><button class="btn btn-sec">Back</button></a>
+                    <div>
+                        <a href="{% url 'tc_site:dashboard' username=user.username %}" class="btn btn-sec">Save</a>
+                        <button type="submit" class="btn btn-pri">Preview</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+{% endblock %}

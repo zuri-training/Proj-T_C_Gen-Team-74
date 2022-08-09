@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Montserrat', sans-serif;   
+}
+
+
+.dash-profile {
+    display: block;
+    /* width: calc(100% - 256px); */
+    width: 100%;
+    /* margin-left: 256px; */
+    transition: all 0.5s ease;
+    background-color:  #F7F9F7;
+    padding: 50px 50px 50px 25px;
+}
+
+.profile-avatar-img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.prof-input-file {
+   display: none;
+}
+
+.prof-input-img {
+    display: block;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #6C5D5D;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.form-grid {
+    display: grid;
+    padding-top: 10px;
+}
+
+.form-grid-1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.form-grid-2 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.form-grid-3 {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+    padding-top: 25px;
+}
+
+.basic-info-h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    color: #2D2DB6;  
+    padding-bottom: 10px;
+    border-bottom: 2px solid #C4B5B5;
+}
+
+.form-label-name {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #263238;
+    padding-bottom: 10px;
+}
+
+.form-label-username {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #263238;
+    padding-bottom: 10px;
+}
+
+.form-name {
+    display: block;
+    height: 66px;
+    width: 300px;
+    background: #FFFFFF;
+    border: 1px solid #263238;
+    border-radius: 8px;
+    padding: 21px 16px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #131313;
+}
+
+.input-edit-img1 {
+    position: relative;
+    top: -45px;
+    left: 250px;
+}
+.input-edit-img2 {
+    position: relative;
+    top: -45px;
+    left: 250px;
+}
+.input-edit-img3 {
+    position: relative;
+    top: -45px;
+    left: 575px;
+}
+.input-edit-img4 {
+    position: relative;
+    top: -45px;
+    left: 575px;
+}
+.input-edit-img5 {
+    position: relative;
+    top: -45px;
+    left: 575px;
+}
+
+.form-name::placeholder {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #6C5D5D;
+}
+
+.form-name:focus {
+    outline: none;
+    background: #FFFFFF;
+    border: 2px solid #2D2DB6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.form-name:focus ~ .input-edit-img1 {
+   display: none;
+}
+.form-name:focus ~ .input-edit-img2 {
+    display: none;
+}
+.form-user:focus ~ .input-edit-img3 {
+    display: none;
+}
+.form-user:focus ~ .input-edit-img4 {
+    display: none;
+}
+.form-user:focus ~ .input-edit-img5 {
+    display: none;
+}
+
+.form-user {
+    display: block;
+    height: 66px;
+    width: 625px;
+    background: #FFFFFF;
+    border: 1px solid #263238;
+    border-radius: 8px;
+    padding: 21px 16px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #131313;
+}
+
+.form-user::placeholder {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #6C5D5D;
+}
+
+.form-user:focus {
+    outline: none;
+    background: #FFFFFF;
+    border: 2px solid #2D2DB6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.basic-info {
+    padding-bottom: 50px;
+}
+
+.contact-info-h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    color: #2D2DB6;  
+    padding-bottom: 10px;
+    border-bottom: 2px solid #746C6C;
+}
+
+.form-label-email {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #263238;
+    padding-bottom: 10px;
+}
+
+.form-label-phone {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #263238;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.form-con-prof {
+    padding-top: 10px;
+}
+
+.form-prof-save {
+    padding: 10px;
+    gap: 10px;
+    width: 238px;
+    height: 66px;
+    background: #252598;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin: 50px 0px;
+}
+
+.form-prof-save:hover {
+    background-color: #2D2DB6;
+    border: 2px solid #080808;
+    box-shadow: 0px 4px 12px rgba(56, 56, 56, 0.3);
+}
+
+@media screen and (max-width: 1116px) {
+    .form-name {
+        width: 200px;
+        background-image: url("{% static 'assets/dashboard/layout/taiwo/edit.png' %}");
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .form-user {
+        width: 420px;
+        background-image: url("{% static 'assets/dashboard/layout/taiwo/edit.png' %}");
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .input-edit-img1, .input-edit-img2, .input-edit-img3, .input-edit-img4, .input-edit-img5 {
+        display: none;
+    }
+}
+
+/* tablet media query */
+
+@media screen and (max-width: 767px) {
+    .form-name {
+        width: 250px;
+        background-image: url("{% static 'assets/dashboard/layout/taiwo/edit.png' %}");
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .form-user {
+        width: 250px;
+        background-image: url("{% static 'assets/dashboard/layout/taiwo/edit.png' %}");
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    .form-grid {
+        display: grid;
+        padding-top: 10px;
+    }
+    
+    .form-grid-1 {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+    
+    .form-grid-2 {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        padding-top: 25px;
+    }
+    
+    .form-grid-3 {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+        padding-top: 25px;
+    }
+  
+}
+
+/* mobile phones media query */
+
+@media screen and (max-width: 500px) and (min-width: 250px) {
+
+    .dash-profile {
+        /* width: calc(100% - 80px);
+        margin-left: 80px; */
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+
+    .form-name {
+        width: 250px;
+        height: 40px;
+        background-image: url("{% static 'assets/dashboard/layout/taiwo/edit.png' %}");
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .form-user {
+        width: 250px;
+        height: 40px;
+        background-image: url("{% static 'assets/dashboard/layout/taiwo/edit.png' %}");
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .prof-input-img {
+        font-size: 18px;
+    }
+
+    .basic-info-h1 {
+        padding-top: 20px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        border-bottom: none;
+        display: block;
+        text-align: center;
+    }
+
+    .contact-info-h1 {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        border-bottom: none;
+        display: block;
+        text-align: center;
+    }
+
+    .form-label-name, .form-label-username {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .form-name::placeholder, .form-user::placeholder {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

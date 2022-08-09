@@ -1,0 +1,48 @@
+#testimonials.container {
+    max-width: 960px;
+    padding: 3rem 0;
+}
+
+#testimonials .row {
+    justify-content: center;
+    align-items: center;
+}
+
+#testimonials .review-card {
+    width: 90%;
+    box-shadow: 0 0 3px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+#testimonials .title {
+    /* font-size: 2.5rem; */
+
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+
+#testimonials .rating {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+#testimonials .rating img {
+    margin-right: .5rem;
+}
+
+#testimonials .text {
+    margin-bottom: 1rem;
+}
+
+#testimonials .name {
+    font-weight: 600;
+}

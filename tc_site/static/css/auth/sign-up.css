@@ -1,0 +1,255 @@
+@import url("https://use.typekit.net/bpd3bxi.css");
+
+.sign-up_container {
+  --main-color: rgb(255, 255, 255);
+  --main-blue: rgb(45, 45, 182);
+  --main-blue-light: hsl(240, 60%, 55%);
+}
+
+/* General stylings  */
+.modals * {
+  font-family: "Montserrat";
+}
+
+.error-alert {
+  width: 80%;
+  padding: 0.2rem;
+  margin: 0.5rem auto 0;
+}
+.error-alert li {
+  padding: 0.5rem;
+}
+
+.modals a {
+  text-decoration: none;
+  color: black;
+}
+
+.modals.sign-up_container {
+  background-color: rgba(243, 241, 241, 1);
+  box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.25);
+  border: 1px solid black;
+  border-radius: 1rem;
+  width: 90%;
+  /* max-width: 480px; */
+  max-width: 1000px;
+  /* padding-bottom: 1rem; */
+  padding: 2.38rem;
+}
+
+.modals.sign-up_container i.fa-times{
+  font-size: 60px;
+  color: black;
+  float: right;
+}
+
+.modals.sign-up_container div.container{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+/* Image stylings*/
+.modals.sign-up_container figure {
+  margin-bottom: 1rem;
+  /* border-radius: 1rem 1rem 0 0; */
+  overflow: hidden;
+  flex-basis: 50%;
+}
+.modals.sign-up_container figure img {
+  width: 100%;
+}
+
+/* Heading styles */
+.modals.sign-up_container .head_wrap {
+  width: 90%;
+  /* text-align: center; */
+  margin: auto;
+}
+
+.modals.sign-up_container .head_wrap p {
+  font-size: 12px;
+  color: rgba(19, 19, 19, 1);
+}
+
+.modals.sign-up_container .head_wrap .sign-up_heading {
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 39px;
+  margin-bottom: 1.2rem;
+  color: var(--main-blue);
+}
+
+/* Form stylings */
+
+.modals.sign-up_container label {
+  /* font-size: 16px; */
+  font-size: 10.63px;
+  /* line-height: 24px; */
+  line-height: 21.25px;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+.modals.sign-up_container form#sign-up_form {
+  width: 90%;
+  margin: auto;
+}
+
+.modals.sign-up_container div.fields {
+  margin-bottom: 0.5rem;
+}
+
+.modals.sign-up_container div.icon_group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2px;
+}
+
+.modals.sign-up_container input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  /* color: rgba(0, 0, 0, 0.4); */
+  color: rgba(146, 136, 136, 1);
+}
+
+.modals.sign-up_container input:focus {
+  outline: none;
+  transition: 0.1s;
+  border: solid var(--main-blue) 2px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.modals.sign-up_container input:focus::placeholder {
+  transition: 0.1s;
+  letter-spacing: 0.6px;
+  font-size: 17px;
+}
+
+.modals.sign-up_container #terms_agreement {
+  font-size: 12px;
+  width: 2rem;
+  height: 1.2rem;
+}
+
+.modals.sign-up_container .btn-sign-up-container {
+  margin-bottom: 1rem;
+}
+
+.modals.sign-up_container #sign-up_btn {
+  transition: letter-spacing 0.3s;
+  letter-spacing: normal;
+}
+
+.modals.sign-up_container #sign-up_btn:hover {
+  color: white;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+}
+
+.modals.sign-up_container form p {
+  font-size: 12px;
+}
+
+.modals.sign-up_container p.d-flex{
+  font-size: 8px;
+}
+
+.modals.sign-up_container p.d-flex a{
+  font-size: 8px;
+  display: inline;
+}
+
+.modals.sign-up_container p.question {
+  text-align: center;
+  font-size: 12px;
+  color: rgb(19, 19, 19);
+}
+
+.modals.sign-up_container p.question a {
+  transition: letter-spacing 0.2s;
+  letter-spacing: normal;
+  margin-top: 0.55rem;
+}
+
+.modals.sign-up_container p.question a:hover {
+  cursor: pointer;
+  letter-spacing: 0.6px;
+}
+
+@media screen and (max-width: 700px) {
+  .modals.sign-up_container.sign-up_container {
+    flex-wrap: wrap;
+  }
+  .modals.sign-up_container i.fa-times{
+    font-size: 30px;
+  }
+  .modals.sign-up_container figure {
+    display: none;
+  }
+  .modals.sign-up_container .head_wrap p {
+    font-size: 14px;
+  }
+
+  .modals.sign-up_container .head_wrap .sign-up_heading {
+    font-size: 28px;
+    margin-bottom: 1rem;
+  }
+
+  .modals label {
+    font-size: 14px;
+  }
+
+  .modals input::placeholder {
+    font-size: 14px;
+  }
+
+  .modals input:focus::placeholder {
+    transition: 0.1s;
+    font-size: 15px;
+  }
+
+  .modals #terms_agreement {
+    font-size: 12px;
+    width: 1.7rem;
+    height: 1rem;
+  }
+
+  .modals .btn-sign-up-container {
+    margin-top: 8px;
+    margin-bottom: 21px;
+  }
+
+  .modals #sign-up_btn {
+    padding: 9px 8px;
+    font-size: 21px;
+  }
+
+  .modals #sign-up_btn:hover {
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .modals.sign-up_container.sign-up_container {
+    flex-wrap: wrap;
+  }
+  .modals.sign-up_container i.fa-times{
+    font-size: 30px;
+  }
+  .modals.sign-up_container figure {
+    display: none;
+  }
+  .modals .head_wrap .sign-up_heading {
+    font-size: 26px;
+  }
+  .modals input:focus::placeholder {
+    transition: 0.1s;
+    font-size: 15px;
+  }
+  .modals #sign-up_btn {
+    padding: 9px 8px;
+    font-size: 19px;
+  }
+}

@@ -1,0 +1,34 @@
+{% load static %}
+<nav id="mySidenav" class="sidenav">
+    
+    <a class="logo" href="{% url 'tc_site:landing' %}">
+        <img class="full-logo" src="{% static 'assets/dashboard/dinho/Frame 59906.png' %}" alt="logo" />
+        <img class="half-logo" style="display: none;" src="{% static 'assets/dashboard/layout/sidenav/logo.png' %}"
+            alt="logo" />
+    </a>
+
+    <ul class="top-nav-items">
+
+        <li data-description="Dashboard"><a href="{% url 'tc_site:dashboard' username=user.username %}"><img
+                    src="{% static 'assets/dashboard/dinho/element-4.png' %}" alt="" /><span>Dashboard</span></a></li>
+
+        <li data-description="Generated Docs"><a href="{% url 'tc_site:generated_docs' username=user.username %}"><img
+                    src="{% static 'assets/dashboard/dinho/edit.png' %}" alt="" /><span>Generated Docs</span></a></li>
+
+        <li data-description="Generate"><a href="{% url 'tc_site:gen-form' %}"><img src="{% static 'assets/dashboard/dinho/layer.png' %}"
+                    alt="" /><span>Generate</span></a></li>
+
+        <li data-description="Archive"><a href="{% url 'tc_site:coming-soon' page='dashboard' %}"><img
+                    src="{% static 'assets/dashboard/dinho/archive.png' %}" alt="" /><span>Archive</span></a></li>
+    </ul>
+    <ul class="move-ele">
+        <li data-description="Contact/FAQ"><a href="{% url 'tc_site:landing' %}#faq"><img
+                    src="{% static 'assets/dashboard/dinho/message-question.png' %}"
+                    alt="" /><span>Contact/FAQ</span></a></li>
+        <li data-description="Profile"><a href="{% url 'tc_site:coming-soon' page='dashboard' %}"><img
+                    src="{% static 'assets/dashboard/dinho/message-question.png' %}" alt="" /><span>Profile</span></a>
+        </li>
+        <li data-description="Logout"><a href="{% url 'tc_site:signout' %}"><img
+                    src="{% static 'assets/dashboard/dinho/logout.png' %}" alt="" /><span>Logout</span></a></li>
+    </ul>
+</nav>

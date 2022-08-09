@@ -1,0 +1,122 @@
+@import url("https://use.typekit.net/bpd3bxi.css");
+
+:root {
+  --main-color: rgb(255, 255, 255);
+  --main-blue: rgb(45, 45, 182);
+  --shadow-grey: rgba(146, 146, 146);
+  --button-grey: rgba(214, 226, 214, 1);
+}
+
+/* General styles */
+.dashboard-archive * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+.dashboard-archive html,
+body {
+  font-size: 16px;
+}
+
+.dashboard-archive main {
+  padding: 1rem 2rem;
+}
+
+/* Button styles  */
+
+.dashboard-archive a {
+  text-decoration: none;
+  color: black;
+}
+
+.dashboard-archive div.upper-sect {
+  padding: 2.5rem 0.2rem;
+}
+
+.dashboard-archive button.create-folder {
+  background-color: var(--button-grey);
+  padding: 12px 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Detail/Accordion stylings */
+
+.dashboard-archive #det-cont {
+  margin: 1rem 0.2rem 1.8rem;
+}
+
+.dashboard-archive div.det-heads {
+  display: flex;
+  flex-direction: row;
+}
+
+.dashboard-archive div.det-heads > i {
+  margin: 15px 2px 2px 0px;
+}
+
+.dashboard-archive details.detail-titles summary {
+  list-style: none;
+  padding: 1rem 0.4rem 0.7rem;
+  cursor: pointer;
+}
+
+/* Detail list stylings */
+
+.dashboard-archive .acc-links {
+  padding-left: 1.5rem;
+}
+
+.dashboard-archive .acc-links p {
+  padding: 0.2rem;
+  margin: 0.1rem 0.2rem 0.3rem;
+}
+
+.dashboard-archive .acc-links p:hover {
+  transition: 200ms;
+  letter-spacing: 0.5px;
+  /* font-size: 16.5px; */
+}
+
+.dashboard-archive .btm-sect {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-archive .sect-head {
+  margin-bottom: 0.6rem;
+}
+
+.dashboard-archive .btm-sect-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 0.8rem;
+}
+
+.dashboard-archive .btm-sect-cont {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  gap: 8px;
+  border-radius: 16px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: flex;
+}
+
+.dashboard-archive #btm-sect-cont-red {
+  background-color: rgba(243, 217, 217, 1);
+}
+.dashboard-archive #btm-sect-cont-yellow {
+  background-color: rgba(245, 243, 177, 1);
+}
+
+.dashboard-archive .btm-sect .num-cont {
+  background-color: rgba(247, 249, 247, 1);
+  text-align: center;
+  margin: 0rem 46%;
+}

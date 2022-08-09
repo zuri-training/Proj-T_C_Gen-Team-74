@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap');
+
+.project {
+    position: relative;
+}
+
+/* Header section */
+
+#header-section {
+    background:  #F5F5F5;
+}
+
+#header-section .container{
+    padding: 40px;
+    height: 100vh;
+}
+
+.header-img{
+    width: 100%;
+    max-width: 569px;
+    height: 100%;
+    max-height: 569px;
+}
+
+.header-text-one{
+    font-size: 56px;
+    line-height: 68px;
+    font-weight: 700;
+    color: #131313;
+    padding-bottom: 20px;
+}
+
+.header-text-two{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #262626;
+    padding: 30px 0px;
+}
+
+
+.header-btn-one{
+    width: 100%;
+    max-width: 348px;
+    height: 100%;
+    max-height: 91px;
+    border-radius: 4px;
+    padding: 12px 10px;
+    background: #262698;
+    color: #EAF0EA;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    border: transparent;
+
+}
+
+.header-btn-one:hover{
+    background: #5050C2;
+    transition: .5s;
+}
+
+/* Header section */
+
+
+
+/* main-section-three section */
+
+.main-section-three{
+    padding: 100px 0px;
+}
+
+.main3-img{
+    width: 100%;
+    max-width: 585px;
+    height: 100%;
+    max-height: 513px;
+}
+.main3-txt-head{
+    color: #222121;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 700;
+}
+
+.main3-txt-body{
+    color: #262626;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 400;
+}
+
+/* main-section-three section */
+
+/* Animation section */
+
+.loader{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background: #F7F9F7;
+    z-index: 100;
+}
+
+.loader img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: translateY(10px);
+    animation: moveup 1s ease infinite;
+}
+
+@keyframes moveup {
+    0%{
+        transform: translateY(-15px);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(-15px);
+    }
+}
+
+/* Animation section ends */
+
+
+@media screen and (max-width: 992px) and (min-width: 795px){
+
+    #header-section .container{
+        padding: 30px 20px;
+    }
+    .header-text-one{
+        font-size: 45px;
+        line-height: 50px;
+        font-weight: 700;
+        padding-bottom: 0px;
+    }
+
+    .header-text-two{
+        font-size: 24px;
+        line-height: 25px;
+        font-weight: 400;
+        color: #262626;
+        padding: 30px 0px;
+    }
+    
+    .header-btn-one{
+        max-width: 348px;
+        max-height: 91px;
+        padding: 10px 5px;
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 700;
+    }
+
+}
+
+@media screen and (max-width: 794px) and (min-width: 766px){
+
+    a:hover, a.active{
+        background: none;
+        color: #E2DA15;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    } 
+}
+
+@media screen and (max-width: 430px) and (min-width: 373px){
+    .header-text-one{
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 700;
+        padding-bottom: 0px;
+    }
+
+    .header-text-two{
+        font-size: 18px;
+        line-height: 23px;
+        padding: 10px 0px;
+    }
+    
+    
+    .header-btn-one{
+        width: 100%;
+        max-width: 248px;
+        height: 100%;
+        max-height:71px;
+        padding: 10px 5px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    
+
+    .header-img{
+        width: 100%;
+        max-width: 369px;
+        height: 100%;
+        max-height: 369px;
+    }
+    
+    #header-section .container{
+        padding: 20px 20px;
+    }
+    
+    #main-section-one{
+        padding: 20px 20px;
+    }
+
+    .main1-txt-one {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .main-section-two{
+        padding: 53px 20px;
+    }
+
+    #cards-temp {
+        padding: 0px 30px;
+    }
+
+    .temps-txt-2 {
+        padding: 10px 15px;
+    }
+    .count-num{
+        font-size: 20px;
+        line-height: 30px;
+    
+    }
+    
+    .count-txt{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .main-section-three{
+        padding: 80px 0;
+        justify-content: center;
+    }
+
+    .main3-txt-head {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .main3-txt-body {
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .main3-img {
+        width: 100%;
+        max-width: 385px;
+        height: 100%;
+        max-height: 313px;
+    }
+}

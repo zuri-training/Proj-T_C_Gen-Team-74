@@ -1,0 +1,23 @@
+{% load static %}
+
+<!-- header-section -->
+<div id="hero">
+  <div class="hero-bg">
+    <!-- <img src="{% static 'assets/landing/hero/hero-bg.png' %}" alt="hero-bg"> -->
+
+    <div class="container">
+      <div class="text-content">
+        <h1>
+          Terms & Conditions and Privacy Policy <span><span id="auto-type"></span></span>
+        </h1>
+        <p class="text">
+          We handle the paperwork so you
+          can focus on your business.
+        </p>
+      </div>
+      <a class="button" href="{% url 'tc_site:gen-form' %}"></a>
+    </div>
+  </div>
+
+</div>
+<!-- header-section -->
