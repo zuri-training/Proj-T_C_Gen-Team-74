@@ -10,15 +10,9 @@
 }
 
 #main-section-one{
-    padding: 2rem 6rem 1rem 19rem;
+    padding: 2rem 6rem 1rem 2rem;
 }
 
-/* 
-.progress-new, .progress-new2, .progress-new3, .progress-new4{
-    stroke-dasharray: 630;
-    stroke-dashoffset: 0;
-
-} */
 
 #main-section-one #comp-1{
     background-color: #ffffff;
@@ -75,7 +69,7 @@
 /****** main-section-two  Styling*********/
 #main-section-two{
     margin-top: 1.5rem;
-    padding: 2rem 5rem 0rem 19rem;
+    padding: 2rem 5rem 0rem 2rem;
 }
 
 .pend-text{
@@ -167,7 +161,7 @@
 
 #main-section-three{
     margin-top: 1rem;
-    padding: 2rem 5rem 2rem 19rem;
+    padding: 2rem 5rem 2rem 2rem;
 }
 
 .sum-txt{
@@ -280,13 +274,6 @@
 
 @media screen and (max-width: 600px){
    
-    /* .dash-nav{
-        padding: 1rem 2.5rem;
-    } */
- 
-    /* .nav-icons a{
-        padding-left: 10px;
-    } */
     #main-section-one{
         padding: 1rem 2.5rem;
     }
@@ -307,12 +294,7 @@
 }
 
 @media screen and (max-height: 450px) {
-  /* .sidenav {
-    padding-top: 15px;
-  } */
-  /* .sidenav a {
-    font-size: 18px;
-  } */
+
     .col-md-3 {
         flex: 0 0 auto;
         width: 50%;
