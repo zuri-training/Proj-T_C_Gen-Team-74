@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+
+/* ---------Header Section------------- */
+#about-page {
+    width: 100%;
+    padding-top: 6rem;
+}
+#about-hero {
+    background-image: url('/static/assets/landing/hero/hero-bg-2.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#about-hero text {
+    display: grid;
+    place-content: center;
+}
+
+#about-hero .text h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    width: 100%;
+    color: #F7F9F7;
+    text-shadow: 0 0 .5rem #333;
+}
+
+/* ---------About Us Section---------- */
+#about-page .image-about {
+    padding: 5rem 0;
+}
+#about-page .flex-item-container {
+    width: 100%;
+}
+#about-page .flex-item-container img {
+    width: 90%;
+    margin: 1rem auto;
+    display: block;
+}
+#about-page .about-us-text p {
+    width: 90%;
+    margin: 0 auto;
+    font-weight: 400;
+    padding: 3px;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-shadow: 0 0 1rem #ccc;
+    text-align: center;
+}
+
+/* ---------Secure Your Business Section-------- */
+
+#about-page .secure-text {
+    margin: 1rem auto 3rem;
+}
+#about-page .secure-text h1 {
+    font-weight: 700;
+    width: 90%;
+    font-size: 2.15rem;
+    text-align: center;
+    line-height: 2.4rem;
+    color: #131313;
+    margin: 2rem auto;
+}
+
+#about-page .secure-text .count-num {
+    text-align: center;
+}
+
+/* ---------Our Goals Section---------- */
+
+#about-page .goals {
+    background-color: #D5D5F0;
+    padding: 3rem 0;
+}
+
+#about-page .goals .text,
+#about-page .goals .image-goal {
+    width: 90%;
+    margin: 0 auto;
+}
+#about-page .goals h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2.5rem;
+    color: #17191C
+}
+
+#about-page .goals p {
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+    padding: 3px;
+    color: #4A4A4A;
+    text-shadow: 0 0 1rem #ccc;
+}
+
+#about-page .goals img {
+    display: block;
+    width: 100%;
+}
+
+/* ----------Our Team----------- */
+#about-page .team {
+    padding: 5rem 0;
+}
+#about-page .team h1 {
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.7rem;
+    margin: 2rem auto;
+    color: #17191C  
+}
+
+#about-page .team p {
+    font-weight: 400;
+    font-size: 1.35rem;
+    text-align: center;
+    width: 90%;
+    max-width: 880px;
+    padding: 5px;
+    color: #262626;
+    margin: 2rem auto;
+}
+
+#about-page .image-team img { 
+    display: block;
+    width: 70%;
+}
+
+#about-page .image-team h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.2rem;
+    color: #000000;
+    margin: 1rem 0;
+}
+
+#about-page .image-team p {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 1%;
+    color: #000000;
+}
+
+
+@media screen and (max-width: 700px) {
+    #about-hero {
+        height: 20vh;
+    }
+    #about-page .image-about,
+    #about-page .team {
+        padding: 3rem 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #about-hero .text h1 {
+        font-size: 2rem;
+    }
+    #about-page .about-us-text p,
+    #about-page .team p,
+    #about-page .goals p {
+        font-size: 1rem;
+    }
+    #about-page .secure-text h1 {
+        font-size: 1.5rem;
+    }
+    #about-page .secure-text .count-num {
+        font-size: 1.5rem;
+    }
+}
