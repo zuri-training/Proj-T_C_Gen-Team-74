@@ -1,3 +1,9 @@
+Name: Ezike Obiajulu<br>
+Team: [74](https://github.com/orgs/zuri-training/teams/proj-t_c_gen-team-74/members) <br>
+Role: Dev lead
+<hr>
+<br>
+
 Task    |   Proof link
 ----    |   -----
 Create project skeleton | https://github.com/zuri-training/Proj-T_C_Gen-Team-74/issues/14
@@ -23,4 +29,4 @@ bug fixes on dashboard navbar and added username error checking | https://github
 Review submissions, merge changes to main branch and give feedback when necessary | https://github.com/zuri-training/Proj-T_C_Gen-Team-74/issues/126, https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/42, https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/41, https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/48, https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/59, https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/83, https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/93
 Managed the entire project as lead for the dev team | Proof can be seen by my presence in almost all branches of this project
 Effected fixes on reviewed submissions  | Proof of this is in the commit stories of reviewed branches
-Perform the backend developer part of the final presentation  | 
+Perform the backend developer part of the final presentation  | https://github.com/zuri-training/Proj-T_C_Gen-Team-74/issues/128
