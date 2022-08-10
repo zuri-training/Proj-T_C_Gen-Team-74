@@ -174,8 +174,8 @@ Now you would want to install all the projects dependencies
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+<!-- Feature exmaples -->
+## Features
 
 Our project provides these basic functionalities:
 1.  Ability to preview one of our templates as an unauthenticated user
@@ -238,8 +238,7 @@ Don't forget to give the project a star! Thanks again!
 
 <!-- CONTACT -->
 ## Contact
-
-Your Name - [@De_marauder](https://twitter.com/@De_marauder)
+For moe information about this project you can contact [@De_marauder](https://twitter.com/@De_marauder) on twitter or [github](https://github.com/de-marauder)
 
 Project Link: [https://github.com/zuri-training/Proj-T_C_Gen-Team-74](https://github.com/zuri-training/Proj-T_C_Gen-Team-74)
 
@@ -253,7 +252,6 @@ Project Link: [https://github.com/zuri-training/Proj-T_C_Gen-Team-74](https://gi
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
 * [ZurixI4G](https://training.zuri.team/)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Img Shields](https://shields.io)
 * [Heroku](https://heroku.com)
 * [Font Awesome](https://fontawesome.com)
@@ -279,15 +277,15 @@ Thanks go to these wonderful people ([emoji key](https://allcontributors.org/doc
 
 [**de-marauder**](https://github.com/de-marauder) and [**labodinho**](https://github.com/labodinho) will be handling the main branch and merging of feature branches so you can perform your task in your own dedicated branches
 
-### Good luck everyone!
+### Thank you everyone!
 
 <hr>
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/de-marauder"><img src="https://avatars.githubusercontent.com/u/1500684?v=3?s=100" width="100px;" alt=""/><br /><sub><b>Ezike Obiajulu</b></sub></a><br /><a href="#question-kentcdodds" title="Answering Questions">💬</a> <a href="https://github.com/all-contributors/all-contributors/commits?author=kentcdodds" title="Documentation">📖</a> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Akentcdodds" title="Reviewed Pull Requests">👀</a> <a href="#talk-kentcdodds" title="Talks">📢</a></td>
-    <td align="center"><a href="https://github.com/jfmengels"><img src="https://avatars.githubusercontent.com/u/3869412?v=3?s=100" width="100px;" alt=""/><br /><sub><b>Jeroen Engels</b></sub></a><br /><a href="https://github.com/all-contributors/all-contributors/commits?author=jfmengels" title="Documentation">📖</a> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Ajfmengels" title="Reviewed Pull Requests">👀</a> <a href="#tool-jfmengels" title="Tools">🔧</a></td>
-    <td align="center"><a href="https://jakebolam.com"><img src="https://avatars2.githubusercontent.com/u/3534236?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jake Bolam</b></sub></a><br /><a href="https://github.com/all-contributors/all-contributors/commits?author=jakebolam" title="Documentation">📖</a> <a href="#tool-jakebolam" title="Tools">🔧</a> <a href="#infra-jakebolam" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-jakebolam" title="Maintenance">🚧</a> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Ajakebolam" title="Reviewed Pull Requests">👀</a> <a href="#question-jakebolam" title="Answering Questions">💬</a></td>
+    <td align="center"><a href="https://github.com/de-marauder"><img src="https://avatars.githubusercontent.com/de-marauder?v=3?s=100" width="100px;" alt=""/><br /><sub><b>Ezike Obiajulu</b></sub></a><br /><a href="#question-de_marauder" title="Answering Questions">💬</a> <a href="https://github.com/zuri-training/Proj-T_C_Gen-Team-74/commits?author=de-marauder" title="Documentation">📖</a> <a href="https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pulls?q=is%3Apr+reviewed-by%3Ade-marauder" title="Reviewed Pull Requests">👀</a> <a href="#talk-de_marauder" title="Talks">📢</a><a href="#maintenance-de_marauder" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://github.com/labodinho"><img src="https://avatars.githubusercontent.com/labodinho?v=3?s=100" width="100px;" alt=""/><br /><sub><b>Olabode Oritogun</b></sub></a><br /><a href="https://github.com/zuri-training/Proj-T_C_Gen-Team-74/commits?author=labodinho" title="Documentation">📖</a> <a href="https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pulls?q=is%3Apr+reviewed-by%3Alabodinho" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/ogunkapc"><img src="https://avatars2.githubusercontent.com/ogunkapc?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ogunka Promise</b></sub></a><br /><a href="https://github.com/all-contributors/all-contributors/commits?author=ogunkapc" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/tbenning"><img src="https://avatars2.githubusercontent.com/u/7265547?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tyler Benning</b></sub></a><br /><a href="#maintenance-tbenning" title="Maintenance">🚧</a> <a href="https://github.com/all-contributors/all-contributors/commits?author=tbenning" title="Code">💻</a> <a href="#design-tbenning" title="Design">🎨</a></td>
     <td align="center"><a href="https://sinchang.me"><img src="https://avatars0.githubusercontent.com/u/3297859?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jeff Wen</b></sub></a><br /><a href="#maintenance-sinchang" title="Maintenance">🚧</a> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Asinchang" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="http://maxcubing.wordpress.com"><img src="https://avatars0.githubusercontent.com/u/8260834?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Maximilian Berkmann</b></sub></a><br /><a href="#translation-Berkmann18" title="Translation">🌍</a> <a href="https://github.com/all-contributors/all-contributors/commits?author=Berkmann18" title="Documentation">📖</a> <a href="#maintenance-Berkmann18" title="Maintenance">🚧</a> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3ABerkmann18" title="Reviewed Pull Requests">👀</a> <a href="#talk-Berkmann18" title="Talks">📢</a></td>
@@ -409,11 +407,11 @@ This project follows the [all-contributors](https://allcontributors.org) specifi
 Contributions of any kind are welcome!
 
 ## Relevant links
-  - Live site: https://quickterms.herokuapp.com/
-  - UX Research documention: https://docs.google.com/document/d/1T4SFiEQCYYrOaHTu2laP7x9L5mTi5jr42VCgjAVX7rI/edit?usp=sharing
-  - Technical documentation: https://docs.google.com/document/d/1nvtH6D1MPTVXxoJBVj0Ln0Znj64kLaKMG5RNimM2Aq4/edit?usp=sharing
-  - Contributors details and their tasks: https://docs.google.com/spreadsheets/d/11xXrf_8M0h4MvW9oLjhe1myAj8swJUplk9y0fm1J2YQ/edit?usp=sharing
-  - Database Schema: https://drive.google.com/file/d/1-TfYdHR8ApGuiqzOfBnUK4ddSRsvrybG/view?usp=sharing
+  - [Live site](https://quickterms.herokuapp.com/)
+  - [UX Research documention](https://docs.google.com/document/d/1T4SFiEQCYYrOaHTu2laP7x9L5mTi5jr42VCgjAVX7rI/edit?usp=sharing)
+  - [Technical documentation](https://obiajuluezike.slite.com/p/LeWE1nW8ZC8iPM/QuickTerms-Technical-Documentation)
+  - [Contributors details and their tasks](https://docs.google.com/spreadsheets/d/11xXrf_8M0h4MvW9oLjhe1myAj8swJUplk9y0fm1J2YQ/edit?usp=sharing)
+  - [Database Schema](https://drive.google.com/file/d/1-TfYdHR8ApGuiqzOfBnUK4ddSRsvrybG/view?usp=sharing)
 
 <!-- LICENSE -->
 ## LICENSE
@@ -450,7 +448,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [Python-url]: https://www.python.org/
 [CSS3]: https://img.shields.io/badge/CSS-4A4A55?style=for-the-badge&logo=css3&logoColor=FF3E00
 [CSS3-url]: https://www.w3.org/Style/CSS/Overview.en.html
-[HTML5]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+[HTML5]: https://img.shields.io/badge/html-FF2D20?style=for-the-badge&logo=html5&logoColor=white
 [HTML5-url]: https://html5.org/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
