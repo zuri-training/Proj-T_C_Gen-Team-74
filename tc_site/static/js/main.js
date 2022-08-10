@@ -49,4 +49,13 @@ valueDisplay.forEach((valueDisplays) => {
 
 
 
-// Preview button handler
+// Animation
+
+// Auto Typing Effect
+var typed = new Typed('#auto-type', {
+    strings: ["Creator","Generator","Builder"], typeSpeed: 200,
+    backSpeed: 250,
+    loop: true,
+    smartBackspace: true
+})
+

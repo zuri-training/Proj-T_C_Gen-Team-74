@@ -3,7 +3,7 @@
 {% block content %}
 
   <!-- main-section-one -->
-  <div id="main-section-one">
+  <div class="container" id="main-section-one">
     <div class="row">
       <div class="col-md-6">
         <p class="comp-text">GENERATED DOCUMENTS</p>
@@ -11,22 +11,22 @@
           <div>
             <canvas id="myChart"></canvas>
           </div>
-          <p class="clinge">Total <span class="clinge-total">75%</span></p>
+          <div class="move-mid"><p class="clinge">Total <span class="clinge-total">75</span></p></div>
+          
         </div>
       </div>
       <div class="col-md-6">
         <p class="comp-text">PENDING DOCUMENTS</p>
         <div id="comp-1">
-          <div>
-            <canvas id="newGen"></canvas>
+            <div>
+              <canvas id="newGen"></canvas>
+            </div>
+            <div class="move-mid"><p class="clinge">Total <span class="clinge-total">2</span></p></div>
           </div>
-          <p class="clinge">Total <span class="clinge-total">50%</span></p>
-        </div>
       </div>
     </div>
   </div>
   <!-- main-section-one -->
-
 
   <!-- main-section-two -->
   <div id="main-section-two">
@@ -43,7 +43,6 @@
           </div>
           <p id="move-to-end"><span class="loading"></span> Completed</p>
         </div>
-
       </div>
       <div class="sub-section-two">
         <div class="top-sec-main">
@@ -56,42 +55,27 @@
           </div>
           <p id="move-to-end"><span class="loading2"></span> Completed</p>
         </div>
-
-
       </div>
     </div>
   </div>
   <!-- main-section-two -->
 
-
-
   <!-- main-section-three -->
   <div id="main-section-three">
     <p class="sum-txt">SUMMARY</p>
     <div class="row">
-      <div class="col-md-3" id="color-1">
-        <p class="col-txt-1">Total Terms and Conditions
-          Generated</p>
+      <div class="col-md-6" id="color-1">
+        <p class="col-txt-1">Total Terms and Conditions Generated</p>
         <p class="col-txt-2">54</p>
       </div>
-      <div class="col-md-3" id="color-2">
-        <p class="col-txt-1">Total Terms and Conditions
-          Generated</p>
+      <div class="col-md-6" id="color-2">
+        <p class="col-txt-1">Total Terms and Conditions Generated</p>
         <p class="col-txt-2">21</p>
-      </div>
-      <div class="col-md-3" id="color-3">
-        <p class="col-txt-1">Total Terms and Conditions
-          Generated</p>
-        <p class="col-txt-2">1</p>
-      </div>
-      <div class="col-md-3" id="color-4">
-        <p class="col-txt-1">Total Terms and Conditions
-          Generated</p>
-        <p class="col-txt-2">1</p>
       </div>
     </div>
   </div>
   <!-- main-section-three -->
+</main>
 {% endblock %}
 
 {% block scripts %}
