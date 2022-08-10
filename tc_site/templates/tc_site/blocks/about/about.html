@@ -1,0 +1,125 @@
+{% extends 'tc_site/pages/landing/base.html' %}
+{% load static %}
+{% block meta %}
+<link rel="stylesheet" href="{% static 'css/about/about.css' %}?version=2">
+<title>About Us</title>
+{% endblock %}
+
+{% block content %}
+<!-- ---------Header Section------------- -->
+<div id="about-page">
+    <div id="about-hero">
+        <!-- <img src="{% static 'assets/about/banner.png' %}" alt="banner"> -->
+        <div class="text">
+            <h1>ABOUT US</h1>
+        </div>
+    </div>
+
+    <!-- ---------About Us Section---------- -->
+
+    <div class="d-md-flex align-items-center image-about container">
+        <div class="flex-item-container">
+            <img src="{% static 'assets/about/aboutus.png' %}" alt="aboutus">
+        </div>
+        <div class="flex-item-container about-us-text">
+            <p>QuickTerms is the No. 1 online generator of fast, free and customised Terms & Conditions and Privacy
+                policy
+                documents for busy business owners and professionals.</p>
+        </div>
+    </div>
+
+    <!-- ---------Secure Your Business Section-------- -->
+    <div class="secure-text">
+        <h1>Secure Your Business With Us</h1>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="counter-container">
+                        <p class="count-num">
+                            <span class="num" data-val="2500">+</span><span>+</span>
+                        </p>
+                        <p class="count-txt">Policies Generated</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="counter-container">
+                        <p class="count-num">
+                            <span class="num" data-val="1000">+</span><span>+</span>
+                        </p>
+                        <p class="count-txt">User Trust Built</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="counter-container">
+                        <p class="count-num">
+                            <span class="num" data-val="150">+</span><span>+</span>
+                        </p>
+                        <p class="count-txt">Supported Countries</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------Our Goals Section----------  -->
+
+    <div class="goals">
+        <div class="d-md-flex align-items-center container">
+            <div class="flex-item-container">
+                <div class="text">
+
+                    <h1>OUR GOALS</h1>
+                    <p>We aim to eliminate the frustration and delay you encounter with drafting Terms & Conditions and
+                        Privacy
+                        policies. With QuickTerms your generate relevant legal documents that promotes and safeguards
+                        your
+                        business
+                        for
+                        free.</p>
+                </div>
+            </div>
+            <div class="flex-item-container">
+                <div class="image-goal">
+                    <img src="{% static 'assets/about/goals.png' %}" alt="goals">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------Our Team----------- -->
+
+    <div class="team">
+        <h1>OUR TEAM</h1>
+        <p>A team of smart designers and developers who combined in-depth knowledge and hard work to develop QuickTerms;
+            all
+            being trained by I4GxZuri.
+        </p>
+        <div class="d-md-flex container">
+            <div class="flex-item-container">
+                <div class="image-team">
+                    <img src="{% static 'assets/about/Group 120.png' %}" alt="group120">
+                    <h3>Olabode Oritogun</h3>
+                    <p>Team Lead</p>
+                </div>
+            </div>
+            <div class="flex-item-container">
+                <div class="image-team">
+                    <img src="{% static 'assets/about/Group 121.png' %}" alt="group121">
+                    <h3>Enomfon Obot</h3>
+                    <p>Assistant Team Lead (Design)</p>
+                </div>
+            </div>
+            <div class="flex-item-container">
+                <div class="image-team">
+                    <img src="{% static 'assets/about/Group 122.png' %}" alt="group122">
+                    <h3>Obiajulu Ezike</h3>
+                    <p>Assistant Team Lead (Developer)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}

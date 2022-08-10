@@ -18,6 +18,7 @@ app_name = 'tc_site'
 urlpatterns = [
     # Landing page URLS
     path('', views.landing, name="landing"),
+    path('about/', views.about, name="about"),
     path('signin/', views.signin, name="signin"),
     path('signup/', views.signup, name="signup"),
     path('signout/', views.signout, name="signout"),
@@ -49,5 +50,7 @@ urlpatterns = [
     path('<str:username>/generate', views.generated_docs, name="generate"),
     path('<str:username>/generated_docs',
          views.generated_docs, name="generated_docs"),
+    path('<str:username>/profile',
+         views.profile, name="profile"),
     path('<str:page>/coming-soon', views.coming_soon, name="coming-soon"),
 ]
