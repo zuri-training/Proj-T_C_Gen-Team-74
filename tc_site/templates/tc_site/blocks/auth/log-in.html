@@ -2,15 +2,14 @@
 <div id="sign-in-modal" class="backdrop-wrapper" style="display: none;">
   <div class="backdrop"></div>
   <div class="modals login_container">
-    <i class="fa fa-times"></i>
+    <i class="cancel cancel-backdrop">
+      <img src="{% static 'assets/auth/cancel.png' %}" alt="cancel" width="20px" height="20px">
+    </i>
     <div class="container2">
       <figure>
-        <img
-          {% comment %} src="{% static 'assets/auth/sign-up/get-started.png' %}" {% endcomment %}
-          src="{% static 'assets/auth/sign-up/get-started.svg' %}"
-          {% comment %} alt="get-started.png" {% endcomment %}
-          alt="get-started.svg"
-        />
+        <img {% comment %} src="{% static 'assets/auth/sign-up/get-started.png' %}" {% endcomment %}
+          src="{% static 'assets/auth/sign-up/get-started.svg' %}" {% comment %} alt="get-started.png" {% endcomment %}
+          alt="get-started.svg" />
       </figure>
 
       <div class="login_right">
@@ -37,7 +36,7 @@
             <div class="icon_group">
               {{signin_form.password}}
               <i class="bi bi-eye-slash togglePassword"></i>
-    
+
             </div>
           </div>
           <span id="forgot"><a href="{% url 'tc_site:password_reset' %}"> Forgot Password? </a></span>
@@ -47,9 +46,10 @@
             <button class="button" type="submit" id="login_btn">Login</button>
           </div>
         </form>
-
-        <p class="question">Don't have an account?</p>
-        <p class="sign-up"><a>Sign Up</a></p>
+        <div class="d-flex align-items-center justify-content-center">
+          <p class="question me-2">Don't have an account?</p>
+          <p class="sign-up"><a>Sign Up</a></p>
+        </div>
       </div>
     </div>
   </div>

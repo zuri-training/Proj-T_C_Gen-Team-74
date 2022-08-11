@@ -18,14 +18,14 @@
         <li data-description="Generate"><a href="{% url 'tc_site:gen-form' %}"><img src="{% static 'assets/dashboard/dinho/layer.png' %}"
                     alt="" /><span>Generate</span></a></li>
 
-        <li data-description="Archive"><a href="{% url 'tc_site:coming-soon' page='dashboard' %}"><img
+        <li data-description="Archive"><a href="{% url 'tc_site:archive' username=user.username %}"><img
                     src="{% static 'assets/dashboard/dinho/archive.png' %}" alt="" /><span>Archive</span></a></li>
     </ul>
     <ul class="move-ele">
         <li data-description="Contact/FAQ"><a href="{% url 'tc_site:landing' %}#faq"><img
                     src="{% static 'assets/dashboard/dinho/message-question.png' %}"
                     alt="" /><span>Contact/FAQ</span></a></li>
-        <li data-description="Profile"><a href="{% url 'tc_site:profile' page='dashboard' %}"><img
+        <li data-description="Profile"><a href="{% url 'tc_site:profile' username=user.username %}"><img
                     src="{% static 'assets/dashboard/dinho/frame.png' %}" alt="" /><span>Profile</span></a>
         </li>
         <li data-description="Logout"><a href="{% url 'tc_site:signout' %}"><img

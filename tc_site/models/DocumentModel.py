@@ -12,6 +12,7 @@ class DocumentModel (models.Model):
     content = models.CharField(max_length=100000)
     document_type = models.CharField(max_length=10) # PP or TC
     date_issued = models.DateField()
+    document_state = models.BooleanField(default=False) # false if form incomplete (saved as draft) else True
     company = models.ForeignKey(CompanyModel, on_delete=models.CASCADE)
 
     def __str__(self):

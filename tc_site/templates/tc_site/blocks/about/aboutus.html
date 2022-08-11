@@ -1,0 +1,86 @@
+{% extends 'tc_site/pages/landing/base.html' %}
+{% load static %}
+{% block meta %}
+<link rel="stylesheet" href="{% static 'css/about/about.css' %}">
+<title>About Us</title>
+{% endblock %}
+
+{% block content %}
+<!-- ---------Header Section------------- -->
+<div id="about-page">
+    <div id="landing">
+        <img src="{% static 'assets/about/banner.png' %}" alt="banner">
+        <div id="landing-text">
+            <h1>ABOUT US</h1>
+        </div>
+    </div>
+
+    <!-- ---------About Us Section---------- -->
+
+    <div id="image-aboutus">
+        <img src="{% static 'assets/about/aboutus.png' %}" alt="aboutus">
+        <div id="aboutus-text">
+            <p>QuickTerms is the No. 1 online generator of fast, free and customised Terms & Conditions and Privacy
+                policy
+                documents for busy business owners and professionals.</p>
+        </div>
+    </div>
+
+    <!-- ---------Secure Your Business Section-------- -->
+
+    <div class="secure-text">
+        <h1>Secure Your Business With Us</h1>
+        <div class="secure-text1">
+            <h1>10,000+</h1>
+            <p>Policies Generated</p>
+        </div>
+        <div class="secure-text1">
+            <h1>95,000+</h1>
+            <p>Users Trust Built</p>
+        </div>
+        <div class="secure-text1">
+            <h1>150+</h1>
+            <p>Supported Countries</p>
+        </div>
+    </div>
+
+    <!-- ---------Our Goals Section----------  -->
+
+    <div id="goals">
+        <h1>OUR GOALS</h1>
+        <p>We aim to eliminate the frustration and delay you encounter with drafting Terms & Conditions and Privacy
+            policies. With QuickTerms your generate relevant legal documents that promotes and safeguards your business
+            for
+            free.</p>
+        <div id="image-goal">
+            <img src="{% static 'assets/about/goals.png' %}" alt="goals">
+        </div>
+    </div>
+
+    <!-- ----------Our Team----------- -->
+
+    <div id="team">
+        <h1>OUR TEAM</h1>
+        <P>A team of smart designers and developers who combined in-depth knowledge and hard work to develop QuickTerms;
+            all
+            being trained by I4GxZuri.</P>
+        <div class="image-team">
+            <img src="{% static 'assets/about/Group 120.png' %}" alt="group120">
+            <h3>Olabode Oritogun</h3>
+            <p>Team Lead</p>
+        </div>
+        <div class="image-team">
+            <img src="{% static 'assets/about/Group 121.png' %}" alt="group121">
+            <h3>Enomfon Obot</h3>
+            <p>Assistant Team Lead (Design)</p>
+        </div>
+        <div class="image-team">
+            <img src="{% static 'assets/about/Group 122.png' %}" alt="group122">
+            <h3>Obiajulu Ezike</h3>
+            <p>Assistant Team Lead (Developer)</p>
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}

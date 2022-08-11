@@ -97,3 +97,22 @@ def generated_docs (request, username):
 def profile (request, username):
     # Locate and put your logic in the view_helper directory of this app
     return profile_helper(request, username)
+
+
+
+from django.contrib.auth import views as auth_views
+from django.shortcuts import render
+
+# Class based views for reset password
+class ResetPasswordView (auth_views.PasswordResetView):
+    
+    template_name='tc_site/pages/landing/landing.html'
+
+    extra_context={
+        'show_reset_password': True
+    }
+
+    def post(self, request):
+        return render(request, self.template_name, self.extra_context)
+    def get(self, request):
+        return render(request, self.template_name, self.extra_context)
