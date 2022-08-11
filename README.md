@@ -144,6 +144,11 @@ Now you would want to install all the projects dependencies
     ```sh
     source <path to virtual environment folder just created>/bin/activate
     ```
+    <p align="center">OR</p>
+
+    ```sh
+    <path to virtual environment folder just created>\Scripts\activate
+    ```
 2. Clone the repo
      ```sh
      git clone https://github.com/zuri-training/Proj-T_C_Gen-Team-74.git
@@ -186,8 +191,8 @@ Our project provides these basic functionalities:
 6.  Ability to view all generated documents  (For authenticated users)
 
 ## Todo
-- Send emails to userson request after document generation
-- Accepting user feedback after succesfull document generation.
+- Send emails to users on request after document generation
+- Accepting user feedback after succesful document generation.
 
 _For more examples, please refer to the [Documentation](https://obiajuluezike.slite.com/p/LeWE1nW8ZC8iPM/QuickTerms-Technical-Documentation)_
 
@@ -238,7 +243,7 @@ Don't forget to give the project a star! Thanks again!
 
 <!-- CONTACT -->
 ## Contact
-For moe information about this project you can contact [@De_marauder](https://twitter.com/@De_marauder) on twitter or [github](https://github.com/de-marauder)
+For more information about this project you can contact [@De_marauder](https://twitter.com/@De_marauder) on twitter or [github](https://github.com/de-marauder)
 
 Project Link: [https://github.com/zuri-training/Proj-T_C_Gen-Team-74](https://github.com/zuri-training/Proj-T_C_Gen-Team-74)
 
@@ -251,7 +256,7 @@ Project Link: [https://github.com/zuri-training/Proj-T_C_Gen-Team-74](https://gi
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [ZurixI4G](https://training.zuri.team/)
+* [I4GxZuri](https://training.zuri.team/)
 * [Img Shields](https://shields.io)
 * [Heroku](https://heroku.com)
 * [Font Awesome](https://fontawesome.com)
