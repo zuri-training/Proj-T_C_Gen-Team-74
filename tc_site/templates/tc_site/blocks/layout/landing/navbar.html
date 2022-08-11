@@ -11,6 +11,16 @@
 {% else %}
 <div id="sign-in-modal-checker" data-show-sign-in-modal="false"></div>
 {% endif %}
+{% if show_reset_password %}
+<div id="reset-password-modal-checker" data-show-reset-password-modal="true"></div>
+{% else %}
+<div id="reset-password-modal-checker" data-show-reset-password-modal="false"></div>
+{% endif %}
+{% if show_forgot_password %}
+<div id="forgot-password-modal-checker" data-show-forgot-password-modal="true"></div>
+{% else %}
+<div id="forgot-password-modal-checker" data-show-forgot-password-modal="false"></div>
+{% endif %}
 {% if show_blank_preview %}
 <div id="blank-review-modal-checker" data-show-blank-preview-modal="true"></div>
 {% else %}

@@ -43,6 +43,8 @@ def signup_helper(request):
                 messages.error(request, 'Email already exists, try another or sigin if you already have an account!')
                 # return redirect('tc_site:signup')
                 return render(request, 'tc_site/pages/landing/landing.html', ctx)
+            
+            # Verifying that the username isn't already in the database
             elif User.objects.filter(username=username).first():
                 messages.error(request, 'Username already exists, try another or sigin if you already have an account!')
                 # return redirect('tc_site:signup')

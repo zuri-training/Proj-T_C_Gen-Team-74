@@ -1,4 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 def profile_helper (request):
-    return render(request, 'tc_site/blocks/dashboard/profile.html')
+    user = request.user
+
+    if user.id:
+        return render(request, 'tc_site/blocks/dashboard/profile.html')
+    
+    return redirect('/')
