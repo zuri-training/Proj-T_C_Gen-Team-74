@@ -1,13 +1,4 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
 
 
 <!-- PROJECT SHIELDS -->
@@ -84,7 +75,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://drive.google.com/file/d/1urjsylAbPbuq1dzW0Bh-rKslK_GDVDvx/view?usp=sharing)
+[![Product Name Screen Shot][product-screenshot]](/tc_site/static/assets/landing/hero/hero.png)
 
 This software is a web application that basically allows the generation of personalized terms and conditions and privacy policy documents. It is completely free and always will be. It will however, require the user to signup on our platform
 
@@ -243,7 +234,7 @@ Don't forget to give the project a star! Thanks again!
 
 <!-- CONTACT -->
 ## Contact
-For more information about this project you can contact [@De_marauder](https://twitter.com/@De_marauder) on twitter or [github](https://github.com/de-marauder)
+For more information about this project you can contact [@De_marauder](https://twitter.com/@De_marauder) on twitter or [github](https://github.com/de-marauder) or [linkedin](https://linkedin.com/in/obiajulu-ezike)
 
 Project Link: [https://github.com/zuri-training/Proj-T_C_Gen-Team-74](https://github.com/zuri-training/Proj-T_C_Gen-Team-74)
 
@@ -360,7 +351,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [license-url]: https://github.com/zuri-training/Proj-T_C_Gen-Team-74/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/obiajulu-ezike
-[product-screenshot]: /tc_site/assets/landing/hero/hero.png
+[product-screenshot]: /tc_site/static/assets/landing/hero/hero.png
 
 [Django]: https://img.shields.io/badge/django-000000?style=for-the-badge&logo=django&logoColor=white
 [Django-url]: https://docs.djangoproject.com/
