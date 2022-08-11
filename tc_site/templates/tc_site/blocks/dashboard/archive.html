@@ -8,26 +8,32 @@
     <button type="" class="create-folder">+ Create folder</button>
   </div>
 
+  {% if companies %}
   <div id="det-cont">
+
+    {% for company, documents in doc_list %}
     <div class="det-heads">
       <i class="bi bi-folder"></i>
       <details class="detail-titles">
         <summary>
-          My Blog
+          {{company.company_name}}
           <i class="bi bi-caret-right-fill"></i>
         </summary>
 
         <div class="acc-links">
-          <p><a href="">Website Privacy Policy</a></p>
-          <p><a href="">Terms & Conditions </a></p>
-          <p><a href="">Sales Terms & Conditions </a></p>
+          {% for document in documents %}
+          <p><a href="{% url 'tc_site:share' docID=document.id  %}" target="_blank">{{ document.company.company_name}} {{document.document_type}}</a></p>
+          {% endfor %}
+          <!-- <p><a href="">Terms & Conditions </a></p>
+          <p><a href="">Sales Terms & Conditions </a></p> -->
         </div>
       </details>
     </div>
 
     <hr />
+    {% endfor %}
 
-    <div class="det-heads">
+    <!-- <div class="det-heads">
       <i class="bi bi-folder"> </i>
       <details class="detail-titles">
         <summary>
@@ -78,8 +84,11 @@
       </details>
     </div>
 
-    <hr />
+    <hr /> -->
   </div>
+  {% else %}
+  <div>You have no data</div>
+  {% endif %}
 
   <section class="btm-sect">
     <p class="sect-head">SUMMARY</p>
