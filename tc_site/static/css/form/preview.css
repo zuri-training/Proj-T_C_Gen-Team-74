@@ -6,7 +6,7 @@
     --border-color: #080808;
 
     min-height: 100vh;
-    padding-top: 150px;
+    padding-top: 100px;
 }
 
 #preview .back-arrow {
@@ -17,11 +17,10 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: antiquewhite;
 }
 
 #preview .back-arrow:hover {
-    background-color: #eee;
+    background-color: #ccc;
 
 }
 #preview .back-arrow img:first-child {
@@ -39,15 +38,34 @@
     width: 30px;
 }
 
+#preview #preview-wrapper {
+    padding-top: 50px;
+    height: 150vh;
+    overflow-y: scroll;
+    border: inset 2px #aaa;
+    border-right: none;
+    border-left: none;
+}
+
 #preview .btns {
     margin: 3rem 0 3rem;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#preview .btns > a {
+    width: 80%;
 }
 #preview .btn {
+    width: 80%;
+    margin: auto;
+    display: block;
     font-size: 1rem;
     font-weight: bold;
-    width: max-content;
+    max-width: 250px;
     padding: .5rem 1rem;
     border: 2px solid transparent;
 }

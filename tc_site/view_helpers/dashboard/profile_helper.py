@@ -15,7 +15,4 @@ def profile_helper (request, username):
         messages.error(request, "You are not allowed to view this page")
         return redirect('/')
 
-    if user.id:
-        return render(request, 'tc_site/blocks/dashboard/profile.html', ctx)
-    
-    return redirect('/')
+    return render(request, 'tc_site/blocks/dashboard/profile.html', ctx)

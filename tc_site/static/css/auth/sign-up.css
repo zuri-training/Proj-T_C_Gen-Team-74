@@ -16,6 +16,7 @@
   padding: 0.2rem;
   margin: 0.5rem auto 0;
 }
+
 .error-alert li {
   padding: 0.5rem;
 }
@@ -31,19 +32,13 @@
   border: 1px solid black;
   border-radius: 1rem;
   width: 90%;
-  /* max-width: 480px; */
   max-width: 1000px;
-  /* padding-bottom: 1rem; */
+  position: relative;
   padding: 2.38rem;
 }
 
-.modals.sign-up_container i.fa-times{
-  font-size: 60px;
-  color: black;
-  float: right;
-}
 
-.modals.sign-up_container div.container{
+.modals.sign-up_container div.container {
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -56,6 +51,7 @@
   overflow: hidden;
   flex-basis: 50%;
 }
+
 .modals.sign-up_container figure img {
   width: 100%;
 }
@@ -150,13 +146,14 @@
 
 .modals.sign-up_container form p {
   font-size: 12px;
+  margin-bottom: 0 !important;
 }
 
-.modals.sign-up_container p.d-flex{
+.modals.sign-up_container p.d-flex {
   font-size: 8px;
 }
 
-.modals.sign-up_container p.d-flex a{
+.modals.sign-up_container p.d-flex a {
   font-size: 8px;
   display: inline;
 }
@@ -164,6 +161,7 @@
 .modals.sign-up_container p.question {
   text-align: center;
   font-size: 12px;
+  margin-right: .5rem;
   color: rgb(19, 19, 19);
 }
 
@@ -181,13 +179,17 @@
 @media screen and (max-width: 700px) {
   .modals.sign-up_container.sign-up_container {
     flex-wrap: wrap;
+    padding: 2rem 0;
   }
-  .modals.sign-up_container i.fa-times{
+
+  .modals.sign-up_container i.fa-times {
     font-size: 30px;
   }
+
   .modals.sign-up_container figure {
     display: none;
   }
+
   .modals.sign-up_container .head_wrap p {
     font-size: 14px;
   }
@@ -235,19 +237,24 @@
   .modals.sign-up_container.sign-up_container {
     flex-wrap: wrap;
   }
-  .modals.sign-up_container i.fa-times{
+
+  .modals.sign-up_container i.fa-times {
     font-size: 30px;
   }
+
   .modals.sign-up_container figure {
     display: none;
   }
+
   .modals .head_wrap .sign-up_heading {
     font-size: 26px;
   }
+
   .modals input:focus::placeholder {
     transition: 0.1s;
     font-size: 15px;
   }
+
   .modals #sign-up_btn {
     padding: 9px 8px;
     font-size: 19px;
