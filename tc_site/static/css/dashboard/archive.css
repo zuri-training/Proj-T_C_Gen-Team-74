@@ -21,7 +21,7 @@ body {
 }
 
 .dashboard-archive main {
-  padding: 1rem 2rem;
+  padding: 1rem 2rem!important;
 }
 
 /* Button styles  */
@@ -32,12 +32,12 @@ body {
 }
 
 .dashboard-archive div.upper-sect {
-  padding: 2.5rem 0.2rem;
+  padding: 2.5rem 0.2rem!important;
 }
 
 .dashboard-archive button.create-folder {
   background-color: var(--button-grey);
-  padding: 12px 10px;
+  padding: 12px 10px!important;
   border: none;
   border-radius: 4px;
 }
@@ -45,7 +45,7 @@ body {
 /* Detail/Accordion stylings */
 
 .dashboard-archive #det-cont {
-  margin: 1rem 0.2rem 1.8rem;
+  margin: 1rem 0.2rem 1.8rem!important;
 }
 
 .dashboard-archive div.det-heads {
@@ -54,24 +54,24 @@ body {
 }
 
 .dashboard-archive div.det-heads > i {
-  margin: 15px 2px 2px 0px;
+  margin: 15px 2px 2px 0px!important;
 }
 
 .dashboard-archive details.detail-titles summary {
   list-style: none;
-  padding: 1rem 0.4rem 0.7rem;
+  padding: 1rem 0.4rem 0.7rem!important;
   cursor: pointer;
 }
 
 /* Detail list stylings */
 
 .dashboard-archive .acc-links {
-  padding-left: 1.5rem;
+  padding-left: 1.5rem!important;
 }
 
 .dashboard-archive .acc-links p {
-  padding: 0.2rem;
-  margin: 0.1rem 0.2rem 0.3rem;
+  padding: 0.2rem!important;
+  margin: 0.1rem 0.2rem 0.3rem!important;
 }
 
 .dashboard-archive .acc-links p:hover {
@@ -86,7 +86,7 @@ body {
 }
 
 .dashboard-archive .sect-head {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.6rem!important;
 }
 
 .dashboard-archive .btm-sect-wrap {
@@ -100,8 +100,8 @@ body {
 .dashboard-archive .btm-sect-cont {
   flex: 1;
   text-align: center;
-  padding: 8px;
-  gap: 8px;
+  padding: 8px!important;
+  gap: 8px!important;
   border-radius: 16px;
   flex-wrap: wrap;
   flex-direction: column;
@@ -118,5 +118,5 @@ body {
 .dashboard-archive .btm-sect .num-cont {
   background-color: rgba(247, 249, 247, 1);
   text-align: center;
-  margin: 0rem 46%;
+  margin: 0rem 46%!important;
 }
