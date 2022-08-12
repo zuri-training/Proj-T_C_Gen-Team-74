@@ -7,6 +7,9 @@
     font-family: 'Montserrat', sans-serif;   
 }
 
+.form-mobile{
+    display: none;   
+}
 
 .dash-profile {
     display: block;
@@ -24,6 +27,9 @@
     height: 150px;
     border-radius: 50%;
     margin: 0 auto;
+    position: relative;
+    top: 25px;
+    left: 45px;
 }
 
 .prof-input-file {
@@ -39,40 +45,42 @@
     font-size: 20px;
     line-height: 24px;
     color: #6C5D5D;
-    text-align: center;
-    padding-top: 10px;
+    position: relative;
+    top: 30px;
+    left: 65px;
 }
 
-.form-grid {
-    display: grid;
-    padding-top: 10px;
+.profile-form {
+    display: block;
+    position: relative;
+    top: 20px;
 }
 
-.form-grid-1 {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
+.table-con {
+    position: relative;
+    top: 15px;
 }
 
-.form-grid-2 {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.form-grid-3 {
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 2;
+.table-con-3 {
     padding-top: 25px;
+}
+
+.td-left {
+    display: block;
+    position: relative;
+    left: 25px;
 }
 
 .basic-info-h1 {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 39px;
     color: #2D2DB6;  
     padding-bottom: 10px;
     border-bottom: 2px solid #C4B5B5;
+    width: 650px;
 }
 
 .form-label-name {
@@ -97,45 +105,43 @@
 
 .form-name {
     display: block;
-    height: 66px;
+    height: 45px;
     width: 300px;
     background: #FFFFFF;
     border: 1px solid #263238;
     border-radius: 8px;
-    padding: 21px 16px;
+    padding: 10px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
+    font-size: 18px;
+    line-height: 20px;
     color: #131313;
 }
 
 .input-edit-img1 {
     position: relative;
-    top: -45px;
+    top: -35px;
     left: 250px;
 }
 .input-edit-img2 {
     position: relative;
-    top: -45px;
+    top: -35px;
     left: 250px;
 }
 .input-edit-img3 {
     position: relative;
-    top: -45px;
+    top: -35px;
     left: 575px;
 }
 .input-edit-img4 {
     position: relative;
-    top: -45px;
+    top: -35px;
     left: 575px;
 }
 .input-edit-img5 {
     position: relative;
-    top: -45px;
+    top: -35px;
     left: 575px;
 }
 
@@ -143,9 +149,11 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 20px;
     color: #6C5D5D;
+    position: relative;
+    left: 10px;
 }
 
 .form-name:focus {
@@ -156,35 +164,20 @@
     border-radius: 8px;
 }
 
-.form-name:focus ~ .input-edit-img1 {
-   display: none;
-}
-.form-name:focus ~ .input-edit-img2 {
-    display: none;
-}
-.form-user:focus ~ .input-edit-img3 {
-    display: none;
-}
-.form-user:focus ~ .input-edit-img4 {
-    display: none;
-}
-.form-user:focus ~ .input-edit-img5 {
-    display: none;
-}
 
 .form-user {
     display: block;
-    height: 66px;
+    height: 45px;
     width: 625px;
     background: #FFFFFF;
     border: 1px solid #263238;
     border-radius: 8px;
-    padding: 21px 16px;
+    padding: 10px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 20px;
     display: flex;
     align-items: center;
     color: #131313;
@@ -194,9 +187,11 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 20px;
     color: #6C5D5D;
+    position: relative;
+    left: 10px;
 }
 
 .form-user:focus {
@@ -215,11 +210,12 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 39px;
     color: #2D2DB6;  
     padding-bottom: 10px;
     border-bottom: 2px solid #746C6C;
+    width: 650px;
 }
 
 .form-label-email {
@@ -247,11 +243,16 @@
     padding-top: 10px;
 }
 
+.form-con-prof1 {
+    position: relative;
+    top: 15px;
+}
+
 .form-prof-save {
     padding: 10px;
     gap: 10px;
-    width: 238px;
-    height: 66px;
+    width: 200px;
+    height: 50px;
     background: #252598;
     border: none;
     border-radius: 10px;
@@ -270,123 +271,84 @@
     box-shadow: 0px 4px 12px rgba(56, 56, 56, 0.3);
 }
 
-@media screen and (max-width: 1116px) {
-    .form-name {
-        width: 200px;
-        background-image: url("{% static 'assets/dashboard/layout/taiwo/edit.png' %}");
-        background-repeat: no-repeat;
-        background-position: right;
-    }
+@media screen and (max-width: 991px) {
 
-    .form-user {
-        width: 420px;
-        background-image: url("{% static 'assets/dashboard/layout/taiwo/edit.png' %}");
-        background-repeat: no-repeat;
-        background-position: right;
-    }
-
-    .input-edit-img1, .input-edit-img2, .input-edit-img3, .input-edit-img4, .input-edit-img5 {
-        display: none;
+    .profile-form {
+        position: relative;
+        left: 75px;
     }
 }
 
 /* tablet media query */
 
 @media screen and (max-width: 767px) {
-    .form-name {
-        width: 250px;
-        background-image: url("{% static 'assets/dashboard/layout/taiwo/edit.png' %}");
-        background-repeat: no-repeat;
-        background-position: right;
-    }
 
-    .form-user {
-        width: 250px;
-        background-image: url("{% static 'assets/dashboard/layout/taiwo/edit.png' %}");
-        background-repeat: no-repeat;
-        background-position: right;
-    }
-    .form-grid {
-        display: grid;
-        padding-top: 10px;
-    }
-    
-    .form-grid-1 {
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
-    }
-    
-    .form-grid-2 {
-        grid-column: 1 / span 1;
-        grid-row: 2 / span 1;
-        padding-top: 25px;
-    }
-    
-    .form-grid-3 {
-        grid-column: 1 / span 1;
-        grid-row: 3 / span 1;
-        padding-top: 25px;
-    }
-  
-}
-
-/* mobile phones media query */
-
-@media screen and (max-width: 500px) and (min-width: 250px) {
-
-    .dash-profile {
-        /* width: calc(100% - 80px);
-        margin-left: 80px; */
-        width: 100%;
-        transition: all 0.5s ease;
-    }
-
-    .form-name {
-        width: 250px;
-        height: 40px;
-        background-image: url("{% static 'assets/dashboard/layout/taiwo/edit.png' %}");
-        background-repeat: no-repeat;
-        background-position: right;
-    }
-
-    .form-user {
-        width: 250px;
-        height: 40px;
-        background-image: url("{% static 'assets/dashboard/layout/taiwo/edit.png' %}");
-        background-repeat: no-repeat;
-        background-position: right;
-    }
-
-    .prof-input-img {
-        font-size: 18px;
+    .profile-form {
+        display: block;
+        position: relative;
+        top: 40px; 
+        left: 40px;
     }
 
     .basic-info-h1 {
-        padding-top: 20px;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
-        border-bottom: none;
-        display: block;
-        text-align: center;
+        width: 300px;
     }
 
     .contact-info-h1 {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
-        border-bottom: none;
-        display: block;
-        text-align: center;
+        width: 300px;
+    }
+
+    .td-left {
+        display: none;
+    }
+
+    .form-mobile{
+        display: block;   
+    }
+
+    .form-name {
+        width: 250px;
+    }
+
+    .form-user {
+        width: 250px;
+    }
+
+    .input-edit-img1 {
+        position: relative;
+        top: -35px;
+        left: 210px;
+    }
+    .input-edit-img2 {
+        position: relative;
+        top: -35px;
+        left: 210px;
+    }
+    .input-edit-img3 {
+        position: relative;
+        top: -35px;
+        left: 210px;
+    }
+    .input-edit-img4 {
+        position: relative;
+        top: -35px;
+        left: 210px;
+    }
+    .input-edit-img5 {
+        position: relative;
+        top: -35px;
+        left: 210px;
     }
 
     .form-label-name, .form-label-username {
         font-size: 12px;
         line-height: 15px;
     }
-
+    
     .form-name::placeholder, .form-user::placeholder {
         font-size: 14px;
         line-height: 20px;
     }
+  
 }
+
