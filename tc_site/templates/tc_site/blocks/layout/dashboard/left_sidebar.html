@@ -15,7 +15,7 @@
         <li data-description="Generated Docs"><a href="{% url 'tc_site:generated_docs' username=user.username %}"><img
                     src="{% static 'assets/dashboard/dinho/edit.png' %}" alt="" /><span>Generated Docs</span></a></li>
 
-        <li data-description="Generate"><a href="{% url 'tc_site:gen-form' %}"><img src="{% static 'assets/dashboard/dinho/layer.png' %}"
+        <li data-description="Generate"><a href="{% url 'tc_site:gen-form' docID='0' %}"><img src="{% static 'assets/dashboard/dinho/layer.png' %}"
                     alt="" /><span>Generate</span></a></li>
 
         <li data-description="Archive"><a href="{% url 'tc_site:archive' username=user.username %}"><img

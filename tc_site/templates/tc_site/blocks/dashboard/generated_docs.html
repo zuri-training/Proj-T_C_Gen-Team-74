@@ -18,7 +18,7 @@
         {% for item in tc %}
         <div class="gen-docs_temps">
           <figure>
-            <a href=""> <img src="" alt="" /> </a>
+            <a href="{% url 'tc_site:share' docID=item.id  %}" target="_blank"> <img src="{% static 'assets/dashboard/gen-docs/doc.png' %}" alt="doc" /> </a>
             <figcaption class="gen-docs_names">
               {{item.company.company_name}} {{item.document_type}}
             </figcaption>
@@ -57,7 +57,7 @@
         {% for item in pp %}
         <div class="gen-docs_temps">
           <figure>
-            <a href=""> <img src="" alt="" /> </a>
+            <a href="{% url 'tc_site:share' docID=item.id  %}" target="_blank"> <img src="{% static 'assets/dashboard/gen-docs/doc.png' %}" alt="" /> </a>
             <figcaption class="gen-docs_names">
               {{item.company.company_name}} {{item.document_type}}
             </figcaption>

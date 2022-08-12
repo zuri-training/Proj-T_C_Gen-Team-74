@@ -23,9 +23,6 @@ def archive_helper(request, username):
         documents = DocumentModel.objects.filter(company=company)
         doc_list.append([company, documents])
 
-    print(companies)
-    print(doc_list)
-
     ctx = {
         'user': user,
         'companies': companies,

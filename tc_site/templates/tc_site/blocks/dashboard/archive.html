@@ -22,7 +22,12 @@
 
         <div class="acc-links">
           {% for document in documents %}
-          <p><a href="{% url 'tc_site:share' docID=document.id  %}" target="_blank">{{ document.company.company_name}} {{document.document_type}}</a></p>
+          <div class="d-flex">
+            <a class="me-3" href="{% url 'tc_site:share' docID=document.id  %}" target="_blank">{{ document.company.company_name}} {{document.document_type}}</a>
+            {% if not document.document_state %}
+            <a href="{% url 'tc_site:gen-form' docID=document.id  %}" target="_blank">edit</a>
+            {% endif %}
+          </div>
           {% endfor %}
           <!-- <p><a href="">Terms & Conditions </a></p>
           <p><a href="">Sales Terms & Conditions </a></p> -->
