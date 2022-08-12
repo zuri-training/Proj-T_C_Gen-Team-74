@@ -13,22 +13,27 @@ const clingeTotal = document.querySelector(".clinge-total");
 //clingeTotal.innerHTML = Math.floor(percentageValue) + "%"
 //*********Trying to parse data with array**********//
 
+const refEl = document.getElementById("myChart");
+const pp_count = refEl.dataset.ppCount
+const tc_count = refEl.dataset.tcCount
+const draft_pp_count = refEl.dataset.draftPpCount
+const draft_tc_count = refEl.dataset.draftTcCount
 
 const myChart = new Chart(ctx, {
   type: "doughnut",
   data: {
-    labels: ["2 Privacy policy", "1 Terms and Condition"],
+    labels: [`${pp_count} Privacy policy`, `${tc_count} Terms and Condition`],
     datasets: [
       {
         label: "# of Votes",
-        data: [2,1],
-        backgroundColor: ["#BCB612","#C53F3F"],
-        borderWidth: 1,
+        data: [pp_count, tc_count],
+        backgroundColor: ["#BCB612", "#C53F3F"],
+        borderWidth: .5,
       },
-      
+
     ],
   },
-  
+
   options: {
     responsive: true,
   },
@@ -38,12 +43,12 @@ const myChart = new Chart(ctx, {
 const myChart2 = new Chart(newGen, {
   type: "doughnut",
   data: {
-    labels: ["1 Privacy policy", "1 Terms and Condition"],
+    labels: [`${draft_pp_count} Privacy policy`, `${draft_pp_count} Terms and Condition`],
     datasets: [
-      
+
       {
         label: "# of Votes",
-        data: [50, 50],
+        data: [draft_pp_count, draft_tc_count],
         backgroundColor: ["#BCB612", "#C53F3F"],
         borderWidth: 1,
       },

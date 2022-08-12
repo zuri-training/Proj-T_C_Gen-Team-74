@@ -60,6 +60,6 @@ def signup_helper(request):
                 # Login user
                 login(request, user)
                 messages.success(request, 'Account successfully created!')
-                return redirect('tc_site:gen-form')
+                return redirect('/tc_site:gen-form/', docId='0')
         return render(request, 'tc_site/pages/landing/landing.html', ctx)
     return render(request, 'tc_site/pages/landing/landing.html', ctx)

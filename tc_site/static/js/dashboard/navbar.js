@@ -14,9 +14,8 @@ const logo = header.querySelector('.logo');
 const positionTopNav = () => {
     // Position top nav bar
     const vpWidth = window.innerWidth;
-    console.log(vpWidth)
     const sidebarWidth = header.getBoundingClientRect().width;
-    console.log(sidebarWidth)
+
     // target the main section
     const main = document.getElementById('main');
 

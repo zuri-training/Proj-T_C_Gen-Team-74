@@ -29,9 +29,13 @@ def profile_helper (request, username):
             user_from_db.email = form.cleaned_data['email']
             user_from_db.first_name = form.cleaned_data['first_name']
             user_from_db.last_name = form.cleaned_data['last_name']
+
+            user_from_db.save()
         except:
             print('something went wrong')
             messages.error(request, "something went wrong")
             return render(request, 'tc_site/blocks/dashboard/profile.html', ctx)
+
+        return render(request, 'tc_site/blocks/dashboard/profile.html', ctx)
 
     return render(request, 'tc_site/blocks/dashboard/profile.html', ctx)
