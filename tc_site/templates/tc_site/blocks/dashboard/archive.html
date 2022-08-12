@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div class="dashboard-archive">
+<div id="dashboard-archive">
 
   <div class="upper-sect">
     <button type="" class="create-folder">+ Create folder</button>
@@ -18,15 +18,17 @@
         <summary>
           {{company.company_name}}
           <i class="bi bi-caret-right-fill"></i>
+          <a class="delete" href="{% url 'tc_site:delete_company' companyID=company.id  %}">delete</a>
         </summary>
 
         <div class="acc-links">
           {% for document in documents %}
-          <div class="d-flex">
+          <div class="d-flex my-2">
             <a class="me-3" href="{% url 'tc_site:share' docID=document.id  %}" target="_blank">{{ document.company.company_name}} {{document.document_type}}</a>
             {% if not document.document_state %}
-            <a href="{% url 'tc_site:gen-form' docID=document.id  %}" target="_blank">edit</a>
+            <a href="{% url 'tc_site:gen-form' docID=document.id  %}" target="_blank" class="edit btn btn-primary">edit</a>
             {% endif %}
+            <a href="{% url 'tc_site:delete_doc' docID=document.id  %}" class="ms-3 delete">delete</a>
           </div>
           {% endfor %}
           <!-- <p><a href="">Terms & Conditions </a></p>

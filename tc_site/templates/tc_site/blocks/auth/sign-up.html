@@ -18,7 +18,7 @@
           <p class="sign-up_heading">Sign Up!</p>
           <p>Create an account with QuickTerms and get started right away</p>
         </div>
-        {% if form.errors %}
+        {% if signup_form.errors %}
         <div class="alert alert-warning alert-dismissible fade show error-alert" role="alert">
           {{signup_form.errors.last_name}} {{signup_form.errors.first_name}}
           {{signup_form.errors.username}} {{signup_form.errors.email}}

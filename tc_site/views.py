@@ -12,6 +12,8 @@ from .view_helpers.gen_file_helper import gen_file_helper
 from .view_helpers.embed_helper import embed_helper
 from .view_helpers.download_helper import download_helper
 from .view_helpers.share_helper import share_helper
+from .view_helpers.delete_doc_helper import delete_doc_helper
+from .view_helpers.delete_company_helper import delete_company_helper
 from .view_helpers.export_helper import export_helper
 from .view_helpers.export_docx_helper import export_docx_helper
 from .view_helpers.coming_soon_helper import coming_soon_helper
@@ -69,6 +71,14 @@ def download (request, userID, docID):
 def share (request, docID):
     # Locate and put your logic in the view_helper directory of this app
     return share_helper(request, docID)
+
+def delete_doc (request, docID):
+    # Locate and put your logic in the view_helper directory of this app
+    return delete_doc_helper(request, docID)
+
+def delete_company (request, companyID):
+    # Locate and put your logic in the view_helper directory of this app
+    return delete_company_helper(request, companyID)
 
 def export(request, userID, docID):
     # Locate and put your logic in the view_helper directory of this app

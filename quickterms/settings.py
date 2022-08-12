@@ -29,6 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
+HOST = os.getenv('HOST')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -96,7 +97,7 @@ DATABASES = {
         'NAME': 'quickterms',
         'USER': 'de_marauder',
         'PASSWORD': 'TCquicktermsPP',
-        'HOST': 'localhost',
+        'HOST': HOST,
         'PORT': '',
     }
 }

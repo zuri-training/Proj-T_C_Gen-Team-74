@@ -11,8 +11,8 @@ def generated_docs_helper(request, username):
     }
 
     if user.id and user.username == username:
-        pp = DocumentModel.objects.filter(document_type='PP')
-        tc = DocumentModel.objects.filter(document_type='TC')
+        pp = DocumentModel.objects.filter(document_type='PP', owner=user)
+        tc = DocumentModel.objects.filter(document_type='TC', owner=user)
         ctx['pp'] = pp
         ctx['tc'] = tc
         return render(request, 'tc_site/blocks/dashboard/generated_docs.html', ctx)
