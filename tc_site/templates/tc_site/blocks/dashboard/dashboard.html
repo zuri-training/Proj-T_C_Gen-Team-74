@@ -9,9 +9,9 @@
         <p class="comp-text">GENERATED DOCUMENTS</p>
         <div id="comp-1">
           <div>
-            <canvas id="myChart"></canvas>
+            <canvas id="myChart" data-pp-count="{{pp_count}}" data-draft_tc-count="{{draft_tc_count}}" data-draft_pp-count="{{draft_pp_count}}" data-draft_tc-count="{{draft_tc_count}}"></canvas>
           </div>
-          <div class="move-mid"><p class="clinge">Total <span class="clinge-total">75</span></p></div>
+          <div class="move-mid"><p class="clinge">Total <span class="clinge-total">{{tc_pp_count}}</span></p></div>
           
         </div>
       </div>
@@ -21,7 +21,7 @@
             <div>
               <canvas id="newGen"></canvas>
             </div>
-            <div class="move-mid"><p class="clinge">Total <span class="clinge-total">2</span></p></div>
+            <div class="move-mid"><p class="clinge">Total <span class="clinge-total">{{draft_tc_pp_count}}</span></p></div>
           </div>
       </div>
     </div>

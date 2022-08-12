@@ -11,7 +11,7 @@ from ..forms.GenDocumentForm import GenDocumentForm
 def gen_form_helper(request):
     # Write your logic here
     user = request.user
-    form = GenDocumentForm()
+    form = GenDocumentForm(use_required_attribute=False)
     ctx = {
         'user': user,
         'form': form

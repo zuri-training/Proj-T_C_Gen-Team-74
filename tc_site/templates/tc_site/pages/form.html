@@ -23,7 +23,9 @@
         <hr class="form-divider">
         <!-- Step Wise Form Content -->
         <div class="form-wrapper">
-            <form action="{% url 'tc_site:preview' %}" method="POST">
+            <form action="{% url 'tc_site:preview' %}" method="POST"
+                onsubmit="(event)=>{event.preventDefault}"
+            >
                 {% csrf_token %}
                 <h1 class="form-heading">Business Information</h1>
 

@@ -14,7 +14,6 @@ from datetime import date
 import os
 from pathlib import Path
 import re
-import random
 
 from django_countries import countries
 
@@ -40,14 +39,14 @@ def preview_helper(request):
             form = request.POST
             docform = GenDocumentForm(request.POST)
 
-            if not re.match(r'^\+?1?\d{9,15}$', request.POST['company_phone_number']):
-                messages.info(request, "Remove spaces from your phone number")
-                return redirect('/gen-form/')
+            # if not re.match(r'^\+?1?\d{9,15}$', request.POST['company_phone_number']):
+            #     messages.info(request, "Remove spaces from your phone number")
+            #     return redirect('/gen-form/')
 
-            if request.POST.get('doc-type') == None:
-                messages.info(
-                    request, "Please select what type of document you wish to")
-                return redirect('/gen-form/')
+            # if request.POST.get('doc-type') == None:
+            #     messages.info(
+            #         request, "Please select what type of document you wish to")
+            #     return redirect('/gen-form/')
 
             # Use data from form to select the template to be be used
             # Read the template
@@ -90,6 +89,9 @@ def preview_helper(request):
                 else:
                     with open(os.path.join(PP_DIR, 'T&C_temp.html'), 'r') as f:
                         template_str = f.read()
+            else:
+                    with open(os.path.join(PP_DIR, 'T&C_temp.html'), 'r') as f:
+                        template_str = f.read()
 
             # Edit the template
             template_str = template_str.replace(
@@ -97,37 +99,37 @@ def preview_helper(request):
             template_str = template_str.replace(
                 '[___DATE___]', '<strong class="text-info">' + date.today().strftime("%B %d, %Y") + '</strong>')
             template_str = template_str.replace(
-                '[COMPANY_NAME]', '<strong class="text-info">' + str(form['company_name']) if form['company_name'] else '[COMPANY_NAME]' + '</strong>')
+                '[COMPANY_NAME]', '<strong class="text-info">' + f"{str(form['company_name']) if form['company_name'] else '[___COMPANY_INFORMATION___]'}" + '</strong>')
             template_str = template_str.replace(
-                '[___WEBSITE_NAME___]', '<strong class="text-info">' +  str(form['company_name']) if form['company_name'] else '[COMPANY_NAME]' + '</strong>')
+                '[___WEBSITE_NAME___]', '<strong class="text-info">' + f"{str(form['company_name']) if form['company_name'] else '[___COMPANY_INFORMATION___]'}" + '</strong>')
             template_str = template_str.replace(
-                '[___COMPANY_INFORMATION___]', '<strong class="text-info">' + str(form['company_name']) if form['company_name'] else '[COMPANY_NAME]' + '</strong>')
+                '[___COMPANY_INFORMATION___]', '<strong class="text-info">' + f"{str(form['company_name']) if form['company_name'] else '[___COMPANY_INFORMATION___]'}" + '</strong>')
             template_str = template_str.replace(
-                '[___COMPANY_COUNTRY___]', '<strong class="text-info">' + COUNTRY_DICT[form['company_country']] if form['company_country'] else '[___COMPANY_COUNTRY___]' + '</strong>')
+                '[___COMPANY_COUNTRY___]', '<strong class="text-info">' + f"{COUNTRY_DICT[form['company_country']] if form['company_country'] else '[___COMPANY_COUNTRY___]'}" + '</strong>')
             template_str = template_str.replace(
-                '[COMPANY_URL]', '<strong class="text-info">' + form['company_url'] if form['company_url'] else '[___WEBSITE_URL___]' + '</strong>')
+                '[COMPANY_URL]', '<strong class="text-info">' + f"{form['company_url'] if form['company_url'] else '[___WEBSITE_URL___]'}" + '</strong>')
             template_str = template_str.replace(
-                '[WEBSITE_URL]', '<strong class="text-info">' + form['company_url'] if form['company_url'] else '[___WEBSITE_URL___]' + '</strong>')
+                '[WEBSITE_URL]', '<strong class="text-info">' + f"{form['company_url'] if form['company_url'] else '[___WEBSITE_URL___]'}" + '</strong>')
             template_str = template_str.replace(
-                '[___WEBSITE_URL___]', '<strong class="text-info">' + form['company_url'] if form['company_url'] else '[___WEBSITE_URL___]' + '</strong>')
+                '[___WEBSITE_URL___]', '<strong class="text-info">' + f"{form['company_url'] if form['company_url'] else '[___WEBSITE_URL___]'}" + '</strong>')
             template_str = template_str.replace(
-                '[WEBSITE_CONTACT_PAGE_URL]', '<strong class="text-info">' + form['company_url'] if form['company_url'] else '[___WEBSITE_URL___]' + '</strong>')
+                '[WEBSITE_CONTACT_PAGE_URL]', '<strong class="text-info">' + f"{form['company_url'] if form['company_url'] else '[___WEBSITE_URL___]'}" + '</strong>')
             template_str = template_str.replace(
-                '[COPYRIGHT_AGENT_CONTACT_EMAIL]', '<strong class="text-info">copyrightagent@' + ''.join(form['company_name'].split(' ')) if form['company_name'] else '[___COPYRIGHT_AGENT_CONTACT_EMAIL___]' + '.com</strong>')
+                '[COPYRIGHT_AGENT_CONTACT_EMAIL]', '<strong class="text-info">copyrightagent@' + f"{''.join(form['company_name'].split(' ')) if form['company_name'] else '[___COPYRIGHT_AGENT_CONTACT_EMAIL___]'}" + '.com</strong>')
             template_str = template_str.replace(
-                '[___COPYRIGHT_AGENT_CONTACT_EMAIL___]', '<strong class="text-info">copyrightagent@' + ''.join(form['company_name'].split(' ')) if form['company_name'] else '[___COPYRIGHT_AGENT_CONTACT_EMAIL___]' + '.com</strong>')
+                '[___COPYRIGHT_AGENT_CONTACT_EMAIL___]', '<strong class="text-info">copyrightagent@' + f"{''.join(form['company_name'].split(' ')) if form['company_name'] else '[___COPYRIGHT_AGENT_CONTACT_EMAIL___]'}" + '.com</strong>')
             template_str = template_str.replace(
-                '[___WEBSITE_CONTACT_EMAIL___]', '<strong class="text-info">' + form['company_email'] if form['company_email'] else '[___WEBSITE_CONTACT_EMAIL___]' + '</strong>')
+                '[___WEBSITE_CONTACT_EMAIL___]', '<strong class="text-info">' + f"{form['company_email'] if form['company_email'] else '[___WEBSITE_CONTACT_EMAIL___]'}" + '</strong>')
             template_str = template_str.replace(
-                '[WEBSITE_EMAIL]', '<strong class="text-info">' + form['company_email'] + '</strong>')
+                '[WEBSITE_EMAIL]', '<strong class="text-info">' + f"{form['company_email'] if form['company_email'] else '[WEBSITE_EMAIL]'}" + '</strong>')
             template_str = template_str.replace(
                 '[___LIST___]', '')
             template_str = template_str.replace(
-                '[___WEBSITE_CONTACT_PAGE_URL___]', '<strong class="text-info">' + form['company_url'] + '</strong>')
+                '[___WEBSITE_CONTACT_PAGE_URL___]', '<strong class="text-info">' + f"{form['company_url'] if form['company_url'] else '[___WEBSITE_CONTACT_PAGE_URL___]'}" + '</strong>')
             template_str = template_str.replace(
-                '[___APP_NAME___]', '<strong class="text-info">' + request.POST['app_name'] + '</strong>')
+                '[___APP_NAME___]', '<strong class="text-info">' + f"{request.POST['app_name'] if request.POST['app_name'] else '[___APP_NAME___]'}" + '</strong>')
             template_str = template_str.replace(
-                '[COMPANY_COUNTRY]', '<strong class="text-info">' + form['company_country'] + '</strong>')
+                '[COMPANY_COUNTRY]', '<strong class="text-info">' + f"{form['company_country'] if form['company_country'] else '[COMPANY_COUNTRY]'}" + '</strong>')
 
             # Save the edited str as a .html file and open it
             new_html_file = open(os.path.join(
@@ -136,47 +138,57 @@ def preview_helper(request):
 
             # Use data from the form to create a document model
 
-            if docform.is_valid():
-                try:
-                    company = CompanyModel.objects.get(
-                        company_name=docform.cleaned_data['company_name'],
-                        owner=user)
+            try:
+                company = CompanyModel.objects.get(company_name=request.POST['company_name'], owner=user)
+                if company:
+                    print("don't create new")
+                    company.company_name = request.POST['company_name']
+                    company.app_name = request.POST['app_name']
+                    company.company_url = request.POST['company_url']
+                    company.company_email = request.POST['company_email']
+                    company.company_type = request.POST['company_type']
+                    company.company_phone_number = request.POST['company_phone_number']
+                    company.company_country = request.POST['company_country']
+                    company.owner = user
+            except:
+                print("create new")
+                company = CompanyModel(
+                    company_name=request.POST['company_name'],
+                    app_name=request.POST['app_name'],
+                    company_url=request.POST['company_url'],
+                    company_email=request.POST['company_email'],
+                    company_type=request.POST['company_type'],
+                    company_phone_number=request.POST['company_phone_number'],
+                    company_country=request.POST['company_country'],
+                    owner=user
+                )
 
-                    company['company_name'] = docform.cleaned_data['company_name']
-                    company['app_name'] = docform.cleaned_data['app_name']
-                    company['company_url'] = docform.cleaned_data['company_url']
-                    company['company_email'] = docform.cleaned_data['company_email']
-                    company['company_type'] = docform.cleaned_data['company_type']
-                    company['company_phone_number'] = docform.cleaned_data['company_phone_number']
-                    company['company_country'] = docform.cleaned_data['company_country']
-                    company['owner'] = user
-                except:
-                    company = CompanyModel(
-                        company_name=docform.cleaned_data['company_name'],
-                        app_name=docform.cleaned_data['app_name'],
-                        company_url=docform.cleaned_data['company_url'],
-                        company_email=docform.cleaned_data['company_email'],
-                        company_type=docform.cleaned_data['company_type'],
-                        company_phone_number=docform.cleaned_data['company_phone_number'],
-                        company_country=docform.cleaned_data['company_country'],
-                        owner=user
-                    )
-                    # company.id=None
-                    # Save company model                    
-                    
-                company.save()
+            # Save company model                    
+            company.save()
 
-                # print(company)
-                # Save the Document
+            # Save the Document
+            try:
+                # Get document using the company and content
+                document = DocumentModel.objects.get(company=company, content=template_str)
+                
+                document.content = template_str  # saving HTML string to DB
+                document.document_type = form['doc-type']
+                document.document_state = True if docform.is_valid() else False
+                document.date_issued = date.today()
+                document.company = company
+
+            except:
+                print('except')
                 document=DocumentModel(
                     content = template_str,  # saving HTML string to DB
                     company = company,
                     document_type = form['doc-type'],
-                    date_issued = date.today()
+                    date_issued = date.today(),
+                    document_state = True if docform.is_valid() else False
                 )
 
-                # Save Document
-                document.save()
+            # Save Document
+            document.save()
 
             # Close html file
             new_html_file.close()

@@ -13,33 +13,34 @@
       </div>
 
       <!-- <div class="gen_container__wrapper"> -->
-        <div class="gen_container">
-          <div class="gen-docs_temps">
-           
-            <figure>
-              <a href=""> <img src="" alt="" /> </a>
-              <figcaption class="gen-docs_names">
-                Zoey Bakery Website
-              </figcaption>
-            </figure>
-          </div>
-          <div class="gen-docs_temps">
-           
-
-            <figure>
-              <a href=""> <img src="" alt="" /> </a>
-              <figcaption class="gen-docs_names">JDW Mobile App</figcaption>
-            </figure>
-          </div>
-          <div class="gen-docs_temps">
-            
-
-            <figure>
-              <a href=""> <img src="" alt="" /> </a>
-              <figcaption class="gen-docs_names">JDW E-Commerce</figcaption>
-            </figure>
-          </div>
+      <div class="gen_container">
+        {% if tc %}
+        {% for item in tc %}
+        <div class="gen-docs_temps">
+          <figure>
+            <a href=""> <img src="" alt="" /> </a>
+            <figcaption class="gen-docs_names">
+              {{item.company.company_name}} {{item.document_type}}
+            </figcaption>
+          </figure>
         </div>
+        {% endfor %}
+        {% else %}
+        <div class="text-center"><strong>You have no privacy policies</strong></div>
+        {% endif %}
+        <!-- <div class="gen-docs_temps">
+          <figure>
+            <a href=""> <img src="" alt="" /> </a>
+            <figcaption class="gen-docs_names">JDW Mobile App</figcaption>
+          </figure>
+        </div>
+        <div class="gen-docs_temps">
+          <figure>
+            <a href=""> <img src="" alt="" /> </a>
+            <figcaption class="gen-docs_names">JDW E-Commerce</figcaption>
+          </figure>
+        </div> -->
+      </div>
       <!-- </div> -->
     </section>
 
@@ -52,9 +53,21 @@
       </div>
 
       <div class="gen_container">
+        {% if pp %}
+        {% for item in pp %}
         <div class="gen-docs_temps">
-         
-
+          <figure>
+            <a href=""> <img src="" alt="" /> </a>
+            <figcaption class="gen-docs_names">
+              {{item.company.company_name}} {{item.document_type}}
+            </figcaption>
+          </figure>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="text-center"><strong>You have no privacy policies</strong></div>
+        {% endif %}
+        <!-- <div class="gen-docs_temps">
           <figure>
             <a href=""> <img src="" alt="" /> </a>
             <figcaption class="gen-docs_names">
@@ -63,8 +76,6 @@
           </figure>
         </div>
         <div class="gen-docs_temps">
-          
-
           <figure>
             <a href=""> <img src="" alt="" /> </a>
             <figcaption class="gen-docs_names">Mobile App</figcaption>
@@ -72,13 +83,11 @@
         </div>
 
         <div class="gen-docs_temps">
-          
-
           <figure>
             <a href=""> <img src="" alt="" /></a>
             <figcaption class="gen-docs_names">E-Commerce</figcaption>
           </figure>
-        </div>
+        </div> -->
       </div>
     </section>
   </div>
