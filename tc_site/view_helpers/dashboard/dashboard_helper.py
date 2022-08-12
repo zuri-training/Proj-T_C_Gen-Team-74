@@ -15,10 +15,10 @@ def dashboard_helper(request, username):
         messages.error(request, "You are not allowed to view this page")
         return redirect('/')
     
-    draft_tc_count = DocumentModel.objects.filter(document_state=False, document_type='TC').count()
-    draft_pp_count = DocumentModel.objects.filter(document_state=False, document_type='PP').count()
-    pp_count = DocumentModel.objects.filter(document_state=True, document_type='PP').count()
-    tc_count = DocumentModel.objects.filter(document_state=True, document_type='TC').count()
+    draft_tc_count = DocumentModel.objects.filter(document_state=False, document_type='TC', owner=user).count()
+    draft_pp_count = DocumentModel.objects.filter(document_state=False, document_type='PP', owner=user).count()
+    pp_count = DocumentModel.objects.filter(document_state=True, document_type='PP', owner=user).count()
+    tc_count = DocumentModel.objects.filter(document_state=True, document_type='TC', owner=user).count()
 
     ctx['draft_tc_count'] = draft_tc_count
     ctx['draft_pp_count'] = draft_pp_count

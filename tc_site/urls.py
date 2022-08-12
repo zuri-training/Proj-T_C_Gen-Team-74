@@ -32,6 +32,9 @@ urlpatterns = [
     path('export/docx/<str:userID>/<str:docID>', views.export_docx, name="export_docx"),
     path('download/<userID>/<docID>', views.download, name="download"),
     path('share/<docID>', views.share, name="share"),
+    path('delete_doc/<docID>', views.delete_doc, name="delete_doc"),
+    path('delete_company/<companyID>', views.delete_company, name="delete_company"),
+
 
     # Reset Password URLS
     path('password_reset/', auth_views.PasswordResetView.as_view(

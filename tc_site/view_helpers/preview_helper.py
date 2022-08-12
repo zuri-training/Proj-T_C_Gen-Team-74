@@ -176,6 +176,7 @@ def preview_helper(request):
                 document.document_state = True if docform.is_valid() else False
                 document.date_issued = date.today()
                 document.company = company
+                document.owner = user
 
             except:
                 print('except')
@@ -184,7 +185,8 @@ def preview_helper(request):
                     company = company,
                     document_type = form['doc-type'],
                     date_issued = date.today(),
-                    document_state = True if docform.is_valid() else False
+                    document_state = True if docform.is_valid() else False,
+                    owner = user
                 )
 
             # Save Document

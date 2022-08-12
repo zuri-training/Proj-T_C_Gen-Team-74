@@ -34,7 +34,9 @@ def signin_helper(request):
             login(request, user)
             messages.success(request, 'It\'s good to have you back!')
             return redirect('/tc_site:dashboard/', username=user.username)
+            
         # The else condition redirects to the signin form/refreshes the page.
         messages.error(request, 'Invalid login credentials!')
         return render(request, 'tc_site/pages/landing/landing.html', ctx)
+
     return render(request, 'tc_site/pages/landing/landing.html', ctx)
