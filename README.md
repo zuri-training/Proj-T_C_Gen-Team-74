@@ -59,9 +59,10 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#file-structure">File Structure</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#features">Features</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -174,6 +175,29 @@ Now you would want to install all the projects dependencies
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+
+### File Structure
+
+This is a brief explanation of our file structure
+
+1. `/quickterms/`: This is the project folder it contains the settings.py file and other relevant files
+    
+2. `/tc_site/`: This is our app folder and contains all the static files, templates, models and forms for our site
+     
+3. `/tc_site/static/`: This contains all static files for our project
+     
+4. `/tc_site/templates/`: This contains all template files for our project split into blocks and pages.
+    
+5.  `/tc_site/models/`: This contains all our database models
+
+6.  `/tc_site/forms/`: This contains all our model based forms 
+    
+7.  `/tc_site/view_helpers/`: This contains all logic for our function based views. It was created to separate the project logic and modularize the project.
+8.  `/tc_site/views.py/`: All view_helper modules and imported and executed in this file
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Feature exmaples -->
 ## Features
