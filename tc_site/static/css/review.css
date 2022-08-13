@@ -1,0 +1,127 @@
+@import url("https://use.typekit.net/bpd3bxi.css");
+
+.review-container {
+  --main-color: rgb(255, 255, 255);
+  --main-blue: rgb(45, 45, 182);
+  --main-blue-light: hsl(240, 60%, 55%);
+}
+
+/* General stylings  */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.backdrop-wrapper {
+  position: fixed;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 2rem 0;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.backdrop {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.modals * {
+  font-family: "Montserrat";
+}
+.modals.review-container {
+  text-align: center;
+  padding: 35px;
+  width: 45%;
+  max-width: 700px;
+  background: var(--main-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 26px;
+}
+.modals.review-container .head_wrap {
+  width: 80%;
+  margin: auto;
+}
+
+.modals.review-container .head_wrap p {
+  font-size: 24px;
+  color: rgba(19, 19, 19, 1);
+}
+
+.modals.review-container .head_wrap .heading {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 1.2rem;
+  color: var(--main-blue);
+}
+.rates {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+.rate {
+  margin: 25px;
+  padding: 10px 20px;
+  font-size: 32px;
+  line-height: 39px;
+  border: 1px solid var(--main-blue-light);
+  border-radius: 8px;
+}
+.rate.active {
+  background-color: var(--main-blue);
+  color: var(--main-color);
+}
+.rate-text {
+  font-size: 20px;
+  margin-top: -5px;
+}
+.modals.review-container .head_wrap.feedback {
+  margin-top: 5rem;
+}
+.message {
+  padding: 1rem;
+  width: 70%;
+  background-color: #d1cef3;
+  border-radius: 12px;
+}
+.message:focus {
+  outline: none;
+  border: 2px solid rgba(3, 81, 98, 0.8);
+  border-radius: 4px;
+  background-color: #e4ece4;
+}
+.message::placeholder {
+  color: var(--main-blue);
+}
+.submit-review {
+  width: 40%;
+  color: var(--main-color);
+  background-color: var(--main-blue);
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  transition: letter-spacing 0.3s;
+  letter-spacing: normal;
+}
+.submit-review:hover {
+  color: var(--main-color);
+  cursor: pointer;
+  letter-spacing: 1.2px;
+}
