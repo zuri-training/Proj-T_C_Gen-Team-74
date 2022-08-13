@@ -163,8 +163,13 @@ Now you would want to install all the projects dependencies
     ```
     DJANGO_SECRET_KEY='generated secret'
     ```
-6.  Run the command `python3 manage.py migrate` to start up your database
-7.  Run the command `python3 manage.py runserver` to startup your server
+6.  Define the required environment variables using the code below as an example
+    ```
+    SITE_URL='quickterms.zurifordummies.com'  // the production site URL
+    HOST='quickterms.zurifordummies.com' // for configuring postgresql on django
+    ```
+7.  Run the command `python3 manage.py migrate` to start up your database
+8.  Run the command `python3 manage.py runserver` to startup your server
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -180,6 +185,7 @@ Our project provides these basic functionalities:
 4.  Ability to embed generated document into a user's website  (For authenticated users)
 5.  Ability to share generated documents via custom generated link  (For authenticated users)
 6.  Ability to view all generated documents  (For authenticated users)
+7.  Ability to delete all generated documents  (For authenticated users)
 
 ## Todo
 - Send emails to users on request after document generation
@@ -205,8 +211,10 @@ _For more examples, please refer to the [Documentation](https://obiajuluezike.sl
     - [x] Export
     - [x] Share
 - [x] Deploy on heroku
-- [ ] Save and Continue later
+- [x] Save and edit drafts later
+- [x] Delete generated documents
 - [ ] E-mail users after file generation
+- [ ] Collecting feedback from users after file generation
 
 
 See the [open issues](https://github.com/zuri-training/Proj-T_C_Gen-Team-74/issues) for a full list of proposed features (and known issues).
@@ -248,7 +256,7 @@ Project Link: [https://github.com/zuri-training/Proj-T_C_Gen-Team-74](https://gi
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
 * [I4GxZuri](https://training.zuri.team/)
-* [Img Shields](https://shields.io)
+* [Django](https://www.djangoproject.com/)
 * [Heroku](https://heroku.com)
 * [Font Awesome](https://fontawesome.com)
 * [Bootstrap5](https://getbootstrap.com/)
@@ -265,7 +273,7 @@ Use this space to list resources you find helpful and would like to give credit 
 
 ## Contributors ✨
 
-Thanks go to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks go to these wonderful people:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -315,9 +323,6 @@ Thanks go to these wonderful people ([emoji key](https://allcontributors.org/doc
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://allcontributors.org) specification.
-Contributions of any kind are welcome!
 
 ## Relevant links
   - [Live site](https://quickterms.herokuapp.com/)
