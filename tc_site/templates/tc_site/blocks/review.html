@@ -12,22 +12,24 @@
         <p>How has been your experience so far with our website?</p>
       </div>
       <div class="rates">
-        <div class="rate">1</div>
-        <div class="rate">2</div>
-        <div class="rate">3</div>
-        <div class="rate active">4</div>
-        <div class="rate">5</div>
+        <div data-value="1" class="rate">1</div>
+        <div data-value="2" class="rate">2</div>
+        <div data-value="3" class="rate">3</div>
+        <div data-value="4" class="rate active">4</div>
+        <div data-value="5" class="rate">5</div>
       </div>
-      <p class="rate-text"><span>Bad</span> <span>_________</span> <span>Good</span>  </p>
+      <p class="rate-text"><span>Bad</span> <span>_________</span> <span>Good</span> </p>
       <div class="head_wrap feedback">
         <p class="heading">Give us Feedback</p>
         <p>We would love to hear what you felt about Quickterm service</p>
       </div>
-      <form action="" method="post" id="review-form">
+      <form action="{% url 'tc_site:feedback' %}" method="post" id="review-form">
+        {% csrf_token %}
+        <input hidden name="rating" id="rate-input" required/>
         <div>
-          <textarea name="message" class="message" maxlength="500" rows="8" placeholder="Type here..."
-            required></textarea>
+          <textarea name="feedback" class="message" maxlength="500" rows="8" placeholder="Type here..." required></textarea>
         </div>
+
         <div class="btn-review-container">
           <button class="submit-review" type="submit" id="sign-up_btn">
             submit
@@ -38,4 +40,4 @@
   </div>
 </div>
 
-<script src="{% static 'js/review.js' %}?version=1"></script>
+<script src="{% static 'js/review.js' %}?version=3"></script>
