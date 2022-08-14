@@ -16,6 +16,7 @@ from .view_helpers.delete_doc_helper import delete_doc_helper
 from .view_helpers.delete_company_helper import delete_company_helper
 from .view_helpers.export_helper import export_helper
 from .view_helpers.export_docx_helper import export_docx_helper
+from .view_helpers.feedback_helper import feedback_helper
 from .view_helpers.coming_soon_helper import coming_soon_helper
 from .view_helpers.dashboard.dashboard_helper import dashboard_helper
 from .view_helpers.dashboard.archive_helper import archive_helper
@@ -87,6 +88,10 @@ def export(request, userID, docID):
 def export_docx(request, userID, docID):
     # Locate and put your logic in the view_helper directory of this app
     return export_docx_helper(request, userID, docID)
+
+def feedback(request):
+    # Locate and put your logic in the view_helper directory of this app
+    return feedback_helper(request)
 
 def coming_soon (request, page):
     # Locate and put your logic in the view_helper directory of this app
