@@ -9,9 +9,9 @@
         <p class="comp-text">GENERATED DOCUMENTS</p>
         <div id="comp-1">
           <div>
-            <canvas id="myChart"></canvas>
+            <canvas id="myChart" data-tc-count="{{tc_count}}" data-pp-count="{{pp_count}}" data-draft-tc-count="{{draft_tc_count}}" data-draft-pp-count="{{draft_pp_count}}"></canvas>
           </div>
-          <div class="move-mid"><p class="clinge">Total <span class="clinge-total">75</span></p></div>
+          <div class="move-mid"><p class="clinge">Total <span class="clinge-total">{{tc_pp_count}}</span></p></div>
           
         </div>
       </div>
@@ -21,7 +21,7 @@
             <div>
               <canvas id="newGen"></canvas>
             </div>
-            <div class="move-mid"><p class="clinge">Total <span class="clinge-total">2</span></p></div>
+            <div class="move-mid"><p class="clinge">Total <span class="clinge-total">{{draft_tc_pp_count}}</span></p></div>
           </div>
       </div>
     </div>
@@ -66,11 +66,11 @@
     <div class="row">
       <div class="col-md-6" id="color-1">
         <p class="col-txt-1">Total Terms and Conditions Generated</p>
-        <p class="col-txt-2">54</p>
+        <p class="col-txt-2">{{tc_count}}</p>
       </div>
       <div class="col-md-6" id="color-2">
-        <p class="col-txt-1">Total Terms and Conditions Generated</p>
-        <p class="col-txt-2">21</p>
+        <p class="col-txt-1">Total Privacy Policies Generated</p>
+        <p class="col-txt-2">{{pp_count}}</p>
       </div>
     </div>
   </div>
@@ -79,5 +79,5 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="{% static 'js/dinho.js' %}?version=6"></script>
+<script src="{% static 'js/dinho.js' %}?version=7"></script>
 {% endblock %}

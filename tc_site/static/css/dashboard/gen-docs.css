@@ -88,15 +88,13 @@
   align-content: space-between;
   justify-content: space-between;
   align-items: flex-start;
-  column-gap: 5rem;
+  column-gap: 2rem;
   row-gap: 2rem;
 }
 
 #dashboard-body .dashboard-gen-docs div.gen-docs_temps {
   background-color: var(--main-color);
-  flex: 1;
   text-align: center;
-  height: 15rem;
   padding: 0.5rem 0.8rem;
   border-radius: 1rem;
   box-shadow: 0 0 0.5rem 0.1rem var(--shadow-grey);

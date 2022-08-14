@@ -27,6 +27,8 @@ Bug fix on FAQ section and style enhancements on the 2nd section of the landing 
 Landing page and dashboard layout enhancements  | https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/96
 bug fixes on dashboard navbar and added username error checking | https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/97
 Review submissions, merge changes to main branch and give feedback when necessary | https://github.com/zuri-training/Proj-T_C_Gen-Team-74/issues/126, https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/42, https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/41, https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/48, https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/59, https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/83, https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/93
+Upgraded our database to Postgresql | https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/150
+Implemented save, edit and delete functionalites  | https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/151
+Implemented the backend for accepting feedback (an extra feature)  | https://github.com/zuri-training/Proj-T_C_Gen-Team-74/pull/154
 Managed the entire project as lead for the dev team | Proof can be seen by my presence in almost all branches of this project
 Effected fixes on reviewed submissions  | Proof of this is in the commit stories of reviewed branches
-Perform the backend developer part of the final presentation  | https://github.com/zuri-training/Proj-T_C_Gen-Team-74/issues/128

@@ -11,6 +11,16 @@
 {% else %}
 <div id="sign-in-modal-checker" data-show-sign-in-modal="false"></div>
 {% endif %}
+{% if show_reset_password %}
+<div id="reset-password-modal-checker" data-show-reset-password-modal="true"></div>
+{% else %}
+<div id="reset-password-modal-checker" data-show-reset-password-modal="false"></div>
+{% endif %}
+{% if show_forgot_password %}
+<div id="forgot-password-modal-checker" data-show-forgot-password-modal="true"></div>
+{% else %}
+<div id="forgot-password-modal-checker" data-show-forgot-password-modal="false"></div>
+{% endif %}
 {% if show_blank_preview %}
 <div id="blank-review-modal-checker" data-show-blank-preview-modal="true"></div>
 {% else %}
@@ -37,9 +47,9 @@
       <div class="nav">
         <ul class="nav-links">
           <li class="nav-item active"><a href="{% url 'tc_site:landing' %}">Home</a></li>
-          <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">About</a></li>
+          <li class="nav-item"><a href="{% url 'tc_site:about' %}">About</a></li>
           <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">How It Works</a></li>
-          <li class="nav-item"><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
+          <li class="nav-item"><a href="{% url 'tc_site:gen-form' docID='0' %}">Generate</a></li>
           <li class="nav-item"><a href="{% url 'tc_site:landing' %}#contact">Contact</a></li>
           <li class="nav-item"><a href="{% url 'tc_site:landing' %}#faq">FAQ</a></li>
         </ul>
@@ -74,9 +84,9 @@
     <div class="nav-lg">
       <ul class="nav-links links">
         <li class="nav-item active"><a href="{% url 'tc_site:landing' %}">Home</a></li>
-        <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">About</a></li>
+        <li class="nav-item"><a href="{% url 'tc_site:about' %}">About</a></li>
         <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">How It Works</a></li>
-        <li class="nav-item"><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
+        <li class="nav-item"><a href="{% url 'tc_site:gen-form' docID='0' %}">Generate</a></li>
         <li class="nav-item"><a href="{% url 'tc_site:landing' %}#contact">Contact</a></li>
         <li class="nav-item"><a href="{% url 'tc_site:landing' %}#faq">FAQ</a></li>
       </ul>
@@ -111,7 +121,8 @@
   </div>
 </nav>
 
-{% else %}
+{% else %} 
+<!-- Navbar for other pages -->
 <nav id="landing-navbar" class="navbar navbar-other-pages">
   <div class="container">
     <a href="{% url 'tc_site:landing' %}">
@@ -131,9 +142,9 @@
       <div class="nav">
         <ul class="nav-links">
           <li class="nav-item active"><a href="{% url 'tc_site:landing' %}">Home</a></li>
-          <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">About</a></li>
+          <li class="nav-item"><a href="{% url 'tc_site:about' %}">About</a></li>
           <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">How It Works</a></li>
-          <li class="nav-item"><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
+          <li class="nav-item"><a href="{% url 'tc_site:gen-form' docID='0' %}">Generate</a></li>
           <li class="nav-item"><a href="{% url 'tc_site:landing' %}#contact">Contact</a></li>
           <li class="nav-item"><a href="{% url 'tc_site:landing' %}#faq">FAQ</a></li>
         </ul>
@@ -168,9 +179,9 @@
     <div class="nav-lg">
       <ul class="nav-links links">
         <li class="nav-item active"><a href="{% url 'tc_site:landing' %}">Home</a></li>
-        <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">About</a></li>
+        <li class="nav-item"><a href="{% url 'tc_site:about' %}">About</a></li>
         <li class="nav-item"><a href="{% url 'tc_site:landing' %}#docs">How It Works</a></li>
-        <li class="nav-item"><a href="{% url 'tc_site:gen-form' %}">Generate</a></li>
+        <li class="nav-item"><a href="{% url 'tc_site:gen-form' docID='0' %}">Generate</a></li>
         <li class="nav-item"><a href="{% url 'tc_site:landing' %}#contact">Contact</a></li>
         <li class="nav-item"><a href="{% url 'tc_site:landing' %}#faq">FAQ</a></li>
       </ul>

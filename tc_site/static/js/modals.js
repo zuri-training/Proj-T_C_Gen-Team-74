@@ -28,14 +28,14 @@ function enableBtn() {
 signupChecker = document.getElementById('sign-up-modal-checker');
 signinChecker = document.getElementById('sign-in-modal-checker');
 previewChecker = document.getElementById('blank-preview-modal-checker');
-forgotPasswordChecker = document.getElementById('forgot-password-modal-checker');
+// forgotPasswordChecker = document.getElementById('forgot-password-modal-checker');
 
 
 // Create a toggle by checking if the route was redirected to 'signup' or 'signin'
 let signupModalActive = signupChecker?.dataset?.showSignUpModal == 'true' ? true : false;
 let signinModalActive = signinChecker?.dataset?.showSignInModal == 'true' ? true : false;
 let previewModalActive = previewChecker?.dataset?.showBlankPreviewModal == 'true' ? true : false;
-let forgotPasswordModalActive = forgotPasswordChecker?.dataset?.showBlankforgotPasswordModal == 'true' ? true : false;
+// let forgotPasswordModalActive = forgotPasswordChecker?.dataset?.showBlankforgotPasswordModal == 'true' ? true : false;
 
 // Toggle signup modal
 const signupBtns = document.querySelectorAll('.sign-up')
@@ -85,29 +85,6 @@ signinBtns.forEach((signinBtn) => {
 })
 
 
-// Toggle forgot password modal
-const forgotPasswordBtn = document.getElementById('forgot');
-const forgotPasswordModal = document.getElementById('forgot-password-modal');
-forgotPasswordModal.style.display = forgotPasswordModalActive ? 'grid' : 'none';
-
-
-  forgotPasswordBtn.addEventListener('click', () => {
-    if (forgotPasswordActive) {
-      forgotPasswordModal.style.display = 'none';
-      forgotPasswordModalActive = !forgotPasswordModalActive
-    } else {
-      // remove signin modal if active
-      if (signinModalActive) {
-        signinModal.style.display = 'none';
-        signinModalActive = !signinModalActive
-      }
-      forgotPasswordModal.style.display = 'grid';
-      forgotPasswordModalActive = !signinModalActive
-    }
-  })
-
-
-
 // Add onclick handler to backdrop to remove modal
 const backdrops = document.querySelectorAll('.backdrop')
 backdrops.forEach((backdrop) => {
@@ -117,13 +94,13 @@ const removeBackdrop = (backdrop) => {
   backdrop.parentElement.style.display = 'none';
   signinModalActive = false
   signupModalActive = false
-  forgotPasswordActive = false
+  // forgotPasswordActive = false
   previewModalActive = false
 }
 const cancelBackdrops = document.querySelectorAll('.cancel-backdrop')
 cancelBackdrops.forEach((btn) => {
   btn.addEventListener('click', () => {
-    backdrops.forEach((backdrop)=>{
+    backdrops.forEach((backdrop) => {
       backdrop.click()
     })
   })
@@ -131,27 +108,28 @@ cancelBackdrops.forEach((btn) => {
 
 // Toggle template Preview modal
 
-const previewModalButton = document.querySelector('.preview-modal-btn')
+const previewModalButtons = document.querySelectorAll('.preview-modal-btn')
 const previewModal = document.getElementById('preview-modal');
 previewModal.style.display = previewModalActive ? 'grid' : 'none';
 
-
-previewModalButton.addEventListener('click', () => {
-  if (previewModalActive) {
-    previewModal.style.display = 'none';
-    previewModalActive = !previewModalActive
-  } else {
-    // remove signin modal if active
-    // remove signup modal if active
-    if (signinModalActive) {
-      signinModal.style.display = 'none';
-      signinModalActive = !signinModalActive
+previewModalButtons.forEach((previewModalButton) => {
+  previewModalButton.addEventListener('click', () => {
+    if (previewModalActive) {
+      previewModal.style.display = 'none';
+      previewModalActive = !previewModalActive
+    } else {
+      // remove signin modal if active
+      // remove signup modal if active
+      if (signinModalActive) {
+        signinModal.style.display = 'none';
+        signinModalActive = !signinModalActive
+      }
+      if (signupModalActive) {
+        signupModal.style.display = 'none';
+        signupModalActive = !signupModalActive
+      }
+      previewModal.style.display = 'grid';
+      previewModalActive = !previewModalActive
     }
-    if (signupModalActive) {
-      signupModal.style.display = 'none';
-      signupModalActive = !signupModalActive
-    }
-    previewModal.style.display = 'grid';
-    previewModalActive = !previewModalActive
-  }
+  })
 })

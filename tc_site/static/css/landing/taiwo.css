@@ -185,13 +185,14 @@
 }
 
 .main-tc-6-h1 {
+    display: block;
+    text-align: center;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
     line-height: 48px;
     color: #0F0F3D;
-    ;
     padding-top: 4rem;
 }
 
@@ -199,17 +200,13 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 23.8987px;
+    font-size: 32px;
     line-height: 40px;
     color: #0F0F3D;
     position: relative;
+    padding-bottom: 2rem;
 }
 
-@media screen and (max-width: 600px) {
-    .main-tc-6-h1 {
-        font-size: 30px;
-    }
-}
 
 @media screen and (max-width: 450px) {
     .main-tc-6-p {
@@ -420,7 +417,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    color: #FAFAFA;
+    color: #FAFAFA !important;
     padding-bottom: 12px;
 }
 
@@ -536,9 +533,6 @@
     padding: 70px 0 35px;
 }
 
-/* taiwoak's css end*/
-
-
 @media (max-width: 990px) {
 
     .main-tc-2-img img,
@@ -565,6 +559,17 @@
         margin: 0 auto;
     }
 
+    .main-tc-6-h1 {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .main-tc-6-p {
+        font-size: 24px;
+        line-height: 28px;
+        padding-bottom: 1rem;
+    }
+
     .main-tc-8 {
         max-width: 530px;
         width: 100%;
@@ -589,6 +594,13 @@
     }
 }
 
+@media (max-width: 575px) {
+    .footer-logo {
+        padding-left: 2rem;
+    }
+}
+
+
 @media screen and (max-width: 600px) {
     .main-tc-9-p {
         display: none;
@@ -596,6 +608,17 @@
 
     .main-tc-9-img {
         margin-bottom: 2rem;
+    }
+
+    .main-tc-6-h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .main-tc-6-p {
+        font-size: 18px;
+        line-height: 20px;
+        padding-bottom: 1rem;
     }
 }
 
@@ -616,6 +639,12 @@
     .footer-logo {
         margin-bottom: 1.5rem;
     }
+
+    .main-tc-6-h1 {
+        padding-top: 1rem;
+        font-size: 24px;
+        line-height: 32px;
+    }
 }
 
 .footer-svg {
@@ -623,3 +652,5 @@
     position: relative;
     top: 10px;
 }
+
+/* taiwoak's css end*/

@@ -1,13 +1,4 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
 
 
 <!-- PROJECT SHIELDS -->
@@ -18,13 +9,13 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 
 <!-- PROJECT LOGO -->
@@ -68,9 +59,10 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#file-structure">File Structure</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#features">Features</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -84,7 +76,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://drive.google.com/file/d/1urjsylAbPbuq1dzW0Bh-rKslK_GDVDvx/view?usp=sharing)
+[![Product Name Screen Shot][product-screenshot]](/tc_site/static/assets/landing/hero/hero.png)
 
 This software is a web application that basically allows the generation of personalized terms and conditions and privacy policy documents. It is completely free and always will be. It will however, require the user to signup on our platform
 
@@ -144,6 +136,11 @@ Now you would want to install all the projects dependencies
     ```sh
     source <path to virtual environment folder just created>/bin/activate
     ```
+    <p align="center">OR</p>
+
+    ```sh
+    <path to virtual environment folder just created>\Scripts\activate
+    ```
 2. Clone the repo
      ```sh
      git clone https://github.com/zuri-training/Proj-T_C_Gen-Team-74.git
@@ -167,12 +164,40 @@ Now you would want to install all the projects dependencies
     ```
     DJANGO_SECRET_KEY='generated secret'
     ```
-6.  Run the command `python3 manage.py migrate` to start up your database
-7.  Run the command `python3 manage.py runserver` to startup your server
+6.  Define the required environment variables using the code below as an example
+    ```
+    SITE_URL='quickterms.zurifordummies.com'  // the production site URL
+    HOST='quickterms.zurifordummies.com' // for configuring postgresql on django
+    ```
+7.  Run the command `python3 manage.py migrate` to start up your database
+8.  Run the command `python3 manage.py runserver` to startup your server
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+
+### File Structure
+
+This is a brief explanation of our file structure
+
+1. `/quickterms/`: This is the project folder it contains the settings.py file and other relevant files
+    
+2. `/tc_site/`: This is our app folder and contains all the static files, templates, models and forms for our site
+     
+3. `/tc_site/static/`: This contains all static files for our project
+     
+4. `/tc_site/templates/`: This contains all template files for our project split into blocks and pages.
+    
+5.  `/tc_site/models/`: This contains all our database models
+
+6.  `/tc_site/forms/`: This contains all our model based forms 
+    
+7.  `/tc_site/view_helpers/`: This contains all logic for our function based views. It was created to separate the project logic and modularize the project.
+8.  `/tc_site/views.py/`: All view_helper modules and imported and executed in this file
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Feature exmaples -->
 ## Features
@@ -184,10 +209,11 @@ Our project provides these basic functionalities:
 4.  Ability to embed generated document into a user's website  (For authenticated users)
 5.  Ability to share generated documents via custom generated link  (For authenticated users)
 6.  Ability to view all generated documents  (For authenticated users)
+7.  Ability to delete all generated documents  (For authenticated users)
+8.  Accepting user feedback after succesful document generation.
 
 ## Todo
-- Send emails to userson request after document generation
-- Accepting user feedback after succesfull document generation.
+- Send emails to users on request after document generation
 
 _For more examples, please refer to the [Documentation](https://obiajuluezike.slite.com/p/LeWE1nW8ZC8iPM/QuickTerms-Technical-Documentation)_
 
@@ -209,7 +235,9 @@ _For more examples, please refer to the [Documentation](https://obiajuluezike.sl
     - [x] Export
     - [x] Share
 - [x] Deploy on heroku
-- [ ] Save and Continue later
+- [x] Save and edit drafts later
+- [x] Delete generated documents
+- [x] Collecting feedback from users after file generation
 - [ ] E-mail users after file generation
 
 
@@ -238,7 +266,7 @@ Don't forget to give the project a star! Thanks again!
 
 <!-- CONTACT -->
 ## Contact
-For moe information about this project you can contact [@De_marauder](https://twitter.com/@De_marauder) on twitter or [github](https://github.com/de-marauder)
+For more information about this project you can contact [@De_marauder](https://twitter.com/@De_marauder) on twitter or [github](https://github.com/de-marauder) or [linkedin](https://linkedin.com/in/obiajulu-ezike)
 
 Project Link: [https://github.com/zuri-training/Proj-T_C_Gen-Team-74](https://github.com/zuri-training/Proj-T_C_Gen-Team-74)
 
@@ -251,8 +279,8 @@ Project Link: [https://github.com/zuri-training/Proj-T_C_Gen-Team-74](https://gi
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [ZurixI4G](https://training.zuri.team/)
-* [Img Shields](https://shields.io)
+* [I4GxZuri](https://training.zuri.team/)
+* [Django](https://www.djangoproject.com/)
 * [Heroku](https://heroku.com)
 * [Font Awesome](https://fontawesome.com)
 * [Bootstrap5](https://getbootstrap.com/)
@@ -269,7 +297,7 @@ Use this space to list resources you find helpful and would like to give credit 
 
 ## Contributors ✨
 
-Thanks go to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks go to these wonderful people:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -320,9 +348,6 @@ Thanks go to these wonderful people ([emoji key](https://allcontributors.org/doc
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://allcontributors.org) specification.
-Contributions of any kind are welcome!
-
 ## Relevant links
   - [Live site](https://quickterms.herokuapp.com/)
   - [UX Research documention](https://docs.google.com/document/d/1T4SFiEQCYYrOaHTu2laP7x9L5mTi5jr42VCgjAVX7rI/edit?usp=sharing)
@@ -355,7 +380,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [license-url]: https://github.com/zuri-training/Proj-T_C_Gen-Team-74/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/obiajulu-ezike
-[product-screenshot]: /tc_site/assets/landing/hero/hero.png
+[product-screenshot]: /tc_site/static/assets/landing/hero/hero.png
 
 [Django]: https://img.shields.io/badge/django-000000?style=for-the-badge&logo=django&logoColor=white
 [Django-url]: https://docs.djangoproject.com/

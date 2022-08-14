@@ -38,27 +38,32 @@
   width: 90%;
   /* max-width: 480px; */
   max-width: 1000px;
-  /* padding-bottom: 1rem; */
   padding: 2.38rem;
+  position: relative;
+  padding-top: 4rem;
 }
 
-.modals.login_container i.fa-times {
+.modals .cancel {
   font-size: 60px;
-  color: black;
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  width: fit-content;
+  cursor: pointer;
 }
 
 .modals.login_container div.container2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 /* Image stylings*/
 .modals.login_container figure {
   margin-bottom: 1rem;
-  /* border-radius: 1rem 1rem 0 0; */
   overflow: hidden;
+  margin-right: 1rem;
 }
 .modals.login_container figure img {
   width: 100%;
@@ -66,8 +71,6 @@
 
 /* Heading styles */
 .modals.login_container .head_wrap {
-  width: 90%;
-  /* text-align: center; */
   margin: auto;
 }
 
@@ -161,7 +164,6 @@
   line-height: 24px;
   font-weight: 400;
   width: fit-content;
-  margin: 0 auto;
 }
 .modals span a:hover {
   color: var(--main-blue);
@@ -275,9 +277,9 @@
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
   .modals.login_container {
-    padding: 20px 10px;
+    padding: 20px;
   }
 
   .modals.login_container i.fa-times{
@@ -298,5 +300,12 @@
   .modals button {
     padding: 9px 8px;
     font-size: 19px;
+  }
+  .modals .question {
+    font-size: 1rem;
+  }
+  .modals .sign-in,
+  .modals .sign-up {
+    font-size: 1.1rem;
   }
 }
