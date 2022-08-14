@@ -1,28 +1,33 @@
 {% extends 'tc_site/pages/dashboard/base.html' %}
 {% load static %}
 {% block content %}
-
+<div id="main">
   <!-- main-section-one -->
   <div class="container" id="main-section-one">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 px-2">
         <p class="comp-text">GENERATED DOCUMENTS</p>
         <div id="comp-1">
           <div>
-            <canvas id="myChart" data-tc-count="{{tc_count}}" data-pp-count="{{pp_count}}" data-draft-tc-count="{{draft_tc_count}}" data-draft-pp-count="{{draft_pp_count}}"></canvas>
+            <canvas id="myChart" data-tc-count="{{tc_count}}" data-pp-count="{{pp_count}}"
+              data-draft-tc-count="{{draft_tc_count}}" data-draft-pp-count="{{draft_pp_count}}"></canvas>
           </div>
-          <div class="move-mid"><p class="clinge">Total <span class="clinge-total">{{tc_pp_count}}</span></p></div>
-          
+          <div class="move-mid">
+            <p class="clinge">Total <span class="clinge-total">{{tc_pp_count}}</span></p>
+          </div>
+
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 px-2">
         <p class="comp-text">PENDING DOCUMENTS</p>
         <div id="comp-1">
-            <div>
-              <canvas id="newGen"></canvas>
-            </div>
-            <div class="move-mid"><p class="clinge">Total <span class="clinge-total">{{draft_tc_pp_count}}</span></p></div>
+          <div>
+            <canvas id="newGen"></canvas>
           </div>
+          <div class="move-mid">
+            <p class="clinge">Total <span class="clinge-total">{{draft_tc_pp_count}}</span></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -64,18 +69,22 @@
   <div id="main-section-three">
     <p class="sum-txt">SUMMARY</p>
     <div class="row">
-      <div class="col-md-6" id="color-1">
-        <p class="col-txt-1">Total Terms and Conditions Generated</p>
-        <p class="col-txt-2">{{tc_count}}</p>
+      <div class="col-md-6">
+        <div  id="color-1">
+          <p class="col-txt-1">Total Terms and Conditions Generated</p>
+          <p class="col-txt-2">{{tc_count}}</p>
+        </div>
       </div>
-      <div class="col-md-6" id="color-2">
-        <p class="col-txt-1">Total Privacy Policies Generated</p>
-        <p class="col-txt-2">{{pp_count}}</p>
+      <div class="col-md-6">
+        <div id="color-2">
+          <p class="col-txt-1">Total Privacy Policies Generated</p>
+          <p class="col-txt-2">{{pp_count}}</p>
+        </div>
       </div>
     </div>
   </div>
   <!-- main-section-three -->
-</main>
+</div>
 {% endblock %}
 
 {% block scripts %}
