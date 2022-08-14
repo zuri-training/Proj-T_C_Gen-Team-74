@@ -7,7 +7,7 @@
 }
 
 /* General stylings  */
-body {
+.review-body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,9 +41,10 @@ body {
 }
 .modals.review-container {
   text-align: center;
+  position: relative;
   padding: 35px;
-  width: 45%;
-  max-width: 700px;
+  width: 90%;
+  max-width: 600px;
   background: var(--main-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 26px;
@@ -86,6 +87,8 @@ body {
 .rate-text {
   font-size: 20px;
   margin-top: -5px;
+  display: flex;
+  justify-content: space-between;
 }
 .modals.review-container .head_wrap.feedback {
   margin-top: 5rem;
@@ -124,4 +127,44 @@ body {
   color: var(--main-color);
   cursor: pointer;
   letter-spacing: 1.2px;
+}
+
+
+@media screen and (max-width: 600px) {
+ 
+  .rate {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  
+  .rate-text {
+    font-size: 1rem;
+  }
+
+  .modals.review-container .head_wrap {
+    width: 100%;
+  }
+
+  .modals.review-container .head_wrap .heading {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .modals.review-container .head_wrap p {
+    font-size: 1.1rem;
+  }
+  .modals.review-container .head_wrap.feedback {
+    margin-top: 2rem;
+  }
+
+  .message {
+    width: 100%;
+  }
+
+  .submit-review {
+    margin-top: .5rem;
+  }
 }

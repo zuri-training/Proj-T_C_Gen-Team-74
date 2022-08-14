@@ -12,13 +12,12 @@
         <a href="" class="more"> View More > </a>
       </div>
 
-      <!-- <div class="gen_container__wrapper"> -->
       <div class="gen_container">
         {% if tc %}
         {% for item in tc %}
         <div class="gen-docs_temps">
           <figure>
-            <a href="{% url 'tc_site:share' docID=item.id  %}" target="_blank"> <img src="{% static 'assets/dashboard/gen-docs/doc.png' %}" alt="doc" /> </a>
+            <a href="{% url 'tc_site:gen-file' docID=item.id  %}" target="_blank"> <img src="{% static 'assets/dashboard/gen-docs/doc.png' %}" alt="doc" /> </a>
             <figcaption class="gen-docs_names">
               {{item.company.company_name}} {{item.document_type}}
             </figcaption>
@@ -28,20 +27,7 @@
         {% else %}
         <div class="text-center"><strong>You have no privacy policies</strong></div>
         {% endif %}
-        <!-- <div class="gen-docs_temps">
-          <figure>
-            <a href=""> <img src="" alt="" /> </a>
-            <figcaption class="gen-docs_names">JDW Mobile App</figcaption>
-          </figure>
-        </div>
-        <div class="gen-docs_temps">
-          <figure>
-            <a href=""> <img src="" alt="" /> </a>
-            <figcaption class="gen-docs_names">JDW E-Commerce</figcaption>
-          </figure>
-        </div> -->
       </div>
-      <!-- </div> -->
     </section>
 
     <section class="gen-docs" id="pp_docs">
@@ -57,7 +43,7 @@
         {% for item in pp %}
         <div class="gen-docs_temps">
           <figure>
-            <a href="{% url 'tc_site:share' docID=item.id  %}" target="_blank"> <img src="{% static 'assets/dashboard/gen-docs/doc.png' %}" alt="" /> </a>
+            <a href="{% url 'tc_site:gen-file' docID=item.id  %}" target="_blank"> <img src="{% static 'assets/dashboard/gen-docs/doc.png' %}" alt="" /> </a>
             <figcaption class="gen-docs_names">
               {{item.company.company_name}} {{item.document_type}}
             </figcaption>
@@ -67,27 +53,7 @@
         {% else %}
         <div class="text-center"><strong>You have no privacy policies</strong></div>
         {% endif %}
-        <!-- <div class="gen-docs_temps">
-          <figure>
-            <a href=""> <img src="" alt="" /> </a>
-            <figcaption class="gen-docs_names">
-              John Doe Wears Website
-            </figcaption>
-          </figure>
-        </div>
-        <div class="gen-docs_temps">
-          <figure>
-            <a href=""> <img src="" alt="" /> </a>
-            <figcaption class="gen-docs_names">Mobile App</figcaption>
-          </figure>
-        </div>
-
-        <div class="gen-docs_temps">
-          <figure>
-            <a href=""> <img src="" alt="" /></a>
-            <figcaption class="gen-docs_names">E-Commerce</figcaption>
-          </figure>
-        </div> -->
+        
       </div>
     </section>
   </div>

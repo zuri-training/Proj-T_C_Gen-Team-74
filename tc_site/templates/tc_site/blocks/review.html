@@ -1,52 +1,41 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <div id="review-modal" class="backdrop-wrapper">
-      <div class="backdrop"></div>
-      <div class="modals review-container">
-        <div class="head_wrap">
-          <p class="heading">Rate our service</p>
-          <p>How has been your experience so far with our website?</p>
-        </div>
-        <div class="rates">
-          <div class="rate">1</div>
-          <div class="rate">2</div>
-          <div class="rate">3</div>
-          <div class="rate active">4</div>
-          <div class="rate">5</div>
-        </div>
-        <p class="rate-text">Bad __________________________________ Good</p>
-        <div class="head_wrap feedback">
-          <p class="heading">Give us Feedback</p>
-          <p>We would love to hear what you felt about Quickterm service</p>
-        </div>
-        <form action="" method="post" id="review-form">
-          <div>
-            <textarea
-              name="message"
-              class="message"
-              maxlength="500"
-              rows="8"
-              placeholder="Type here..."
-              required
-            ></textarea>
-          </div>
-          <div class="btn-review-container">
-            <button class="submit-review" type="submit" id="sign-up_btn">
-              submit
-            </button>
-          </div>
-        </form>
+<div id="review-body" class="review-body">
+  <div id="review-modal" class="backdrop-wrapper">
+    <div class="backdrop"></div>
+    <div class="modals review-container">
+      <i class="cancel cancel-backdrop">
+        <img src="{% static 'assets/auth/cancel.png' %}" alt="cancel" width="20px" height="20px">
+      </i>
+      <div class="head_wrap">
+        <p class="heading">Rate our service</p>
+        <p>How has been your experience so far with our website?</p>
       </div>
+      <div class="rates">
+        <div class="rate">1</div>
+        <div class="rate">2</div>
+        <div class="rate">3</div>
+        <div class="rate active">4</div>
+        <div class="rate">5</div>
+      </div>
+      <p class="rate-text"><span>Bad</span> <span>_________</span> <span>Good</span>  </p>
+      <div class="head_wrap feedback">
+        <p class="heading">Give us Feedback</p>
+        <p>We would love to hear what you felt about Quickterm service</p>
+      </div>
+      <form action="" method="post" id="review-form">
+        <div>
+          <textarea name="message" class="message" maxlength="500" rows="8" placeholder="Type here..."
+            required></textarea>
+        </div>
+        <div class="btn-review-container">
+          <button class="submit-review" type="submit" id="sign-up_btn">
+            submit
+          </button>
+        </div>
+      </form>
     </div>
-  </body>
-</html>
+  </div>
+</div>
+
+<script src="{% static 'js/review.js' %}?version=1"></script>
