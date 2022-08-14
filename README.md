@@ -237,8 +237,8 @@ _For more examples, please refer to the [Documentation](https://obiajuluezike.sl
 - [x] Deploy on heroku
 - [x] Save and edit drafts later
 - [x] Delete generated documents
+- [x] Collecting feedback from users after file generation
 - [ ] E-mail users after file generation
-- [ ] Collecting feedback from users after file generation
 
 
 See the [open issues](https://github.com/zuri-training/Proj-T_C_Gen-Team-74/issues) for a full list of proposed features (and known issues).
