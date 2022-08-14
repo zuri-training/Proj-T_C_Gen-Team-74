@@ -3,4 +3,4 @@ review.style.display = 'none';
 
 setTimeout(()=>{
     review.style.display = 'flex';
-}, 100)
+}, 10000)
