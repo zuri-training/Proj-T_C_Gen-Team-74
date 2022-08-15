@@ -25,11 +25,14 @@ def gen_file_helper(request, docID):
         # Read the gen doc html
         html = open(os.path.join(BASE_DIR, 'templates', 'tc_site', 'gen_file.html'), 'w')
         # Query database for document
-        document = DocumentModel.objects.get(id=docID)
-        html.write(document.content)
-        html.close()
+        try:
+            document = DocumentModel.objects.get(id=docID)
+            html.write(document.content)
+            html.close()
 
-        ctx['html_content'] = document.content
+            ctx['html_content'] = document.content
+        except:
+            return redirect('tc_site:gen-form', docId='0')
 
         # doc = DocumentModel.objects.get(id=docID)
 
