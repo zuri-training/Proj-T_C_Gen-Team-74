@@ -9,6 +9,7 @@ import markdown
 from datetime import date
 from pathlib import Path
 from django.shortcuts import render, redirect
+from ..models.DocumentModel import DocumentModel
 
 # from tc_site.models.DocumentModel import DocumentModel
 
@@ -22,9 +23,13 @@ def gen_file_helper(request, docID):
     ctx = {'user': user}
     if user.id:
         # Read the gen doc html
-        html = open(os.path.join(BASE_DIR, 'templates', 'tc_site', 'gen_file.html'), 'r')
-        html_content = html.read()
-        ctx['html_content'] = html_content
+        html = open(os.path.join(BASE_DIR, 'templates', 'tc_site', 'gen_file.html'), 'w')
+        # Query database for document
+        document = DocumentModel.objects.get(id=docID)
+        html.write(document.content)
+        html.close()
+
+        ctx['html_content'] = document.content
 
         # doc = DocumentModel.objects.get(id=docID)
 
