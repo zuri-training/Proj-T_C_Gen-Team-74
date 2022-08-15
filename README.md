@@ -215,7 +215,7 @@ Our project provides these basic functionalities:
 ## Todo
 - Send emails to users on request after document generation
 
-_For more examples, please refer to the [Documentation](https://obiajuluezike.slite.com/p/LeWE1nW8ZC8iPM/QuickTerms-Technical-Documentation)_
+_For more details, please refer to the [Documentation](https://obiajuluezike.slite.com/p/LeWE1nW8ZC8iPM/QuickTerms-Technical-Documentation)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
