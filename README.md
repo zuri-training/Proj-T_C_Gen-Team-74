@@ -9,13 +9,13 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 
 <!-- PROJECT LOGO -->
@@ -210,12 +210,12 @@ Our project provides these basic functionalities:
 5.  Ability to share generated documents via custom generated link  (For authenticated users)
 6.  Ability to view all generated documents  (For authenticated users)
 7.  Ability to delete all generated documents  (For authenticated users)
+8.  Accepting user feedback after succesful document generation.
 
 ## Todo
 - Send emails to users on request after document generation
-- Accepting user feedback after succesful document generation.
 
-_For more examples, please refer to the [Documentation](https://obiajuluezike.slite.com/p/LeWE1nW8ZC8iPM/QuickTerms-Technical-Documentation)_
+_For more details, please refer to the [Documentation](https://obiajuluezike.slite.com/p/LeWE1nW8ZC8iPM/QuickTerms-Technical-Documentation)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -237,8 +237,8 @@ _For more examples, please refer to the [Documentation](https://obiajuluezike.sl
 - [x] Deploy on heroku
 - [x] Save and edit drafts later
 - [x] Delete generated documents
+- [x] Collecting feedback from users after file generation
 - [ ] E-mail users after file generation
-- [ ] Collecting feedback from users after file generation
 
 
 See the [open issues](https://github.com/zuri-training/Proj-T_C_Gen-Team-74/issues) for a full list of proposed features (and known issues).

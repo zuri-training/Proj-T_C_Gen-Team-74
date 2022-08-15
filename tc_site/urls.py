@@ -5,8 +5,6 @@ from . import views
 
 from django.contrib.auth import views as auth_views
 
-from django.conf.urls.static import static
-# from django.conf.
 
 #!
 #!
@@ -35,6 +33,8 @@ urlpatterns = [
     path('delete_doc/<docID>', views.delete_doc, name="delete_doc"),
     path('delete_company/<companyID>', views.delete_company, name="delete_company"),
 
+    # Feedback URL
+    path('feedback/', views.feedback, name="feedback"),
 
     # Reset Password URLS
     path('password_reset/', auth_views.PasswordResetView.as_view(

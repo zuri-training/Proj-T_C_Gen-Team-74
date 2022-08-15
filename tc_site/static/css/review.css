@@ -79,6 +79,7 @@
   line-height: 39px;
   border: 1px solid var(--main-blue-light);
   border-radius: 8px;
+  cursor: pointer;
 }
 .rate.active {
   background-color: var(--main-blue);

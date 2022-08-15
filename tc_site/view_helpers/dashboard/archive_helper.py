@@ -30,5 +30,11 @@ def archive_helper(request, username):
         'page': 'Archive'
     }
 
+    pp_count = DocumentModel.objects.filter(document_state=True, document_type='PP', owner=user).count()
+    tc_count = DocumentModel.objects.filter(document_state=True, document_type='TC', owner=user).count()
+
+    ctx['pp_count'] = pp_count
+    ctx['tc_count'] = tc_count
+
     return render(request, 'tc_site/blocks/dashboard/archive.html', ctx)    
     
