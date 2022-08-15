@@ -43,7 +43,7 @@ const myChart = new Chart(ctx, {
 const myChart2 = new Chart(newGen, {
   type: "doughnut",
   data: {
-    labels: [`${draft_pp_count} Privacy policy`, `${draft_pp_count} Terms and Condition`],
+    labels: [`${draft_pp_count} Privacy policy`, `${draft_tc_count} Terms and Condition`],
     datasets: [
 
       {
