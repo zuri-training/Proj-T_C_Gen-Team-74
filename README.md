@@ -351,6 +351,7 @@ Thanks go to these wonderful people:
 ## Relevant links
   - [Live site](https://quickterms.herokuapp.com/)
   - [UX Research documention](https://docs.google.com/document/d/1T4SFiEQCYYrOaHTu2laP7x9L5mTi5jr42VCgjAVX7rI/edit?usp=sharing)
+  - [Figma](https://www.figma.com/file/sn6pQ7kYLokvXTVimlwFVv/Team-74-Project-Phase-design?node-id=2%3A3)
   - [Technical documentation](https://obiajuluezike.slite.com/p/LeWE1nW8ZC8iPM/QuickTerms-Technical-Documentation)
   - [Contributors details and their tasks](https://docs.google.com/spreadsheets/d/11xXrf_8M0h4MvW9oLjhe1myAj8swJUplk9y0fm1J2YQ/edit?usp=sharing)
   - [Database Schema](https://drive.google.com/file/d/1-TfYdHR8ApGuiqzOfBnUK4ddSRsvrybG/view?usp=sharing)
