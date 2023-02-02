@@ -10,7 +10,8 @@ cloudinary==1.29.0
 cryptography==37.0.4
 cssselect2==0.6.0
 dj-database-url==1.0.0
-Django==4.0.6
+# Django==4.0.6
+Django==^3.2.10
 django-cloudinary-storage==0.3.0
 django-countries==7.3.2
 django-on-heroku==1.1.2
