@@ -34,7 +34,7 @@
     <a href="https://obiajuluezike.slite.com/p/LeWE1nW8ZC8iPM/QuickTerms-Technical-Documentation"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://quickTerms.herokuapp.com">View Demo</a>
+    <a href="https://quickterms.onrender.com">View Demo</a>
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
     ·
