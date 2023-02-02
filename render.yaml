@@ -1,0 +1,20 @@
+databases:
+  - name: quickterms
+    databaseName: quickterms
+    user: de_marauder
+
+services:
+  - type: web
+    name: quickterms
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn quickterms.wsgi:application"
+    envVars:
+      - key: HOST
+        fromDatabase:
+          name: quickterms
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4

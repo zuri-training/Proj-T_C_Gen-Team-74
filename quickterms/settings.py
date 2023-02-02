@@ -14,7 +14,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 
-import django_on_heroku
+# import django_on_heroku
 import dj_database_url
 
 
@@ -28,13 +28,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY')
 HOST = os.getenv('HOST')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = ['.zurifordummies.com', 'quickterms.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['.zurifordummies.com', 'quickterms.onrender.com', 'quickterms.herokuapp.com', 'localhost']
 
 # ! PLEASE READ THIS
 # !
@@ -95,8 +96,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
 
         'NAME': 'quickterms',
-        'USER': 'de_marauder',
-        'PASSWORD': 'TCquicktermsPP',
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
         'HOST': HOST,
         'PORT': '',
     }
@@ -146,12 +147,12 @@ STATICFILES_DIRS = [
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-SECRET_KEY = "0f4e357b5b93b50facacf122c022fc00af2132f06eb46930"
-EMAIL_HOST_USER = "onobes007@gmail.com"
-EMAIL_HOST_PASSWORD = "gkorbqrzclxwzfqv"
+EMAIL_HOST = os.getenv('EMAIL_HOST')
+EMAIL_PORT = os.getenv('EMAIL_PORT')
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS')
+SECRET_KEY = os.getenv('SECRET_KEY')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
@@ -160,4 +161,4 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_on_heroku.settings(locals())
+# django_on_heroku.settings(locals())
